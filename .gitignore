@@ -1,2 +1,4 @@
 # Google App Engine generated folder
+WEB-INF/*
+WEB-INF/
 appengine-generated/
