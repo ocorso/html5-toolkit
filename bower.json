@@ -1,0 +1,22 @@
+{
+  "name": "html5-toolkit",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ocorso/html5-toolkit",
+  "authors": [
+    "Owen Corso <owen@ored.net>"
+  ],
+  "description": "This is a project to display the HTML5-Toolkit built by the gTech Creative Specialist team.",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.8.0-rc.7",
+    "iron-elements": "PolymerElements/iron-elements#~0.8.0"
+  }
+}
