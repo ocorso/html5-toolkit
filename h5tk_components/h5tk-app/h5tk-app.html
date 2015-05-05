@@ -10,10 +10,10 @@
 
         <h3>My Firebase Data</h3>
 
+  </template>
 <template repeat="{{key in keys}}">
   <p>{{key}}: {{data[key]}}</p>
 </template>
-  </template>
 </dom-module>
 
 <script type="text/javascript">
@@ -29,18 +29,11 @@
         },
         keys:{
         	type: Array
-        },
-    observers: {
-      // dataChanged only called if data is pointed at a new object
-      // changes to data's _properties or sub-properites are not observed_
-      data: 'dataChanged',
-      // dataNameChanged called if `data.name` changes
-      'data.name': 'dataNameChanged'
-    }
+        }
     },
     ready: function(){ 
         console.log("ready"); 
-        this.innerHTML = "<h1>Hello 0.8</h1>";
+       // this.innerHTML = "<h1>Hello 0.8</h1>";
     },
   dataChanged:function(data){ 
         console.log("dataChanged.");
