@@ -10,9 +10,39 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+        <link rel="import" href="h5tk_components/h5tk-elements.html">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
-    <body>
+    <body onload="onload();">
+    
+    <dom-module id="main-view">
+      <template>
+            <iron-ajax id="firebase"
+            method="POST" auto
+            url="https://html5-toolkit.firebaseio.com/"
+            handleAs="json"
+            on-response="handleResponse"></iron-ajax>
+        
+      </template>
+    </dom-module>
+
+    <script>
+      function onload(){ console.log("page loaded.");}
+
+      Polymer({
+        is: 'main-view',
+        properties: {
+            firebase: Object
+        },
+        ready: function(){ 
+            console.log("ready"); 
+            this.innerHTML = "<h1>Hello 0.8</h1>";
+        },
+        handleResponse:function(data){ 
+            console.log("data loaded.");
+        }
+      });
+    </script>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -20,14 +50,14 @@
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Toolkit.</p>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-62603110-1');ga('send','pageview');
         </script>
     </body>
 </html>
