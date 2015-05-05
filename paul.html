@@ -6,19 +6,37 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Paul's Polymer page</title>
+        <title>HTML5 Toolkit</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+        <link rel="import" href="h5tk_components/h5tk-elements-paul.html">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
-    <body>
+    <body onload="onload();">
+        <h3>My Firebase Data</h3>
 
+        <h5tk-app-paul></h5tk-app-paul>
+
+    <script>
+      function onload(){ console.log("page loaded.");}
+
+
+    </script>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <!-- Google Analytics -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-62603110-1');ga('send','pageview');
+        </script>
     </body>
 </html>

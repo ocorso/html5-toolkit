@@ -1,0 +1,91 @@
+    <link rel="import" href="../h5tk-elements-paul.html">
+    <dom-module id="h5tk-app-paul">
+      <template>
+        <h3>Local Data</h3>
+        <!--
+        <firebase-element
+        id="firebase"
+        location="https://html5-toolkit.firebaseio.com/"
+        data="{{data}}"
+        on-data-change="onDataChange"
+        log
+        ></firebase-element>
+      -->
+        <template is="x-repeat" items="{{data.toolkit-items}}">
+          <h1>{{item.title}}</h1>
+          <p>{{item.summary}}</p>
+        </template>
+      </template>
+    </dom-module>
+
+    <script type="text/javascript">
+
+      Polymer({
+        is: 'h5tk-app-paul',
+
+        properties: {
+          data: {
+            type: Object,
+            notify: true,
+            observer: 'dataChanged'
+          }
+        },
+        ready: function(){
+            console.log("ready");
+            /*this.data = [
+              {what: 'Hello', who: 'World'},
+              {what: 'GoodBye', who: 'DOM APIs'},
+              {what: 'Hello', who: 'Declarative'},
+              {what: 'GoodBye', who: 'Imperative'}
+            ];*/
+            this.data = {
+              "toolkit-items" : [ {
+                "demo" : [ {
+                  "description" : "Here's a demo that shows how to use fonts.",
+                  "link" : {
+                    "title" : "Some Text",
+                    "url" : "http://google.com"
+                  },
+                  "title" : "Demo"
+                } ],
+                "quick start" : {
+                  "code snippet" : "<html>   <head>     <link rel=\"stylesheet\" type=\"text/css\" href=\"http://fonts.googleapis.com/css?family=Tangerine\">     <style>       body {         font-family: 'Tangerine', serif;         font-size: 48px;       }     </style>   </head>   <body>     <div>Making the Web Beautiful!</div>   </body> </html>",
+                  "description" : "Here's how you print hello world.",
+                  "link" : {
+                    "title" : "Quick Start Tutorial",
+                    "url" : "http://google.com"
+                  }
+                },
+                "summary" : "Fonts help create beautiful cross-screen ads.",
+                "title" : "fonts"
+              },
+                {
+                "demo" : [ {
+                  "description" : "Here's a demo that shows how to use Images.",
+                  "link" : {
+                    "title" : "Some Text",
+                    "url" : "http://google.com"
+                  },
+                  "title" : "Demo"
+                } ],
+                "quick start" : {
+                  "code snippet" : "<html>   <head>     <link rel=\"stylesheet\" type=\"text/css\" href=\"http://fonts.googleapis.com/css?family=Tangerine\">     <style>       body {         font-family: 'Tangerine', serif;         font-size: 48px;       }     </style>   </head>   <body>     <div>Making the Web Beautiful!</div>   </body> </html>",
+                  "description" : "Here's how you print hello world.",
+                  "link" : {
+                    "title" : "Quick Start Tutorial",
+                    "url" : "http://google.com"
+                  }
+                },
+                "summary" : "Images are uh useful.",
+                "title" : "Images"
+              } ]
+            };
+            console.log(this.data);
+
+        },
+        dataChanged: function() {
+          this.json = JSON.stringify(this.data, null, '  ');
+          console.log('dataChanged',this.json)
+        }
+      });
+          </script>
