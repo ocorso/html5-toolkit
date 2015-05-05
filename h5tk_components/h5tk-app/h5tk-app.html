@@ -2,11 +2,11 @@
 <dom-module id="h5tk-app">
   <template>
     <firebase-element 
-        id="firebase"
         location="https://html5-toolkit.firebaseio.com/"
         data="{{data}}"
         keys="{{keys}}"
-				></firebase-element>
+				>
+			</firebase-element>
 
         <h3>My Firebase Data</h3>
 
@@ -21,24 +21,29 @@
   Polymer({
     is: 'h5tk-app',
     properties: {
-        firebase: {
-        	type:Object
-        },
+
         data:{ 
         	type: Object, 
-        	observer: "handleResponse", 
+        	observer: "dataChanged", 
         	notify:true
         },
         keys:{
         	type: Array
-        }
+        },
+    observers: {
+      // dataChanged only called if data is pointed at a new object
+      // changes to data's _properties or sub-properites are not observed_
+      data: 'dataChanged',
+      // dataNameChanged called if `data.name` changes
+      'data.name': 'dataNameChanged'
+    }
     },
     ready: function(){ 
         console.log("ready"); 
         this.innerHTML = "<h1>Hello 0.8</h1>";
     },
-    handleResponse:function(data){ 
-        console.log("data loaded.");
+  dataChanged:function(data){ 
+        console.log("dataChanged.");
     }
   });
 </script>
