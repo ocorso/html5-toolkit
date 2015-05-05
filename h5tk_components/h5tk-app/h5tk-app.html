@@ -21,7 +21,6 @@
   Polymer({
     is: 'h5tk-app',
     properties: {
-
         data:{ 
         	type: Object, 
         	observer: "dataChanged", 
@@ -37,6 +36,9 @@
     },
   dataChanged:function(data){ 
         console.log("dataChanged.");
+    },
+  dataHandler:function(data){ 
+        console.log("dataHandler.");
     }
   });
 </script>
