@@ -15,33 +15,12 @@
     </head>
     <body onload="onload();">
     
-    <dom-module id="main-view">
-      <template>
-            <iron-ajax id="firebase"
-            method="POST" auto
-            url="https://html5-toolkit.firebaseio.com/"
-            handleAs="json"
-            on-response="handleResponse"></iron-ajax>
-        
-      </template>
-    </dom-module>
+<h5tk-app></h5tk-app>
 
     <script>
       function onload(){ console.log("page loaded.");}
 
-      Polymer({
-        is: 'main-view',
-        properties: {
-            firebase: Object
-        },
-        ready: function(){ 
-            console.log("ready"); 
-            this.innerHTML = "<h1>Hello 0.8</h1>";
-        },
-        handleResponse:function(data){ 
-            console.log("data loaded.");
-        }
-      });
+
     </script>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

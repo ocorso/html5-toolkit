@@ -1,0 +1,25 @@
+{
+  "name": "firebase-element",
+  "version": "0.8.0",
+  "private": true,
+  "dependencies": {
+    "polymer": "polymer/polymer#v0.8.0-rc.6",
+    "firebase": "^2.2.0"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.6.0",
+    "iron-doc-viewer": "polymerelements/iron-doc-viewer#^0.8.0",
+    "web-component-tester": "*"
+  },
+  "homepage": "https://github.com/PolymerElements/firebase-element",
+  "_release": "0.8.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.8.0",
+    "commit": "b3a2725f74b6144d9dd0ca06481f1866bcd8db90"
+  },
+  "_source": "git://github.com/PolymerElements/firebase-element.git",
+  "_target": "~0.8.0",
+  "_originalSource": "PolymerElements/firebase-element",
+  "_direct": true
+}

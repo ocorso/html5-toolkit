@@ -1,0 +1,35 @@
+    <link rel="import" href="../h5tk-elements.html">
+    <dom-module id="h5tk-app">
+      <template>
+        <firebase-element 
+            id="firebase"
+            location="https://html5-toolkit.firebaseio.com/"
+            data="{{data}}"
+            keys="{{keys}}"
+  					></firebase-element>
+            <h3>My Firebase Data</h3>
+
+      </template>
+    <template repeat="{{key in keys}}">
+      <p>{{key}}: {{data[key]}}</p>
+    </template>
+    </dom-module>
+
+    <script type="text/javascript">
+
+          Polymer({
+        is: 'h5tk-app',
+        properties: {
+            firebase: Object,
+            data:Object,
+            keys:Array
+        },
+        ready: function(){ 
+            console.log("ready"); 
+            this.innerHTML = "<h1>Hello 0.8</h1>";
+        },
+        handleResponse:function(data){ 
+            console.log("data loaded.");
+        }
+      });
+          </script>
