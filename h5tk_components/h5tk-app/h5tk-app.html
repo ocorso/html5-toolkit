@@ -1,35 +1,44 @@
-    <link rel="import" href="../h5tk-elements.html">
-    <dom-module id="h5tk-app">
-      <template>
-        <firebase-element 
-            id="firebase"
-            location="https://html5-toolkit.firebaseio.com/"
-            data="{{data}}"
-            keys="{{keys}}"
-  					></firebase-element>
-            <h3>My Firebase Data</h3>
+<link rel="import" href="../h5tk-elements.html">
+<dom-module id="h5tk-app">
+  <template>
+    <firebase-element 
+        location="https://html5-toolkit.firebaseio.com/"
+        data="{{data}}"
+        keys="{{keys}}"
+				>
+			</firebase-element>
 
-      </template>
-    <template repeat="{{key in keys}}">
-      <p>{{key}}: {{data[key]}}</p>
-    </template>
-    </dom-module>
+        <h3>My Firebase Data</h3>
 
-    <script type="text/javascript">
+  </template>
+<template repeat="{{key in keys}}">
+  <p>{{key}}: {{data[key]}}</p>
+</template>
+</dom-module>
 
-          Polymer({
-        is: 'h5tk-app',
-        properties: {
-            firebase: Object,
-            data:Object,
-            keys:Array
+<script type="text/javascript">
+
+  Polymer({
+    is: 'h5tk-app',
+    properties: {
+        data:{ 
+        	type: Object, 
+        	observer: "dataChanged", 
+        	notify:true
         },
-        ready: function(){ 
-            console.log("ready"); 
-            this.innerHTML = "<h1>Hello 0.8</h1>";
-        },
-        handleResponse:function(data){ 
-            console.log("data loaded.");
+        keys:{
+        	type: Array
         }
-      });
-          </script>
+    },
+    ready: function(){ 
+        console.log("ready"); 
+       // this.innerHTML = "<h1>Hello 0.8</h1>";
+    },
+  dataChanged:function(data){ 
+        console.log("dataChanged.");
+    },
+  dataHandler:function(data){ 
+        console.log("dataHandler.");
+    }
+  });
+</script>
