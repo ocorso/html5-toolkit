@@ -1,17 +1,19 @@
 <link rel="import" href="../h5tk-elements.html">
 <dom-module id="h5tk-app">
   <template>
-    <firebase-element 
-        location="https://html5-toolkit.firebaseio.com/"
-        data="{{data}}"
-        keys="{{keys}}"
-				>
-			</firebase-element>
+<iron-ajax
+	id="firebase"
+	method="post"
+  auto
+  url="https://html5-toolkit.firebaseio.com/"
+  handleas="json"
+  on-response="handleResponse"
+  verbose="true"></iron-ajax>
 
         <h3>My Firebase Data</h3>
 
   </template>
-<template repeat="{{key in keys}}">
+<template is="dom-repeat" items="{{key in keys}}">
   <p>{{key}}: {{data[key]}}</p>
 </template>
 </dom-module>
@@ -21,24 +23,27 @@
   Polymer({
     is: 'h5tk-app',
     properties: {
-        data:{ 
-        	type: Object, 
-        	observer: "dataChanged", 
-        	notify:true
-        },
-        keys:{
-        	type: Array
-        }
+    	firebase:{type:Object},
+      data:{ 
+      	type: Object, 
+      	observer: "dataChanged", 
+      	notify:true
+      },
+      keys:{
+      	type: Array
+      },
+      handleResponse:{
+      	type:Object,
+      	value:"handleResponse"
+      }
     },
     ready: function(){ 
         console.log("ready"); 
        // this.innerHTML = "<h1>Hello 0.8</h1>";
     },
-  dataChanged:function(data){ 
-        console.log("dataChanged.");
-    },
-  dataHandler:function(data){ 
-        console.log("dataHandler.");
-    }
+	  handleResponse:function(data){ 
+	        console.log("handleResponse.");
+	        console.log(data);
+	    }
   });
 </script>

@@ -1,9 +1,10 @@
 {
   "name": "iron-ajax",
+  "version": "0.8.3",
   "private": true,
   "dependencies": {
     "polymer": "polymer/polymer#v0.8.0-rc.7",
-    "promise-polyfill": "polymerlabs/promise-polyfill#master"
+    "promise-polyfill": "polymerlabs/promise-polyfill#^0.8.0"
   },
   "devDependencies": {
     "iron-image": "polymerelements/iron-image#^0.8.0",
@@ -13,12 +14,11 @@
     "web-component-tester": "~2.2.3"
   },
   "homepage": "https://github.com/PolymerElements/iron-ajax",
-  "version": "0.8.2",
-  "_release": "0.8.2",
+  "_release": "0.8.3",
   "_resolution": {
     "type": "version",
-    "tag": "v0.8.2",
-    "commit": "edea60df5f606cccdcf8082e4eef43fed4742e26"
+    "tag": "v0.8.3",
+    "commit": "d45465ccaf5f9d85cbb2ac47763fae06563c1f89"
   },
   "_source": "git://github.com/PolymerElements/iron-ajax.git",
   "_target": "^0.8.0",

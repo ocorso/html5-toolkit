@@ -15,10 +15,13 @@
     </head>
     <body onload="onload();">
     
-<h5tk-app></h5tk-app>
+<h5tk-app id="h5tk_app"></h5tk-app>
 
     <script>
-      function onload(){ console.log("page loaded.");}
+  var app;
+      function onload(){ console.log("page loaded.");
+        app = document.getElementById("h5tk_app");
+  }
 
 
     </script>
