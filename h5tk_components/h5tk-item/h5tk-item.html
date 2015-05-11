@@ -1,29 +1,17 @@
 <link rel="import" href="../h5tk-elements.html">
-<dom-module id="h5tk-app">
-  <link href="h5tk-app.css"></link>
-  <template is="">
-    <iron-ajax
-    	id="firebase"
-      auto
-      url="https://html5-toolkit.firebaseio.com/toolkit-items.json"
-      handleas="json"
-      on-response="handleResponse"
-      verbose="true"></iron-ajax>
-
-    <h3>My Firebase Data:</h3>
-    <template is="dom-repeat" items="{{data}}">
-      <h5tk-item data="{{item}}"></h5tk>
-    </template>
+<dom-module id="h5tk-item">
+  <template>
+    <h1>Title: <span>{{data.title}}</span></h1>
   </template>
 </dom-module>
 
 <script type="text/javascript">
 
   Polymer({
-    is: 'h5tk-app',
+    is: 'h5tk-item',
     properties: {
       data:{ 
-      	type: Array,
+      	type: Object,
         observer: "dataChanged"
       },
       handleResponse:{
@@ -32,9 +20,7 @@
       }
     },
     ready: function(){ 
-        console.log("h5tk-app ready"); 
-        this.data = "hi test";
-       // this.innerHTML = "<h1>Hello 0.8</h1>";
+        console.log("h5tk-item ready"); 
     },
     handleResponse:function(data){ 
           console.log("handleResponse.");
