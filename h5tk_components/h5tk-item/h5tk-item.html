@@ -21,14 +21,14 @@
     },
     ready: function(){ 
         console.log("h5tk-item ready"); 
+        console.log(this.data);
     },
     handleResponse:function(data){ 
-          console.log("handleResponse.");
-          console.log(data.detail);
-          this.data = data.detail;
+          console.log("h5tk-item handleResponse.");
+ 
       },
 	  dataChanged:function(data){ 
-	        console.log("dataChanged.");
+	        console.log("h5tk-item dataChanged.");
 	         console.log(this.data);
 	    }
   });
