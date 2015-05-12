@@ -1,0 +1,9 @@
+  .row {
+    padding: 5px 0px;
+    font-size: 18px;
+  }
+
+  .counter {
+    display: inline-block;
+    width: 30px;
+  }

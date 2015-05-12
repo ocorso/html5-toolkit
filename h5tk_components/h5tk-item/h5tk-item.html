@@ -1,7 +1,23 @@
 <link rel="import" href="../h5tk-elements.html">
 <dom-module id="h5tk-item">
+  <style>
+  .row {
+    padding: 5px 0px;
+    font-size: 18px;
+  }
+
+  .counter {
+    display: inline-block;
+    width: 30px;
+  }
+  </style>
+
   <template>
-    <h1>Title: <span>{{data.title}}</span></h1>
+    <div class="row">
+      <h1>Title: <span>{{data.title}}</span></h1>
+      <h2>Summary</h2>
+      <p>{{data.description}}</p>
+    </div>
   </template>
 </dom-module>
 
