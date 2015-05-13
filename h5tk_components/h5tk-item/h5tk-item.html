@@ -17,6 +17,14 @@
       <h1>Title: <span>{{data.title}}</span></h1>
       <h2>Summary</h2>
       <p>{{data.description}}</p>
+      <h3>Demo</h3>
+      <ul>
+        <template is="dom-repeat" items="{{data.demo}}">
+
+          <li>  <span class="counter"><span>{{counter(index)}}</span>.</span>
+            {{ item }} </li>
+        </template>
+      </ul>
     </div>
   </template>
 </dom-module>
@@ -37,7 +45,7 @@
     },
     ready: function(){ 
         console.log("h5tk-item ready"); 
-        console.log(this.data);
+        console.log(this.data.demo[0].title);
     },
     handleResponse:function(data){ 
           console.log("h5tk-item handleResponse.");
@@ -46,6 +54,9 @@
 	  dataChanged:function(data){ 
 	        console.log("h5tk-item dataChanged.");
 	         console.log(this.data);
-	    }
+	    },
+     counter: function(idx) {
+       return idx + 1;
+     },
   });
 </script>

@@ -10,7 +10,7 @@
       last-response="{{data}}"
       verbose="true"></iron-ajax>
 <button on-click="restart">Refresh</button>
-    <h3>My Firebase Data:</h3>
+    <h1>My HTML5 Toolkit Data:</h1>
     <template is="dom-repeat" items="{{data}}">
       <span class="counter"><span>{{counter(index)}}</span>.</span>
       <h5tk-item data="{{item}}"></h5tk-item>
@@ -26,16 +26,7 @@
         class: "layout vertical fit"
     },
     properties: {
-      data:{ 
-      	type: Array,
-        notify: true,
-        observer: "dataChanged"
-      },
-      handleResponse:{
-      	type:Object,
-        //notify: true,
-      	value:"handleResponse"
-      }
+
     },
     ready: function(){ 
         console.log("h5tk-app ready"); 
