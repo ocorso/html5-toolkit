@@ -1,0 +1,102 @@
+/* ==========================================================================
+   global
+========================================================================== */
+html, body {
+  font: 400 14px/1.6em RobotoDraft, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  text-rendering: optimizeLegibility; }
+
+body {
+  height: 100%; }
+  body .cf {
+    *zoom: 1; }
+    body .cf:before, body .cf:after {
+      content: " ";
+      display: table; }
+    body .cf:after {
+      clear: both; }
+  body a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none; }
+  body img {
+    max-width: 100%;
+    vertical-align: middle; }
+  body h1, body h2,
+  body h3,
+  body h4 {
+    line-height: 1.25;
+    margin: 0; }
+
+/* ==========================================================================
+   wrapper width and heights
+========================================================================== */
+.container {
+  height: 100%; }
+
+.left-side {
+  height: 100%;
+  z-index: 100; }
+  .left-side md-sidenav {
+    height: 100%; }
+
+.right-side {
+  height: 100%;
+  width: 100%; }
+  .right-side.lockNav {
+    width: calc(100% - 304px); }
+  .right-side md-content[ng-view] {
+    height: calc(100% - 64px);
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 24px; }
+
+/* ==========================================================================
+   typography
+========================================================================== */
+.md-display-1 {
+  font-size: 34px;
+  font-weight: 400; }
+
+.md-title {
+  font-size: 20px;
+  font-weight: 500; }
+
+.md-subhead {
+  font-size: 16px;
+  font-weight: 500; }
+
+/* ==========================================================================
+   toolbar
+========================================================================== */
+md-toolbar .md-button {
+  height: 64px;
+  padding: 8px 24px; }
+md-toolbar h3 {
+  margin-left: 24px; }
+
+/* ==========================================================================
+   navPanel
+========================================================================== */
+md-sidenav header {
+  background: #0277bd;
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  height: 64px;
+  padding-left: 24px;
+  position: relative;
+  z-index: 1; }
+md-sidenav md-list {
+  background: #f0f0f0 !important;
+  display: block;
+  height: calc(100% - 64px); }
+  md-sidenav md-list md-list-item a {
+    display: block;
+    font-weight: 500;
+    padding: 8px 24px; }
+
+/*# sourceMappingURL=style.scss.map */

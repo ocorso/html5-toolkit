@@ -21,8 +21,10 @@
       <ul>
         <template is="dom-repeat" items="{{data.demo}}">
 
-          <li>  <span class="counter"><span>{{counter(index)}}</span>.</span>
-            {{ item }} </li>
+          <li>  
+            <span class="counter"><span>{{counter(index)}}</span>.</span>
+            {{ item.title }} 
+          </li>
         </template>
       </ul>
     </div>
@@ -34,26 +36,15 @@
   Polymer({
     is: 'h5tk-item',
     properties: {
-      data:{ 
-      	type: Object,
-        observer: "dataChanged"
-      },
-      handleResponse:{
-      	type:Object,
-      	value:"handleResponse"
-      }
+
     },
     ready: function(){ 
         console.log("h5tk-item ready"); 
-        console.log(this.data.demo[0].title);
+        
     },
-    handleResponse:function(data){ 
-          console.log("h5tk-item handleResponse.");
- 
-      },
 	  dataChanged:function(data){ 
-	        console.log("h5tk-item dataChanged.");
-	         console.log(this.data);
+	       console.log("h5tk-item dataChanged.");
+	       console.log(this.data);
 	    },
      counter: function(idx) {
        return idx + 1;

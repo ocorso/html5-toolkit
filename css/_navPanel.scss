@@ -1,0 +1,28 @@
+md-sidenav {
+	header {
+		background: $primary-color-1;
+	  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	  -ms-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+		color: #fff;
+		height: 64px;
+		padding-left: 24px;
+		position: relative;
+	  z-index: 1
+	}
+
+	md-list {
+		background: $light-grey !important;
+		display: block;
+		height: calc(100% - 64px);
+
+		md-list-item {
+			a {
+				display: block;
+				font-weight: 500;
+				padding: 8px 24px;
+			}
+		}
+	}
+}

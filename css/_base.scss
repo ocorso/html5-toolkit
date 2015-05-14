@@ -1,0 +1,135 @@
+/* ==========================================================================
+   global
+========================================================================== */
+$font-stack: RobotoDraft, Roboto, Arial, sans-serif;
+$font-color: rgba(0,0,0,.87);
+$font-color-2: rgba(0,0,0,.54);
+$font-color-3: rgba(0,0,0,.26);
+$color-dividers: rgba(0,0,0,.12);
+$primary-color: rgb(2,136,209);
+$primary-color-1: rgb(2,119,189);
+$accent-color: rgb(174,234,0);
+$light-grey: #f0f0f0;
+
+html {
+	font: 400 14px/1.6em $font-stack;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	height: 100%;
+	@extend html;
+
+	.cf {
+	  *zoom: 1;
+
+	  &:before {
+		  content: " ";
+		  display: table;
+		}
+
+		&:after {
+			@extend .cf:before;
+			clear: both;
+		}
+	}
+
+	a {
+		color: inherit;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	img {
+		max-width: 100%;
+		vertical-align: middle;
+	}
+
+	h1 {
+		line-height: 1.25;
+		margin: 0;
+	}
+
+	h2,
+	h3,
+	h4 {
+		@extend h1;
+	}
+}
+
+
+/* ==========================================================================
+   wrapper width and heights
+========================================================================== */
+.container {
+	height: 100%;
+}
+
+.left-side {
+	height: 100%;
+  z-index: 100;
+
+  md-sidenav {
+		height: 100%;
+  }
+}
+
+.right-side {
+	height: 100%;
+	width: 100%;
+
+	&.lockNav	{
+		width: calc(100% - 304px);
+	}
+
+	md-content {
+		&[ng-view] {
+			height: calc(100% - 64px);
+			overflow: hidden;
+			overflow-y: auto;
+			padding: 24px;
+		}
+	}
+}
+
+
+/* ==========================================================================
+   typography
+========================================================================== */
+.md-display-1 {
+	font-size: 34px;
+	font-weight: 400;
+}
+
+.md-title {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.md-subhead {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+
+/* ==========================================================================
+   toolbar
+========================================================================== */
+md-toolbar {
+	.md-button {
+		height: 64px;
+		padding: 8px 24px;
+	}
+
+	h3 {
+		margin-left: 24px;
+	}
+}
+
+
+/* ==========================================================================
+   navPanel
+========================================================================== */
+@import '_navPanel';
