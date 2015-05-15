@@ -1,65 +1,132 @@
-<style>
-	.item {
-		margin: 20px 0;
-	}
+<article ng-repeat="item in welcome.toolkitItems">
+	<header>
+		<h1 class="md-display-1">
+			<a href="#/h5tk/{{ item.title | hyphenate | lowercase }}">
+				{{ item.title }}
+			</a>
+		</h1>
 
-	hr {
-		background: #eee;
-		border: none;
-		height: 1px;
-		margin: 20px 0;
-	}
+		<md-list class="tags" 
+						 layout-sm="column" layout-align-sm="start start"
+						 layout="row" layout-align="start center">
 
-	h3 + p {
-		margin-top: 0;
-	}
-</style>
+			<md-list-item class="md-body-1" ng-repeat="tag in item.tags">
+				<ng-md-icon icon="label" size="24" ng-if="$first"></ng-md-icon>
+				<span ng-if="!$first">{{ tag }}</span>
+			</md-list-item>
+		</md-list> <!-- tags -->
+	</header> <!-- title -->
 
-<div ng-repeat="item in welcome.toolkitItems">
-	<h2>{{item.title}}</h2>
+	<section class="summary">
+		<header>
+			<h3 class="md-headline">
+				Summary
+			</h3>
+		</header>
 
-	<p><strong>Description:</strong> <span ng-bind-html="item.description"></span></p>
+		<main>
+			<p class="md-body-1" ng-bind-html="item.description"></p>
+		</main>
+	</section> <!-- description -->
 
-	<div class="item">
-		<h3>Demos</h3>
-		<p ng-repeat="demo in item.demo">
-			<strong>Title:</strong> {{demo.title}}<br />
-			<strong>Description:</strong> {{demo.description}}<br />
-			<strong>Link label:</strong> {{demo.link.title}}<br />
-			<strong>Link url:</strong> {{demo.link.url}}
-		</p>
-	</div>
+	<section class="demo">
+		<header>
+			<h3 class="md-headline">
+				Demo(s)
+			</h3>
+		</header>
 
-	<div class="item">
-		<h3>Links</h3>
-		<p ng-repeat="link in item.links">
-			<strong>Label:</strong> {{link.title}}<br />
-			<strong>Url:</strong> {{link.url}}
-		</p>
-	</div>
+		<main>
+			<md-list>
+				<md-list-item ng-repeat="demo in item.demo">
+					<h4 class="md-subhead" 
+							layout-sm="column" layout-align-sm="start start"
+							layout="row" layout-align="space-between center">
 
-	<div class="item">
-		<h3>Pro tips</h3>
-		<p ng-repeat="tip in item['pro-tips']">
-			<strong>Description:</strong> {{tip.description}}<br />
-			<strong>Type:</strong> {{tip.type}}
-		</p>
-	</div>
+						<span>{{ demo.title }}</span>
 
-	<div class="item">
-		<h3>Quick start</h3>	
-		<p ng-repeat="start in item['quick-start']">
-			<strong>Description:</strong> {{start.description}}<br />
-			<!-- <strong>Code snippet:</strong> {{start['code snippet']}}<br /> -->
-			<strong>Link label:</strong> {{start.link.title}}<br />
-			<strong>Link url:</strong> {{start.link.url}}
-		</p>
-	</div>
+						<md-button class="md-primary md-hue-1 md-raised">
+							{{ demo.link.title }}
+						</md-button>
+					</h4>
 
-	<div class="item">
-		<h3>Tags</h3>
-		<div ng-repeat="tags in item.tags"><strong>{{$index + 1}}:</strong> {{tags}}</div>
-	</div>
+					<p class="md-body-1" ng-bind-html="demo.description"></p>
+				</md-list-item>
+			</md-list>
+		</main>
+	</section> <!-- demos -->
 
-	<hr / ng-if="!$last">
-</div>
+	<section class="quick-start">
+		<header>
+			<h3 class="md-headline">
+				Quick start
+			</h3>
+		</header>
+
+		<main>
+			<md-list>
+				<md-list-item ng-repeat="quick in item['quick-start']" 
+											layout="row" layout-align:"start start">
+					<h1 class="md-display-1 numeral">
+						{{ $index + 1 }}
+					</h1>
+
+					<div>
+						<p class="md-body-1" ng-bind-html="quick.description"></p>
+
+						<p>
+							<md-button href="{{ quick.link.url }}" 
+												 target="_blank" 
+												 class="md-primary"
+												 md-no-ink>
+								{{ quick.link.title }}
+							</md-button>
+						</p>
+					</div>
+				</md-list-item>
+			</md-list>
+		</main>
+	</section> <!-- quick start -->
+
+	<section class="pro-tips block-color accent-2">
+		<header>
+			<h3 class="md-headline">
+				Pro tips
+			</h3>
+		</header>
+
+		<main>
+			<md-list>
+				<md-list-item ng-repeat="tip in item['pro-tips']"
+											layout="row" layout-align:"start start">
+					<h1 class="md-display-1 numeral">
+						{{ $index + 1 }}
+					</h1>
+
+					<div>
+						<p class="md-body-1" ng-bind-html="tip.description"></p>
+						<p class="md-body-1">{{ tip.type }}</p>
+					</div>
+				</md-list-item>
+			</md-list>
+		</main>
+	</section> <!-- pro tips -->
+
+	<footer>
+		<header>
+			<h4 class="md-subhead">
+				Helpful links
+			</h4>
+		</header>
+
+		<main class="links md-body-1">
+			<md-list ng-repeat="link in item.links">
+				<md-list-item>
+					<md-button href="{{ link.url }}" target="_blank" md-no-ink>
+						{{ link.title }}
+					</md-button>
+				</md-list-item>
+			</md-list> <!-- links -->
+		</main>
+	</footer>
+</article>

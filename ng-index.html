@@ -15,12 +15,12 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
 <script src="//code.angularjs.org/1.3.15/angular-route.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.min.js"></script>
-
 <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-<link rel="import" href="h5tk_components/h5tk-elements.html">
 
+<link rel="import" href="h5tk_components/h5tk-elements.html">
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.2/angular-material.min.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Code+Pro:500'>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -36,8 +36,9 @@
       <md-list>
         <md-list-item ng-repeat="item in main.toolkitItems">
           <a href="#/h5tk/{{item.title | lowercase | hyphenate}}" 
+             class="md-body-2"
              ng-click="main.closeNav()">
-            {{item.title}}
+            {{ item.title }}
           </a>
         </md-list-item>
       </md-list>
@@ -51,10 +52,10 @@
         <ng-md-icon icon="menu" style="fill: #fff" size="24"></ng-md-icon>
       </md-button>
 
-      <h3 class="md-subhead">{{main.pageTitle}}</h3>
+      <h3 class="md-subhead">{{ main.pageTitle }}</h3>
     </md-toolbar>
 
-    <md-content layout-padding ng-view></md-content>
+    <md-content ng-view></md-content>
   </div>
 </div>
 

@@ -9,18 +9,23 @@ md-sidenav {
 		height: 64px;
 		padding-left: 24px;
 		position: relative;
-	  z-index: 1
+	  z-index: 1;
+
+	  a {
+	  	color: #fff;
+	  }
 	}
 
 	md-list {
 		background: $light-grey !important;
 		display: block;
 		height: calc(100% - 64px);
+		padding-top: 24px;
 
 		md-list-item {
 			a {
+				color: $font-color;
 				display: block;
-				font-weight: 500;
 				padding: 8px 24px;
 			}
 		}

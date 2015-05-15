@@ -16,10 +16,12 @@ app.config(function($mdThemingProvider, $routeProvider) {
   $mdThemingProvider.theme('default')
     .primaryPalette('light-blue', {
       'default': '700',
-      'hue-1': '800',
+      'hue-1': '800'
     })
-    .accentPalette('lime', {
-      'default': 'A700'
+    .accentPalette('pink', {
+      'default': '500',
+      'hue-1': '200',
+      'hue-2': '100',
     })
     .warnPalette('red');
 
