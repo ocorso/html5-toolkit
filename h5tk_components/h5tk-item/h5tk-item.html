@@ -1,0 +1,53 @@
+<link rel="import" href="../h5tk-elements.html">
+<dom-module id="h5tk-item">
+  <style>
+  .row {
+    padding: 5px 0px;
+    font-size: 18px;
+  }
+
+  .counter {
+    display: inline-block;
+    width: 30px;
+  }
+  </style>
+
+  <template>
+    <div class="row">
+      <h1>Title: <span>{{data.title}}</span></h1>
+      <h2>Summary</h2>
+      <p>{{data.description}}</p>
+      <h3>Demo</h3>
+      <ul>
+        <template is="dom-repeat" items="{{data.demo}}">
+
+          <li>  
+            <span class="counter"><span>{{counter(index)}}</span>.</span>
+            {{ item.title }} 
+          </li>
+        </template>
+      </ul>
+    </div>
+  </template>
+</dom-module>
+
+<script type="text/javascript">
+
+  Polymer({
+    is: 'h5tk-item',
+    properties: {
+
+    },
+    ready: function(){ 
+        console.log("h5tk-item ready"); 
+        
+    },
+	  dataChanged:function(data){ 
+	       console.log("h5tk-item dataChanged.");
+	       console.log(this.data);
+	    },
+     counter: function(idx) {
+       return idx + 1;
+     },
+  });
+</script>

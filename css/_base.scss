@@ -1,0 +1,323 @@
+/* ==========================================================================
+   global
+========================================================================== */
+$font-stack: RobotoDraft, Roboto, Arial, sans-serif;
+$font-color: rgba(0,0,0,.87);
+$font-color-2: rgba(0,0,0,.54);
+$font-color-3: rgba(0,0,0,.26);
+$color-dividers: rgba(0,0,0,.12);
+$primary-color: rgb(2,136,209);
+$primary-color-1: rgb(2,119,189);
+$accent-color: rgb(255,64,129);
+$accent-color-1: rgb(244,143,177);
+$accent-color-2: rgb(248,187,208); 
+$light-grey: #f0f0f0;
+$large-padding: 24px;
+$small-padding: 16px;
+
+@mixin transition($speed: .2s, $ease: cubic-bezier(0.4, 0.0, 0.2, 1)) {
+	-moz-transition: all $speed $ease;
+	-ms-transition: all $speed $ease;
+	-webkit-transition: all $speed $ease;
+	transition: all $speed $ease;
+}
+
+html {
+	font: 400 10px/1.846 $font-stack;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	height: 100%;
+	@extend html;
+
+	.cf {
+	  *zoom: 1;
+
+	  &:before {
+		  content: " ";
+		  display: table;
+		}
+
+		&:after {
+			@extend .cf:before;
+			clear: both;
+		}
+	}
+
+	a {
+		color: $primary-color;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	img {
+		max-width: 100%;
+		vertical-align: middle;
+	}
+
+	h1 {
+		line-height: 1.25;
+		margin: 0;
+	}
+
+	h2,
+	h3,
+	h4 {
+		@extend h1;
+	}
+}
+
+
+/* ==========================================================================
+   wrapper width and heights
+========================================================================== */
+.container {
+	height: 100%;
+}
+
+.left-side {
+	height: 100%;
+  z-index: 100;
+
+  md-sidenav {
+		height: 100%;
+  }
+}
+
+.right-side {
+	height: 100%;
+	width: 100%;
+
+	&.lockNav	{
+		width: calc(100% - 304px);
+	}
+
+	md-content {
+		&[ng-view] {
+			height: calc(100% - 64px);
+			overflow: hidden;
+			overflow-y: auto;
+			padding: $large-padding;
+		}
+	}
+}
+
+
+/* ==========================================================================
+   typography
+========================================================================== */
+.md-display-1 {
+	color: $accent-color;
+	font-size: 3.4rem;
+	font-weight: 400;
+
+	&.numeral {
+		border-right: 2px solid $accent-color-1;
+		font-weight: 300;
+	  line-height: 1;
+	  margin-right: 24px;
+	  margin-top: 14px;
+	  min-width: 40px;
+	  text-align: left;
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+.md-headline {
+	font-size: 2.4rem;
+	font-weight: 400;
+}
+
+.md-title {
+	font-size: 2.0rem;
+	font-weight: 500;
+}
+
+.md-subhead {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.md-body-1 {
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.md-body-2 {
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.md-button {
+	@extend .md-body-2;
+	padding: 6px 16px;
+
+	&[md-no-ink] {
+		color: $primary-color;
+		padding: 0;
+
+		&:hover,
+		&:focus {
+			background: none !important;
+		}
+	}
+}
+
+.md-caption {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+
+/* ==========================================================================
+   toolbar
+========================================================================== */
+md-toolbar {
+	.md-button {
+		height: 64px;
+		padding: 8px 24px;
+	}
+
+	.md-subhead {
+		color: #fff;
+		font-weight: 400;
+		margin-left: 24px;
+		@include transition;
+	}
+}
+
+
+/* ==========================================================================
+   navPanel
+========================================================================== */
+@import '_navPanel';
+
+
+/* ==========================================================================
+   general styling for main elements
+========================================================================== */
+article {
+	border-top: 1px solid $color-dividers;
+
+	&:first-child {
+		border: none;
+	}
+
+	header {
+		margin: 8px 0;
+		max-width: 912px;
+
+		.tags {
+			ng-md-icon {
+				fill: $font-color-3;
+			}
+
+			md-list-item {
+				background: $light-grey;
+				color: $font-color-2;
+				margin: 6px;
+				padding: 0 6px;
+
+				&:first-child {
+					background: none;
+					height: 24px;
+					margin-left: 0;
+					margin-right: 0;
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	section {
+		margin: 24px 0;
+		max-width: 912px;
+
+		md-list {
+			display: block;
+
+			md-list-item {
+				display: block;
+			}
+		}
+	}
+
+	footer {
+		margin: 24px 0;
+
+		.links {
+			margin-bottom: 24px;
+
+			md-list-item {
+				border-right: 1px solid $color-dividers;
+				display: inline-block;
+				margin-right: 8px;
+			  margin-top: 8px;
+				padding-right: 8px;
+
+				&:last-child {
+					border: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.block-color {
+		&.accent {
+			background: $accent-color;
+
+			.numeral {
+				border-color: #fff;
+				color: #fff;
+			}
+		}
+
+		&.accent-1 {
+			background: $accent-color-1;
+		}
+
+		&.accent-2 {
+			background: $accent-color-2;
+		}
+
+		header {
+			border-bottom: 1px solid $color-dividers;
+			padding: $large-padding;
+		}
+
+		main {
+			padding: 0 $large-padding $large-padding;
+		}
+	}
+}
+
+
+/* ==========================================================================
+   code
+========================================================================== */
+pre {
+	background: $light-grey;
+	color: $accent-color-1;
+	font: 500 16px/1.6em 'Source Code Pro', monospace;
+	padding: $large-padding;
+}
+
+
+/* ==========================================================================
+   media queries
+========================================================================== */
+@import '_mediaQueries';
+
+
+
+
+

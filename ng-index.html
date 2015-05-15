@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MainCtrl as main">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>HTML5 Toolkit</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angular_material/0.8.2/angular-material.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
+<script src="//code.angularjs.org/1.3.15/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.min.js"></script>
+<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+<link rel="import" href="h5tk_components/h5tk-elements.html">
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.2/angular-material.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Code+Pro:500'>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container" layout="row" layout-align="space-between start">
+  <div class="left-side">
+    <md-sidenav md-component-id="navPanel" 
+                md-is-locked-open="main.size == 'lg'">
+      <header class="md-title" layout="row" layout-align="start center">
+        <a href="#/htk5/welcome" ng-click="main.closeNav()">HTML5 Toolkit</a>
+      </header>
+
+      <md-list>
+        <md-list-item ng-repeat="item in main.toolkitItems">
+          <a href="#/h5tk/{{item.title | lowercase | hyphenate}}" 
+             class="md-body-2"
+             ng-click="main.closeNav()">
+            {{ item.title }}
+          </a>
+        </md-list-item>
+      </md-list>
+    </md-sidenav>
+  </div>
+
+  <div class="right-side" ng-class="{lockNav:main.size == 'lg'}">
+    <md-toolbar layout="row" layout-align="start center">
+      <md-button ng-click="main.toggleNav()" 
+                 ng-show="main.size != 'lg'" aria-label="Toggle Nav">
+        <ng-md-icon icon="menu" style="fill: #fff" size="24"></ng-md-icon>
+      </md-button>
+
+      <h3 class="md-subhead">{{ main.pageTitle }}</h3>
+    </md-toolbar>
+
+    <md-content ng-view></md-content>
+  </div>
+</div>
+
+<script src="app/_app.js"></script>
+<script src="app/welcome/WelcomeController.js"></script>
+<script src="app/toolkit/ToolkitController.js"></script>
+
+</body>
+</html>

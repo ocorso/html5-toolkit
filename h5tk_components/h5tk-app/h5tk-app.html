@@ -1,44 +1,54 @@
 <link rel="import" href="../h5tk-elements.html">
 <dom-module id="h5tk-app">
+  <link href="h5tk-app.css"></link>
   <template>
-    <firebase-element 
-        location="https://html5-toolkit.firebaseio.com/"
-        data="{{data}}"
-        keys="{{keys}}"
-				>
-			</firebase-element>
-
-        <h3>My Firebase Data</h3>
-
+    <iron-ajax
+    	id="firebase"
+      auto
+      url="https://html5-toolkit.firebaseio.com/toolkit-items.json"
+      handleas="json"
+      last-response="{{data}}"
+      verbose="true"></iron-ajax>
+<button on-click="restart">Refresh</button>
+    <h1>My HTML5 Toolkit Data:</h1>
+    <template is="dom-repeat" items="{{data}}">
+      <span class="counter"><span>{{counter(index)}}</span>.</span>
+      <h5tk-item data="{{item}}"></h5tk-item>
+    </template>
   </template>
-<template repeat="{{key in keys}}">
-  <p>{{key}}: {{data[key]}}</p>
-</template>
 </dom-module>
 
 <script type="text/javascript">
 
   Polymer({
     is: 'h5tk-app',
+    hostAttributes: {
+        class: "layout vertical fit"
+    },
     properties: {
-        data:{ 
-        	type: Object, 
-        	observer: "dataChanged", 
-        	notify:true
-        },
-        keys:{
-        	type: Array
-        }
+
     },
     ready: function(){ 
-        console.log("ready"); 
+        console.log("h5tk-app ready"); 
+       // this.data = [{"title":"hi test1"}, {"title": "hi test2"}];
        // this.innerHTML = "<h1>Hello 0.8</h1>";
     },
-  dataChanged:function(data){ 
-        console.log("dataChanged.");
+    handleResponse:function(data){ 
+          console.log("handleResponse.");
+          console.log(data.detail[0]);
+          this.data = data.detail;
     },
-  dataHandler:function(data){ 
-        console.log("dataHandler.");
-    }
+	  dataChanged:function(data){ 
+	        console.log("dataChanged.");
+	         console.log(this.data);
+           this.data = data;
+	  },
+    counter: function(idx) {
+       return idx + 1;
+     },
+    restart: function() {
+        console.log("firebase restart", this.data);
+        this.$.firebase.generateRequest();
+     },
   });
 </script>

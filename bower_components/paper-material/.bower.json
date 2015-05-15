@@ -1,0 +1,42 @@
+{
+  "name": "paper-material",
+  "version": "0.9.0",
+  "private": true,
+  "authors": [
+    "The Polymer Authors"
+  ],
+  "keywords": [
+    "web-components",
+    "web-component",
+    "polymer"
+  ],
+  "main": [
+    "paper-material.html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/paper-material"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/PolymerElements/paper-material",
+  "ignore": [],
+  "dependencies": {
+    "polymer": "polymer/polymer#v0.9.0-rc.1",
+    "paper-styles": "polymerelements/paper-styles#^0.9.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^0.9.0",
+    "test-fixture": "polymerelements/test-fixture#^0.9.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.6.0",
+    "web-component-tester": "*"
+  },
+  "_release": "0.9.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.9.0",
+    "commit": "54b1fc6c7067a080b5e84b59f8d3128cfca54c38"
+  },
+  "_source": "git://github.com/polymerelements/paper-material.git",
+  "_target": "^0.9.0",
+  "_originalSource": "polymerelements/paper-material"
+}
