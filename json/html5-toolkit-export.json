@@ -82,7 +82,7 @@
       "title" : "YouTube Player",
       "description" : "The YouTube Player IFrame API allows you to easily embed YouTube video content into your Ad. This will allow click to play interactions to increase your public view count to help your video and channel gain exposure. Flash and Javascript API’s have been deprecated in favor of the IFrame API which allows YouTube to serve HTML5 player by default and backup to Flash if necessary.",
       "demo" : [ {
-        "description" : "Demonstrates the YouTube Player API’s various parameters, functions, and events.",
+        "description" : "Demonstrates the YouTube Player API’s various parameters, functions, and events.<br \/><br \/><iframe id=\"player\" type=\"text/html\" width=\"640\" height=\"390\"\n  src=\"http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=https://html5-toolkit.appspot.com\"\n  frameborder=\"0\"></iframe>",
         "link" : {
           "title" : "YouTube Player Demo",
           "url" : "https://developers.google.com/youtube/youtube_player_demo"

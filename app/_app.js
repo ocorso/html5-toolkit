@@ -1,6 +1,6 @@
 var app = angular.module('app', [
-  'ngMaterial', 
-  'ngAnimate', 
+  'ngMaterial',
+  'ngAnimate',
   'ngRoute',
   'ngMdIcons',
   'ngSanitize',
@@ -58,9 +58,9 @@ app.factory('ToolkitData', function($http) {
 /*
  * main controller that is accessible in any view
  */
-app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams, 
+app.controller('MainCtrl', ['$sce', function($scope, $sce, $mdSidenav, $window, $routeParams,
   ToolkitData) {
-  
+
   var main = this;
 
   // toggle nav
@@ -75,7 +75,7 @@ app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams,
 
   // get Firebase data
   ToolkitData.items().success(function(data) {
-    main.toolkitItems = data['toolkit-items'];
+    main.toolkitItems = $sce.trustAsHtml(data['toolkit-items']);
 
   }).error(function() {
     console.log('Error loading in Firebase data.');
@@ -93,7 +93,7 @@ app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams,
 
     } else if( width > 600 && width <= 960 ) {
       main.size = 'md';
-    
+
     } else {
       main.size = 'lg';
     }
@@ -114,14 +114,14 @@ app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams,
       $scope.$apply(function() {
         main.size = 'md';
       });
-    
+
     } else {
       $scope.$apply(function() {
         main.size = 'lg';
       });
     }
   };
-});
+}]);
 
 
 // custom filter that takes title of toolkit item
