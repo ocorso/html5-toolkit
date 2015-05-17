@@ -1,9 +1,13 @@
 var toolkit = angular.module('toolkit', []);
 
-toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location, 
+toolkit.controller('ToolkitCtrl', ['$sce', function($scope, $sce, $routeParams, $location,
 	ToolkitData) {
 
 	var toolkit = this;
+
+	toolkit.safeHtml = function(html) {
+	  return $sce.trustAsHtml(html);
+	};
 
 	// get Firebase data
   ToolkitData.items().success(function(data) {
@@ -45,4 +49,4 @@ toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
   }).error(function() {
     console.log('Error loading in Firebase data.');
   });
-});
+}]);

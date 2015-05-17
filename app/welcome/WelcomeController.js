@@ -1,9 +1,13 @@
 var welcome = angular.module('welcome', []);
 
-welcome.controller('WelcomeCtrl', function($scope, ToolkitData) {
+welcome.controller('WelcomeCtrl', ['$sce', function($scope, $sce, ToolkitData) {
 	$scope.main.pageTitle = 'Welcome';
 
 	var welcome = this;
+
+  welcome.safeHtml = function(html) {
+    return $sce.trustAsHtml(html);
+  };
 
 	// get Firebase data
   ToolkitData.items().success(function(data) {
@@ -13,4 +17,4 @@ welcome.controller('WelcomeCtrl', function($scope, ToolkitData) {
   }).error(function() {
     console.log('Error loading in Firebase data.');
   });
-});
+}]);

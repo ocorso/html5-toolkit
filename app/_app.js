@@ -72,10 +72,13 @@ app.controller('MainCtrl', ['$sce', function($scope, $sce, $mdSidenav, $window, 
     $mdSidenav('navPanel').close();
   }
 
+  main.safeHtml = function(html) {
+    return $sce.trustAsHtml(html);
+  };
 
   // get Firebase data
   ToolkitData.items().success(function(data) {
-    main.toolkitItems = $sce.trustAsHtml(data['toolkit-items']);
+    main.toolkitItems = data['toolkit-items'];
 
   }).error(function() {
     console.log('Error loading in Firebase data.');
