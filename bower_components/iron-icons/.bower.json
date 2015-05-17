@@ -1,32 +1,44 @@
 {
-  "name": "iron-icon",
-  "private": true,
-  "version": "0.8.3",
-  "main": "iron-icon.html",
-  "author": [
+  "name": "iron-icons",
+  "version": "0.9.2",
+  "description": "A set of icons for use with iron-icon",
+  "authors": [
     "The Polymer Authors"
   ],
+  "keywords": [
+    "web-components",
+    "web-component",
+    "polymer"
+  ],
+  "main": "iron-icons.html",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/paper-icons"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/PolymerElements/paper-icons",
   "dependencies": {
-    "iron-flex-layout": "polymerelements/iron-flex-layout#^0.8.0",
-    "iron-meta": "polymerelements/iron-meta#^0.8.0",
-    "polymer": "polymer/polymer#v0.8.0-rc.7"
+    "iron-icon": "polymerelements/iron-icon#^0.9.0",
+    "iron-iconset-svg": "polymerelements/iron-iconset-svg#^0.9.0",
+    "polymer": "Polymer/polymer#^0.9.0"
   },
   "devDependencies": {
-    "test-fixture": "polymerelements/test-fixture#^0.8.0",
-    "iron-iconset": "polymerelements/iron-iconset#^0.8.0",
-    "iron-icons": "polymerelements/iron-icons#^0.8.0",
-    "iron-doc-viewer": "polymerelements/iron-doc-viewer#^0.8.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.6.0",
-    "web-component-tester": "*"
+    "iron-flex-layout": "polymerelements/iron-flex-layout#^0.9.0",
+    "iron-meta": "polymerelements/iron-meta#^0.9.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
-  "homepage": "https://github.com/PolymerElements/iron-icon",
-  "_release": "0.8.3",
+  "ignore": [
+    "util",
+    "update-icons.sh"
+  ],
+  "_release": "0.9.2",
   "_resolution": {
     "type": "version",
-    "tag": "v0.8.3",
-    "commit": "c1aa02593553cc5c2eb0e70a0ac0f0e121165cf1"
+    "tag": "v0.9.2",
+    "commit": "11dc8f9df372d129f6c3685f156c4d0aa2e9ca2d"
   },
-  "_source": "git://github.com/PolymerElements/iron-icon.git",
-  "_target": "^0.8.0",
-  "_originalSource": "PolymerElements/iron-icon"
+  "_source": "git://github.com/PolymerElements/iron-icons.git",
+  "_target": "^0.9.0",
+  "_originalSource": "PolymerElements/iron-icons"
 }
