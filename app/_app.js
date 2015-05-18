@@ -1,6 +1,6 @@
 var app = angular.module('app', [
-  'ngMaterial',
-  'ngAnimate',
+  'ngMaterial', 
+  'ngAnimate', 
   'ngRoute',
   'ngMdIcons',
   'ngSanitize',
@@ -58,9 +58,9 @@ app.factory('ToolkitData', function($http) {
 /*
  * main controller that is accessible in any view
  */
-app.controller('MainCtrl', ['$sce', function($scope, $sce, $mdSidenav, $window, $routeParams,
+app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams, 
   ToolkitData) {
-
+  
   var main = this;
 
   // toggle nav
@@ -72,9 +72,6 @@ app.controller('MainCtrl', ['$sce', function($scope, $sce, $mdSidenav, $window, 
     $mdSidenav('navPanel').close();
   }
 
-  main.safeHtml = function(html) {
-    return $sce.trustAsHtml(html);
-  };
 
   // get Firebase data
   ToolkitData.items().success(function(data) {
@@ -96,7 +93,7 @@ app.controller('MainCtrl', ['$sce', function($scope, $sce, $mdSidenav, $window, 
 
     } else if( width > 600 && width <= 960 ) {
       main.size = 'md';
-
+    
     } else {
       main.size = 'lg';
     }
@@ -117,14 +114,14 @@ app.controller('MainCtrl', ['$sce', function($scope, $sce, $mdSidenav, $window, 
       $scope.$apply(function() {
         main.size = 'md';
       });
-
+    
     } else {
       $scope.$apply(function() {
         main.size = 'lg';
       });
     }
   };
-}]);
+});
 
 
 // custom filter that takes title of toolkit item
