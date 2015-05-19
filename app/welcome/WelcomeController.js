@@ -8,7 +8,6 @@ welcome.controller('WelcomeCtrl', function($scope, ToolkitData) {
 	// get Firebase data
   ToolkitData.items().success(function(data) {
     welcome.toolkitItems = data['toolkit-items'];
-    console.log(welcome.toolkitItems);
 
   }).error(function() {
     console.log('Error loading in Firebase data.');

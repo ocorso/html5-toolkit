@@ -16,7 +16,8 @@ app.config(function($mdThemingProvider, $routeProvider) {
   $mdThemingProvider.theme('default')
     .primaryPalette('light-blue', {
       'default': '700',
-      'hue-1': '800'
+      'hue-1': '800',
+      'hue-2': '100'
     })
     .accentPalette('pink', {
       'default': '500',
@@ -59,7 +60,7 @@ app.factory('ToolkitData', function($http) {
  * main controller that is accessible in any view
  */
 app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams, 
-  ToolkitData) {
+  $sce, ToolkitData) {
   
   var main = this;
 
@@ -72,10 +73,16 @@ app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams,
     $mdSidenav('navPanel').close();
   }
 
+  // safe HTML
+  main.safeHtml = function(html) {
+    return $sce.trustAsHtml(html);
+  };
+
 
   // get Firebase data
   ToolkitData.items().success(function(data) {
     main.toolkitItems = data['toolkit-items'];
+    console.log(main.toolkitItems);
 
   }).error(function() {
     console.log('Error loading in Firebase data.');
@@ -128,6 +135,8 @@ app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams,
 // and hyphenates it if it's more than 1 word a
 app.filter('hyphenate', function() {
   return function(str) {
-    return str.split(' ').join('-');
+    if( str != undefined ) {
+      return str.split(' ').join('-');
+    }
   }
 });

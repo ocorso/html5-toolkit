@@ -2,3 +2,4 @@
 WEB-INF/*
 WEB-INF/
 appengine-generated/
+.DS_Store

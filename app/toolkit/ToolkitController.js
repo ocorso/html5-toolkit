@@ -36,7 +36,6 @@ toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
 	  if( match == 1 ) {
 	  	$scope.main.pageTitle = pageTitle;
 	  	toolkit.content = toolkit.toolkitItems[itemIndex];
-	  	console.log(toolkit.content);
 
 	  } else {
 	  	$location.path('/h5tk/welcome');

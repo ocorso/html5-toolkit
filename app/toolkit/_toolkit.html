@@ -8,10 +8,7 @@
 			</a>
 		</h1>
 
-		<md-list class="tags" 
-						 layout-sm="column" layout-align-sm="start start"
-						 layout="row" layout-align="start center">
-
+		<md-list class="tags" layout="row" layout-align="start center">
 			<md-list-item class="md-body-1" ng-repeat="tag in toolkit.content.tags">
 				<ng-md-icon icon="label" size="24" ng-if="$first"></ng-md-icon>
 				<span ng-if="!$first">{{ tag }}</span>
@@ -27,14 +24,14 @@
 		</header>
 
 		<main>
-			<p class="md-body-1" ng-bind-html="toolkit.content.description"></p>
+			<p class="md-body-1" ng-bind-html="main.safeHtml(toolkit.content.description)"></p>
 		</main>
 	</section> <!-- description -->
 
 	<section class="demo">
 		<header>
 			<h3 class="md-headline">
-				Demo(s)
+				Demo
 			</h3>
 		</header>
 
@@ -52,11 +49,11 @@
 						</md-button>
 					</h4>
 
-					<p class="md-body-1" ng-bind-html="demo.description"></p>
+					<p class="md-body-1" ng-bind-html="main.safeHtml(demo.description)"></p>
 				</md-list-item>
 			</md-list>
 		</main>
-	</section> <!-- demos -->
+	</section> <!-- demo -->
 
 	<section class="quick-start">
 		<header>
@@ -74,7 +71,7 @@
 					</h1>
 
 					<div>
-						<p class="md-body-1" ng-bind-html="quick.description"></p>
+						<p class="md-body-1" ng-bind-html="main.safeHtml(quick.description)"></p>
 
 						<p>
 							<md-button href="{{ quick.link.url }}" 
@@ -90,7 +87,7 @@
 		</main>
 	</section> <!-- quick start -->
 
-	<section class="pro-tips block-color accent-2">
+	<section class="pro-tips">
 		<header>
 			<h3 class="md-headline">
 				Pro tips
@@ -99,15 +96,10 @@
 
 		<main>
 			<md-list>
-				<md-list-item ng-repeat="tip in toolkit.content['pro-tips']"
-											layout="row" layout-align:"start start">
-					<h1 class="md-display-1 numeral">
-						{{ $index + 1 }}
-					</h1>
-
-					<div>
-						<p class="md-body-1" ng-bind-html="tip.description"></p>
-						<p class="md-body-1">{{ tip.type }}</p>
+				<md-list-item ng-repeat="tip in toolkit.content['pro-tips']">
+					<div class="block" ng-class="{good: tip.type == 'good', bad: tip.type == 'bad'}">
+						<h4 class="md-subhead">{{ tip.type }}</h4>
+						<p class="md-body-1" ng-bind-html="main.safeHtml(tip.description)"></p>
 					</div>
 				</md-list-item>
 			</md-list>
