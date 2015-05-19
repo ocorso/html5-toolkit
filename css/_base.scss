@@ -8,9 +8,12 @@ $font-color-3: rgba(0,0,0,.26);
 $color-dividers: rgba(0,0,0,.12);
 $primary-color: rgb(2,136,209);
 $primary-color-1: rgb(2,119,189);
+$primary-color-2: rgb(179,229,252);
 $accent-color: rgb(255,64,129);
 $accent-color-1: rgb(244,143,177);
-$accent-color-2: rgb(248,187,208); 
+$accent-color-2: rgb(248,187,208);
+$accent-green: rgb(14,156,87);
+$accent-green-1: rgb(184,245,201);
 $light-grey: #f0f0f0;
 $large-padding: 24px;
 $small-padding: 16px;
@@ -115,8 +118,8 @@ body {
 	font-weight: 400;
 
 	&.numeral {
-		border-right: 2px solid $accent-color-1;
 		font-weight: 300;
+		height: 40px;
 	  line-height: 1;
 	  margin-right: 24px;
 	  margin-top: 14px;
@@ -142,6 +145,13 @@ body {
 .md-subhead {
 	font-size: 1.6rem;
 	font-weight: 500;
+
+	a {
+		ng-md-icon {
+			fill: $primary-color;
+			margin-left: 4px;
+		}
+	}
 }
 
 .md-body-1 {
@@ -157,6 +167,7 @@ body {
 .md-button {
 	@extend .md-body-2;
 	padding: 6px 16px;
+  white-space: normal;
 
 	&[md-no-ink] {
 		color: $primary-color;
@@ -202,6 +213,14 @@ md-toolbar {
 /* ==========================================================================
    general styling for main elements
 ========================================================================== */
+.progress-circle {
+	text-align: center;
+
+	md-progress-circular {
+		display: inline-block;
+	}
+}
+
 article {
 	border-top: 1px solid $color-dividers;
 
@@ -214,6 +233,8 @@ article {
 		max-width: 912px;
 
 		.tags {
+			flex-wrap: wrap;
+
 			ng-md-icon {
 				fill: $font-color-3;
 			}
@@ -237,7 +258,7 @@ article {
 	}
 
 	section {
-		margin: 24px 0;
+		margin: $large-padding + 8px 0;
 		max-width: 912px;
 
 		md-list {
@@ -245,53 +266,89 @@ article {
 
 			md-list-item {
 				display: block;
+
+				&:first-child {
+					.block {
+						margin-top: 0;
+					}
+				}
+			}
+
+			iframe {
+				max-width: 640px;
+				width: 100%;
+			}
+		}
+
+		.block {
+			margin-top: $small-padding;
+			padding: $large-padding;
+
+			&.good {
+				background: $accent-green-1;
+
+				.md-subhead {
+					border-bottom: 1px solid $accent-green;
+					text-transform: uppercase
+				}
+			}
+
+			&.bad {
+				background: $accent-color-2;
+
+				.md-subhead {
+					border-bottom: 1px solid $accent-color;
+					text-transform: uppercase
+				}
 			}
 		}
 	}
 
 	footer {
-		margin: 24px 0;
+		margin: $large-padding 0 $large-padding * 2;
 
 		.links {
 			margin-bottom: 24px;
 
 			md-list-item {
-				border-right: 1px solid $color-dividers;
-				display: inline-block;
-				margin-right: 8px;
-			  margin-top: 8px;
-				padding-right: 8px;
+				display: block;
 
-				&:last-child {
-					border: none;
-					margin: 0;
-					padding: 0;
+				a {
+					word-break: break-all;
 				}
 			}
 		}
 	}
 
 	.block-color {
-		&.accent {
-			background: $accent-color;
+		header {
+			background: $font-color;
+			color: #fff;
+			padding: $large-padding;
+		}
+
+		&.primary-2 {
+			background: $primary-color-2;
+
+			header {
+				background: $primary-color-1;
+			}
 
 			.numeral {
-				border-color: #fff;
-				color: #fff;
+				color: $font-color;
 			}
 		}
 
-		&.accent-1 {
-			background: $accent-color-1;
-		}
+		&.grey {
+			background: $light-grey;
 
-		&.accent-2 {
-			background: $accent-color-2;
-		}
+			header {
+				background: $font-color;
+			}
 
-		header {
-			border-bottom: 1px solid $color-dividers;
-			padding: $large-padding;
+			.numeral {
+				color: $font-color;
+			}
 		}
 
 		main {
@@ -306,9 +363,11 @@ article {
 ========================================================================== */
 pre {
 	background: $light-grey;
-	color: $accent-color-1;
+	color: $accent-color;
 	font: 500 16px/1.6em 'Source Code Pro', monospace;
 	padding: $large-padding;
+	white-space: normal;
+	word-break: break-all;
 }
 
 

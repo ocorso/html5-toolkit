@@ -1,6 +1,10 @@
-<!-- <h5tk-item data="{{toolkit.content}}"></h5tk-item> -->
+<div class="progress-circle" ng-hide="home.progressComplete" 
+		 ng-if="main.progress">
+	<md-progress-circular md-mode="indeterminate"
+												class="md-accent"></md-progress-circular>
+</div>
 
-<article>
+<article ng-if="!main.progress">
 	<header>
 		<h1 class="md-display-1">
 			<a href="#/h5tk/{{ toolkit.content.title | hyphenate | lowercase }}">
@@ -28,7 +32,7 @@
 		</main>
 	</section> <!-- description -->
 
-	<section class="demo">
+	<section class="demo block-color grey">
 		<header>
 			<h3 class="md-headline">
 				Demo
@@ -38,15 +42,12 @@
 		<main>
 			<md-list>
 				<md-list-item ng-repeat="demo in toolkit.content.demo">
-					<h4 class="md-subhead" 
-							layout-sm="column" layout-align-sm="start start"
-							layout="row" layout-align="space-between center">
-
-						<span>{{ demo.title }}</span>
-
-						<md-button class="md-primary md-hue-1 md-raised">
-							{{ demo.link.title }}
-						</md-button>
+					<h4 class="md-subhead">
+						<a href="{{ demo.link.url }}" target="_blank"
+							 layout="row" layout-align="start start">
+							{{ demo.title }}
+							<ng-md-icon icon="open_in_new" size="20"></ng-md-icon>
+						</a>
 					</h4>
 
 					<p class="md-body-1" ng-bind-html="main.safeHtml(demo.description)"></p>
@@ -55,7 +56,7 @@
 		</main>
 	</section> <!-- demo -->
 
-	<section class="quick-start">
+	<section class="quick-start block-color primary-2">
 		<header>
 			<h3 class="md-headline">
 				Quick start
@@ -71,8 +72,6 @@
 					</h1>
 
 					<div>
-						<p class="md-body-1" ng-bind-html="main.safeHtml(quick.description)"></p>
-
 						<p>
 							<md-button href="{{ quick.link.url }}" 
 												 target="_blank" 
@@ -81,6 +80,8 @@
 								{{ quick.link.title }}
 							</md-button>
 						</p>
+
+						<p class="md-body-1" ng-bind-html="main.safeHtml(quick.description)"></p>
 					</div>
 				</md-list-item>
 			</md-list>
