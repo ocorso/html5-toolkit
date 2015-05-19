@@ -12,7 +12,9 @@
 			</a>
 		</h1>
 
-		<md-list class="tags" layout="row" layout-align="start center">
+		<md-list class="tags" layout="row" layout-align="start center" 
+						 ng-if="toolkit.content.tags">
+
 			<md-list-item class="md-body-1" ng-repeat="tag in toolkit.content.tags">
 				<ng-md-icon icon="label" size="24" ng-if="$first"></ng-md-icon>
 				<span ng-if="!$first">{{ tag }}</span>
@@ -20,7 +22,7 @@
 		</md-list> <!-- tags -->
 	</header> <!-- title -->
 
-	<section class="summary">
+	<section class="summary" ng-if="toolkit.content.description">
 		<header>
 			<h3 class="md-headline">
 				Summary
@@ -32,7 +34,7 @@
 		</main>
 	</section> <!-- description -->
 
-	<section class="demo block-color grey">
+	<section class="demo block-color grey" ng-if="toolkit.content.demo[0].title">
 		<header>
 			<h3 class="md-headline">
 				Demo
