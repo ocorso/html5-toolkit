@@ -58,7 +58,8 @@
 		</main>
 	</section> <!-- demo -->
 
-	<section class="quick-start block-color primary-2">
+	<section class="quick-start block-color primary-2"
+					 ng-if="toolkit.content['quick-start'][0].description">
 		<header>
 			<h3 class="md-headline">
 				Quick start
@@ -78,8 +79,10 @@
 							<md-button href="{{ quick.link.url }}" 
 												 target="_blank" 
 												 class="md-primary"
+												 layout="row" layout-align="start center"
 												 md-no-ink>
 								{{ quick.link.title }}
+								<ng-md-icon icon="open_in_new" size="20"></ng-md-icon>
 							</md-button>
 						</p>
 
@@ -90,7 +93,7 @@
 		</main>
 	</section> <!-- quick start -->
 
-	<section class="pro-tips">
+	<section class="pro-tips" ng-if="toolkit.content['pro-tips'][0].description">
 		<header>
 			<h3 class="md-headline">
 				Pro tips
@@ -100,8 +103,14 @@
 		<main>
 			<md-list>
 				<md-list-item ng-repeat="tip in toolkit.content['pro-tips']">
-					<div class="block" ng-class="{good: tip.type == 'good', bad: tip.type == 'bad'}">
-						<h4 class="md-subhead">{{ tip.type }}</h4>
+					<div class="block" 
+							 ng-class="{good: tip.type == 'good', bad: tip.type == 'bad'}"
+							 layout-sm="column" layout-align-sm="center center"
+							 layout="row" layout-align="start center">
+						<span>
+							<ng-md-icon icon="check" size="24" ng-if="tip.type == 'good'"></ng-md-icon>
+							<ng-md-icon icon="close" size="24" ng-if="tip.type == 'bad'"></ng-md-icon>
+						</span> 
 						<p class="md-body-1" ng-bind-html="main.safeHtml(tip.description)"></p>
 					</div>
 				</md-list-item>
@@ -109,7 +118,7 @@
 		</main>
 	</section> <!-- pro tips -->
 
-	<footer>
+	<footer ng-if="toolkit.content.links[0].title">
 		<header>
 			<h4 class="md-subhead">
 				Helpful links
@@ -119,9 +128,9 @@
 		<main class="links md-body-1">
 			<md-list ng-repeat="link in toolkit.content.links">
 				<md-list-item>
-					<md-button href="{{ link.url }}" target="_blank" md-no-ink>
+					<a href="{{ link.url }}" target="_blank">
 						{{ link.title }}
-					</md-button>
+					</a>
 				</md-list-item>
 			</md-list> <!-- links -->
 		</main>

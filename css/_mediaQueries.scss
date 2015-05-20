@@ -1,0 +1,62 @@
+// tablet
+@media only screen and (max-width: 960px) {
+	md-toolbar  {
+		.md-subhead {
+			margin: 0;
+		}
+	}
+}
+
+
+// mobile
+@media only screen and (max-width: 600px) {
+	.right-side {
+		md-content {
+			&[ng-view] {
+				padding: $small-padding;
+			}
+		}
+	} 
+
+	pre {
+		padding: $small-padding;
+	}
+
+	.md-display-1 {
+		&.numeral {
+			display: none;
+		}
+	}
+
+	article {
+		.block-color {
+			header {
+				padding: $small-padding;
+			}
+
+			main {
+				padding: 0 $small-padding $small-padding;
+			}
+		}
+
+		section {
+			md-list {
+				iframe {
+					padding: $small-padding;
+				}
+			}
+
+			.block {
+				padding: $small-padding;
+				text-align: center;
+			}
+
+			&.quick-start {
+				md-list-item {
+					padding: $small-padding;
+					margin-top: $small-padding;
+				}
+			}
+		}
+	}
+}

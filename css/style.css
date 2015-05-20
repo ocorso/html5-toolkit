@@ -63,8 +63,6 @@ body {
     font-weight: 300;
     height: 40px;
     line-height: 1;
-    margin-right: 24px;
-    margin-top: 14px;
     min-width: 40px;
     text-align: left; }
   .md-display-1 a {
@@ -98,9 +96,15 @@ body {
   white-space: normal; }
   .md-button[md-no-ink] {
     color: #0288d1;
-    padding: 0; }
+    padding: 0;
+    text-align: left; }
     .md-button[md-no-ink]:hover, .md-button[md-no-ink]:focus {
       background: none !important; }
+  .md-button ng-md-icon {
+    fill: #0288d1;
+    height: 24px;
+    margin-left: 4px;
+    width: 32px; }
 
 .md-caption {
   font-size: 1.2rem;
@@ -192,17 +196,36 @@ article {
         width: 100%; }
     article section .block {
       margin-top: 16px;
-      padding: 24px; }
+      padding: 0 24px 0 16px; }
       article section .block.good {
         background: #b8f5c9; }
         article section .block.good .md-subhead {
           border-bottom: 1px solid #0e9c57;
           text-transform: uppercase; }
+        article section .block.good ng-md-icon {
+          fill: #0e9c57; }
       article section .block.bad {
         background: #f8bbd0; }
         article section .block.bad .md-subhead {
           border-bottom: 1px solid #ff4081;
           text-transform: uppercase; }
+        article section .block.bad ng-md-icon {
+          fill: #ff4081; }
+      article section .block span {
+        display: inline-block;
+        height: 24px;
+        margin-right: 16px;
+        min-width: 24px; }
+        article section .block span ng-md-icon {
+          display: inline-block;
+          height: 24px;
+          width: 24px; }
+    article section.quick-start md-list-item {
+      background: rgba(255, 255, 255, 0.25);
+      padding: 24px;
+      margin-top: 24px; }
+      article section.quick-start md-list-item:first-child {
+        margin-top: 0; }
   article footer {
     margin: 24px 0 48px; }
     article footer .links {
@@ -255,13 +278,19 @@ pre {
     padding: 16px; }
 
   .md-display-1.numeral {
-    margin-right: 16px; }
+    display: none; }
 
   article .block-color header {
     padding: 16px; }
   article .block-color main {
     padding: 0 16px 16px; }
   article section md-list iframe {
-    padding: 16px; } }
+    padding: 16px; }
+  article section .block {
+    padding: 16px;
+    text-align: center; }
+  article section.quick-start md-list-item {
+    padding: 16px;
+    margin-top: 16px; } }
 
 /*# sourceMappingURL=style.css.map */

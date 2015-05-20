@@ -121,8 +121,6 @@ body {
 		font-weight: 300;
 		height: 40px;
 	  line-height: 1;
-	  margin-right: 24px;
-	  margin-top: 14px;
 	  min-width: 40px;
 	  text-align: left;
 	}
@@ -172,11 +170,19 @@ body {
 	&[md-no-ink] {
 		color: $primary-color;
 		padding: 0;
+		text-align: left;
 
 		&:hover,
 		&:focus {
 			background: none !important;
 		}
+	}
+
+	ng-md-icon {
+		fill: $primary-color;
+		height: 24px;
+		margin-left: 4px;
+	  width: 32px;
 	}
 }
 
@@ -282,7 +288,7 @@ article {
 
 		.block {
 			margin-top: $small-padding;
-			padding: $large-padding;
+			padding: 0 $large-padding 0 $small-padding;
 
 			&.good {
 				background: $accent-green-1;
@@ -290,6 +296,10 @@ article {
 				.md-subhead {
 					border-bottom: 1px solid $accent-green;
 					text-transform: uppercase
+				}
+
+				ng-md-icon {
+					fill: $accent-green;	
 				}
 			}
 
@@ -299,6 +309,35 @@ article {
 				.md-subhead {
 					border-bottom: 1px solid $accent-color;
 					text-transform: uppercase
+				}
+
+				ng-md-icon {
+					fill: $accent-color;	
+				}
+			}
+
+			span {
+				display: inline-block;
+				height: 24px;
+				margin-right: $small-padding;
+				min-width: 24px;
+
+				ng-md-icon {
+					display: inline-block;
+					height: 24px;
+					width: 24px;	
+				}
+			}
+		}
+
+		&.quick-start {
+			md-list-item {
+				background: rgba(255, 255, 255, .25);
+				padding: $large-padding;
+				margin-top: $large-padding;
+
+				&:first-child {
+					margin-top: 0;
 				}
 			}
 		}
