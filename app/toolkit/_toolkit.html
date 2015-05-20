@@ -7,9 +7,7 @@
 <article ng-if="!main.progress">
 	<header>
 		<h1 class="md-display-1">
-			<a href="#/h5tk/{{ toolkit.content.title | hyphenate | lowercase }}">
-				{{ toolkit.content.title }}
-			</a>
+			{{ toolkit.content.title }}
 		</h1>
 
 		<md-list class="tags" layout="row" layout-align="start center" 
@@ -120,8 +118,9 @@
 
 	<footer ng-if="toolkit.content.links[0].title">
 		<header>
-			<h4 class="md-subhead">
+			<h4 class="md-subhead" layout="row" layout-align="start center">
 				Helpful links
+				<ng-md-icon icon="open_in_new" size="20"></ng-md-icon>
 			</h4>
 		</header>
 

@@ -144,10 +144,16 @@ body {
 	font-size: 1.6rem;
 	font-weight: 500;
 
+	ng-md-icon {
+		display: inline-block;
+		height: 24px;
+		margin-left: 4px;
+		width: 24px;
+	}
+
 	a {
 		ng-md-icon {
 			fill: $primary-color;
-			margin-left: 4px;
 		}
 	}
 }
@@ -405,7 +411,7 @@ article {
    code
 ========================================================================== */
 pre {
-	background: $light-grey;
+	background: $color-dividers;
 	color: $accent-color;
 	font: 500 16px/1.6em 'Source Code Pro', monospace;
 	padding: $large-padding;

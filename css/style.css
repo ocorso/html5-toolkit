@@ -79,9 +79,13 @@ body {
 .md-subhead {
   font-size: 1.6rem;
   font-weight: 500; }
+  .md-subhead ng-md-icon {
+    display: inline-block;
+    height: 24px;
+    margin-left: 4px;
+    width: 24px; }
   .md-subhead a ng-md-icon {
-    fill: #0288d1;
-    margin-left: 4px; }
+    fill: #0288d1; }
 
 .md-body-1 {
   font-size: 1.4rem;
@@ -261,7 +265,7 @@ article {
    code
 ========================================================================== */
 pre {
-  background: #f0f0f0;
+  background: rgba(0, 0, 0, 0.12);
   color: #ff4081;
   font: 500 16px/1.6em 'Source Code Pro', monospace;
   padding: 24px;
@@ -288,8 +292,6 @@ pre {
     padding: 16px; }
   article .block-color main {
     padding: 0 16px 16px; }
-  article section md-list iframe {
-    padding: 16px; }
   article section .block {
     padding: 16px;
     text-align: center; }
