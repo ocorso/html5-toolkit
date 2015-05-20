@@ -222,6 +222,10 @@ article {
           width: 24px; }
     article section.quick-start md-list-item {
       background: rgba(255, 255, 255, 0.25);
+      -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
       padding: 24px;
       margin-top: 24px; }
       article section.quick-start md-list-item:first-child {

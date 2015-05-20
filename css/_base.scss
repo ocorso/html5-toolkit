@@ -333,6 +333,10 @@ article {
 		&.quick-start {
 			md-list-item {
 				background: rgba(255, 255, 255, .25);
+				-moz-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+				-ms-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+				-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+				box-shadow: 1px 1px 3px rgba(0,0,0,.1);
 				padding: $large-padding;
 				margin-top: $large-padding;
 
