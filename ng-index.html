@@ -26,14 +26,20 @@
 <div class="container" layout="row" 
      layout-align="space-between start">
 
-  <div class="left-side" ng-class="{lockNav:main.size == 'lg'}">
+  <div class="left-side">
     <header class="top-bar">
       <div class="inner-content" layout="row" layout-align="space-between center">
-        <h3 class="md-subhead" ng-bind-html="main.safeHtml(main.pageTitle)"></h3>
+        <h3 class="md-subhead">
+          <a href="#/html5/welcome">HTML5 Transition</a>
+          <i ng-if="main.item">></i>
+          <a ng-click="main.toggleRightNav()" ng-if="main.item">Toolkit</a>
+          <i ng-if="main.item">></i>
+          <span ng-if="main.item">{{ main.title }}</span>
+        </h3>
 
-        <md-button ng-click="main.toggleRightNav()" 
+        <md-button class="md-fab" ng-click="main.toggleRightNav()" 
                    aria-label="Toggle Right Nav">
-          <ng-md-icon icon="menu" style="fill: #333" size="24"></ng-md-icon>
+          <img src="imgs/icon_toolkit_white.png" width="24" border="0" />
         </md-button>
       </div>
     </header>
@@ -50,16 +56,6 @@
       </header>
 
       <md-list>
-        <md-list-item>
-          <a href="#/html5/welcome" 
-             class="md-body-2"
-             ng-click="main.closeRightNav()"
-             ng-class="{active:main.activeNav('welcome')}">
-            
-            Welcome
-          </a>
-        </md-list-item>
-
         <md-list-item ng-repeat="item in main.toolkitItems">
           <a href="#/html5/toolkit/{{ item.title | lowercase | hyphenate }}" 
              class="md-body-2"
@@ -75,7 +71,8 @@
 </div>
 
 <script src="app/_app.js"></script>
-<script src="app/welcome/WelcomeController.js"></script>
+<script src="app/splash/SplashController.js"></script>
+<script src="app/splash/SplashFactory.js"></script>
 <script src="app/toolkit/ToolkitController.js"></script>
 
 </body>

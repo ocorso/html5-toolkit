@@ -4,8 +4,8 @@ var app = angular.module('app', [
   'ngRoute',
   'ngMdIcons',
   'ngSanitize',
-  'welcome',
-  'toolkit'
+  'toolkit',
+  'splash'
 ]);
 
 /*
@@ -19,7 +19,7 @@ app.config(function($mdThemingProvider, $routeProvider) {
       'hue-1': '800',
       'hue-2': '100'
     })
-    .accentPalette('pink', {
+    .accentPalette('deep-orange', {
       'default': '500',
       'hue-1': '200',
       'hue-2': '100',
@@ -28,8 +28,8 @@ app.config(function($mdThemingProvider, $routeProvider) {
 
   // routing
   $routeProvider.when('/html5/welcome', {
-    templateUrl: 'app/welcome/_welcome.html',
-    controller: 'WelcomeCtrl as welcome'
+    templateUrl: 'app/splash/_splash.html',
+    controller: 'SplashCtrl as splash'
 
   }).when('/html5/toolkit/:item', {
     templateUrl: 'app/toolkit/_toolkit.html',
@@ -60,7 +60,7 @@ app.factory('ToolkitData', function($http) {
  * main controller that is accessible in any view
  */
 app.controller('MainCtrl', function($scope, $mdSidenav, $window, $sce, 
-  $location, $routeParams, ToolkitData) {
+  $location, $routeParams, SplashContent, ToolkitData) {
   
   var main = this;
 
@@ -85,7 +85,11 @@ app.controller('MainCtrl', function($scope, $mdSidenav, $window, $sce,
     return path === page_view;
   };
 
-  // get Firebase data
+  // get main nav
+  main.nav = SplashContent.content;
+  console.log(main.nav);
+
+  // get Firebase toolkit data
   ToolkitData.items().success(function(data) {
     main.toolkitItems = data['toolkit-items'];
     console.log(main.toolkitItems);

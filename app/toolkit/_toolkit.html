@@ -31,7 +31,7 @@
 		</main>
 	</section> <!-- description -->
 
-	<section class="demo block-color grey" ng-if="toolkit.content.demo[0].title">
+	<section class="demo block-color accent" ng-if="toolkit.content.demo[0].title">
 		<header>
 			<h3 class="md-headline">
 				Demo
@@ -99,7 +99,7 @@
 
 		<main>
 			<md-list>
-				<md-list-item ng-repeat="tip in toolkit.content['pro-tips']">
+				<md-list-item ng-repeat="tip in toolkit.content['pro-tips'] | orderBy:'-type'">
 					<div class="block" 
 							 ng-class="{good: tip.type == 'good', bad: tip.type == 'bad'}"
 							 layout-sm="column" layout-align-sm="center center"

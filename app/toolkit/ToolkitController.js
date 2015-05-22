@@ -15,20 +15,18 @@ toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
 	  // loop through all toolkit items to check if url param exists
 	  // if not, redirect to welcome view
 	  // if so, show correct toolkit content
-	  var param = $routeParams.item;
+	  $scope.main.item = $routeParams.item;
+	  $scope.main.title;
 	  var match = 0;
-	  var pageTitle;
 	  var itemIndex;
-	  var title;
 	  var titleFiltered;
 
 	  for( var i = 0; i < toolkit.toolkitItems.length; i++ ) {
-	  	title = toolkit.toolkitItems[i].title;
-	  	titleFiltered = title.split(' ').join('-').toLowerCase();
+	  	$scope.main.title = toolkit.toolkitItems[i].title;
+	  	titleFiltered = $scope.main.title.split(' ').join('-').toLowerCase();
 
-	  	if( param == titleFiltered ) {
+	  	if( $scope.main.item == titleFiltered ) {
 	  		match++;
-	  		pageTitle = title;
 	  		itemIndex = i;
 
 	  		break;
@@ -39,19 +37,6 @@ toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
 	  }
 
 	  if( match == 1 ) {
-	  	$scope.main.pageTitle = 
-		  	'<a href="#/html5/welcome>' +
-			  	'HTML5 Transition' +
-		  	'</a>' +
-		  	'>' +
-		  	'<a ng-click="main.toggleRightNav()">' +
-			  	'Toolkit' +
-		  	'</a>' +
-		  	'>' +
-		  	'<a href="#/html5/toolkit/' + titleFiltered + '">' +
-			  	pageTitle +
-		  	'</a>';
-
 	  	toolkit.content = toolkit.toolkitItems[itemIndex];
 
 	  } else {

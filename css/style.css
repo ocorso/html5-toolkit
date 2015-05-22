@@ -56,7 +56,7 @@ md-content[ng-view] {
    typography
 ========================================================================== */
 .md-display-1 {
-  color: #ff4081;
+  color: #ff5722;
   font-size: 3.4rem;
   font-weight: 400; }
   .md-display-1.numeral {
@@ -119,19 +119,32 @@ md-content[ng-view] {
 ========================================================================== */
 .top-bar {
   background: #f0f0f0;
+  border-bottom: 1px solid #fff;
   height: 64px;
   padding: 0 24px; }
   .top-bar .inner-content {
+    height: 100%;
     margin: 0 auto;
-    max-width: 1200px; }
+    max-width: 960px;
+    position: relative; }
+    .top-bar .inner-content a, .top-bar .inner-content md-sidenav md-list md-list-item .expandable, md-sidenav md-list md-list-item .top-bar .inner-content .expandable {
+      margin: 0 8px; }
+      .top-bar .inner-content a:first-child, .top-bar .inner-content md-sidenav md-list md-list-item .expandable:first-child, md-sidenav md-list md-list-item .top-bar .inner-content .expandable:first-child {
+        margin-left: 0; }
+    .top-bar .inner-content i {
+      font-style: normal; }
+    .top-bar .inner-content span {
+      margin-left: 8px; }
   .top-bar .md-button {
-    height: 64px;
-    padding: 8px 24px; }
-    .top-bar .md-button ng-md-icon {
-      fill: rgba(0, 0, 0, 0.87); }
+    bottom: -28px;
+    line-height: 56px;
+    padding: 0;
+    position: absolute;
+    right: 24px; }
   .top-bar .md-subhead {
     color: rgba(0, 0, 0, 0.87);
     font-weight: 400;
+    margin-right: 120px;
     -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     -ms-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -141,7 +154,7 @@ md-content[ng-view] {
    navPanel
 ========================================================================== */
 md-sidenav header {
-  background: #0277bd;
+  background: #ff5722;
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -163,7 +176,7 @@ md-sidenav md-list {
     display: block;
     padding: 8px 24px; }
     md-sidenav md-list md-list-item a.active, md-sidenav md-list md-list-item .active.expandable {
-      color: #ff4081; }
+      color: #ff5722; }
 
 /* ==========================================================================
    general styling for main elements
@@ -173,120 +186,127 @@ md-sidenav md-list {
   .progress-circle md-progress-circular {
     display: inline-block; }
 
-article {
-  border-top: 1px solid rgba(0, 0, 0, 0.12); }
-  article.welcome > header {
-    background: #ff4081;
+article:first-child {
+  border: none; }
+article header {
+  margin: 8px auto;
+  max-width: 960px; }
+  article header.splash-header {
+    background: #ff5722;
     padding: 48px 24px; }
-    article.welcome > header h1, article.welcome > header body h2, body article.welcome > header h2,
-    article.welcome > header body h3,
-    body article.welcome > header h3,
-    article.welcome > header body h4,
-    body article.welcome > header h4 {
+    article header.splash-header h1, article header.splash-header body h2, body article header.splash-header h2,
+    article header.splash-header body h3,
+    body article header.splash-header h3,
+    article header.splash-header body h4,
+    body article header.splash-header h4 {
       color: #fff; }
-  article:first-child {
-    border: none; }
-  article header {
-    margin: 8px auto;
-    max-width: 1160px; }
-    article header .tags {
-      flex-wrap: wrap; }
-      article header .tags ng-md-icon {
-        fill: rgba(0, 0, 0, 0.26); }
-      article header .tags md-list-item {
-        background: #f0f0f0;
-        color: rgba(0, 0, 0, 0.54);
-        margin: 6px;
-        padding: 0 6px; }
-        article header .tags md-list-item:first-child {
-          background: none;
-          height: 24px;
-          margin-left: 0;
-          margin-right: 0;
-          padding-left: 0;
-          padding-right: 0; }
-  article section {
-    margin: 32px auto;
-    max-width: 1160px; }
-    article section md-list {
+  article header .tags {
+    flex-wrap: wrap; }
+    article header .tags ng-md-icon {
+      fill: rgba(0, 0, 0, 0.26); }
+    article header .tags md-list-item {
+      background: #f0f0f0;
+      color: rgba(0, 0, 0, 0.54);
+      margin: 6px;
+      padding: 0 6px; }
+      article header .tags md-list-item:first-child {
+        background: none;
+        height: 24px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0; }
+article md-tabs.md-default-theme .md-header {
+  background: #f0f0f0; }
+  article md-tabs.md-default-theme .md-header md-tab.active {
+    color: #ff5722; }
+article section {
+  margin: 32px auto;
+  max-width: 960px; }
+  article section md-list {
+    display: block; }
+    article section md-list md-list-item {
       display: block; }
-      article section md-list md-list-item {
-        display: block; }
-        article section md-list md-list-item:first-child .block {
-          margin-top: 0; }
-      article section md-list iframe {
-        max-width: 640px;
-        width: 100%; }
-    article section .block {
-      margin-top: 16px;
-      padding: 0 24px 0 16px; }
-      article section .block.good {
-        background: #b8f5c9; }
-        article section .block.good .md-subhead {
-          border-bottom: 1px solid #0e9c57;
-          text-transform: uppercase; }
-        article section .block.good ng-md-icon {
-          fill: #0e9c57; }
-      article section .block.bad {
-        background: #f8bbd0; }
-        article section .block.bad .md-subhead {
-          border-bottom: 1px solid #ff4081;
-          text-transform: uppercase; }
-        article section .block.bad ng-md-icon {
-          fill: #ff4081; }
-      article section .block span {
+      article section md-list md-list-item:first-child .block {
+        margin-top: 0; }
+    article section md-list iframe {
+      max-width: 640px;
+      width: 100%; }
+  article section .block {
+    margin-top: 16px;
+    padding: 0 24px 0 16px; }
+    article section .block.good {
+      background: #b8f5c9; }
+      article section .block.good .md-subhead {
+        border-bottom: 1px solid #0e9c57;
+        text-transform: uppercase; }
+      article section .block.good ng-md-icon {
+        fill: #0e9c57; }
+    article section .block.bad {
+      background: #f8bbd0; }
+      article section .block.bad .md-subhead {
+        border-bottom: 1px solid #ff5722;
+        text-transform: uppercase; }
+      article section .block.bad ng-md-icon {
+        fill: #ff4081; }
+    article section .block span {
+      display: inline-block;
+      height: 24px;
+      margin-right: 16px;
+      min-width: 24px; }
+      article section .block span ng-md-icon {
         display: inline-block;
         height: 24px;
-        margin-right: 16px;
-        min-width: 24px; }
-        article section .block span ng-md-icon {
-          display: inline-block;
-          height: 24px;
-          width: 24px; }
-    article section.quick-start md-list-item {
-      background: rgba(255, 255, 255, 0.25);
-      -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-      -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-      -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-      padding: 24px;
-      margin-top: 24px; }
-      article section.quick-start md-list-item:first-child {
-        margin-top: 0; }
-  article footer {
-    margin: 24px auto 48px;
-    max-width: 1160px; }
-    article footer .links {
-      margin-bottom: 24px; }
-      article footer .links md-list-item {
-        display: block; }
-        article footer .links md-list-item a, article footer .links md-sidenav md-list md-list-item .expandable, md-sidenav md-list article footer .links md-list-item .expandable {
-          word-break: break-all; }
-  article .block-color header {
-    background: rgba(0, 0, 0, 0.87);
-    color: #fff;
-    padding: 24px; }
-  article .block-color.primary-2 {
-    background: #b3e5fc; }
-    article .block-color.primary-2 header {
-      background: #0277bd; }
-    article .block-color.primary-2 .numeral {
-      color: rgba(0, 0, 0, 0.87); }
-  article .block-color.grey {
-    background: #f0f0f0; }
-    article .block-color.grey header {
-      background: rgba(0, 0, 0, 0.87); }
-    article .block-color.grey .numeral {
-      color: rgba(0, 0, 0, 0.87); }
-  article .block-color main {
-    padding: 0 24px 24px; }
+        width: 24px; }
+  article section.quick-start md-list-item {
+    background: rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-top: 24px; }
+    article section.quick-start md-list-item:first-child {
+      margin-top: 0; }
+article footer {
+  margin: 24px auto 48px;
+  max-width: 960px; }
+  article footer .links {
+    margin-bottom: 24px; }
+    article footer .links md-list-item {
+      display: block; }
+      article footer .links md-list-item a, article footer .links md-sidenav md-list md-list-item .expandable, md-sidenav md-list article footer .links md-list-item .expandable {
+        word-break: break-all; }
+article .block-color header {
+  background: rgba(0, 0, 0, 0.87);
+  color: #fff;
+  padding: 24px; }
+article .block-color.primary-2 {
+  background: #b3e5fc; }
+  article .block-color.primary-2 header {
+    background: #0277bd; }
+  article .block-color.primary-2 .numeral {
+    color: rgba(0, 0, 0, 0.87); }
+article .block-color.grey {
+  background: #f0f0f0; }
+  article .block-color.grey header {
+    background: rgba(0, 0, 0, 0.87); }
+  article .block-color.grey .numeral {
+    color: rgba(0, 0, 0, 0.87); }
+article .block-color.accent {
+  background: #ffccbc; }
+  article .block-color.accent header {
+    background: #ff5722; }
+  article .block-color.accent .numeral {
+    color: rgba(0, 0, 0, 0.87); }
+article .block-color main {
+  padding: 0 24px 24px; }
 
 /* ==========================================================================
    code
 ========================================================================== */
 pre {
   background: rgba(0, 0, 0, 0.12);
-  color: #ff4081;
   font: 500 16px/1.6em 'Source Code Pro', monospace;
   padding: 24px;
   white-space: normal;

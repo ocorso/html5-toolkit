@@ -9,11 +9,14 @@ $color-dividers: rgba(0,0,0,.12);
 $primary-color: rgb(2,136,209);
 $primary-color-1: rgb(2,119,189);
 $primary-color-2: rgb(179,229,252);
-$accent-color: rgb(255,64,129);
-$accent-color-1: rgb(244,143,177);
-$accent-color-2: rgb(248,187,208);
+$accent-color: rgb(255,87,34);
+$accent-color-1: rgb(255,171,145);
+$accent-color-2:rgb(255,204,188);
 $accent-green: rgb(14,156,87);
 $accent-green-1: rgb(184,245,201);
+$accent-pink: rgb(255,64,129);
+$accent-pink-1: rgb(244,143,177);
+$accent-pink-2: rgb(248,187,208);
 $light-grey: #f0f0f0;
 $large-padding: 24px;
 $small-padding: 16px;
@@ -200,26 +203,45 @@ md-content {
 ========================================================================== */
 .top-bar {
 	background: $light-grey;
+	border-bottom: 1px solid #fff;
 	height: 64px;
 	padding: 0 24px;
 
 	.inner-content {
+		height: 100%;
 		margin: 0 auto;
-		max-width: 1200px;
+		max-width: 960px;
+		position: relative;
+
+		a {
+			margin: 0 8px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		i {
+			font-style: normal;
+		}
+
+		span {
+			margin-left: 8px;
+		}
 	}
 
 	.md-button {
-		height: 64px;
-		padding: 8px 24px;
-
-		ng-md-icon {
-			fill: $font-color;
-		}
+		bottom: -28px;
+		line-height: 56px;
+		padding: 0;
+		position: absolute;
+		right: 24px;
 	}
 
 	.md-subhead {
 		color: $font-color;
 		font-weight: 400;
+		margin-right: 120px;
 		@include transition;
 	}
 }
@@ -243,8 +265,15 @@ md-content {
 }
 
 article {
-	&.welcome {
-		> header {
+	&:first-child {
+		border: none;
+	}
+
+	header {
+		margin: 8px auto;
+		max-width: 960px;
+
+		&.splash-header {
 			background: $accent-color;
 			padding: $large-padding * 2 $large-padding;
 
@@ -252,18 +281,6 @@ article {
 				color: #fff;
 			}
 		}
-	}
-
-
-	border-top: 1px solid $color-dividers;
-
-	&:first-child {
-		border: none;
-	}
-
-	header {
-		margin: 8px auto;
-		max-width: 1160px;
 
 		.tags {
 			flex-wrap: wrap;
@@ -290,9 +307,23 @@ article {
 		}
 	}
 
+	md-tabs {
+		&.md-default-theme {
+			.md-header {
+				background: $light-grey;
+
+				md-tab {
+					&.active {
+						color: $accent-color;
+					}
+				}
+			}
+		}
+	}
+
 	section {
 		margin: $large-padding + 8px auto;
-		max-width: 1160px;
+		max-width: 960px;
 
 		md-list {
 			display: block;
@@ -331,7 +362,7 @@ article {
 			}
 
 			&.bad {
-				background: $accent-color-2;
+				background: $accent-pink-2;
 
 				.md-subhead {
 					border-bottom: 1px solid $accent-color;
@@ -339,7 +370,7 @@ article {
 				}
 
 				ng-md-icon {
-					fill: $accent-color;	
+					fill: $accent-pink;	
 				}
 			}
 
@@ -376,7 +407,7 @@ article {
 
 	footer {
 		margin: $large-padding auto $large-padding * 2;
-		max-width: 1160px;
+		max-width: 960px;
 
 		.links {
 			margin-bottom: 24px;
@@ -422,6 +453,18 @@ article {
 			}
 		}
 
+		&.accent {
+			background: $accent-color-2;
+
+			header {
+				background: $accent-color;
+			}
+
+			.numeral {
+				color: $font-color;
+			}
+		}
+
 		main {
 			padding: 0 $large-padding $large-padding;
 		}
@@ -434,7 +477,6 @@ article {
 ========================================================================== */
 pre {
 	background: $color-dividers;
-	color: $accent-color;
 	font: 500 16px/1.6em 'Source Code Pro', monospace;
 	padding: $large-padding;
 	white-space: normal;
