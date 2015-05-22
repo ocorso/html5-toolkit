@@ -10,13 +10,11 @@
 
 // mobile
 @media only screen and (max-width: 600px) {
-	.right-side {
-		md-content {
-			&[ng-view] {
-				padding: $small-padding;
-			}
+	md-content {
+		&[ng-view] {
+			padding: $small-padding;
 		}
-	} 
+	}
 
 	pre {
 		padding: $small-padding;
@@ -29,6 +27,12 @@
 	}
 
 	article {
+		&.welcome {
+			> header {
+				padding: $small-padding * 2 $small-padding;
+			}
+		}
+
 		.block-color {
 			header {
 				padding: $small-padding;

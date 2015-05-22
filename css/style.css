@@ -16,7 +16,7 @@ body {
       display: table; }
     body .cf:after {
       clear: both; }
-  body a {
+  body a, body md-sidenav md-list md-list-item .expandable, md-sidenav md-list md-list-item body .expandable {
     color: #0288d1;
     cursor: pointer;
     text-decoration: none; }
@@ -33,24 +33,24 @@ body {
    wrapper width and heights
 ========================================================================== */
 .container {
-  height: 100%; }
-
-.left-side {
   height: 100%;
-  z-index: 100; }
-  .left-side md-sidenav {
-    height: 100%; }
+  overflow-y: auto; }
 
 .right-side {
   height: 100%;
+  z-index: 100; }
+  .right-side md-sidenav {
+    height: 100%; }
+
+.left-side {
+  height: 100%;
   width: 100%; }
-  .right-side.lockNav {
-    width: calc(100% - 304px); }
-  .right-side md-content[ng-view] {
-    height: calc(100% - 64px);
-    overflow: hidden;
-    overflow-y: auto;
-    padding: 24px; }
+
+md-content[ng-view] {
+  height: calc(100% - 64px);
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 24px; }
 
 /* ==========================================================================
    typography
@@ -65,7 +65,7 @@ body {
     line-height: 1;
     min-width: 40px;
     text-align: left; }
-  .md-display-1 a {
+  .md-display-1 a, .md-display-1 md-sidenav md-list md-list-item .expandable, md-sidenav md-list md-list-item .md-display-1 .expandable {
     color: inherit; }
 
 .md-headline {
@@ -84,7 +84,7 @@ body {
     height: 24px;
     margin-left: 4px;
     width: 24px; }
-  .md-subhead a ng-md-icon {
+  .md-subhead a ng-md-icon, .md-subhead md-sidenav md-list md-list-item .expandable ng-md-icon, md-sidenav md-list md-list-item .md-subhead .expandable ng-md-icon {
     fill: #0288d1; }
 
 .md-body-1 {
@@ -115,19 +115,27 @@ body {
   font-weight: 400; }
 
 /* ==========================================================================
-   toolbar
+   top bar
 ========================================================================== */
-md-toolbar .md-button {
+.top-bar {
+  background: #f0f0f0;
   height: 64px;
-  padding: 8px 24px; }
-md-toolbar .md-subhead {
-  color: #fff;
-  font-weight: 400;
-  margin-left: 24px;
-  -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+  padding: 0 24px; }
+  .top-bar .inner-content {
+    margin: 0 auto;
+    max-width: 1200px; }
+  .top-bar .md-button {
+    height: 64px;
+    padding: 8px 24px; }
+    .top-bar .md-button ng-md-icon {
+      fill: rgba(0, 0, 0, 0.87); }
+  .top-bar .md-subhead {
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 400;
+    -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
 
 /* ==========================================================================
    navPanel
@@ -143,17 +151,19 @@ md-sidenav header {
   padding-left: 24px;
   position: relative;
   z-index: 1; }
-  md-sidenav header a {
+  md-sidenav header a, md-sidenav header md-list md-list-item .expandable, md-sidenav md-list md-list-item header .expandable {
     color: #fff; }
 md-sidenav md-list {
   background: #f0f0f0 !important;
   display: block;
   height: calc(100% - 64px);
   padding-top: 24px; }
-  md-sidenav md-list md-list-item a {
+  md-sidenav md-list md-list-item a, md-sidenav md-list md-list-item .expandable {
     color: rgba(0, 0, 0, 0.87);
     display: block;
     padding: 8px 24px; }
+    md-sidenav md-list md-list-item a.active, md-sidenav md-list md-list-item .active.expandable {
+      color: #ff4081; }
 
 /* ==========================================================================
    general styling for main elements
@@ -165,11 +175,20 @@ md-sidenav md-list {
 
 article {
   border-top: 1px solid rgba(0, 0, 0, 0.12); }
+  article.welcome > header {
+    background: #ff4081;
+    padding: 48px 24px; }
+    article.welcome > header h1, article.welcome > header body h2, body article.welcome > header h2,
+    article.welcome > header body h3,
+    body article.welcome > header h3,
+    article.welcome > header body h4,
+    body article.welcome > header h4 {
+      color: #fff; }
   article:first-child {
     border: none; }
   article header {
-    margin: 8px 0;
-    max-width: 912px; }
+    margin: 8px auto;
+    max-width: 1160px; }
     article header .tags {
       flex-wrap: wrap; }
       article header .tags ng-md-icon {
@@ -187,8 +206,8 @@ article {
           padding-left: 0;
           padding-right: 0; }
   article section {
-    margin: 32px 0;
-    max-width: 912px; }
+    margin: 32px auto;
+    max-width: 1160px; }
     article section md-list {
       display: block; }
       article section md-list md-list-item {
@@ -235,12 +254,13 @@ article {
       article section.quick-start md-list-item:first-child {
         margin-top: 0; }
   article footer {
-    margin: 24px 0 48px; }
+    margin: 24px auto 48px;
+    max-width: 1160px; }
     article footer .links {
       margin-bottom: 24px; }
       article footer .links md-list-item {
         display: block; }
-        article footer .links md-list-item a {
+        article footer .links md-list-item a, article footer .links md-sidenav md-list md-list-item .expandable, md-sidenav md-list article footer .links md-list-item .expandable {
           word-break: break-all; }
   article .block-color header {
     background: rgba(0, 0, 0, 0.87);
@@ -279,7 +299,7 @@ pre {
   md-toolbar .md-subhead {
     margin: 0; } }
 @media only screen and (max-width: 600px) {
-  .right-side md-content[ng-view] {
+  md-content[ng-view] {
     padding: 16px; }
 
   pre {
@@ -288,6 +308,8 @@ pre {
   .md-display-1.numeral {
     display: none; }
 
+  article.welcome > header {
+    padding: 32px 16px; }
   article .block-color header {
     padding: 16px; }
   article .block-color main {

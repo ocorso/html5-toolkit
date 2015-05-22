@@ -27,6 +27,14 @@ md-sidenav {
 				color: $font-color;
 				display: block;
 				padding: 8px 24px;
+
+				&.active {
+					color: $accent-color;
+				}
+			}
+
+			.expandable {
+				@extend a;
 			}
 		}
 	}

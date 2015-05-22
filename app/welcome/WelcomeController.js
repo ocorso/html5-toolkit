@@ -1,8 +1,8 @@
 var welcome = angular.module('welcome', []);
 
 welcome.controller('WelcomeCtrl', function($scope, ToolkitData) {
-  $scope.main.pageTitle = 'Welcome';
 	$scope.main.progress = true;
+  $scope.main.pageTitle = 'HTML Transition';
 
 	var welcome = this;
 

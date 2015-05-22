@@ -79,9 +79,10 @@ body {
 ========================================================================== */
 .container {
 	height: 100%;
+  overflow-y: auto;
 }
 
-.left-side {
+.right-side {
 	height: 100%;
   z-index: 100;
 
@@ -90,21 +91,17 @@ body {
   }
 }
 
-.right-side {
+.left-side {
 	height: 100%;
 	width: 100%;
+}
 
-	&.lockNav	{
-		width: calc(100% - 304px);
-	}
-
-	md-content {
-		&[ng-view] {
-			height: calc(100% - 64px);
-			overflow: hidden;
-			overflow-y: auto;
-			padding: $large-padding;
-		}
+md-content {
+	&[ng-view] {
+		height: calc(100% - 64px);
+		overflow: hidden;
+		overflow-y: auto;
+		padding: $large-padding;
 	}
 }
 
@@ -199,18 +196,30 @@ body {
 
 
 /* ==========================================================================
-   toolbar
+   top bar
 ========================================================================== */
-md-toolbar {
+.top-bar {
+	background: $light-grey;
+	height: 64px;
+	padding: 0 24px;
+
+	.inner-content {
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+
 	.md-button {
 		height: 64px;
 		padding: 8px 24px;
+
+		ng-md-icon {
+			fill: $font-color;
+		}
 	}
 
 	.md-subhead {
-		color: #fff;
+		color: $font-color;
 		font-weight: 400;
-		margin-left: 24px;
 		@include transition;
 	}
 }
@@ -234,6 +243,18 @@ md-toolbar {
 }
 
 article {
+	&.welcome {
+		> header {
+			background: $accent-color;
+			padding: $large-padding * 2 $large-padding;
+
+			h1 {
+				color: #fff;
+			}
+		}
+	}
+
+
 	border-top: 1px solid $color-dividers;
 
 	&:first-child {
@@ -241,8 +262,8 @@ article {
 	}
 
 	header {
-		margin: 8px 0;
-		max-width: 912px;
+		margin: 8px auto;
+		max-width: 1160px;
 
 		.tags {
 			flex-wrap: wrap;
@@ -270,8 +291,8 @@ article {
 	}
 
 	section {
-		margin: $large-padding + 8px 0;
-		max-width: 912px;
+		margin: $large-padding + 8px auto;
+		max-width: 1160px;
 
 		md-list {
 			display: block;
@@ -354,7 +375,8 @@ article {
 	}
 
 	footer {
-		margin: $large-padding 0 $large-padding * 2;
+		margin: $large-padding auto $large-padding * 2;
+		max-width: 1160px;
 
 		.links {
 			margin-bottom: 24px;

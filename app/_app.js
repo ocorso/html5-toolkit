@@ -27,16 +27,16 @@ app.config(function($mdThemingProvider, $routeProvider) {
     .warnPalette('red');
 
   // routing
-  $routeProvider.when('/h5tk/welcome', {
+  $routeProvider.when('/html5/welcome', {
     templateUrl: 'app/welcome/_welcome.html',
     controller: 'WelcomeCtrl as welcome'
 
-  }).when('/h5tk/:toolkit', {
+  }).when('/html5/toolkit/:item', {
     templateUrl: 'app/toolkit/_toolkit.html',
     controller: 'ToolkitCtrl as toolkit'
 
   }).otherwise({
-    redirectTo: '/h5tk/welcome'
+    redirectTo: '/html5/welcome'
   });
 });
 
@@ -59,25 +59,31 @@ app.factory('ToolkitData', function($http) {
 /*
  * main controller that is accessible in any view
  */
-app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams, 
-  $sce, ToolkitData) {
+app.controller('MainCtrl', function($scope, $mdSidenav, $window, $sce, 
+  $location, $routeParams, ToolkitData) {
   
   var main = this;
 
-  // toggle nav
-  main.toggleNav = function() {
-    $mdSidenav('navPanel').toggle();
+  main.toggleRightNav = function() {
+    $mdSidenav('RightNavPanel').toggle();
   };
 
-  main.closeNav = function() {
-    $mdSidenav('navPanel').close();
-  }
+  main.closeRightNav = function() {
+    $mdSidenav('RightNavPanel').close();
+  };
 
   // safe HTML
   main.safeHtml = function(html) {
     return $sce.trustAsHtml(html);
   };
 
+  // set active nav on nav panel
+  main.activeNav = function(path) {
+    var path_split = $location.path().split('/');
+    var page_view = path_split[3];
+
+    return path === page_view;
+  };
 
   // get Firebase data
   ToolkitData.items().success(function(data) {
@@ -110,7 +116,7 @@ app.controller('MainCtrl', function($scope, $mdSidenav, $window, $routeParams,
   $window.onresize = function() {
     var width = window.innerWidth;
 
-    main.closeNav();
+    main.closeRightNav();
 
     if( width <= 600 ) {
       $scope.$apply(function() {
