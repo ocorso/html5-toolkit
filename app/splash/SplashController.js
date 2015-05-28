@@ -1,10 +1,13 @@
 var splash = angular.module('splash', []);
 
-splash.controller('SplashCtrl', function($scope, ToolkitData) {
+splash.controller('SplashCtrl', function($scope, SplashContent, ToolkitData) {
 	$scope.main.progress = true;
   $scope.main.item = false;
 
 	var splash = this;
+
+  // get splash grid
+  splash.grid = SplashContent.grid;
 
 	// get Firebase data
   ToolkitData.items().success(function(data) {

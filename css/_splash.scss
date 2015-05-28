@@ -1,0 +1,92 @@
+.splash-view {
+  .copy {
+    padding: $large-padding;
+
+    h2 {
+      margin-bottom: $small-padding;
+    }
+  }
+
+  .text {
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  ul {
+    list-style-position: outside;
+    margin: 1em 0 1em 1em;
+    padding: 0 0 0 1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+  }
+
+  .grid {
+    flex-wrap: wrap;
+
+    md-card {
+      background: #fff;
+      -webkit-flex: 0 0 calc(50% - 16px);
+      -ms-flex: 0 0 calc(50% - 16px);
+      flex: 0 0 calc(50% - 16px);
+    }
+
+    .icon {
+      padding: $small-padding;
+      position: relative;
+      text-align: center;
+
+      img {
+          max-height: 88px;
+          width: auto;
+      }
+
+      &:after {
+        background: $color-dividers;
+        content: '';
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+      }
+    }
+
+    .snippet {
+      color: $font-color;
+      padding: $small-padding;
+
+      h3 {
+        margin-bottom: $small-padding;
+      }
+
+      i {
+        color: $primary-color;
+        font-style: normal;
+      }
+    }
+  }
+
+  section {
+    .section {
+      margin: 32px auto;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .graph {
+      background: #fff;
+      padding: $small-padding;
+    }
+  }
+}

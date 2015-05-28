@@ -85,14 +85,9 @@ app.controller('MainCtrl', function($scope, $mdSidenav, $window, $sce,
     return path === page_view;
   };
 
-  // get main nav
-  main.nav = SplashContent.content;
-  console.log(main.nav);
-
   // get Firebase toolkit data
   ToolkitData.items().success(function(data) {
     main.toolkitItems = data['toolkit-items'];
-    console.log(main.toolkitItems);
 
   }).error(function() {
     console.log('Error loading in Firebase data.');

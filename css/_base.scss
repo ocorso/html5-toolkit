@@ -101,10 +101,11 @@ body {
 
 md-content {
 	&[ng-view] {
+		background: $light-grey;
 		height: calc(100% - 64px);
 		overflow: hidden;
 		overflow-y: auto;
-		padding: $large-padding;
+		padding-bottm: $large-padding;
 	}
 }
 
@@ -269,16 +270,24 @@ article {
 		border: none;
 	}
 
+	> header {
+		padding: $large-padding 0 0;
+	}
+
 	header {
 		margin: 8px auto;
 		max-width: 960px;
 
 		&.splash-header {
 			background: $accent-color;
+			margin: 0;
 			padding: $large-padding * 2 $large-padding;
+			max-width: none;
 
 			h1 {
 				color: #fff;
+				margin: 0 auto;
+				max-width: 960px;
 			}
 		}
 
@@ -311,6 +320,9 @@ article {
 		&.md-default-theme {
 			.md-header {
 				background: $light-grey;
+				margin: 0;
+				max-width: none;
+				padding: 0;
 
 				md-tab {
 					&.active {
@@ -318,6 +330,11 @@ article {
 					}
 				}
 			}
+		}
+
+		.md-header-items-container {
+			margin: 0 auto;
+			max-width: 960px;
 		}
 	}
 
@@ -423,6 +440,8 @@ article {
 	}
 
 	.block-color {
+		margin: 32px auto;
+
 		header {
 			background: $font-color;
 			color: #fff;
@@ -476,12 +495,18 @@ article {
    code
 ========================================================================== */
 pre {
-	background: $color-dividers;
+	background: rgba(255,255,255,.4);
 	font: 500 16px/1.6em 'Source Code Pro', monospace;
 	padding: $large-padding;
 	white-space: normal;
 	word-break: break-all;
 }
+
+
+/* ==========================================================================
+   splash page
+========================================================================== */
+@import '_splash';
 
 
 /* ==========================================================================
