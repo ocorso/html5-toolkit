@@ -8,26 +8,26 @@
       },
       "title" : "Debugging a Rich Media Creative"
     } ],
-    "description" : "Debugging HTML5 creatives is easy with built in browser development tools. All major browsers provide a developer inspector of some sort. Most can be accessed while on a page by right clicking and choosing <pre>\"inspect element\"<\/pre> or via the menu options at the top. Debugging allows you to view the html structure of your creative, view and adjust CSS to tweak visual elements, as well as view network activity, console logging, and performance monitoring.<br \/><br \/>When it comes to debugging a mobile site or ad, you don’t have easy access to an inspector tool like you do on a desktop. Fortunately Chrome, Safari and Firefox all offer remote debugging over a USB connection to your desktop.<br \/><br \/>Check out the resources section for additional information and links from across the web.",
+    "description" : "Debugging HTML5 creatives is easy with built in browser development tools. All major browsers provide a developer inspector of some sort. Most can be accessed while on a page by right clicking and choosing <pre>\"inspect element\"</pre> or via the menu options at the top. Debugging allows you to view the html structure of your creative, view and adjust CSS to tweak visual elements, as well as view network activity, console logging, and performance monitoring.<br /><br />When it comes to debugging a mobile site or ad, you don’t have easy access to an inspector tool like you do on a desktop. Fortunately Chrome, Safari and Firefox all offer remote debugging over a USB connection to your desktop.<br /><br />Check out the resources section for additional information and links from across the web.",
     "links" : [ {
       "title" : "Remote Debugging on Android with Chrome",
       "url" : "https://developer.chrome.com/devtools/docs/remote-debugging"
     } ],
     "pro-tips" : [ {
-      "type" : "good",
-      "description" : "Use remote debugging when developing html5 content that will be viewed across screens."
+      "description" : "Use remote debugging when developing html5 content that will be viewed across screens.",
+      "type" : "good"
     }, {
-      "type" : "good",
-      "description" : "Works with Creative Preview app for debugging in-app creatives."
+      "description" : "Works with Creative Preview app for debugging in-app creatives.",
+      "type" : "good"
     } ],
     "quick-start" : [ {
-      "description" : "Here’s how to quickly get testing with USB Debugging.<br \/><br \/>Get started on Chrome for Android by following instructions here to enable USB debugging and connect your phone to your computer. Be sure to visit <pre>chrome://inspect<\/pre> and enable Discovery of USB devices.<br \/><br \/>Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br \/><br \/>When visiting <pre>chrome://inspect<\/pre> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br \/><br \/><img> here",
+      "description" : "Here’s how to quickly get testing with USB Debugging.<br /><br />Get started on Chrome for Android by following instructions here to enable USB debugging and connect your phone to your computer. Be sure to visit <pre>chrome://inspect</pre> and enable Discovery of USB devices.<br /><br />Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br /><br />When visiting <pre>chrome://inspect</pre> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br /><br /><img> here",
       "link" : {
         "title" : "Remote Debugging on Android with Chrome",
         "url" : "https://developer.chrome.com/devtools/docs/remote-debugging#setting-up-device"
       }
     }, {
-      "description" : "Get started on Safari and iOS devices by following instructions here to enable debugging options and connect your device to your computer.<br \/><br \/>Send a Studio preview to your phone so it opens in Safari.<br \/><br \/>Open Safari and from the Develop menu you should see your device and open windows listed. Simply select Studio’s preview window and you’ll be able to fully view and debug your creative as if on your desktop.",
+      "description" : "Get started on Safari and iOS devices by following instructions here to enable debugging options and connect your device to your computer.<br /><br />Send a Studio preview to your phone so it opens in Safari.<br /><br />Open Safari and from the Develop menu you should see your device and open windows listed. Simply select Studio’s preview window and you’ll be able to fully view and debug your creative as if on your desktop.",
       "link" : {
         "title" : "About Safari Web Inspector",
         "url" : "https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1"
@@ -36,106 +36,119 @@
     "tags" : [ "debugging", "android", "chrome", "safari", "google apis", "mobile" ],
     "title" : "USB Device Debugging"
   }, {
-      "title" : "Google Fonts",
-      "description" : "A web with web fonts is more beautiful, readable, accessible and open. Google Fonts makes it quick and easy for everyone to use web fonts, including professional designers and developers. We believe that everyone should be able to bring quality typography to their web pages and applications. All you have to do is add a special stylesheet link to your HTML document, then refer to the font in a CSS style.",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "A web with web fonts is more beautiful, readable, accessible and open. Google Fonts makes it quick and easy for everyone to use web fonts, including professional designers and developers. We believe that everyone should be able to bring quality typography to their web pages and applications. All you have to do is add a special stylesheet link to your HTML document, then refer to the font in a CSS style.",
+    "links" : [ {
+      "title" : "",
+      "url" : ""
+    } ],
+    "pro-tips" : [ {
+      "description" : "Limit number of families / weights used if possible",
+      "type" : "good"
+    }, {
+      "description" : "Don’t cut images of the text.",
+      "type" : "bad"
+    }, {
+      "description" : "Install Cloud fonts on designer’s machine BEFORE designing.",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "Add this code to your website: <pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre><br/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;</pre><br/>",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      }
+    } ],
+    "tags" : [ "fonts", "debugging" ],
+    "title" : "Google Fonts"
+  }, {
+    "demo" : [ {
+      "description" : "Demonstrates the YouTube Player API’s various parameters, functions, and events.<br /><br /><iframe id=\"player\" type=\"text/html\" width=\"640\" height=\"390\"\n  src=\"//www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=https://html5-toolkit.appspot.com\"\n  frameborder=\"0\"></iframe>",
+      "link" : {
+        "title" : "YouTube Player Demo",
+        "url" : "https://developers.google.com/youtube/youtube_player_demo"
+      },
+      "title" : "YouTube Player Demo"
+    } ],
+    "description" : "The YouTube Player IFrame API allows you to easily embed YouTube video content into your Ad. This will allow click to play interactions to increase your public view count to help your video and channel gain exposure. Flash and Javascript API’s have been deprecated in favor of the IFrame API which allows YouTube to serve HTML5 player by default and backup to Flash if necessary.",
+    "links" : [ {
+      "title" : "https://developers.google.com/youtube/iframe_api_reference",
+      "url" : "YouTube Player API Reference for iframe Embeds"
+    }, {
+      "title" : "https://developers.google.com/youtube/youtube_player_demo",
+      "url" : "YouTube Player Demo"
+    }, {
+      "title" : "https://developers.google.com/youtube/iframe_api_reference#Playback_controls",
+      "url" : "Google Developers site - YouTube playback controls"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Use the Google Web Designer YouTube component and get basic video metrics, muted autoplay (desktop), and click to play view count included with no additional coding required.",
+      "type" : "good"
+    }, {
+      "description" : "With YouTube HTML5 compatible IFrame player you can be sure your video will playback on all modern browsers and devices.",
+      "type" : "good"
+    }, {
+      "description" : "Need more control? Use JavaScript to load, cue, pause, seek, and more! Check out the API playback controls on the Google Developers site.",
+      "type" : "good"
+    }, {
+      "description" : "IE7 and below are not supported due to lack of postMessage support.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "Using Google Web Designer to build your Ad? Drag and drop the YouTube Player component onto the stage from the components panel.<br /><br />With it still selected, check the properties panel to add your YouTube ID and adjust any other parameters.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/youtube-player/youtube-gwd-properties.png\">",
+      "link" : {
+        "title" : "Google Web Designer YouTube Component",
+        "url" : "https://support.google.com/webdesigner/answer/3232992?hl=en"
+      }
+    }, {
+      "description" : "Visit the YouTube Player Getting Started guide to manually include the YouTube Player in your Ad creative.",
+      "link" : {
+        "title" : "Getting Started",
+        "url" : "https://developers.google.com/youtube/iframe_api_reference#Getting_Started"
+      }
+    } ],
+    "tags" : [ "youtube", "google apis", "video", "Google Web Designer" ],
+    "title" : "YouTube Player"
+  },
+  {
+      "title" : "Studio Layouts",
+      "description" : "DoubleClick Studio Layouts makes Rich Media creative development much easier. Layouts provides the Rich Media ad shell for you, so all you have to do is pick the Layout you want, upload your existing assets, add your desired copy, and publish. With Layouts, you can get more out of your existing assets, trade up from basic image creatives to Rich Media, and creatives in minutes.",
       "demo" : [ {
-        "description" : "",
+        "description" : "For advertisers that want to enhance their video assets, create an additional layer of interaction via clickable hotspots that overlay additional content. When hotspot is clicked, the video will pause and overlay will appear. When overlay close button is clicked, the video resumes. This format only runs on YouTube.",
         "link" : {
-          "title" : "",
-          "url" : ""
+          "title" : "HTML5 Interactive Video Hotspots",
+          "url" : "http://www.richmediagallery.com/detailPage?id=8190"
         },
-        "title" : ""
+        "title" : "HTML5 Interactive Video Hotspots"
       } ],
       "quick-start" : [
         {
-          "description" : "Add this code to your website: <pre>&lt;link href='https:\/\/fonts.googleapis.com\/css?family=Open+Sans' rel='stylesheet' type='text\/css'&gt;<\/pre><br\/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;<\/pre><br\/>",
-          "link" : {
-            "title" : "",
-            "url" : ""
-          }
+          "description" : "Build a YouTube Masthead with video and hotpots from a Layout using the requirements described <a href=’’ target=’https://support.google.com/displayspecs/answer/4489886’>here</a>. "
         }
       ],
       "pro-tips" : [
         {
-          "type":"good",
-          "description": "Limit number of families / weights used if possible"
-        },
-        {
-          "type":"bad",
-          "description": "Don’t cut images of the text."
-        },
-        {
-          "type":"good",
-          "description": "Install Cloud fonts on designer’s machine BEFORE designing."
+          "type":"good", 
+          "description": "Use the in-product preview gallery to preview a Layout before deciding to use it. The in-product gallery can be found within the Studio user interface when choosing a Layout."
         }
       ],
       "links" : [
         {
-          "url" : "",
-          "title" : ""
+          "url" : "https://support.google.com/richmedia/answer/3306570",
+          "title" : "Studio Layouts"
         }
       ],
       "tags" : [
-        "fonts","debugging"
+"tool",
+"Studio",
+"templates"
       ]
-    },{
-      "title" : "YouTube Player",
-      "description" : "The YouTube Player IFrame API allows you to easily embed YouTube video content into your Ad. This will allow click to play interactions to increase your public view count to help your video and channel gain exposure. Flash and Javascript API’s have been deprecated in favor of the IFrame API which allows YouTube to serve HTML5 player by default and backup to Flash if necessary.",
-      "demo" : [ {
-        "description" : "Demonstrates the YouTube Player API’s various parameters, functions, and events.<br \/><br \/><iframe id=\"player\" type=\"text/html\" width=\"640\" height=\"390\"\n  src=\"http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=https://html5-toolkit.appspot.com\"\n  frameborder=\"0\"></iframe>",
-        "link" : {
-          "title" : "YouTube Player Demo",
-          "url" : "https://developers.google.com/youtube/youtube_player_demo"
-        },
-        "title" : "YouTube Player Demo"
-      } ],
-      "quick-start" : [
-        {
-"description" : "Using Google Web Designer to build your Ad? Drag and drop the YouTube Player component onto the stage from the components panel.<br \/><br \/>With it still selected, check the properties panel to add your YouTube ID and adjust any other parameters.<br \/><br \/><img src=\"https://storage.googleapis.com/html5-toolkit/youtube-player/youtube-gwd-properties.png\">",
-          "link" : {
-            "title" : "Google Web Designer YouTube Component",
-            "url" : "https://support.google.com/webdesigner/answer/3232992?hl=en"
-          }
-        }, {
-"description" : "Visit the YouTube Player Getting Started guide to manually include the YouTube Player in your Ad creative.",
-          "link" : {
-            "title" : "Getting Started",
-            "url" : "https://developers.google.com/youtube/iframe_api_reference#Getting_Started"
-          }
-        }
-      ],
-      "pro-tips" : [
-        {
-         "type":"good",
-         "description" : "Use the Google Web Designer YouTube component and get basic video metrics, muted autoplay (desktop), and click to play view count included with no additional coding required."
-      }, {
-  "type":"good",
-         "description" : "With YouTube HTML5 compatible IFrame player you can be sure your video will playback on all modern browsers and devices."
-}, {
-  "type":"good",
- "description" : "Need more control? Use JavaScript to load, cue, pause, seek, and more! Check out the API playback controls on the Google Developers site."
-}, {
-  "type":"bad",
- "description": "IE7 and below are not supported due to lack of postMessage support."
-} ],
-      "links" : [
-        {
-          "url" : "YouTube Player API Reference for iframe Embeds",
-          "title" : "https://developers.google.com/youtube/iframe_api_reference"
-        }, {
-          "url" : "YouTube Player Demo",
-          "title" : "https://developers.google.com/youtube/youtube_player_demo"
-        }, {
-          "url" : "Google Developers site - YouTube playback controls",
-          "title" : "https://developers.google.com/youtube/iframe_api_reference#Playback_controls"
-        }
-      ],
-      "tags" : [
-"youtube",
-"google apis",
-"video",
-"Google Web Designer"
-      ]
-    }
- ]
+    } ]
 }
