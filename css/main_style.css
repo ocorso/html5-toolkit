@@ -1,0 +1,344 @@
+/* ==========================================================================
+   global
+========================================================================== */
+html, body {
+  background: #f0f0f0;
+  font: 400 10px/1.846 RobotoDraft, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+body {
+  height: 100%; }
+  body .cf {
+    *zoom: 1; }
+    body .cf:before, body .cf:after {
+      content: " ";
+      display: table; }
+    body .cf:after {
+      clear: both; }
+  body a {
+    color: #0288d1;
+    cursor: pointer;
+    text-decoration: none; }
+  body img {
+    max-width: 100%;
+    vertical-align: middle; }
+  body h1, body h2,
+  body h3,
+  body h4 {
+    line-height: 1.25;
+    margin: 0; }
+
+/* ==========================================================================
+   typography
+========================================================================== */
+.md-display-1 {
+  color: #ff5722;
+  font-size: 3.4rem;
+  font-weight: 400; }
+  .md-display-1.numeral {
+    color: inherit;
+    font-weight: 300;
+    height: 40px;
+    line-height: 1;
+    margin-right: 16px;
+    margin-top: 8px;
+    text-align: left; }
+  .md-display-1 a {
+    color: inherit; }
+
+.md-headline {
+  font-size: 2.4rem;
+  font-weight: 400; }
+
+.md-title {
+  font-size: 2.0rem;
+  font-weight: 500; }
+
+.md-subhead {
+  font-size: 1.6rem;
+  font-weight: 500; }
+  .md-subhead ng-md-icon {
+    display: inline-block;
+    height: 24px;
+    margin-left: 4px;
+    width: 24px; }
+  .md-subhead a ng-md-icon {
+    fill: #0288d1; }
+
+.md-body-1 {
+  font-size: 1.4rem;
+  font-weight: 400; }
+
+.md-body-2, .md-button {
+  font-size: 1.4rem;
+  font-weight: 500; }
+
+.md-button {
+  display: inline-block;
+  padding: 6px 16px;
+  white-space: normal; }
+  .md-button[md-no-ink] {
+    color: #0288d1 !important;
+    padding: 0;
+    text-align: left; }
+    .md-button[md-no-ink]:hover, .md-button[md-no-ink]:focus {
+      background: none !important; }
+  .md-button ng-md-icon {
+    fill: #0288d1;
+    height: 24px;
+    margin-left: 4px;
+    width: 32px; }
+
+.md-caption {
+  font-size: 1.2rem;
+  font-weight: 400; }
+
+/* ==========================================================================
+   general layout
+========================================================================== */
+.max-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  padding: 0 24px; }
+
+header h3 {
+  padding: 16px 0; }
+header.masthead {
+  background: #ff5722;
+  padding: 48px 0; }
+  header.masthead h1, header.masthead body h2, body header.masthead h2,
+  header.masthead body h3,
+  body header.masthead h3,
+  header.masthead body h4,
+  body header.masthead h4 {
+    color: #fff; }
+
+md-tabs md-tab {
+  border-bottom: 2px solid #fff;
+  padding: 0; }
+md-tabs section {
+  margin: 0; }
+md-tabs a {
+  color: inherit;
+  display: block;
+  padding: 20px 24px; }
+
+.search-bar {
+  max-width: 320px;
+  width: 100%; }
+  .search-bar label, .search-bar .md-input {
+    padding-left: 24px !important; }
+  .search-bar ng-md-icon {
+    bottom: 32px;
+    fill: rgba(0, 0, 0, 0.12);
+    position: absolute;
+    left: 0; }
+
+article[ng-view] {
+  background: #f0f0f0; }
+
+ng-md-icon svg {
+  vertical-align: middle; }
+
+section {
+  margin: 24px 0; }
+  section.breadcrumbs {
+    background: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    padding-bottom: 8px;
+    padding-top: 8px; }
+    section.breadcrumbs i {
+      font-style: normal;
+      margin: 0 2px; }
+  section .bg-white-trans {
+    background: rgba(255, 255, 255, 0.6); }
+
+ul.no-style {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0; }
+
+/* ==========================================================================
+   splash view
+========================================================================== */
+section main.bg-white-trans .big-image {
+  max-height: 364px;
+  overflow: hidden;
+  width: 100%; }
+  section main.bg-white-trans .big-image img {
+    max-width: none;
+    width: 100%; }
+section main.bg-white-trans .copy {
+  max-height: 364px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 24px; }
+section main md-card {
+  background: #fff;
+  margin: 16px 0; }
+  section main md-card .redirect {
+    color: inherit; }
+    section main md-card .redirect i {
+      font-style: normal;
+      color: #0288d1; }
+  section main md-card .icon {
+    padding: 16px;
+    text-align: center; }
+    section main md-card .icon img {
+      max-height: 112px;
+      width: auto; }
+  section main md-card .snippet {
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 16px; }
+    section main md-card .snippet h3 {
+      margin-bottom: 16px; }
+  section main md-card.toolkit-card .title {
+    color: #0288d1;
+    padding: 16px; }
+    section main md-card.toolkit-card .title ng-md-icon {
+      fill: #0288d1; }
+  section main md-card.toolkit-card .snippet {
+    max-height: 56px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%; }
+section main .graph {
+  background: #fff;
+  padding: 16px; }
+
+/* ==========================================================================
+   toolkit view
+========================================================================== */
+section ul.tags {
+  flex-wrap: wrap; }
+  section ul.tags ng-md-icon {
+    fill: rgba(0, 0, 0, 0.26); }
+  section ul.tags li {
+    background: rgba(255, 255, 255, 0.6);
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.26);
+    display: inline-block;
+    margin-right: 4px;
+    margin-top: 8px;
+    padding: 0 6px; }
+    section ul.tags li:first-child {
+      background: none; }
+    section ul.tags li:last-child {
+      margin-right: 0; }
+section pre {
+  background: rgba(255, 255, 255, 0.6);
+  color: #ff5722;
+  font: 500 16px/1.6em 'Source Code Pro', monospace;
+  padding: 16px;
+  white-space: normal;
+  word-break: break-all; }
+section.block-color header {
+  color: #fff;
+  padding: 24px; }
+  section.block-color header h3 {
+    padding: 0; }
+section.block-color main {
+  padding: 24px; }
+section.block-color.primary {
+  background: #ffccbc; }
+  section.block-color.primary header {
+    background: #ff5722; }
+section.block-color.accent {
+  background: #b3e5fc; }
+  section.block-color.accent header {
+    background: #0288d1; }
+section.block-color ul {
+  margin: 0; }
+section.quick-start main {
+  padding: 0 24px 24px; }
+  section.quick-start main li {
+    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 24px 0;
+    padding: 24px; }
+section.pro-tips li {
+  margin: 16px 0;
+  padding: 24px; }
+  section.pro-tips li span {
+    margin-right: 24px;
+    min-width: 24px; }
+  section.pro-tips li p {
+    margin: 0; }
+  section.pro-tips li.good {
+    background: #b8f5c9; }
+    section.pro-tips li.good ng-md-icon {
+      fill: #0e9c57; }
+  section.pro-tips li.bad {
+    background: #f8bbd0; }
+    section.pro-tips li.bad ng-md-icon {
+      fill: #ff4081; }
+section iframe {
+  max-width: 100%; }
+
+footer.links a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%; }
+
+/* ==========================================================================
+   media queries
+========================================================================== */
+/* ==========================================================================
+   media query - tablet
+========================================================================== */
+@media only screen and (max-width: 960px) {
+  .max-width {
+    padding: 0 16px; }
+
+  section main.bg-white-trans {
+    max-height: none; }
+    section main.bg-white-trans .big-image {
+      max-height: none; }
+    section main.bg-white-trans .copy {
+      max-height: none;
+      padding: 16px; } }
+/* ==========================================================================
+   media query - mobile
+========================================================================== */
+@media only screen and (max-width: 600px) {
+  .md-button {
+    width: 100%; }
+
+  section main md-card.toolkit-card .title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    width: 100%; }
+  section main md-card.toolkit-card .snippet {
+    border: none; }
+  section.block-color header {
+    padding: 16px; }
+  section.block-color main {
+    padding: 16px; }
+  section.quick-start main {
+    padding: 0 16px 16px; }
+    section.quick-start main li {
+      margin: 16px 0;
+      padding: 16px; }
+  section.pro-tips li {
+    padding: 16px; }
+    section.pro-tips li span {
+      margin-right: 0; }
+    section.pro-tips li p {
+      text-align: center; }
+  section ul.tags {
+    flex-wrap: wrap; }
+    section ul.tags li:first-child {
+      display: none; } }
+
+/*# sourceMappingURL=main_style.css.map */

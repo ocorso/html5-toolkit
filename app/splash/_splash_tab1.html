@@ -1,0 +1,111 @@
+<section>
+  <main class="bg-white-trans"
+        layout-gt-md="row" layout-align-gt-md="space-between start"
+        layout="column" layout-align="start start">
+
+    <div class="big-image" flex-gt-md="65">
+      <img src="imgs/HTML5_masthead.jpg" border="0" />
+    </div>
+
+    <div class="copy" flex-gt-md="35">
+      <h2 class="md-title">
+        Time to switch
+      </h2>
+
+      <p>HTML5 is becoming the industry standard for web technology. Publishers are migrating to HTML5 video players, browsers are introducing power saving plugins and mobile traffic, which only supports HTML5, is continually rising.</p>
+
+      <p>HTML5 is here to stay so make sure you don’t get left behind in this industry-wide revamp.</p>
+
+      <md-button href="" class="md-raised md-accent">
+        Make the switch today!
+      </md-button>
+    </div>
+  </main>
+</section>
+
+<section>
+  <header>
+    <h3 class="md-subhead">
+      What's the big deal?
+    </h3>
+  </header>
+
+  <main>
+    <p>As publishers reduce the support of Flash and mobile impressions increase, many advertisers have seen a gradual growth in backup image rates for their campaigns. Along side this, many browsers have started to adopt ‘Power Saving’ plugins which pause any Flash content. Don't be scared, we're here to help!</p>
+
+    <p>Luckily, HTML5 navigates these issues and can help improve your advertising campaign’s performance by reducing the backup rate while delivering the same rich, interactive content as Flash.</p>
+
+    <p>HTML5 also creates the opportunity to extend the reach of your campaign. With the ever increasing prevalence of mobile traffic, unlike with Flash, HTML5 allows you to target your audience no matter their device.  Whether it be desktop, tablet or smartphones, with HTML5 your audience will always see the full advertising experience that you create.</p>
+  </main>
+</section>
+
+<section>
+  <header>
+    <h3 class="md-subhead">
+      Resources
+    </h3>
+  </header>
+
+  <main>
+    <p>We offer a wide variety of tools and support material to help you make the switch to HTML5 today:</p>
+
+    <ul>
+      <li>Google Web Designer; a powerful authoring tool which helps designers and developers to easily build creatives</li>
+      <li>Layouts; lets you quickly turn your static assets into interactive rich media units</li>
+      <li>Templates, Help Center and HTML5 Toolkit resources help you build HTML5 units from scratch</li>
+    </ul>
+
+    <p>If you feel brave enough you can use include of our TechLab solutions or deep dive into all the advanced available features at <a href="http://www.html5rocks.com" target="_blank">HTML5Rocks.com</a>.</p>
+  </main>
+</section>
+
+<section>
+  <main>
+    <md-card ng-repeat="item in splash.grid">
+      <a class="redirect" ng-if="item.type == 'external'" target="_blank" 
+         href="{{ item.link }}"
+         layout="row" layout-align="space-between center">
+
+        <div class="icon" flex="40">
+          <img ng-src="imgs/{{ item.icon }}" border="0" />
+        </div>
+
+        <div class="snippet" flex="60">
+          <h3 class="md-subhead">{{ item.title }}</h3>
+          <span ng-bind-html="main.safeHtml(item.snippet)"></span>
+        </div>
+      </a>
+
+      <a class="redirect" ng-if="item.type != 'external'" href="{{ item.link }}"
+         layout="row" layout-align=" space-between center">
+
+        <div class="icon" flex="40">
+          <img ng-src="imgs/{{ item.icon }}" border="0" />
+        </div>
+
+        <div class="snippet" flex="60">
+          <h3 class="md-subhead">{{ item.title }}</h3>
+          <span ng-bind-html="main.safeHtml(item.snippet)"></span>
+        </div>
+      </a>
+    </md-card>
+  </main>
+</section>
+
+<section>
+  <header>
+    <h3 class="md-subhead">
+      Additional Resources
+    </h3>
+  </header>
+
+  <main>
+    <p>
+      <img class="graph" src="imgs/line_graph.jpg" border="0" />
+    </p>
+
+    <p>
+      <img class="graph" src="imgs/bar_graph.jpg" border="0" />
+    </p>
+  </main>
+</section>

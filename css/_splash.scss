@@ -1,92 +1,80 @@
-.splash-view {
-  .copy {
-    padding: $large-padding;
+section {	
+	main {
+		&.bg-white-trans {
+			.big-image {
+				max-height: 364px;
+				overflow: hidden;
+				width: 100%;
 
-    h2 {
-      margin-bottom: $small-padding;
-    }
-  }
+				img {
+					max-width: none;
+					width: 100%;
+				}
+			}
 
-  .text {
-    p {
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-  }
+			.copy {
+				max-height: 364px;
+				overflow: hidden;
+				overflow-y: auto; 
+				padding: $large-space;
+			}
+		}
 
-  ul {
-    list-style-position: outside;
-    margin: 1em 0 1em 1em;
-    padding: 0 0 0 1em;
+		md-card {
+			background: #fff;
+			margin: $small-space 0;
 
-    &:first-child {
-      margin-top: 0;
-    }
+			.redirect {
+				color: inherit;
 
-    li {
-      margin: 4px 0;
-    }
-  }
+				i {
+					font-style: normal;
+					color: $accent-color;
+				}
+			}
 
-  .grid {
-    flex-wrap: wrap;
+			.icon {
+				padding: $small-space;
+				text-align: center;
 
-    md-card {
-      background: #fff;
-      -webkit-flex: 0 0 calc(50% - 16px);
-      -ms-flex: 0 0 calc(50% - 16px);
-      flex: 0 0 calc(50% - 16px);
-    }
+				img {
+				  max-height: 112px;
+					width: auto;
+				}
+			}
 
-    .icon {
-      padding: $small-padding;
-      position: relative;
-      text-align: center;
+			.snippet {
+				border-left: 1px solid $color-dividers;
+				padding: $small-space;
 
-      img {
-          max-height: 88px;
-          width: auto;
-      }
+				h3 {
+					margin-bottom: $small-space;
+				}
+			}
 
-      &:after {
-        background: $color-dividers;
-        content: '';
-        height: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 1px;
-      }
-    }
+			&.toolkit-card {
+				.title {
+					color: $accent-color;
+					padding: $small-space;
 
-    .snippet {
-      color: $font-color;
-      padding: $small-padding;
+					ng-md-icon {
+						fill: $accent-color;
+					}
+				}
 
-      h3 {
-        margin-bottom: $small-padding;
-      }
+				.snippet {
+					max-height: 56px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					width: 100%;
+				}
+			}
+		}
 
-      i {
-        color: $primary-color;
-        font-style: normal;
-      }
-    }
-  }
-
-  section {
-    .section {
-      margin: 32px auto;
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-
-    .graph {
-      background: #fff;
-      padding: $small-padding;
-    }
-  }
+		.graph {
+			background: #fff;
+			padding: $small-space;
+		}
+	}
 }

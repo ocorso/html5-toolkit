@@ -1,0 +1,98 @@
+.max-width {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 960px;
+	padding: 0 $large-space;
+}
+
+header {
+	h3 {
+		padding: $small-space 0;
+	}
+
+	&.masthead {
+		background: $primary-color;
+		padding: $large-space * 2 0;
+
+		h1 {
+			color: #fff;
+		}
+	}
+}
+
+md-tabs {
+	md-tab {
+	  border-bottom: 2px solid #fff;
+		padding: 0;
+	}
+
+	section {
+		margin: 0;
+	}
+
+	a {
+		color: inherit;
+		display: block;
+		padding: 20px 24px;
+	}
+}
+
+.search-bar {
+	max-width: 320px;
+	width: 100%;
+
+	label {
+		padding-left: 24px !important;
+	}
+
+	.md-input {
+		@extend label;
+	}
+
+	ng-md-icon {
+	  bottom: 32px;
+	  fill: $color-dividers;
+	  position: absolute;
+	  left: 0;
+	}
+}
+
+article {
+	&[ng-view] {
+		background: $light-grey;
+	}
+}
+
+ng-md-icon {
+	svg {
+		vertical-align: middle;
+	}
+}
+
+section {
+	margin: $large-space 0;
+
+	&.breadcrumbs {
+		background: $white-trans;
+		margin: 0;
+		padding-bottom: 8px;
+		padding-top: 8px;
+
+		i {
+			font-style: normal;
+			margin: 0 2px;
+		}
+	}
+
+	.bg-white-trans {
+		background: $white-trans;
+	}
+}
+
+ul {
+	&.no-style {
+		list-style: none;
+		margin: 1em 0;
+		padding: 0;
+	}
+}

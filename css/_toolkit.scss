@@ -1,0 +1,141 @@
+section {	
+	ul {
+		&.tags {
+			flex-wrap: wrap;
+
+			ng-md-icon {
+				fill: $font-color-3;
+			}
+
+			li {
+				background: $white-trans;
+				-moz-border-radius: 2px;
+				-ms-border-radius: 2px;
+				-webkit-border-radius: 2px;
+				border-radius: 2px;
+				color: $font-color-3;
+				display: inline-block;
+				margin-right: 4px;
+				margin-top: 8px;
+				padding: 0 6px;
+
+				&:first-child {
+					background: none;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	pre {
+		background: $white-trans;
+		color: $primary-color;
+		font: 500 16px/1.6em 'Source Code Pro', monospace;
+		padding: $small-space;
+		white-space: normal;
+		word-break: break-all;
+	}
+
+	&.block-color {
+		header {
+		  color: #fff;
+		  padding: $large-space;
+
+		  h3 {
+		  	padding: 0;
+		  }
+		}
+
+		main {
+			padding: $large-space;
+		}
+
+		&.primary {
+			background: $primary-color-2;
+
+			header {
+				background: $primary-color;
+			}
+		}
+
+		&.accent {
+			background: $accent-color-2;
+
+			header {
+				background: $accent-color;
+			}
+		}
+
+		ul {
+			margin: 0;
+		}
+	}
+
+	&.quick-start {
+		main {
+			padding: 0 $large-space $large-space;
+
+			li {
+				background: $white-trans;
+				background: rgba(255, 255, 255, .25);
+				-moz-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+				-ms-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+				-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+				box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+				margin: $large-space 0;
+				padding: $large-space;
+			}
+		}
+	}
+
+	&.pro-tips {
+		li {
+			margin: $small-space 0;
+			padding: $large-space;
+
+			span {
+			  margin-right: 24px;
+			  min-width: 24px;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			&.good {
+				background: $accent-green;
+
+				ng-md-icon {
+					fill: $accent-green-1;
+				}
+			}
+
+			&.bad {
+				background: $accent-pink;
+
+				ng-md-icon {
+					fill: $accent-pink-1;
+				}
+			}
+		}
+	}
+
+	iframe {
+		max-width: 100%;
+	}
+}
+
+footer {
+	&.links {
+		a {
+			display: block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 100%;
+		}
+	}
+}

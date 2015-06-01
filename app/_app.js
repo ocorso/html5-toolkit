@@ -14,21 +14,25 @@ var app = angular.module('app', [
 app.config(function($mdThemingProvider, $routeProvider) {
   // material colors
   $mdThemingProvider.theme('default')
-    .primaryPalette('light-blue', {
-      'default': '700',
-      'hue-1': '800',
-      'hue-2': '100'
-    })
-    .accentPalette('deep-orange', {
+    .primaryPalette('deep-orange', {
       'default': '500',
       'hue-1': '200',
       'hue-2': '100',
     })
+    .accentPalette('light-blue', {
+      'default': '700',
+      'hue-1': '800',
+      'hue-2': '100'
+    })
     .warnPalette('red');
 
   // routing
-  $routeProvider.when('/html5/welcome', {
-    templateUrl: 'app/splash/_splash.html',
+  $routeProvider.when('/html5', {
+    templateUrl: 'app/splash/_splash_tab1.html',
+    controller: 'SplashCtrl as splash'
+
+  }).when('/html5/toolkit', {
+    templateUrl: 'app/splash/_splash_tab2.html',
     controller: 'SplashCtrl as splash'
 
   }).when('/html5/toolkit/:item', {
@@ -36,63 +40,32 @@ app.config(function($mdThemingProvider, $routeProvider) {
     controller: 'ToolkitCtrl as toolkit'
 
   }).otherwise({
-    redirectTo: '/html5/welcome'
+    redirectTo: '/html5'
   });
-});
-
-
-/*
- * Firebase toolkit items
- */
-app.factory('ToolkitData', function($http) {
-  var url = 'https://html5-toolkit.firebaseio.com/.json';
-  var toolkit = {};
-
-  toolkit.items = function() {
-    return $http.jsonp(url + '?callback=JSON_CALLBACK');
-  };
-
-  return toolkit;
 });
 
 
 /*
  * main controller that is accessible in any view
  */
-app.controller('MainCtrl', function($scope, $mdSidenav, $window, $sce, 
-  $location, $routeParams, SplashContent, ToolkitData) {
+app.controller('MainCtrl', function($scope, $window, $sce, $location) {
+
+  $scope.main.progress = true;
   
   var main = this;
-
-  main.toggleRightNav = function() {
-    $mdSidenav('RightNavPanel').toggle();
-  };
-
-  main.closeRightNav = function() {
-    $mdSidenav('RightNavPanel').close();
-  };
 
   // safe HTML
   main.safeHtml = function(html) {
     return $sce.trustAsHtml(html);
   };
 
-  // set active nav on nav panel
-  main.activeNav = function(path) {
-    var path_split = $location.path().split('/');
-    var page_view = path_split[3];
-
-    return path === page_view;
-  };
-
-  // get Firebase toolkit data
-  ToolkitData.items().success(function(data) {
-    main.toolkitItems = data['toolkit-items'];
-
-  }).error(function() {
-    console.log('Error loading in Firebase data.');
+  // route tabs
+  $scope.$watch('main[\'selected-tab\']', function(current, old) {
+    switch(current) {
+      case 0: $location.url('/html5'); break;
+      case 1: $location.url('/html5/toolkit'); break;
+    }
   });
-
 
   // MEDIAQUERIES
   // on load
@@ -114,8 +87,6 @@ app.controller('MainCtrl', function($scope, $mdSidenav, $window, $sce,
   // on resize
   $window.onresize = function() {
     var width = window.innerWidth;
-
-    main.closeRightNav();
 
     if( width <= 600 ) {
       $scope.$apply(function() {

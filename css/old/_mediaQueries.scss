@@ -10,36 +10,24 @@
 		> header {
 			padding: $large-padding $large-padding 0;
 		}
-
-		.block-color {
-			margin: 32px $small-padding;
-		}
-
-		main {
-			padding: 0 $large-padding;
-		}
-
-		section {
-			header {
-				padding: 0 $large-padding;
-			}
-		}
-
-		footer {
-			padding: 0 $large-padding;
-		}
 	}
 
 	.splash-view {
-	  .copy {
-	    padding: $large-padding 0;
-	  }
+		section {
+	    .section {
+	      &.bg-white {
+	        max-height: none;
+	        overflow: auto;
 
-	  .grid {
-		  md-card {
-	      -webkit-flex: 1;
-	      -ms-flex: 1;
-	      flex: 1;
+	        .image {
+	        	height: auto;
+	        	max-height: none;
+	        }
+	      }
+
+	      .copy {
+		    	max-height: none;
+			  }
 	    }
 	  }
 	}
@@ -48,28 +36,10 @@
 
 // mobile
 @media only screen and (max-width: 600px) {
-	.top-bar {
-		.md-subhead {
-			font-size: 12px;
-			font-weight: 500;
-		}
-
-		.inner-content {
-			i {
-				display: none;
-			}
-
-			a, 
-			span {
-				display: block;
-				margin: 3px 0;
-			}
-		}
-	}
-
-	md-content {
-		&[ng-view] {
-			padding-bottom: $small-padding;
+	body {
+		.max-width {
+			padding-left: $small-padding; 
+			padding-right: $small-padding; 
 		}
 	}
 
@@ -105,14 +75,6 @@
 		}
 
 		section {
-			header {
-				padding: 0 $small-padding;
-			}
-
-			main {
-				padding: 0 $small-padding;
-			}
-
 			.block {
 				padding: $small-padding;
 				text-align: center;
@@ -132,8 +94,21 @@
 	}
 
 	.splash-view {
-	  .copy {
-	    padding: $small-padding 0;
+		section {
+	    .section {
+	      .copy {
+		    	max-height: none;
+			    padding: $small-padding;
+			  }
+	    }
+	  }
+
+	  .grid {
+		  md-card {
+	     .icon {
+	     	display: none;
+	     }
+	    }
 	  }
 	}
 }

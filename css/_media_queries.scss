@@ -1,0 +1,99 @@
+/* ==========================================================================
+   media query - tablet
+========================================================================== */
+@media only screen and (max-width: 960px) {
+	.max-width {
+		padding: 0 $small-space;
+	}
+
+	section {	
+		main {
+			&.bg-white-trans {
+				max-height: none;
+
+				.big-image {
+					max-height: none;
+				}
+
+				.copy {
+					max-height: none;
+					padding: $small-space;
+				}
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+   media query - mobile
+========================================================================== */
+@media only screen and (max-width: 600px) {
+	.md-button {
+		width: 100%;
+	}
+
+	section {
+		main {
+			md-card {
+				&.toolkit-card {
+					.title {
+						border-bottom: 1px solid $color-dividers;
+						width: 100%;
+					}
+
+					.snippet {
+						border: none;
+					}
+				}
+			}
+		}
+
+		&.block-color {
+			header {
+			  padding: $small-space;
+			}
+
+			main {
+				padding: $small-space;
+			}
+		}
+
+		&.quick-start {
+			main {
+				padding: 0 $small-space $small-space;
+
+				li {
+					margin: $small-space 0;
+					padding: $small-space;
+				}
+			}
+		}
+
+		&.pro-tips {
+			li {
+				padding: $small-space;
+
+				span {
+				  margin-right: 0;
+				}
+
+				p {
+				 text-align: center;
+				}
+			}
+		}
+
+		ul {
+			&.tags {
+				flex-wrap: wrap;
+
+				li {
+					&:first-child {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+<section>
+	<main>	
+		<form name="searchToolkit" layout="row" layout-align="end center">
+		  <md-input-container class="md-accent search-bar">
+		    <label>Search</label>
+		    <input name="search" ng-model="search">
+		    <ng-md-icon icon="search" size="24"></ng-md-icon>
+		  </md-input-container>
+		</form>
+
+		<md-card class="toolkit-card" 
+						 ng-repeat="item in splash.toolkitItems | orderBy: 'title' 
+											  | filter:search">
+
+      <a class="redirect" 
+	       href="#/html5/toolkit/{{ item.title | lowercase | hyphenate }}"
+	       layout-sm="column" layout-align="start start"
+         layout="row" layout-align="space-between center">
+
+        <div class="title" flex-sm="100" flex="30">
+		      <h2 class="md-subhead" layout="row" layout-align="space-between center">
+		        {{ item.title }}
+		        <ng-md-icon icon="launch" size="20"></ng-md-icon>
+		      </h2>
+        </div>
+
+        <div class="snippet" flex-sm="100" flex="70">
+          <span ng-bind-html="main.safeHtml(item.description)"></span>
+        </div>
+      </a>
+    </md-card>
+	</main>
+</section>

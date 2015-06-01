@@ -19,63 +19,56 @@
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.2/angular-material.min.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
 <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Code+Pro:500'>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/main_style.css">
 </head>
-<body  ng-controller="MainCtrl as main">
+<body ng-controller="MainCtrl as main">
 
-<div class="container" layout="row" 
-     layout-align="space-between start">
+<header class="masthead">
+  <h1 class="md-display-1 max-width">
+    HTML5 Toolkit
+  </h1>
+</header>
 
-  <div class="left-side">
-    <header class="top-bar">
-      <div class="inner-content"
-           layout="row" layout-align="space-between center">
-           
-        <h3 class="md-subhead">
-          <a href="#/html5/welcome">HTML5 Transition</a>
-          <i ng-if="main.item">></i>
-          <a ng-click="main.toggleRightNav()" ng-if="main.item">Toolkit</a>
-          <i ng-if="main.item">></i>
-          <span ng-if="main.item">{{ main.title }}</span>
-        </h3>
+<section class="breadcrumbs">
+  <main class="max-width">
+    <h4 class="md-caption">
+      <a href="#/html5">HTML5 Toolkit</a>
+      <i ng-show="main['toolkit-view']">></i>
 
-        <md-button class="md-fab" ng-click="main.toggleRightNav()" 
-                   aria-label="Toggle Right Nav">
-          <img src="imgs/icon_toolkit_white.png" width="24" border="0" />
-        </md-button>
-      </div>
-    </header>
+      <span ng-show="main['toolkit-view'] && !main['toolkit-item-view']">
+        Toolkit
+      </span>
 
-    <md-content ng-view></md-content>
-  </div>
+      <a href="#/html5/toolkit" ng-show="main['toolkit-item-view']">
+        Toolkit
+      </a>
 
-  <div class="right-side">
-    <md-sidenav class="md-sidenav-right" md-component-id="RightNavPanel">
-      <header class="md-title" layout="row" layout-align="start center">
-        <span ng-click="main.closeRightNav()">
-          HTML5 Toolkit
-        </span>
-      </header>
+      <i ng-show="main['toolkit-item-view']">></i>
 
-      <md-list>
-        <md-list-item ng-repeat="item in main.toolkitItems">
-          <a href="#/html5/toolkit/{{ item.title | lowercase | hyphenate }}" 
-             class="md-body-2"
-             ng-click="main.closeRightNav()"
-             ng-class="{active:main.activeNav('{{ item.title | lowercase | hyphenate }}')}">
+      <span ng-show="main['toolkit-item-view']">
+        {{ main['toolkit-item'] }}
+      </span>
+    </h4>
+  </main>
+</section>
 
-            {{ item.title }}
-          </a>
-        </md-list-item>
-      </md-list>
-    </md-sidenav>
-  </div>
-</div>
+<md-tabs md-stretch-tabs md-selected="main['selected-tab']" class="max-width">
+  <md-tab>
+    <a href="#/html5">Why adopt HTML5?</a>
+  </md-tab>
+
+  <md-tab>
+    <a href="#/html5/toolkit">Toolkit</a>
+  </md-tab>
+</md-tabs>
+
+<article class="max-width md-body-1" ng-view></article>
 
 <script src="app/_app.js"></script>
 <script src="app/splash/SplashController.js"></script>
 <script src="app/splash/SplashFactory.js"></script>
 <script src="app/toolkit/ToolkitController.js"></script>
+<script src="app/toolkit/ToolkitFactory.js"></script>
 
 </body>
 </html>
