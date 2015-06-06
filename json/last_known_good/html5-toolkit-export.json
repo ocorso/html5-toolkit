@@ -1,36 +1,33 @@
 {
   "toolkit-items" : [ {
     "demo" : [ {
-      "description" : "Chrome Inspect view of Android device.<br \/><br \/><a href=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" target=\"_blank\"><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" width=\"864\" alt=\"Chrome Inspect view of Android device\"\/><\/>" ,
-"link" : {
-          "title" : "Debugging a Rich Media Creative",
-          "url" : "https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg"
-        },
-        "title" : "Debugging a Rich Media Creative"
+      "description" : "video here",
+      "link" : {
+        "title" : "Video demo",
+        "url" : "https://google.com"
+      },
+      "title" : "Debugging a Rich Media Creative"
     } ],
-    "description" : "Debugging HTML5 creatives is easy with built in browser development tools. All major browsers provide a developer inspector of some sort. Most can be accessed while on a page by right clicking and choosing <pre>\"inspect element\"<\/pre> or via the menu options at the top. Debugging allows you to view the html structure of your creative, view and adjust CSS to tweak visual elements, as well as view network activity, console logging, and performance monitoring.<br \/><br \/>When it comes to debugging a mobile site or ad, you don’t have easy access to an inspector tool like you do on a desktop. Fortunately Chrome, Safari and Firefox all offer remote debugging over a USB connection to your desktop.<br \/><br \/>Check out the resources section for additional information and links from across the web.",
+    "description" : "Debugging HTML5 creatives is easy with built in browser development tools. All major browsers provide a developer inspector of some sort. Most can be accessed while on a page by right clicking and choosing <pre>\"inspect element\"</pre> or via the menu options at the top. Debugging allows you to view the html structure of your creative, view and adjust CSS to tweak visual elements, as well as view network activity, console logging, and performance monitoring.<br /><br />When it comes to debugging a mobile site or ad, you don’t have easy access to an inspector tool like you do on a desktop. Fortunately Chrome, Safari and Firefox all offer remote debugging over a USB connection to your desktop.<br /><br />Check out the resources section for additional information and links from across the web.",
     "links" : [ {
       "title" : "Remote Debugging on Android with Chrome",
       "url" : "https://developer.chrome.com/devtools/docs/remote-debugging"
-    },{
-        "title" : "Creative Preview App - Android",
-        "url" : "https://play.google.com/store/apps/details?id=com.google.android.apps.audition"
-      } ],
+    } ],
     "pro-tips" : [ {
-      "type" : "good",
-      "description" : "Use remote debugging when developing html5 content that will be viewed across screens."
+      "description" : "Use remote debugging when developing html5 content that will be viewed across screens.",
+      "type" : "good"
     }, {
-      "type" : "good",
-      "description" : "Works with Creative Preview App for debugging in-app creatives. (<a href=\"https://play.google.com/store/apps/details?id=com.google.android.apps.audition\" target=\"_blank\">Android<\/a>) (iOS - coming soon)"
+      "description" : "Works with Creative Preview app for debugging in-app creatives.",
+      "type" : "good"
     } ],
     "quick-start" : [ {
-      "description" : "Here’s how to quickly get testing with USB Debugging.<br \/><br \/>Get started on Chrome for Android by following instructions to enable USB debugging and connect your phone to your computer. Be sure to visit <strong><i>chrome://inspect<\/i><\/strong> and enable Discovery of USB devices.<br \/><br \/>Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br \/><br \/>When visiting <strong><i>chrome://inspect<\/i><\/strong> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br \/><br \/><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/chrome_inspect_devices.jpg\" width=\"781\" alt=\"Chrome Inspect\"\/>",
+      "description" : "Here’s how to quickly get testing with USB Debugging.<br /><br />Get started on Chrome for Android by following instructions here to enable USB debugging and connect your phone to your computer. Be sure to visit <pre>chrome://inspect</pre> and enable Discovery of USB devices.<br /><br />Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br /><br />When visiting <pre>chrome://inspect</pre> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br /><br /><img> here",
       "link" : {
         "title" : "Remote Debugging on Android with Chrome",
         "url" : "https://developer.chrome.com/devtools/docs/remote-debugging#setting-up-device"
       }
     }, {
-      "description" : "Get started on Safari and iOS devices by following instructions here to enable debugging options and connect your device to your computer.<br \/><br \/>Send a Studio preview to your phone so it opens in Safari.<br \/><br \/>Open Safari and from the Develop menu you should see your device and open windows listed. Simply select Studio’s preview window and you’ll be able to fully view and debug your creative as if on your desktop.",
+      "description" : "Get started on Safari and iOS devices by following instructions here to enable debugging options and connect your device to your computer.<br /><br />Send a Studio preview to your phone so it opens in Safari.<br /><br />Open Safari and from the Develop menu you should see your device and open windows listed. Simply select Studio’s preview window and you’ll be able to fully view and debug your creative as if on your desktop.",
       "link" : {
         "title" : "About Safari Web Inspector",
         "url" : "https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1"
@@ -119,39 +116,28 @@
     } ],
     "tags" : [ "youtube", "google apis", "video", "Google Web Designer" ],
     "title" : "YouTube Player"
-  },
-  {
+  }, {
+    "demo" : [ {
+      "description" : "For advertisers that want to enhance their video assets, create an additional layer of interaction via clickable hotspots that overlay additional content. When hotspot is clicked, the video will pause and overlay will appear. When overlay close button is clicked, the video resumes. This format only runs on YouTube.",
+      "link" : {
+        "title" : "HTML5 Interactive Video Hotspots",
+        "url" : "http://www.richmediagallery.com/detailPage?id=8190"
+      },
+      "title" : "HTML5 Interactive Video Hotspots"
+    } ],
+    "description" : "DoubleClick Studio Layouts makes Rich Media creative development much easier. Layouts provides the Rich Media ad shell for you, so all you have to do is pick the Layout you want, upload your existing assets, add your desired copy, and publish. With Layouts, you can get more out of your existing assets, trade up from basic image creatives to Rich Media, and creatives in minutes.",
+    "links" : [ {
       "title" : "Studio Layouts",
-      "description" : "DoubleClick Studio Layouts makes Rich Media creative development much easier. Layouts provides the Rich Media ad shell for you, so all you have to do is pick the Layout you want, upload your existing assets, add your desired copy, and publish. With Layouts, you can get more out of your existing assets, trade up from basic image creatives to Rich Media, and creatives in minutes.",
-      "demo" : [ {
-        "description" : "For advertisers that want to enhance their video assets, create an additional layer of interaction via clickable hotspots that overlay additional content. When hotspot is clicked, the video will pause and overlay will appear. When overlay close button is clicked, the video resumes. This format only runs on YouTube.",
-        "link" : {
-          "title" : "HTML5 Interactive Video Hotspots",
-          "url" : "http://www.richmediagallery.com/detailPage?id=8190"
-        },
-        "title" : "HTML5 Interactive Video Hotspots"
-      } ],
-      "quick-start" : [
-        {
-          "description" : "Build a YouTube Masthead with video and hotpots from a Layout using the requirements described <a href=’’ target=’https://support.google.com/displayspecs/answer/4489886’>here</a>. "
-        }
-      ],
-      "pro-tips" : [
-        {
-          "type":"good",
-          "description": "Use the in-product preview gallery to preview a Layout before deciding to use it. The in-product gallery can be found within the Studio user interface when choosing a Layout."
-        }
-      ],
-      "links" : [
-        {
-          "url" : "https://support.google.com/richmedia/answer/3306570",
-          "title" : "Studio Layouts"
-        }
-      ],
-      "tags" : [
-"tool",
-"Studio",
-"templates"
-      ]
-    } ]
+      "url" : "https://support.google.com/richmedia/answer/3306570"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Use the in-product preview gallery to preview a Layout before deciding to use it. The in-product gallery can be found within the Studio user interface when choosing a Layout.",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "Build a YouTube Masthead with video and hotpots from a Layout using the requirements described <a href=’’ target=’https://support.google.com/displayspecs/answer/4489886’>here</a>. "
+    } ],
+    "tags" : [ "tool", "Studio", "templates" ],
+    "title" : "Studio Layouts"
+  } ]
 }
