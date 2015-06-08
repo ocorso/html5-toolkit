@@ -39,7 +39,7 @@ splash.factory('SplashContent', function() {
 
     {
       title: 'HTML5 Toolkit',
-      icon: 'icon_toolkit.jpg',
+      icon: 'toolkit_logo_color.png',
       snippet: 'A resource for creative designers and developers to learn about a wide range of topics and best practices. Everything from animation techniques to web components are broken down to the must know information to help get you on your way.',
       link: '#/html5/toolkit',
       type: 'internal'

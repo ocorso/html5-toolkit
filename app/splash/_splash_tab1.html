@@ -66,11 +66,11 @@
          href="{{ item.link }}"
          layout="row" layout-align="space-between center">
 
-        <div class="icon" flex="40">
+        <div class="icon">
           <img ng-src="imgs/{{ item.icon }}" border="0" />
         </div>
 
-        <div class="snippet" flex="60">
+        <div class="snippet">
           <h3 class="md-subhead">{{ item.title }}</h3>
           <span ng-bind-html="main.safeHtml(item.snippet)"></span>
         </div>
@@ -79,11 +79,11 @@
       <a class="redirect" ng-if="item.type != 'external'" href="{{ item.link }}"
          layout="row" layout-align=" space-between center">
 
-        <div class="icon" flex="40">
+        <div class="icon">
           <img ng-src="imgs/{{ item.icon }}" border="0" />
         </div>
 
-        <div class="snippet" flex="60">
+        <div class="snippet">
           <h3 class="md-subhead">{{ item.title }}</h3>
           <span ng-bind-html="main.safeHtml(item.snippet)"></span>
         </div>

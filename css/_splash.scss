@@ -2,18 +2,18 @@ section {
 	main {
 		&.bg-white-trans {
 			.big-image {
-				max-height: 364px;
+				max-height: 400px;
 				overflow: hidden;
 				width: 100%;
 
 				img {
-					max-width: none;
-					width: 100%;
+					height: 100%;
+				  max-width: none;
 				}
 			}
 
 			.copy {
-				max-height: 364px;
+				max-height: 400px;
 				overflow: hidden;
 				overflow-y: auto; 
 				padding: $large-space;
@@ -34,18 +34,21 @@ section {
 			}
 
 			.icon {
+			  max-width: 112px;
+			  min-width: 112px;
 				padding: $small-space;
 				text-align: center;
 
 				img {
 				  max-height: 112px;
-					width: auto;
+				  width: auto;
 				}
 			}
 
 			.snippet {
 				border-left: 1px solid $color-dividers;
 				padding: $small-space;
+			  width: calc(100% - 112px);
 
 				h3 {
 					margin-bottom: $small-space;

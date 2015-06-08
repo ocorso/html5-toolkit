@@ -12,10 +12,16 @@ header {
 
 	&.masthead {
 		background: $primary-color;
-		padding: $large-space * 2 0;
+		padding: $large-space 0;
 
 		h1 {
 			color: #fff;
+		}
+
+		span {
+			display: block;
+			margin: 0 auto;
+		  max-width: 150px;
 		}
 	}
 }
@@ -77,6 +83,7 @@ section {
 		margin: 0;
 		padding-bottom: 8px;
 		padding-top: 8px;
+		text-align: center;
 
 		i {
 			font-style: normal;
