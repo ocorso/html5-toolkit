@@ -213,6 +213,8 @@ section main md-card {
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%; }
+    section main md-card.toolkit-card .snippet img {
+      display: none; }
 section main .graph {
   background: #fff;
   padding: 16px; }
