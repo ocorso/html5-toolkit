@@ -1,10 +1,10 @@
 {
   "toolkit-items" : [ {
     "demo" : [ {
-      "description" : "video here",
+      "description" : "Chrome Inspect view of Android device.<br /><br /><a href=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" target=\"_blank\"><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" width=\"864\" alt=\"Chrome Inspect view of Android device\"/></>",
       "link" : {
-        "title" : "Video demo",
-        "url" : "https://google.com"
+        "title" : "Debugging a Rich Media Creative",
+        "url" : "https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg"
       },
       "title" : "Debugging a Rich Media Creative"
     } ],
@@ -12,16 +12,19 @@
     "links" : [ {
       "title" : "Remote Debugging on Android with Chrome",
       "url" : "https://developer.chrome.com/devtools/docs/remote-debugging"
+    }, {
+      "title" : "Creative Preview App - Android",
+      "url" : "https://play.google.com/store/apps/details?id=com.google.android.apps.audition"
     } ],
     "pro-tips" : [ {
       "description" : "Use remote debugging when developing html5 content that will be viewed across screens.",
       "type" : "good"
     }, {
-      "description" : "Works with Creative Preview app for debugging in-app creatives.",
+      "description" : "Works with Creative Preview App for debugging in-app creatives. (<a href=\"https://play.google.com/store/apps/details?id=com.google.android.apps.audition\" target=\"_blank\">Android</a>) (iOS - coming soon)",
       "type" : "good"
     } ],
     "quick-start" : [ {
-      "description" : "Here’s how to quickly get testing with USB Debugging.<br /><br />Get started on Chrome for Android by following instructions here to enable USB debugging and connect your phone to your computer. Be sure to visit <pre>chrome://inspect</pre> and enable Discovery of USB devices.<br /><br />Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br /><br />When visiting <pre>chrome://inspect</pre> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br /><br /><img> here",
+      "description" : "Here’s how to quickly get testing with USB Debugging.<br /><br />Get started on Chrome for Android by following instructions to enable USB debugging and connect your phone to your computer. Be sure to visit <strong><i>chrome://inspect</i></strong> and enable Discovery of USB devices.<br /><br />Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br /><br />When visiting <strong><i>chrome://inspect</i></strong> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/chrome_inspect_devices.jpg\" width=\"781\" alt=\"Chrome Inspect\"/>",
       "link" : {
         "title" : "Remote Debugging on Android with Chrome",
         "url" : "https://developer.chrome.com/devtools/docs/remote-debugging#setting-up-device"
@@ -120,14 +123,17 @@
     "demo" : [ {
       "description" : "For advertisers that want to enhance their video assets, create an additional layer of interaction via clickable hotspots that overlay additional content. When hotspot is clicked, the video will pause and overlay will appear. When overlay close button is clicked, the video resumes. This format only runs on YouTube.",
       "link" : {
-        "title" : "HTML5 Interactive Video Hotspots",
+        "title" : "HTML5 Interactive Video Hotspots Layout",
         "url" : "http://www.richmediagallery.com/detailPage?id=8190"
       },
-      "title" : "HTML5 Interactive Video Hotspots"
+      "title" : "HTML5 Interactive Video Hotspots Layout"
     } ],
-    "description" : "DoubleClick Studio Layouts makes Rich Media creative development much easier. Layouts provides the Rich Media ad shell for you, so all you have to do is pick the Layout you want, upload your existing assets, add your desired copy, and publish. With Layouts, you can get more out of your existing assets, trade up from basic image creatives to Rich Media, and creatives in minutes.",
+    "description" : "DoubleClick Studio Layouts makes Rich Media creative development much easier. Layouts provides the Rich Media ad shell for you, so all you have to do is pick the Layout you want, upload your existing assets, add your desired copy, and publish. With Layouts, you can get more out of your existing assets, trade up from basic image creatives to Rich Media, and creatives in minutes.<div><div style=\"display: inline-block; margin-top: 10px;\"><div style=\"float: left; margin-right: 15px;\"><div style=\"margin-bottom: 5px;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/creative-layout.png\"/></div><div><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/options.png\"/></div></div><div style=\"float: left;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/filler.png\"/></div></div>",
     "links" : [ {
-      "title" : "Studio Layouts",
+      "title" : "Studio Layouts Rich Media Gallery",
+      "url" : "http://www.richmediagallery.com/resources/layouts"
+    }, {
+      "title" : "Studio Layouts Help Center",
       "url" : "https://support.google.com/richmedia/answer/3306570"
     } ],
     "pro-tips" : [ {
@@ -135,9 +141,9 @@
       "type" : "good"
     } ],
     "quick-start" : [ {
-      "description" : "Build a YouTube Masthead with video and hotpots from a Layout using the requirements described <a href=’’ target=’https://support.google.com/displayspecs/answer/4489886’>here</a>. "
+      "description" : "Build a YouTube Masthead with video and hotpots from a Layout using the requirements described <a href=\"https://support.google.com/displayspecs/answer/4489886\" target=\"_blank\">here</a>.<div style=\"margin-top: 10px\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/masthead.png\" /></div>"
     } ],
-    "tags" : [ "tool", "Studio", "templates" ],
+    "tags" : [ "tool", "Studio", "template", "layout" ],
     "title" : "Studio Layouts"
   } ]
 }
