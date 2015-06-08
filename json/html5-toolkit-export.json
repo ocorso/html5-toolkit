@@ -1,5 +1,6 @@
 {
   "toolkit-items" : [ {
+    "category" : "troubleshooting",
     "demo" : [ {
       "description" : "Chrome Inspect view of Android device.<br /><br /><a href=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" target=\"_blank\"><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" width=\"864\" alt=\"Chrome Inspect view of Android device\"/></>",
       "link" : {
@@ -39,6 +40,7 @@
     "tags" : [ "debugging", "android", "chrome", "safari", "google apis", "mobile" ],
     "title" : "USB Device Debugging"
   }, {
+    "category" : "development",
     "demo" : [ {
       "description" : "",
       "link" : {
@@ -72,6 +74,7 @@
     "tags" : [ "fonts", "debugging" ],
     "title" : "Google Fonts"
   }, {
+    "category" : "development",
     "demo" : [ {
       "description" : "Demonstrates the YouTube Player API’s various parameters, functions, and events.<br /><br /><iframe id=\"player\" type=\"text/html\" width=\"640\" height=\"390\"\n  src=\"//www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=https://html5-toolkit.appspot.com\"\n  frameborder=\"0\"></iframe>",
       "link" : {
@@ -120,6 +123,7 @@
     "tags" : [ "youtube", "google apis", "video", "Google Web Designer" ],
     "title" : "YouTube Player"
   }, {
+    "category" : "formats",
     "demo" : [ {
       "description" : "For advertisers that want to enhance their video assets, create an additional layer of interaction via clickable hotspots that overlay additional content. When hotspot is clicked, the video will pause and overlay will appear. When overlay close button is clicked, the video resumes. This format only runs on YouTube.",
       "link" : {
@@ -146,6 +150,7 @@
     "tags" : [ "tool", "Studio", "template", "layout" ],
     "title" : "Studio Layouts"
   }, {
+      "category" : "troubleshooting",
       "title" : "File Size Best Practices",
       "description" : "File size best practices for compressing images, optimizing code, and reducing file size",
       "demo" : [ {
