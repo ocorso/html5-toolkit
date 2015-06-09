@@ -1,14 +1,44 @@
-<section>
+<md-progress-circular md-mode="indeterminate" class="md-accent"
+                      ng-if="main.progress">
+</md-progress-circular>
+
+<section ng-if="!main.progress">
 	<main>	
-		<form name="searchToolkit" layout="row" layout-align="end center">
+		<!-- <form name="searchToolkit" layout="row" layout-align="end center">
 		  <md-input-container class="md-accent search-bar">
 		    <label>Search</label>
 		    <input name="search" ng-model="search">
 		    <ng-md-icon icon="search" size="24"></ng-md-icon>
 		  </md-input-container>
-		</form>
+		</form> -->
 
-		<md-card class="toolkit-card" 
+    <md-list class="categories">
+      <md-list-item 
+        ng-repeat="category in splash.toolkitItems.categories">
+
+        <md-button href="" class="inner-content md-accent" 
+                   layout="row" layout-align="space-between center"
+                   ng-init="category.expand = false;"
+                   ng-click="splash.expandCategory($index)"
+                   ng-class="{active: category.expand}">
+
+          {{ category.category }} <ng-md-icon icon="expand_more" size="24"></ng-md-icon>
+        </md-button>
+
+        <div class="expanded-content" ng-if="category.expand">
+          <a href="#/html5/toolkit/{{ item.title | lowercase | hyphenate }}"
+             layout="row" layout-align="start start"
+             ng-repeat="item in splash.toolkitItems" 
+             ng-if="item.category == category.category">
+
+            <span>{{ item.title }}</span>
+            <span class="snippet" ng-bind-html="main.safeHtml(item.description)"></span>
+          </a>
+        </div>
+      </md-list-item>
+    </md-list>
+
+		<!-- <md-card class="toolkit-card" 
 						 ng-repeat="item in splash.toolkitItems | orderBy: 'title' 
 											  | filter:search">
 
@@ -28,6 +58,6 @@
           <span ng-bind-html="main.safeHtml(item.description)"></span>
         </div>
       </a>
-    </md-card>
+    </md-card> -->
 	</main>
 </section>

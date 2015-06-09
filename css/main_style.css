@@ -103,21 +103,52 @@ body {
   max-width: 960px;
   padding: 0 24px; }
 
+md-progress-circular {
+  margin: 24px auto; }
+
 header h3 {
   padding: 16px 0; }
 header.masthead {
   background: #ff5722;
-  padding: 24px 0; }
+  padding: 16px 0;
+  position: relative;
+  overflow: hidden; }
   header.masthead h1, header.masthead body h2, body header.masthead h2,
   header.masthead body h3,
   body header.masthead h3,
   header.masthead body h4,
   body header.masthead h4 {
     color: #fff; }
-  header.masthead span {
+  header.masthead .shadow {
+    background: #000;
+    background: -moz-linear-gradient(top, black 0%, transparent 100%);
+    background: -ms-linear-gradient(top, black 0%, transparent 100%);
+    background: -webkit-linear-gradient(top, black 0%, transparent 100%);
+    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    height: 300px;
+    left: calc(50% + 30px);
+    opacity: .1;
+    position: absolute;
+    top: 25%;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 150px; }
+  header.masthead a {
+    background: #fff;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
     display: block;
+    height: 150px;
     margin: 0 auto;
-    max-width: 150px; }
+    padding: 16px;
+    position: relative;
+    width: 150px; }
+    header.masthead a img {
+      margin-top: 4px; }
 
 md-tabs md-tab {
   border-bottom: 2px solid #fff;
@@ -152,8 +183,7 @@ section {
     background: rgba(255, 255, 255, 0.6);
     margin: 0;
     padding-bottom: 8px;
-    padding-top: 8px;
-    text-align: center; }
+    padding-top: 8px; }
     section.breadcrumbs i {
       font-style: normal;
       margin: 0 2px; }
@@ -181,8 +211,7 @@ section main.bg-white-trans .copy {
   overflow-y: auto;
   padding: 24px; }
 section main md-card {
-  background: #fff;
-  margin: 16px 0; }
+  background: #fff; }
   section main md-card .redirect {
     color: inherit; }
     section main md-card .redirect i {
@@ -218,6 +247,78 @@ section main md-card {
 section main .graph {
   background: #fff;
   padding: 16px; }
+section main .categories {
+  display: block; }
+  section main .categories md-list-item {
+    display: block; }
+    section main .categories md-list-item .md-button {
+      border-radius: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      margin: 0;
+      text-align: left;
+      width: 100%; }
+      section main .categories md-list-item .md-button ng-md-icon svg {
+        -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        -ms-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+      section main .categories md-list-item .md-button.active {
+        background: rgba(158, 158, 158, 0.2);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        color: rgba(0, 0, 0, 0.87); }
+        section main .categories md-list-item .md-button.active ng-md-icon {
+          fill: rgba(0, 0, 0, 0.87); }
+          section main .categories md-list-item .md-button.active ng-md-icon svg {
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  section main .categories .expanded-content {
+    background: rgba(158, 158, 158, 0.2);
+    max-height: none;
+    overflow: hidden;
+    padding: 24px;
+    -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    section main .categories .expanded-content.ng-enter {
+      max-height: 0; }
+    section main .categories .expanded-content.ng-enter.ng-enter-active {
+      max-height: 1000px; }
+    section main .categories .expanded-content.ng-leave {
+      max-height: 1000px; }
+    section main .categories .expanded-content.ng-leave.ng-leave-active {
+      max-height: 0; }
+    section main .categories .expanded-content a {
+      background: rgba(255, 255, 255, 0.2);
+      margin: 2px 0;
+      padding: 8px 6px;
+      -moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      -ms-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+      section main .categories .expanded-content a:hover {
+        background: rgba(255, 255, 255, 0.5); }
+      section main .categories .expanded-content a span {
+        display: inline-block;
+        margin-right: 8px;
+        max-width: 150px; }
+      section main .categories .expanded-content a .snippet {
+        color: rgba(0, 0, 0, 0.54);
+        display: inline-block;
+        margin-right: 0;
+        max-width: calc(100% - 150px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+        section main .categories .expanded-content a .snippet br,
+        section main .categories .expanded-content a .snippet img,
+        section main .categories .expanded-content a .snippet pre {
+          display: none; }
 
 /* ==========================================================================
    toolkit view
@@ -318,7 +419,8 @@ footer.links a {
       max-height: none; }
       section main.bg-white-trans .big-image img {
         height: auto;
-        max-width: 100%; }
+        max-width: 100%;
+        width: 100%; }
     section main.bg-white-trans .copy {
       max-height: none;
       padding: 16px; } }
@@ -334,6 +436,8 @@ footer.links a {
     width: 100%; }
   section main md-card.toolkit-card .snippet {
     border: none; }
+  section main .categories .expanded-content {
+    padding: 16px; }
   section.block-color header {
     padding: 16px; }
   section.block-color main {

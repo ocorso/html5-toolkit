@@ -22,7 +22,6 @@ section {
 
 		md-card {
 			background: #fff;
-			margin: $small-space 0;
 
 			.redirect {
 				color: inherit;
@@ -82,6 +81,105 @@ section {
 		.graph {
 			background: #fff;
 			padding: $small-space;
+		}
+
+		.categories {
+			display: block;
+
+			md-list-item {
+				display: block;
+
+				.md-button {
+					border-radius: 0;
+					border-top: 1px solid $color-dividers;
+				  display: -ms-flexbox;
+				  display: -webkit-flex;
+				  display: flex;
+					margin: 0;
+					text-align: left;
+					width: 100%;
+
+					ng-md-icon {
+						svg {
+							@include transition;
+						}
+					}
+
+					&.active {
+						background: rgba(158,158,158,0.2);
+						box-shadow: 0 1px 3px rgba(0,0,0,.1);
+						color: $font-color;
+
+						ng-md-icon {
+							fill: $font-color;
+
+							svg {
+								-moz-transform: rotate(180deg);
+								-ms-transform: rotate(180deg);
+								-webkit-transform: rotate(180deg);
+								transform: rotate(180deg);
+							}
+						}
+					}
+				}
+			}
+
+			.expanded-content {
+				background: rgba(158,158,158,0.2);
+				max-height: none;
+				overflow: hidden;
+				padding: $large-space;
+				@include transition;
+
+				&.ng-enter {
+				  max-height: 0;
+				}
+
+				&.ng-enter.ng-enter-active {
+				  max-height: 1000px;
+				}
+
+				&.ng-leave {
+				  max-height: 1000px;
+				}
+
+				&.ng-leave.ng-leave-active {
+				  max-height: 0;
+				}
+
+				a {
+					background: rgba(255,255,255,.2);
+					margin: 2px 0;
+					padding: 8px 6px;
+					@include transition;
+
+					&:hover {
+						background: rgba(255,255,255,.5);
+					}
+
+					span {
+						display: inline-block;
+						margin-right: 8px;
+						max-width: 150px;
+					}
+
+					.snippet {
+						color: $font-color-2;
+						display: inline-block;
+						margin-right: 0;
+						max-width: calc(100% - 150px);
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+
+						br,
+						img,
+						pre, {
+							display: none;
+						}
+					}
+				}
+			}
 		}
 	}
 }

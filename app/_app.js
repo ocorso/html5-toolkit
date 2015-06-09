@@ -48,7 +48,7 @@ app.config(function($mdThemingProvider, $routeProvider) {
 /*
  * main controller that is accessible in any view
  */
-app.controller('MainCtrl', function($scope, $window, $sce, $location) {
+app.controller('MainCtrl', function($scope, $window, $sce, $location, $timeout) {
 
   $scope.main.progress = true;
   
@@ -58,14 +58,6 @@ app.controller('MainCtrl', function($scope, $window, $sce, $location) {
   main.safeHtml = function(html) {
     return $sce.trustAsHtml(html);
   };
-
-  // route tabs
-  $scope.$watch('main[\'selected-tab\']', function(current, old) {
-    switch(current) {
-      case 0: $location.url('/html5'); break;
-      case 1: $location.url('/html5/toolkit'); break;
-    }
-  });
 
   // MEDIAQUERIES
   // on load

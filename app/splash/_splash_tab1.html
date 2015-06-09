@@ -1,4 +1,8 @@
-<section>
+<md-progress-circular md-mode="indeterminate" class="md-accent"
+                      ng-if="main.progress">
+</md-progress-circular>
+
+<section ng-if="!main.progress">
   <main class="bg-white-trans"
         layout-gt-md="row" layout-align-gt-md="space-between start"
         layout="column" layout-align="start start">
@@ -23,7 +27,7 @@
   </main>
 </section>
 
-<section>
+<section ng-if="!main.progress">
   <header>
     <h3 class="md-subhead">
       What's the big deal?
@@ -39,7 +43,7 @@
   </main>
 </section>
 
-<section>
+<section ng-if="!main.progress">
   <header>
     <h3 class="md-subhead">
       Resources
@@ -59,7 +63,7 @@
   </main>
 </section>
 
-<section>
+<section ng-if="!main.progress">
   <main>
     <md-card ng-repeat="item in splash.grid">
       <a class="redirect" ng-if="item.type == 'external'" target="_blank" 
@@ -92,7 +96,7 @@
   </main>
 </section>
 
-<section>
+<section ng-if="!main.progress">
   <header>
     <h3 class="md-subhead">
       Additional Resources
