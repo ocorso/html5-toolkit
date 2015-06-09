@@ -150,7 +150,7 @@
     "tags" : [ "tool", "Studio", "template", "layout" ],
     "title" : "Studio Layouts"
   }, {
-      "category" : "troubleshooting",
+      "category" : "development",
       "title" : "File Size Best Practices",
       "description" : "File size best practices for compressing images, optimizing code, and reducing file size",
       "demo" : [ {
@@ -163,23 +163,30 @@
       } ],
       "quick-start" : [
         {
-          "description" : "<p>A common complaint in the Flash vs HTML5 debate is that HTML5 Creatives are really heavy in terms of file size. The reason for this misconception is because Flash is an application that not only handles the creation of ads, but also the compression of them. <\/p><p>“HTML5 Creatives”, on the other hand, commonly refers to ads created with the programming languages HTML, CSS, and Javascript. HTML5 Creatives provide many opportunities to compress your files.<\/p><p>Many of the tips provided can be implemented in under 15 minutes. The payoff is that a well-compressed HTML5 Creative will perform much better than a Flash Creative.<\/p>",
-          "link" : {
-            "title" : "HTML5 Creative Performance",
-            "url" : "https://www.thinkwithgoogle.com/case-studies/talk-talk-increases-reach-and-lowers-cpa-with-doubleclick.html"
-          }
-        },
- {
-          "description" : "<p>Google Web Designer (GWD) is an application specifically made for HTML5 ad development by Google, and is a great HTML5 alternative to developers that are only familiar with Flash. GWD has built in compression for images and code, Google web font support, SVG support, CSS animation support, etc. Additionally, it is fully integrated with Studio.<\/p><p>GWD is highly recommended above anything else when developing ads. More information on GWD can be found in the GWD Help Center.<\/p>",
-          "link" : {
-            "title" : "Google Web Design",
-            "url" : "http://www.google.com/webdesigner/"
-          },
-          "link" : {
-            "title" : "GWD Help Center",
-            "url" : "https://support.google.com/webdesigner/#topic=3249465"
-          }
-        }
+  "description" : "<p>A common complaint in the Flash vs HTML5 debate is that HTML5 Creatives are really heavy in terms of file size. The reason for this misconception is because Flash is an application that not only handles the creation of ads, but also the compression of them. <\/p><p>“HTML5 Creatives”, on the other hand, commonly refers to ads created with the programming languages HTML, CSS, and Javascript. HTML5 Creatives provide many opportunities to compress your files.<\/p><p>Many of the tips provided can be implemented in under 15 minutes. The payoff is that a <a href=\"https://www.thinkwithgoogle.com/case-studies/talk-talk-increases-reach-and-lowers-cpa-with-doubleclick.html\" target=\"_blank\">well-compressed HTML5 Creative will perform much better than a Flash Creative./a><\/p>"
+},
+{
+  "description" : "<h2>Google Web Designer<\/h2><p><a href=\"http://www.google.com/webdesigner/\" target=\"_blank\">Google Web Designer</a> (GWD) is an application specifically made for HTML5 ad development by Google, and is a great HTML5 alternative to developers that are only familiar with Flash. GWD has built in compression for images and code, Google web font support, SVG support, CSS animation support, etc. Additionally, it is fully integrated with Studio.<\/p><p>GWD is highly recommended above anything else when developing ads. More information on GWD can be found in the <a href=\"https://support.google.com/webdesigner/#topic=3249465/\" target=\"_blank\">GWD Help Center.</a><\/p>"
+},
+{
+  "description" : "<h2>How to Check Your File Size<\/h2><h3>Total File Size vs. Compressed File Size<\/h3><p>The total file size (‘Raw File Size’) of your Creative can be viewed in DoubleClick Studio <a href=\"http://screencast.com/t/MzJAwPa9bCP\" target=\"_blank\">here</a>. In Google Web Designer, you can view size of your Creative in the <a href=\"http://screencast.com/t/Zh9wBUXTCay\" target=\"_blank\">Publish panel</a>. Google Web Designer compresses Creatives with gZip.<\/p><p>To determine your Creative’s compressed size, simply download a free copy of <a href=\"http://www.gnu.org/software/gzip/\" target=\"_blank\">gZip</a>, compress them on your local workspace, and inspect the file size.<\/p><p>Depending on the Publisher’s ad server, they will be calculating the compressed size of your Creative. Always double check with your Publisher to be sure.<\/p><h3>What is a good baseline for HTML5 Creative file size?<\/h3><p>It’s essential to understand your Publisher’s ad serving specifications prior to building your Creative. However, many Publishers follow the IAB recommendation of 35KB (compressed) Initial Load for the Creative and 100KB for total Creative size. Initial Load refers only file size of the .html file in the Creative, not the Enabler, Javascript, CSS, or other image files, but again, check with your Publisher to understand their guidelines to be sure. <\/p><p>More info about the IAB’s recommendations can be found <a href=\"http://www.iab.net/guidelines/508676/508767/mobileguidelines\" target=\"_blank\">here</a> (page 8/9 <a href=\"http://www.iab.net/media/file/HTML5DAv101.pdf\" target=\"_blank\">here</a>) and DoubleClick’s recommendations <a href=\"https://support.google.com/richmedia/answer/165130?hl=en\" target=\"_blank\">here</a>.<\/p><h3>How much does DoubleClick Enabler add in file weight?<\/h3><p>As of April 2015, the Enabler adds approximately ~75KB (~25KB when gZipped).<\/p>"
+},
+{
+  "description" : "<h2>Polite Load & Publisher Specs<\/h2><p>Polite loading delays the loading of additional creative assets (like images and video) until the parent page has finished loading. This is different than ‘initial load’, which only refers to file size of the .html file in the Creative. It is helpful to implement the code for polite loading because many publishers have different specs for initial load versus the complete load size. <a href=\"https://support.google.com/richmedia/answer/2672514?hl=en\" target=\"_blank\">More information about polite loading can be found here.</a><\/p><p>Check with the Publisher to understand their HTML5 specs for Rich Media ads because they are typically different than Flash-based specs. They may or may not count file size based on the compressed gzip format and will rather count the raw file size. Also, individual publisher specs differ from IAB specs depending on placement, ad type, etc. so they may allow more or less leeway in build specs. Publishers may also limit specs for animation and video play time.<\/p>"
+},
+{
+  "description" : "<h2>Images<\/h2><p>Before attempting to reduce your image size, first determine if an image is even necessary as many things can be created with pure CSS. Here are some questions to ask before saving an asset as an image:<\/p><h3>Is the graphic a gradient or a solid color?<\/h3><p>Consider creating the image with just CSS3 to both improve the quality and reduce file size.<\/p><ul><li><a href=\"http://www.cssmatic.com/gradient-generator\" target=\"_blank\">CSS3 Gradient Generator</a><\/li><\/ul><h3>Is the image comprised of solid colors or a vector?<\/h3><p>Use SVG (Scalable Vector Graphics) whenever possible instead of an image. Images are pixel based (“raster”) and may add some overhead in file weight. In contrast, SVGs are point-to-point based graphics (“vector”) and can greatly reduce file size.<\/p><ul><li><a href=\"http://www.w3schools.com/svg/\" target=\"_blank\">W3School's SVG Tutorial</a><\/li><li><a href=\"https://css-tricks.com/using-svg/\" target=\"_blank\">How to Use SVGs</a><\/li><li><a href=\"http://petercollingridge.appspot.com/svg_optimiser\" target=\"_blank\">Compressing SVGs</a><\/li><\/ul><h3>Does your Creative use multiple icons?<\/h3><p>Use icon fonts whenever possible instead of an image for icons, images are pixel based and may add some overhead in file weight. Icon fonts are actually regular fonts and can be used in the same way as any other font in HTML. They are vector based as well. Custom icon fonts are relatively quick to create and implement.<\/p><ul><li><a href=\"https://icomoon.io/app/#/select\" target=\"_blank\">Icomoon Icon Font Creator</a><\/li><li><a href=\"https://thenounproject.com/\" target=\"_blank\">NounProject: an affordable resource to gather SVG icons for your icon font</a><\/li><\/ul><h3>Are you using JPGs or PNGs in your project?<\/h3><p>If pixel based images are required, compress them as much as possible while keeping quality. Many people are already familiar <a href=\"http://help.adobe.com/en_US/creativesuite/cs/using/WS6E857477-27FE-4a88-B8A4-074DC3C65F68.html\" target=\"_blank\">Photoshop’s Save For Web<\/a>, but there are other online tools that can compress an image even further while retaining quality.<ul><li><a href=\"https://tinypng.com/\" target=\"_blank\">TinyPNG: Online PNG Compressor</a><\/li><li><a href=\"https://tinyjpg.com/\" target=\"_blank\">TinyJPG: Online JPG Compressor </a><\/li><\/ul><\/p>"
+},
+{
+  "description" : "<h2>CSS and Animations<\/h2><p>Consider using <a href=\"http://www.w3schools.com/css/css3_animations.asp\" target=\"_blank\">CSS3 animations<\/a> (transitions/transforms) instead of Javascript for animations. CSS transforms use the GPU instead of the CPU for rendering animations so it helps with performance and preserves file size.<\/p><p>Refrain from using JavaScript libraries/frameworks that use the setInterval JavaScript method for animations, and if hand coding then do not use the setInterval method. This method uses up a lot of the browser’s resources and affects performance, and it requires a decent amount of code. If JavaScript animations are mandatory, then consider using the requestAnimationFrame method, it is specifically made for animations.<\/p><ul><li><a href=\"http://css-tricks.com/using-requestanimationframe/\" target=\"_blank\">Using requestAnimationFrame</a><\/li><li><a href=\"https://developers.google.com/web/fundamentals/look-and-feel/animations/css-vs-javascript?hl=en\" target=\"_blank\">CSS vs Javascript Animations</a><\/li><\/ul><p>Before uploading your CSS files to Studio, consider minifying your CSS with an <a href=\"http://cssminifier.com/\" target=\"_blank\">Online CSS Minifier.<\/a><\/p>"
+},
+{
+  "description" : "<h2>Javascript<\/h2><h3>Are you using jQuery?<\/h3><p>Don’t use jQuery in your HTML5 Creatives. jQuery is not recommended because it adds unnecessary file weight (~75k) even though the majority of the jQuery library is not utilized in a Creative. Consider using pure Javascript with <a href=\"http://youmightnotneedjquery.com/?hn\" target=\"_blank\">this guide<\/a>, or using <a href=\"http://zeptojs.com/\" target=\"_blank\">Zepto.js<\/a> if necessary.<\/p><h3>Are you using a Javascript Framework?<\/h3><p>Ask yourself if it is completely necessary to have them in your Creative. Consider taking pieces out of the framework and utilizing them in your main Javascript file to reduce overhead.<\/p><h3>Are you targeting code for specific devices/browsers?<\/h3><p>Ensure your code is written for devices/browsers specified, no need to add code for non-supported devices/browsers.<\/p><ul><li><a href=\"https://support.google.com/richmedia/answer/138582\" target=\"_blank\">Browser and device support for DoubleClick Studio</a><\/li><li><a href=\"http://caniuse.com/\" target=\"_blank\">Can I Use: Up to date browser support for JS and CSS properties</a><\/li><\/ul><h3>Compressing Javascript<\/h3>z<p>GWD natively minifies files, so if you’re using GWD no minification is necessary. Otherwise,there are <a href=\"http://jscompress.com/\" target=\"_blank\">online tools<\/a> that will remove comments and extra whitespace from your Javascript. It’s a best practice to keep a version of your uncompressed Javascript file locally on your computer for later reference.<\/p><p>Keep in mind that in DoubleClick Studio, JavaScript files require a .js extension, not .min.js. If you minify JavaScript files, you can't add tracking easily. If the client requests minifying, add tracking first and minify the .js file later.<\/p>"
+},
+{
+  "description" : "<h2>Optimizing Google Fonts<\/h2><p>If you are using a font other than the standard web fonts, consider using <a href=\"https://www.google.com/fonts/\" target=\"_blank\">Google fonts<\/a>. Google has a large library of fonts which can all be used for free. In order to reduce file size, be sure to only request the characters you need from the font vs. the entire typeface. This is called Font Subsetting.<\/p><ul><li><a href=\"https://developers.google.com/fonts/docs/getting_started#Optimizing_Requests\" target=\"_blank\">Optimizing Font Requests</a><\/li><\/ul>"
+}
+
 
 
       ],
@@ -197,6 +204,58 @@
       ],
       "tags" : [
         "fonts","html5", "filesize", "file-size", "file size", "javascript", "jquery", "images", "jpg", "png", "gif", "svg", "polite load", "minify", "compression", "KB", "debugging"
+      ]
+    }, {
+      "category" : "development",
+      "title" : "Browser Prefixes",
+      "description" : "Not all browsers are created equal. Sometimes Browser Prefixes need to be added to your CSS to ensure compatibility across devices and browsers.",
+      "demo" : [ {
+        "description" : "",
+        "link" : {
+          "title" : "",
+          "url" : ""
+        },
+        "title" : ""
+      } ],
+      "quick-start" : [
+        {
+          "description" : "<p>Some CSS3 properties are not yet standarized across all modern browsers. As a result, Vendor (or Browser) Prefixes are needed to ensure browser compatibility. These prefixes are:<\/p><pre>-moz-\/* Firefox and other browsers using Mozilla's browser engine */<br>-webkit-\/* Safari, Chrome and browsers using the Webkit engine */<br>-o-\/* Opera */<br>-ms-\/* Internet Explorer (but not always) */ <\/pre><p>In use, this would look something like:<\/p><pre>.example {<br>-webkit-transform: rotate(30deg); \/* Chrome <36, Safari 5.1+, iOS, Android =<4.4.4 */<br>-ms-transform: rotate(30deg); \/* Internet Explorer 9 */<br>transform: rotate(30deg); \/* Internet Explorer 10, Firefox 16+, Opera 12.1+ */<br>}<\/pre><p>To understand which browsers are compatible with which properties, be sure to consult <a href=\"http://caniuse.com/\" target=\"_blank\">Can I Use?<\/a> as well as determining <a href=\"http://www.google.com/webdesigner/\" target=\"_blank\">Link<\/a>what browsers DoubleClick Studio supports<\/a>.<\/p>",
+          "link" : {
+            "title" : "",
+            "url" : ""
+          }
+        }
+      ],
+      "pro-tips" : [
+        {
+          "type":"good",
+          "description": "Google Web Designer automatically adds appropriate browser prefixes to any animation or elements constructed in the Design panel."
+        },
+        {
+          "type":"bad",
+          "description": "Avoid adding browser prefixes to every single CSS3 property. This will only bloat your CSS and file size. Double-check <a href=\"http://caniuse.com/\" target=\"_blank\">Can I use?<\/a> for the specifics on browser compatibility"
+        }
+      ],
+      "links" : [
+        {
+          "url" : "https://support.google.com/richmedia/answer/138582",
+          "title" : "Browser and device support for DoubleClick Studio"
+        },
+        {
+          "url" : "http://caniuse.com/",
+          "title" : "Can I Use? What CSS properties are supported by browsers"
+        },
+        {
+          "url" : "http://pleeease.io/play/",
+          "title" : "Pleeease: Automatic Online Browser Prefixer"
+        },
+        {
+          "url" : "https://css-tricks.com/snippets/css/keyframe-animation-syntax/",
+          "title" : "CSS3 Keyframe Animation Syntax"
+        }
+      ],
+      "tags" : [
+        "html5", "safari", "chrome", "firefox", "webkit", "opera", "css3", "transitions", "animations", "prefix", "browser support"
       ]
     } ]
 }
