@@ -166,8 +166,9 @@ section {
 					.snippet {
 						color: $font-color-2;
 						display: inline-block;
+					  height: 24px;
 						margin-right: 0;
-						max-width: calc(100% - 150px);
+						max-width: calc(100% - 200px);
 						overflow: hidden;
 						text-overflow: ellipsis;
 						white-space: nowrap;
