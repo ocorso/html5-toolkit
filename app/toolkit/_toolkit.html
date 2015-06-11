@@ -4,7 +4,11 @@
 
 <section ng-if="!main.progress">
 	<header>
-		<h1 class="md-display-1">
+		<h1 class="md-display-1" layout="row" layout="start start">
+			<a href="#/html5/toolkit">
+				<ng-md-icon icon="arrow_back" size="32"></ng-md-icon>
+			</a>
+
 			{{ toolkit.content.title }}
 		</h1>
 	</header>
@@ -30,7 +34,8 @@
 
 	<main>
 		<p class="md-body-1" 
-			 ng-bind-html="main.safeHtml(toolkit.content.description)"></p>
+			 ng-bind-html="main.safeHtml(toolkit.content.description)">
+		</p>
 	</main>
 </section> <!-- description -->
 
@@ -46,7 +51,8 @@
 			<li ng-repeat="demo in toolkit.content.demo">
 				<h4 class="md-subhead">
 					<a href="{{ demo.link.url }}" target="_blank"
-						 layout="row" layout-align="start start">
+						 layout="row" layout-align="start start"
+						 ng-if="demo.link.url">
 
 						{{ demo.title }}
 						<ng-md-icon icon="open_in_new" size="20"></ng-md-icon>
@@ -83,6 +89,7 @@
 											 target="_blank" 
 											 class="md-primary"
 											 layout="row" layout-align="start center"
+											 ng-if="quick.link.url"
 											 md-no-ink>
 
 							{{ quick.link.title }}

@@ -20,162 +20,53 @@ section {
 			}
 		}
 
-		md-card {
-			background: #fff;
-
-			.redirect {
-				color: inherit;
-
-				i {
-					font-style: normal;
-					color: $accent-color;
-				}
-			}
-
-			.icon {
-			  max-width: 112px;
-			  min-width: 112px;
-				padding: $small-space;
-				text-align: center;
-
-				img {
-				  max-height: 112px;
-				  width: auto;
-				}
-			}
-
-			.snippet {
-				border-left: 1px solid $color-dividers;
-				padding: $small-space;
-			  width: calc(100% - 112px);
-
-				h3 {
-					margin-bottom: $small-space;
-				}
-			}
-
-			&.toolkit-card {
-				.title {
-					color: $accent-color;
-					padding: $small-space;
-
-					ng-md-icon {
-						fill: $accent-color;
-					}
-				}
-
-				.snippet {
-					max-height: 56px;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					white-space: nowrap;
-					width: 100%;
-					
-					img {
-						display: none;
-					}
-				}
-			}
-		}
-
 		.graph {
 			background: #fff;
 			padding: $small-space;
 		}
 
 		.categories {
-			display: block;
+			md-card {
+				background: #fff;
+				margin: 8px;
+				width: calc(50% - 16px);
 
-			md-list-item {
-				display: block;
+				.category-title {
+					background: $accent-color;
+					color: #fff;
+					padding: $small-space;
+				}
 
 				.md-button {
-					border-radius: 0;
 					border-top: 1px solid $color-dividers;
-				  display: -ms-flexbox;
-				  display: -webkit-flex;
-				  display: flex;
-					margin: 0;
-					text-align: left;
-					width: 100%;
+					border-radius: 0;
+					font-weight: 400;
+					line-height: 1.5em;
+					padding: $small-space;
+				  text-align: left;
+				  text-transform: none;
+				  width: 100%;
 
-					ng-md-icon {
-						svg {
-							@include transition;
-						}
+				  &:first-child {
+				  	border-top: none;
+				  }
+
+					.toolkit-title {
+						color: $accent-color;
 					}
 
-					&.active {
-						background: rgba(158,158,158,0.2);
-						box-shadow: 0 1px 3px rgba(0,0,0,.1);
-						color: $font-color;
-
-						ng-md-icon {
-							fill: $font-color;
-
-							svg {
-								-moz-transform: rotate(180deg);
-								-ms-transform: rotate(180deg);
-								-webkit-transform: rotate(180deg);
-								transform: rotate(180deg);
-							}
-						}
-					}
-				}
-			}
-
-			.expanded-content {
-				background: rgba(158,158,158,0.2);
-				max-height: none;
-				overflow: hidden;
-				padding: $large-space;
-				@include transition;
-
-				&.ng-enter {
-				  max-height: 0;
-				}
-
-				&.ng-enter.ng-enter-active {
-				  max-height: 1000px;
-				}
-
-				&.ng-leave {
-				  max-height: 1000px;
-				}
-
-				&.ng-leave.ng-leave-active {
-				  max-height: 0;
-				}
-
-				a {
-					background: rgba(255,255,255,.2);
-					margin: 2px 0;
-					padding: 8px 6px;
-					@include transition;
-
-					&:hover {
-						background: rgba(255,255,255,.5);
-					}
-
-					span {
-						display: inline-block;
-						margin-right: 8px;
-						max-width: 150px;
-					}
-
-					.snippet {
-						color: $font-color-2;
-						display: inline-block;
-					  height: 24px;
-						margin-right: 0;
-						max-width: calc(100% - 200px);
+					.toolkit-snippet {
+						display: block;
+						max-height: 25px;
 						overflow: hidden;
 						text-overflow: ellipsis;
 						white-space: nowrap;
-
-						br,
+						width: 99%;
+  
+						pre,
 						img,
-						pre, {
+						a,
+						br {
 							display: none;
 						}
 					}

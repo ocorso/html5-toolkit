@@ -80,7 +80,6 @@ md-tabs {
 }
 
 .search-bar {
-	max-width: 320px;
 	width: 100%;
 
 	label {
@@ -102,6 +101,7 @@ md-tabs {
 article {
 	&[ng-view] {
 		background: $light-grey;
+		padding-bottom: $large-space * 3;
 	}
 }
 

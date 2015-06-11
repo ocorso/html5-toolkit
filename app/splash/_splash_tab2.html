@@ -4,60 +4,60 @@
 
 <section ng-if="!main.progress">
 	<main>	
-		<!-- <form name="searchToolkit" layout="row" layout-align="end center">
-		  <md-input-container class="md-accent search-bar">
-		    <label>Search</label>
-		    <input name="search" ng-model="search">
-		    <ng-md-icon icon="search" size="24"></ng-md-icon>
-		  </md-input-container>
-		</form> -->
+    <div class="blurb">
+      <h1 class="md-display-1">
+        Blurb headline
+      </h1>
 
-    <md-list class="categories">
-      <md-list-item 
-        ng-repeat="category in splash.toolkitItems.categories">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </p>
+    </div>
 
-        <md-button href="" class="inner-content md-accent" 
-                   layout="row" layout-align="space-between center"
-                   ng-init="category.expand = false;"
-                   ng-click="splash.expandCategory($index)"
-                   ng-class="{active: category.expand}">
+    <form name="search" 
+          layout-sm="column" layout-align-sm="start start"
+          layout="row" layout-align="start center">
 
-          {{ category.category }} <ng-md-icon icon="expand_more" size="24"></ng-md-icon>
+      <md-input-container class="md-accent search-bar">
+        <label>Search category</label>
+        <input name="search-categories" 
+               ng-keydown="splash.cardsLength()" ng-keyup="splash.initMasonry()" 
+               ng-model="searchCategory">
+
+        <ng-md-icon icon="search" size="24"></ng-md-icon>
+      </md-input-container>
+
+      <md-input-container class="md-accent search-bar">
+        <label>Search toolkit items</label>
+        <input name="search-toolkit-items" ng-keyup="splash.initMasonry()" 
+               ng-keydown="splash.cardsLength()" ng-keyup="splash.initMasonry()"
+               ng-model="searchToolkit">
+
+        <ng-md-icon icon="search" size="24"></ng-md-icon>
+      </md-input-container>
+    </form>
+
+    <div class="categories">
+      <md-card class="category-card" 
+               ng-repeat="category in splash.toolkitItems.categories 
+                          | orderBy: 'category' | filter: searchCategory">
+
+        <h3 class="category-title md-title">
+          {{ category.category | capitalize }}
+        </h3>
+
+        <md-button href="#/html5/toolkit/{{ item.title | lowercase | hyphenate }}"
+           ng-repeat="item in splash.toolkitItems | filter: searchToolkit" 
+           ng-if="item.category == category.category">
+
+          <span class="toolkit-title md-subhead">
+            {{ item.title }}
+          </span>
+
+          <span class="toolkit-snippet" 
+                ng-bind-html="main.safeHtml(item.description)"></span>
         </md-button>
-
-        <div class="expanded-content" ng-if="category.expand">
-          <a href="#/html5/toolkit/{{ item.title | lowercase | hyphenate }}"
-             layout="row" layout-align="start start"
-             ng-repeat="item in splash.toolkitItems" 
-             ng-if="item.category == category.category">
-
-            <span>{{ item.title }}</span>
-            <span class="snippet" ng-bind-html="main.safeHtml(item.description)"></span>
-          </a>
-        </div>
-      </md-list-item>
-    </md-list>
-
-		<!-- <md-card class="toolkit-card" 
-						 ng-repeat="item in splash.toolkitItems | orderBy: 'title' 
-											  | filter:search">
-
-      <a class="redirect" 
-	       href="#/html5/toolkit/{{ item.title | lowercase | hyphenate }}"
-	       layout-sm="column" layout-align="start start"
-         layout="row" layout-align="space-between center">
-
-        <div class="title" flex-sm="100" flex="30">
-		      <h2 class="md-subhead" layout="row" layout-align="space-between center">
-		        {{ item.title }}
-		        <ng-md-icon icon="launch" size="20"></ng-md-icon>
-		      </h2>
-        </div>
-
-        <div class="snippet" flex-sm="100" flex="70">
-          <span ng-bind-html="main.safeHtml(item.description)"></span>
-        </div>
-      </a>
-    </md-card> -->
+      </md-card>
+    </div>
 	</main>
 </section>

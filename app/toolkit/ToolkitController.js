@@ -14,6 +14,7 @@ toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
   ToolkitData.items().success(function(data) {
     toolkit.toolkitItems = data['toolkit-items'];
     $scope.main.progress = false;
+    console.log(toolkit.toolkitItems);
 
 		// loop through all toolkit items to check if url param exists
 		// if not, redirect to welcome view

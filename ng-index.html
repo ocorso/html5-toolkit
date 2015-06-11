@@ -15,6 +15,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
 <script src="//code.angularjs.org/1.3.15/angular-route.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.min.js"></script>
 
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.2/angular-material.min.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
@@ -31,39 +32,6 @@
     </a>
   </h1>
 </header>
-
-<section class="breadcrumbs">
-  <main class="max-width">
-    <h4 class="md-caption">
-      <a href="#/html5">HTML5 Toolkit</a>
-      <i ng-show="main['toolkit-view']">></i>
-
-      <span ng-show="main['toolkit-view'] && !main['toolkit-item-view']">
-        Toolkit
-      </span>
-
-      <a href="#/html5/toolkit" ng-show="main['toolkit-item-view']">
-        Toolkit
-      </a>
-
-      <i ng-show="main['toolkit-item-view']">></i>
-
-      <span ng-show="main['toolkit-item-view']">
-        {{ main['toolkit-item'] }}
-      </span>
-    </h4>
-  </main>
-</section>
-
-<md-tabs md-stretch-tabs md-selected="main['selected-tab']" class="max-width">
-  <md-tab>
-    <a href="#/html5">Why adopt HTML5?</a>
-  </md-tab>
-
-  <md-tab>
-    <a href="#/html5/toolkit">Toolkit</a>
-  </md-tab>
-</md-tabs>
 
 <article class="max-width md-body-1" ng-view></article>
 

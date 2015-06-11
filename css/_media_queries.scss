@@ -39,6 +39,12 @@
 		width: 100%;
 	}
 
+	.md-display-1 {
+		&.numeral {
+			display: none;
+		}
+	}
+
 	section {
 		main {
 			md-card {
@@ -55,8 +61,9 @@
 			}
 
 			.categories {
-				.expanded-content {
-					padding: $small-space;
+				md-card {
+					margin: 8px 0;
+					width: 100%;
 				}
 			}
 		}
@@ -75,9 +82,11 @@
 			main {
 				padding: 0 $small-space $small-space;
 
-				li {
-					margin: $small-space 0;
-					padding: $small-space;
+				> ul {
+					> li {
+						margin: $small-space 0;
+						padding: $small-space;
+					}
 				}
 			}
 		}

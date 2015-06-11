@@ -27,20 +27,20 @@ app.config(function($mdThemingProvider, $routeProvider) {
     .warnPalette('red');
 
   // routing
-  $routeProvider.when('/html5', {
-    templateUrl: 'app/splash/_splash_tab1.html',
-    controller: 'SplashCtrl as splash'
-
-  }).when('/html5/toolkit', {
+  $routeProvider.when('/html5/toolkit', {
     templateUrl: 'app/splash/_splash_tab2.html',
     controller: 'SplashCtrl as splash'
+
+  // }).when('/html5/toolkit', {
+  //   templateUrl: 'app/splash/_splash_tab2.html',
+  //   controller: 'SplashCtrl as splash'
 
   }).when('/html5/toolkit/:item', {
     templateUrl: 'app/toolkit/_toolkit.html',
     controller: 'ToolkitCtrl as toolkit'
 
   }).otherwise({
-    redirectTo: '/html5'
+    redirectTo: '/html5/toolkit'
   });
 });
 
@@ -106,5 +106,12 @@ app.filter('hyphenate', function() {
     if( str != undefined ) {
       return str.split(' ').join('-');
     }
+  }
+});
+
+// capitalize first letter of string
+app.filter('capitalize', function() {
+  return function(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 });

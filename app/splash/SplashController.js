@@ -24,8 +24,6 @@ splash.controller('SplashCtrl', function($scope, $location, SplashContent,
   ToolkitData.items().success(function(data) {
     splash.toolkitItems = data['toolkit-items'];
     $scope.main.progress = false;
-    console.log(splash.toolkitItems);
-
 
     // loop through data to get all categories
     splash.toolkitItems.categories = [];
@@ -46,17 +44,24 @@ splash.controller('SplashCtrl', function($scope, $location, SplashContent,
       splash.toolkitItems.categories.push({category});
     }
 
-    // accordion
-    splash.expandCategory = function(category) {
-      for( var i = 0; i < splash.toolkitItems.categories.length; i++ ) {
-        if( category == i && splash.toolkitItems.categories[i].expand == false ) {
-          splash.toolkitItems.categories[i].expand = true;
+    // Masonry
+    $timeout(function() {
+      var msnry = new Masonry('.categories');
+      var cards_length;
+
+      splash.cardsLength = function() {
+        cards_length = document.getElementsByClassName('category-card').length;
+      };
+
+      splash.initMasonry = function() {
+        if( cards_length != splash.toolkitItems.categories.length ) {
+          msnry = new Masonry('.categories');
 
         } else {
-          splash.toolkitItems.categories[i].expand = false;
+          msnry.layout();
         }
-      }
-    }
+      };
+    });
 
   }).error(function() {
     console.log('Error loading in Firebase data.');

@@ -32,11 +32,11 @@ section {
 
 	pre {
 		background: $white-trans;
-		color: $primary-color;
-		font: 500 16px/1.6em 'Source Code Pro', monospace;
-		padding: $small-space;
-		white-space: normal;
-		word-break: break-all;
+		color: $font-color-2;
+		font: 500 13px/1.6em 'Source Code Pro', monospace;
+		overflow: hidden;
+	  overflow-x: auto;
+	  padding: $small-space;
 	}
 
 	&.block-color {
@@ -74,19 +74,46 @@ section {
 		}
 	}
 
+	&.summary {
+		img {
+			background: #fff;
+			padding: 8px;
+		}
+	}
+
+	&.demo {
+		img {
+			background: #fff;
+			padding: 8px;
+		}
+	}
+
 	&.quick-start {
 		main {
 			padding: 0 $large-space $large-space;
 
-			li {
-				background: $white-trans;
-				background: rgba(255, 255, 255, .25);
-				-moz-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
-				-ms-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
-				-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
-				box-shadow: 1px 1px 3px rgba(0,0,0,.1);
-				margin: $large-space 0;
-				padding: $large-space;
+			> ul {
+				> li {
+					background: $white-trans;
+					background: rgba(255, 255, 255, .25);
+					-moz-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+					-ms-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+					-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+					box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+					margin: $large-space 0;
+					padding: $large-space;
+				}
+
+				ul {
+					list-style: disc;
+					margin: 1em 0;
+					padding: 0 0 1em 1em;
+				}
+			}
+
+			img {
+				background: #fff;
+				padding: 8px;
 			}
 		}
 	}
@@ -130,6 +157,14 @@ section {
 
 footer {
 	&.links {
+		h3 {
+			padding-bottom: 0;
+		}
+
+		ul {
+			margin: 0;
+		}
+
 		a {
 			display: block;
 			overflow: hidden;
