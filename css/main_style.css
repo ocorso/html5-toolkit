@@ -219,39 +219,61 @@ section main.bg-white-trans .copy {
 section main .graph {
   background: #fff;
   padding: 16px; }
-section main .categories md-card {
-  background: #fff;
-  margin: 8px;
-  width: calc(50% - 16px); }
-  section main .categories md-card .category-title {
-    background: #0288d1;
-    color: #fff;
-    padding: 16px; }
-  section main .categories md-card .md-button {
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 0;
-    font-weight: 400;
-    line-height: 1.5em;
-    padding: 16px;
-    text-align: left;
-    text-transform: none;
-    width: 100%; }
-    section main .categories md-card .md-button:first-child {
-      border-top: none; }
-    section main .categories md-card .md-button .toolkit-title {
-      color: #0288d1; }
-    section main .categories md-card .md-button .toolkit-snippet {
-      display: block;
-      max-height: 25px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      width: 99%; }
-      section main .categories md-card .md-button .toolkit-snippet pre,
-      section main .categories md-card .md-button .toolkit-snippet img,
-      section main .categories md-card .md-button .toolkit-snippet a,
-      section main .categories md-card .md-button .toolkit-snippet br {
-        display: none; }
+section main .categories {
+  -moz-column-count: 2;
+  -moz-column-gap: 0;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 0;
+  column-count: 2;
+  column-gap: 0;
+  width: 100%; }
+  section main .categories md-card {
+    background: #fff;
+    display: inline-block;
+    line-height: 0;
+    margin: 8px 0;
+    -moz-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: calc(100% - 16px); }
+    section main .categories md-card.ng-hide {
+      opacity: 0;
+      -moz-transform: translateY(100px);
+      -ms-transform: translateY(100px);
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px); }
+    section main .categories md-card .category-title {
+      background: #0288d1;
+      color: #fff;
+      padding: 16px; }
+    section main .categories md-card .md-button {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 0;
+      font-weight: 400;
+      line-height: 1.5em;
+      padding: 16px;
+      text-align: left;
+      text-transform: none;
+      width: 100%; }
+      section main .categories md-card .md-button:first-child {
+        border-top: none; }
+      section main .categories md-card .md-button .toolkit-title {
+        color: #0288d1; }
+      section main .categories md-card .md-button .toolkit-snippet {
+        display: block;
+        max-height: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 99%; }
+        section main .categories md-card .md-button .toolkit-snippet pre,
+        section main .categories md-card .md-button .toolkit-snippet img,
+        section main .categories md-card .md-button .toolkit-snippet a,
+        section main .categories md-card .md-button .toolkit-snippet br {
+          display: none; }
+        section main .categories md-card .md-button .toolkit-snippet p {
+          margin: 0 !important; }
 
 /* ==========================================================================
    toolkit view
@@ -389,9 +411,15 @@ footer.links a {
     width: 100%; }
   section main md-card.toolkit-card .snippet {
     border: none; }
-  section main .categories md-card {
-    margin: 8px 0;
-    width: 100%; }
+  section main .categories {
+    -moz-column-count: 1;
+    -moz-column-gap: 0;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 0;
+    column-count: 1;
+    column-gap: 0; }
+    section main .categories md-card {
+      width: 100%; }
   section.block-color header {
     padding: 16px; }
   section.block-color main {

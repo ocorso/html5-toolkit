@@ -20,8 +20,9 @@ $white-trans: rgba(255,255,255,.6);
 $light-grey: #f0f0f0;
 $large-space: 24px;
 $small-space: 16px;
+$cubic: cubic-bezier(0.4, 0.0, 0.2, 1);
 
-@mixin transition($speed: .2s, $ease: cubic-bezier(0.4, 0.0, 0.2, 1)) {
+@mixin transition($speed: .2s, $ease: $cubic) {
 	-moz-transition: all $speed $ease;
 	-ms-transition: all $speed $ease;
 	-webkit-transition: all $speed $ease;
