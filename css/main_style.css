@@ -273,7 +273,10 @@ section main .categories {
         section main .categories md-card .md-button .toolkit-snippet br {
           display: none; }
         section main .categories md-card .md-button .toolkit-snippet p {
-          margin: 0 !important; }
+          margin: 0 !important;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
 
 /* ==========================================================================
    toolkit view
