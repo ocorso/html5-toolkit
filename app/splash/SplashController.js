@@ -26,10 +26,10 @@ splash.controller('SplashCtrl', function($scope, $location, SplashContent,
     $scope.main.progress = false;
 
     // loop through data to get all categories
-    splash.toolkitItems.categories = [];
+    var categories_array = splash.toolkitItems[splash.toolkitItems.length] = [];
     var matching_array = [];
 
-    for( var i = 0; i < splash.toolkitItems.length; i++ ) {
+    for( var i = 0; i < splash.toolkitItems.length - 1; i++ ) {
       var category = splash.toolkitItems[i].category;
 
       if( matching_array.indexOf(category) == -1 ) {
@@ -41,27 +41,26 @@ splash.controller('SplashCtrl', function($scope, $location, SplashContent,
     // into the toolkit items
     for( var i = 0; i < matching_array.length; i++) {
       var category = matching_array[i];
-      splash.toolkitItems.categories.push({category});
+      categories_array.push({'category':category});
     }
 
     // Masonry
-    $timeout(function() {
-      var msnry = new Masonry('.categories');
-      var cards_length;
+    var msnry;
+    var cards = document.getElementsByClassName('category-card');
+    var card_row_length;
 
-      splash.cardsLength = function() {
-        cards_length = document.getElementsByClassName('category-card').length;
-      };
+    splash.cardGrid = function() {
+      $timeout(function() {
+        for( var i = 0; i < categories_array.length; i++ ) {
+          if( cards[i].children.length - 1 == 0 ) {
+            categories_array[i].hide = true;
 
-      splash.initMasonry = function() {
-        if( cards_length != splash.toolkitItems.categories.length ) {
-          msnry = new Masonry('.categories');
-
-        } else {
-          msnry.layout();
-        }
-      };
-    });
+          } else {
+            categories_array[i].hide = false;
+          }
+        };
+      }, 700);
+    };
 
   }).error(function() {
     console.log('Error loading in Firebase data.');

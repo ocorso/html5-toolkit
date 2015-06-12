@@ -61,8 +61,14 @@
 			}
 
 			.categories {
+				-moz-column-count: 1;
+		    -moz-column-gap: 0;
+		    -webkit-column-count: 1;
+		    -webkit-column-gap: 0;
+		    column-count: 1;
+		    column-gap: 0;
+
 				md-card {
-					margin: 8px 0;
 					width: 100%;
 				}
 			}

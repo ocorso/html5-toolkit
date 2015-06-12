@@ -14,24 +14,11 @@
       </p>
     </div>
 
-    <form name="search" 
-          layout-sm="column" layout-align-sm="start start"
-          layout="row" layout-align="start center">
-
+    <form name="search">
       <md-input-container class="md-accent search-bar">
-        <label>Search category</label>
-        <input name="search-categories" 
-               ng-keydown="splash.cardsLength()" ng-keyup="splash.initMasonry()" 
-               ng-model="searchCategory">
-
-        <ng-md-icon icon="search" size="24"></ng-md-icon>
-      </md-input-container>
-
-      <md-input-container class="md-accent search-bar">
-        <label>Search toolkit items</label>
-        <input name="search-toolkit-items" ng-keyup="splash.initMasonry()" 
-               ng-keydown="splash.cardsLength()" ng-keyup="splash.initMasonry()"
-               ng-model="searchToolkit">
+        <label>Search</label>
+        <input name="search-toolkit-items" ng-model="searchToolkit"
+               ng-keydown="splash.cardGrid()">
 
         <ng-md-icon icon="search" size="24"></ng-md-icon>
       </md-input-container>
@@ -39,8 +26,9 @@
 
     <div class="categories">
       <md-card class="category-card" 
-               ng-repeat="category in splash.toolkitItems.categories 
-                          | orderBy: 'category' | filter: searchCategory">
+               ng-init="category.hide = false"
+               ng-hide="category.hide"
+               ng-repeat="category in splash.toolkitItems[splash.toolkitItems.length - 1]">
 
         <h3 class="category-title md-title">
           {{ category.category | capitalize }}
