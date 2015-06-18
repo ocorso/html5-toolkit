@@ -16,7 +16,7 @@ $accent-green: rgb(184,245,201);
 $accent-green-1: rgb(14,156,87);
 $accent-pink: rgb(248,187,208);
 $accent-pink-1: rgb(255,64,129);
-$white-trans: rgba(255,255,255,.6);
+$white-trans: rgba(255,255,255,.3);
 $light-grey: #f0f0f0;
 $large-space: 24px;
 $small-space: 16px;
@@ -29,8 +29,15 @@ $cubic: cubic-bezier(0.4, 0.0, 0.2, 1);
 	transition: all $speed $ease;
 }
 
+* {
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html {
-	background: $light-grey;
+	background: #fff;
 	font: 400 10px/1.846 $font-stack;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;

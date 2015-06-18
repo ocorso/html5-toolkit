@@ -20,6 +20,14 @@ section {
 			}
 		}
 
+		.blurb {
+			.logo {
+				margin-right: $small-space;
+				max-width: 150px;
+				min-width: 150px;
+			}
+		}
+
 		.graph {
 			background: #fff;
 			padding: $small-space;
@@ -29,7 +37,7 @@ section {
 			-moz-column-count: 2;
 	    -moz-column-gap: 0;
 	    -webkit-column-count: 2;
-	    -webkit-column-gap: 0;
+	    -webkit-column-gap: 16px;
 	    column-count: 2;
 	    column-gap: 0;
 	    width: 100%;
@@ -40,7 +48,7 @@ section {
 				line-height: 0;
 				margin: 8px 0;
 				@include transition(.5s, $cubic);
-				width: calc(100% - 16px);
+				width: calc(100% - 5px);
 
 				&.ng-hide {
 					opacity: 0;
@@ -57,6 +65,8 @@ section {
 				}
 
 				.md-button {
+					border-left: 1px solid $color-dividers;
+					border-right: 1px solid $color-dividers;
 					border-top: 1px solid $color-dividers;
 					border-radius: 0;
 					font-weight: 400;
@@ -66,7 +76,7 @@ section {
 				  text-transform: none;
 				  width: 100%;
 
-				  &:first-child {
+				  &:nth-child(2) {
 				  	border-top: none;
 				  }
 

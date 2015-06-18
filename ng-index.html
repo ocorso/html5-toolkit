@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" ng-controller="MainCtrl as main">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,16 +21,26 @@
 <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Code+Pro:500'>
 <link rel="stylesheet" href="css/main_style.css">
 </head>
-<body ng-controller="MainCtrl as main">
+<body>
 
-<header class="masthead">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60468209-1', 'auto');
+  // ga('send', 'pageview');
+</script>
+
+<!-- <header class="masthead">
   <h1 class="md-display-1 max-width">
     <span class="shadow"></span>
     <a href="#/html5">
       <img src="imgs/toolkit_logo_color.svg" border="0" />
     </a>
   </h1>
-</header>
+</header> -->
 
 <article class="max-width md-body-1" ng-view></article>
 

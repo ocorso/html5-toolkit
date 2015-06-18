@@ -60,6 +60,15 @@
 				}
 			}
 
+			.blurb {
+				.logo {
+					margin-bottom: $small-space;
+					margin-right: 0;
+					max-width: 100px;
+					min-width: 100px;
+				}
+			}
+
 			.categories {
 				-moz-column-count: 1;
 		    -moz-column-gap: 0;
