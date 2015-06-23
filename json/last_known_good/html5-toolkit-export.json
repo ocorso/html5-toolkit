@@ -42,19 +42,37 @@
   }, {
     "category" : "development",
     "demo" : [ {
-      "description" : "",
+      "description" : "This demo links to a generic HTML page that has 3 different fonts loaded built with Google Web Designer. View Source to see how all font-faces are included by appending pipe-delimited (‘|’) font-names in one link tag..",
       "link" : {
-        "title" : "",
-        "url" : ""
+        "title" : "Google Fonts Demo",
+        "url" : "http://goo.gl/xbllK3"
       },
-      "title" : ""
+      "title" : "Cloud Fonts Demo"
     } ],
     "description" : "A web with web fonts is more beautiful, readable, accessible and open. Google Fonts makes it quick and easy for everyone to use web fonts, including professional designers and developers. We believe that everyone should be able to bring quality typography to their web pages and applications. All you have to do is add a special stylesheet link to your HTML document, then refer to the font in a CSS style.",
     "links" : [ {
-      "title" : "",
-      "url" : ""
+      "title" : "Google Fonts Homepage",
+      "url" : "https://www.google.com/fonts"
+    }, {
+      "title" : "Google Developers: Fonts",
+      "url" : "https://developers.google.com/fonts/"
+    }, {
+      "title" : "Demo Source Code",
+      "url" : "https://gist.github.com/ocorso/6979a79d26063d349841"
     } ],
     "pro-tips" : [ {
+      "description" : "Initiate the font download as early as possible",
+      "type" : "good"
+    }, {
+      "description" : "Collapse multiple Google Fonts API requests into a single one",
+      "type" : "good"
+    }, {
+      "description" : "Avoid using the Google Fonts API in nested stylesheets",
+      "type" : "bad"
+    }, {
+      "description" : "Avoid requesting styles/weights that are not used",
+      "type" : "bad"
+    }, {
       "description" : "Limit number of families / weights used if possible",
       "type" : "good"
     }, {
@@ -63,15 +81,18 @@
     }, {
       "description" : "Install Cloud fonts on designer’s machine BEFORE designing.",
       "type" : "good"
+    }, {
+      "description" : "Adjust font-size based on browser width.",
+      "type" : "good"
     } ],
     "quick-start" : [ {
-      "description" : "Add this code to your website: <pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre><br/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;</pre><br/>",
+      "description" : "Add this code to your website: <pre><pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre><br/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;</pre><br/>That's all there is to it.",
       "link" : {
         "title" : "Google Fonts",
-        "url" : "https://www.google.com/fonts"
+        "url" : "https://developers.google.com/fonts/docs/getting_started"
       }
     } ],
-    "tags" : [ "fonts", "debugging" ],
+    "tags" : [ "fonts" ],
     "title" : "Google Fonts"
   }, {
     "category" : "development",
@@ -335,35 +356,35 @@
     } ],
     "quick-start" : [ {
       "content" : "",
-      "description" : "Consider creating the image with just CSS3 to both improve the quality and reduce file size. <a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">CSS3GradientGenerator</a><br/><br/><imgsrc=\"http: //storage.googleapis.com/html5-toolkit/image-compression/image01.png\"width=\"781\"alt=\"ChromeInspect\"/>",
+      "description" : "Consider creating the image with just CSS3 to both improve the quality and reduce file size. <a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">CSS3GradientGenerator</a><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image01.png\"width=\"300\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Gradients: Is the graphic a gradient or a solid color?",
         "url" : ""
       }
     }, {
       "content" : "",
-      "description" : "Use SVG (Scalable Vector Graphics) whenever possible instead of an image. Images are pixel based (\"raster\") and may add some overhead in file weight. In contrast, SVGs are point-to-point based graphics (\"vector\") and can greatly reduce file size.<br/><ul><li><a href=\"http://www.w3schools.com/svg/\"target=\"_blank\">W3School's SVG Tutorial</a></li><li><a href=\"https://css-tricks.com/using-svg/\"target=\"_blank\">How to Use SVGs</a></li><li><a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">Compressing SVGs</a></li></ul><br/><imgsrc=\"http: //storage.googleapis.com/html5-toolkit/image-compression/image00.png\"width=\"781\"alt=\"ChromeInspect\"/>",
+      "description" : "Use SVG (Scalable Vector Graphics) whenever possible instead of an image. Images are pixel based (\"raster\") and may add some overhead in file weight. In contrast, SVGs are point-to-point based graphics (\"vector\") and can greatly reduce file size.<br/><ul><li><a href=\"http://www.w3schools.com/svg/\"target=\"_blank\">W3School's SVG Tutorial</a></li><li><a href=\"https://css-tricks.com/using-svg/\"target=\"_blank\">How to Use SVGs</a></li><li><a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">Compressing SVGs</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image00.png\"width=\"300\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Solid Colors vs Vectors: Is the image comprised of solid colors or a vector?",
         "url" : ""
       }
     }, {
       "content" : "",
-      "description" : "Use icon fonts whenever possible instead of an image for icons, images are pixel based and may add some overhead in file weight. Icon fonts are actually regular fonts and can be used in the same way as any other font in HTML. They are vector based as well. Custom icon fonts are relatively quick to create and implement.<br/><ul><li><a href=\"https://icomoon.io/app/#/select\"target=\"_blank\">Icomoon Icon Font Creator</a></li><li><a href=\"https://thenounproject.com/\"target=\"_blank\">NounProject: an affordable resource to gather SVG icons for your icon font</a></li></ul><br/><imgsrc=\"http: //storage.googleapis.com/html5-toolkit/image-compression/image02.png\"width=\"781\"alt=\"ChromeInspect\"/>",
+      "description" : "Use icon fonts whenever possible instead of an image for icons, images are pixel based and may add some overhead in file weight. Icon fonts are actually regular fonts and can be used in the same way as any other font in HTML. They are vector based as well. Custom icon fonts are relatively quick to create and implement.<br/><ul><li><a href=\"https://icomoon.io/app/#/select\"target=\"_blank\">Icomoon Icon Font Creator</a></li><li><a href=\"https://thenounproject.com/\"target=\"_blank\">NounProject: an affordable resource to gather SVG icons for your icon font</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image02.png\"width=\"300\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Multiple Images & Icons: Do you have multiple images in your project?",
         "url" : ""
       }
     }, {
       "content" : "",
-      "description" : "If pixel based images are required, consider using a Sprite Sheet. A single tiled image that is loaded once, and with CSS, only individual tiles can be made visible, this approach can save making multiple requests over HTTP. <br/><br/>Compressing the image, is still key even with this approach.<br/><ul><li><a href=\"http://www.w3schools.com/css/css_image_sprites.asp\"target=\"_blank\">CSS Image Sprites</a></li><li><a href=\"http://draeton.github.io/stitches/\"target=\"_blank\">Online Sprite Sheet and CSS Creator</a></li></ul><br/><imgsrc=\"http: //storage.googleapis.com/html5-toolkit/image-compression/image04.png\"width=\"781\"alt=\"ChromeInspect\"/>",
+      "description" : "If pixel based images are required, consider using a Sprite Sheet. A single tiled image that is loaded once, and with CSS, only individual tiles can be made visible, this approach can save making multiple requests over HTTP. <br/><br/>Compressing the image, is still key even with this approach.<br/><ul><li><a href=\"http://www.w3schools.com/css/css_image_sprites.asp\"target=\"_blank\">CSS Image Sprites</a></li><li><a href=\"http://draeton.github.io/stitches/\"target=\"_blank\">Online Sprite Sheet and CSS Creator</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image04.png\"width=\"300\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Multiple Images & Icons: Do you have multiple images in your project?",
         "url" : ""
       }
     }, {
       "content" : "",
-      "description" : "If pixel based images are required, compress them as much as possible while keeping quality. Many people are already familiar <a href=\"http://help.adobe.com/en_US/creativesuite/cs/using/WS6E857477-27FE-4a88-B8A4-074DC3C65F68.html\"target=\"_blank\">Photoshop’s Save For Web</a>, but there are other online tools that can compress an image even further while retaining quality.<br/><br/><ul><li><a href=\"https://tinypng.com/\"target=\"_blank\">TinyPNG: Online PNG Compressor</a></li><li><a href=\"https://tinyjpg.com/\"target=\"_blank\">TinyJPG: Online JPG Compressor </a></li></ul><br/><br/><imgsrc=\"http: //storage.googleapis.com/html5-toolkit/image-compression/image03.png\"width=\"781\"alt=\"ChromeInspect\"/>",
+      "description" : "If pixel based images are required, compress them as much as possible while keeping quality. Many people are already familiar <a href=\"http://help.adobe.com/en_US/creativesuite/cs/using/WS6E857477-27FE-4a88-B8A4-074DC3C65F68.html\"target=\"_blank\">Photoshop’s Save For Web</a>, but there are other online tools that can compress an image even further while retaining quality.<br/><br/><ul><li><a href=\"https://tinypng.com/\"target=\"_blank\">TinyPNG: Online PNG Compressor</a></li><li><a href=\"https://tinyjpg.com/\"target=\"_blank\">TinyJPG: Online JPG Compressor </a></li></ul><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image03.png\"width=\"300\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Image File Type: Are you using JPGs or PNGs in your project?",
         "url" : ""
