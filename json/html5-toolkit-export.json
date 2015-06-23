@@ -900,6 +900,66 @@
             "overflow",
             "transparency"
          ]
+      },
+      {
+         "category" : "development",
+         "title":"CSS Transitions, Transforms, and Animations",
+         "description":"CSS transitions, transforms, and animations which are part of the CSS3 set of <a href=\"http://www.w3.org/standards/techs/css#w3c_all\" target=\"blank\">specifications</a>, provide ways to apply/control animation for changing CSS properties.",
+         "demo":[
+            {
+               "description":"Create engaging, interactive HTML5-based designs and motion graphics that can run on any device.",
+               "link":{
+                  "title":"Scalable Vector Graphics (SVG) + Animation",
+                  "url":"http://www.richmediagallery.com/detailPage?id=8201"
+               },
+               "title":"Scalable Vector Graphics (SVG) + Animation"
+            }
+         ],
+         "quick-start":[
+            {
+               "description":"Learn how to apply <a href=\"http://www.the-art-of-web.com/css/css-animation/\" target=\"blank\">animation using CSS transforms</a>."
+            }
+         ],
+         "pro-tips":[
+            {
+               "type":"good",
+               "description":"Refrain from using JavaScript libraries/frameworks that use the setInterval JavaScript method for animations, and if hand coding then do not use the setInterval method. This method uses up a lot of the browser’s resources and affects performance, and it requires a decent amount of code. It is prefered to use CSS for <a href=\"https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions\" target=\"blank\">transitions</a>,  <a href=\"https://css-tricks.com/almanac/properties/t/transform/\" target=\"blank\">transforms</a> and <a href=\"https://css-tricks.com/almanac/properties/a/animation/\" target=\"blank\">animations</a>. If JavaScript animations are mandatory, then consider using the <a href=\"https://css-tricks.com/using-requestanimationframe/\" target=\"blank\">requestAnimationFrame</a> method, it is specifically made for animations. More information can be found <a href=\"https://developers.google.com/web/fundamentals/look-and-feel/animations/css-vs-javascript\" target=\"blank\">here</a>."
+            },
+            {
+               "type":"good",
+               "description":"Consider using CSS <a href=\"http://www.w3schools.com/css/css3_3dtransforms.asp\" target=\"blank\">3D transforms</a> to take advantage of the device GPU. This allows for a smoother animation experience because when CSS 3D transforms are invoked, they run in their own layer governed by the GPU. Take note that doing so can lower battery life on mobile devices."
+            },
+            {
+               "type":"good",
+               "description":"<p>This pertains especially to Dynamic creatives which require a significantly longer time to load all of the data.</p><p>Using the <a href=\"https://support.google.com/richmedia/answer/2672514\" target=\"blank\">Enabler.isPageLoaded()</a> polite load functionality you can wait to trigger all of your CSS animations until all of the data has populated. All you need to do is set a 'paused' class to any element that animates in the ad. Then add this into your css:</p><p><pre><div>.paused {</div><div>&nbsp;&nbsp;animation-play-state: paused !important;</div><div>}</div></pre></p><p>In your .js file you would then release this paused state using querySelectorAll:</p><p><pre><div>var anim = document.querySelectorAll('.paused');</div><div>function pageLoadedHandler() {</div><div>&nbsp;&nbsp;//Play Animations</div><div>&nbsp;&nbsp;for (var i = 0; i < anim.length; i++ ) {</div><div>&nbsp;&nbsp;&nbsp;&nbsp;anim[i].removeAttribute('class', 'paused');</div><div>&nbsp;&nbsp;}</div><div> }</div></pre></p>"
+            },
+            {
+               "type":"good",
+               "description":"Before uploading your CSS files to Studio, consider minifying your CSS with an <a href=\"http://cssminifier.com/\" target=\"blank\">Online CSS Minifier</a>."
+            },
+            {
+               "type":"bad",
+               "description":"Do not use the JavaScript setInterval method to apply animation."
+            }
+         ],
+         "links":[
+            {
+               "url":"http://www.w3schools.com/css/css3_intro.asp",
+               "title":"CSS3 Introduction"
+            },
+            {
+               "url":"https://css-tricks.com/",
+               "title":"CSS-Tricks"
+            },
+            {
+               "url":"http://www.the-art-of-web.com/css/css-animation/",
+               "title":"CSS: Animation Using CSS Transforms"
+            }
+         ],
+         "tags":[
+            "animation",
+            "css"
+         ]
       }
    ]
 }
