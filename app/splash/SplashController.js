@@ -1,7 +1,9 @@
 var splash = angular.module('splash', []);
 
 splash.controller('SplashCtrl', function($scope, $location, SplashContent,
-  ToolkitData, $timeout) {
+  ToolkitData, $timeout, $window) {
+
+  $window.ga('send', 'pageview', { page: 'splash-page' })
 
   // set active Tab & breadcrumbs
   $scope.main['toolkit-item-view'] = false;

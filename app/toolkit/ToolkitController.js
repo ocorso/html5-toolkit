@@ -1,9 +1,8 @@
 var toolkit = angular.module('toolkit', []);
 
 toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
-	$timeout, ToolkitData) {
+	$timeout, ToolkitData, $window) {
 
-	$scope.main['selected-tab'] = 1;
 	$scope.main['toolkit-view'] = true;
 	$scope.main['toolkit-item-view'] = true;
 	$scope.main.item = $routeParams.item.split(' ').join('-').toLowerCase();
@@ -42,6 +41,8 @@ toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
 	  if( match == 1 ) {
 	  	toolkit.content = toolkit.toolkitItems[itemIndex];
 	  	$scope.main['toolkit-item'] = $scope.main.title;
+	  	$window.ga('send', 'pageview', { page: titleFiltered });
+
 	  	$location.path('/html5/toolkit/' + titleFiltered);
 
 	  } else {

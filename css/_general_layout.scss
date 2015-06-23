@@ -15,7 +15,9 @@ header {
 	}
 
 	&.masthead {
-		background: $primary-color;
+		display: none;
+		
+		background: $accent-color;
 		padding: $small-space 0;
 		position: relative;
 		overflow: hidden;
@@ -100,7 +102,7 @@ md-tabs {
 
 article {
 	&[ng-view] {
-		background: $light-grey;
+		background: #fff;
 		padding-bottom: $large-space * 3;
 	}
 }

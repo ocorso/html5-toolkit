@@ -4,11 +4,11 @@ section {
 			flex-wrap: wrap;
 
 			ng-md-icon {
-				fill: $font-color-3;
+				fill: $color-dividers;
 			}
 
 			li {
-				background: $white-trans;
+				background: $color-dividers;
 				-moz-border-radius: 2px;
 				-ms-border-radius: 2px;
 				-webkit-border-radius: 2px;
@@ -20,7 +20,10 @@ section {
 				padding: 0 6px;
 
 				&:first-child {
-					background: none;
+				  background: none;
+				  max-width: 32px;
+				  margin-right: 8px;
+				  min-width: 32px;
 				}
 
 				&:last-child {
@@ -31,12 +34,26 @@ section {
 	}
 
 	pre {
-		background: $white-trans;
+		background: #fafafa;
 		color: $font-color-2;
 		font: 500 13px/1.6em 'Source Code Pro', monospace;
 		overflow: hidden;
 	  overflow-x: auto;
 	  padding: $small-space;
+
+	  &::-webkit-scrollbar {
+			height: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			height: 4px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: $font-color-3;
+			border-radius: 0;
+			height: 4px;
+		}
 	}
 
 	&.block-color {
@@ -49,6 +66,10 @@ section {
 		  }
 		}
 
+		pre {
+			background: $white-trans;
+		}
+
 		main {
 			padding: $large-space;
 		}
@@ -59,6 +80,12 @@ section {
 			header {
 				background: $primary-color;
 			}
+
+			pre {
+				&::-webkit-scrollbar-thumb {
+					background: $primary-color;
+				}
+			}
 		}
 
 		&.accent {
@@ -66,6 +93,12 @@ section {
 
 			header {
 				background: $accent-color;
+			}
+
+			pre {
+				&::-webkit-scrollbar-thumb {
+					background: $accent-color;
+				}
 			}
 		}
 
@@ -76,14 +109,14 @@ section {
 
 	&.summary {
 		img {
-			background: #fff;
+			background: #fafafa;
 			padding: 8px;
 		}
 	}
 
 	&.demo {
 		img {
-			background: #fff;
+			background: $white-trans;
 			padding: 8px;
 		}
 	}
@@ -112,7 +145,7 @@ section {
 			}
 
 			img {
-				background: #fff;
+				background: $white-trans;
 				padding: 8px;
 			}
 		}
@@ -157,16 +190,11 @@ section {
 
 footer {
 	&.links {
-		h3 {
-			padding-bottom: 0;
-		}
-
 		ul {
-			margin: 0;
+			margin: 16px 0;
 		}
 
 		a {
-			display: block;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
