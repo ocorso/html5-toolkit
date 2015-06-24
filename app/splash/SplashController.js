@@ -64,6 +64,24 @@ splash.controller('SplashCtrl', function($scope, $location, SplashContent,
       }, 700);
     };
 
+    // postMessage
+    angular.element(document).ready(function() {
+      $scope.main.pageHeight = document.getElementById('container').offsetHeight;
+      $scope.main.pageWidth = document.getElementById('container').offsetWidth;
+
+      // console.log($scope.main.pageWidth);
+
+      var message = {
+        height: $scope.main.pageHeight,
+        width: $scope.main.pageWidth,
+        type: 'resize'
+      };
+
+
+      message = JSON.stringify(message);  
+      parent.postMessage(message, "*");
+    });
+
   }).error(function() {
     console.log('Error loading in Firebase data.');
   });
