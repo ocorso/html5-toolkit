@@ -8,6 +8,7 @@
   box-sizing: border-box; }
 
 html, body {
+  height: auto;
   background: #fff;
   font: 400 10px/1.846 RobotoDraft, Roboto, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
