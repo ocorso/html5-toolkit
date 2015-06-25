@@ -86,7 +86,7 @@
       "type" : "good"
     } ],
     "quick-start" : [ {
-      "description" : "Add this code to your website: <pre><pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre><br/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;</pre><br/>That's all there is to it.",
+      "description" : "Add this code to your website: <pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre><br/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;</pre><br/>That's all there is to it.",
       "link" : {
         "title" : "Google Fonts",
         "url" : "https://developers.google.com/fonts/docs/getting_started"
@@ -533,5 +533,130 @@
     } ],
     "tags" : [ "dynamic", "DBM" ],
     "title" : "Dynamic Package Solutions"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "How to recreate Photoshop's blend modes in CSS",
+    "links" : [ {
+      "title" : "CSS Blend Modes in Depth",
+      "url" : "https://css-tricks.com/basics-css-blend-modes/"
+    }, {
+      "title" : "Visual Comparison of Blend Modes",
+      "url" : "http://www.webdesignerdepot.com/2014/07/15-css-blend-modes-that-will-supercharge-your-images/"
+    }, {
+      "title" : "CodePen Examples",
+      "url" : "http://codepen.io/collection/Kgshi/"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Use blend modes in animation to highlight how two different elements interact with each other or with hover states",
+      "type" : "good"
+    }, {
+      "description" : "Use blend modes if you’re repeating an image in different ways. For example, an image is monochromatic in the background, while a smaller full-color version is in the foreground. This will eliminate the need for two image assets.",
+      "type" : "good"
+    }, {
+      "description" : "Don’t use blend modes for a single static image. This will only bloat your file size.",
+      "type" : "bad"
+    }, {
+      "description" : "Internet Explorer does not support blend modes. Use <a href=\"https://css-tricks.com/how-to-create-an-ie-only-stylesheet/\" target=\"_blank\">conditional stylesheets</a> or consider using an animated gif as a workaround.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>Adobe Photoshop and other applications use different blend modes to determine how a layer interacts with the layer beneath it. These blend modes are also achievable in CSS with the background-blend and mix-blend-mode properties. <a href=\"http://storage.googleapis.com/html5-toolkit/blend-modes/blendmodes.jpg\" target=\"_blank\">Here is a visual example of the different blend options</a>.</p> <h2>Background-Blend-Mode</h2><p>Background-blend-mode can be used to blend a background image with a solid color or a another background image with <a href=\"https://www.google.com/url?q=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FGuide%2FCSS%2FUsing_multiple_backgrounds&sa=D&sntz=1&usg=AFQjCNHA022TLBBDMQ1Q46BYIjSvDCX4_w\" target=\"_blank\">CSS3 Multiple Backgrounds</a>. The basic usage would be:</p><pre>.example {<br>&nbsp;&nbsp;background-image: url(foo.jpg);<br>&nbsp;&nbsp;background-color: blue;<br>&nbsp;&nbsp;background-blend-mode: multiply;<br>}</pre><p>A live example can be seen here: <a href=\"http://codepen.io/chriscoyier/pen/aBIAc\" target=\"_blank\">http://codepen.io/chriscoyier/pen/aBIAc</a>.</p><h2>Mix Blend Mode</h2><p>Similar to the background-blend-mode, mix-blend-mode can be used on other elements to specify their blending. For example: </p><pre>h1 {<br>&nbsp;&nbsp;color: green;<br>&nbsp;&nbsp;mix-blend-mode: color-dodge;<br>}</pre><p>A live example can be seen here: <a href=\"http://jsfiddle.net/Lr9t0msm/4/\" target=\"_blank\">http://jsfiddle.net/Lr9t0msm/4/</a>.</p><h2>Compatibility</h2><p>Blend Modes are fully compatible with Chrome and Firefox. Internet Explorer does not have plans to support any blend modes. To create an Internet Explorer specific workaround, consider using <a href=\"https://css-tricks.com/how-to-create-an-ie-only-stylesheet/\" target=\"_blank\">conditional stylesheets</a>. Safari does not support the hue, saturation, color, and luminosity blend modes. Be sure to check caniuse.com for the latest updates in <a href=\"http://www.google.com/url?q=http%3A%2F%2Fcaniuse.com%2F%23search%3Dbackground-blend&sa=D&sntz=1&usg=AFQjCNFdItMib7s2WLQ1Iuekk-eMUDbrKA\" target=\"_blank\">background-blend-mode</a> and <a href=\"http://www.google.com/url?q=http%3A%2F%2Fcaniuse.com%2F%23search%3Dmix-blend-mode&sa=D&sntz=1&usg=AFQjCNEO4FPMD1MEUjI3bNFZ2GpwQACnlQ\" target=\"_blank\">mix-blend-mode capabatibility</a>. </p>",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      }
+    } ],
+    "tags" : [ "blend", "blend modes", "layering", "CSS", "multiple", "screen", "overlay", "images", "greyscale", "monochromatic", "lighting", "photoshop", "flash", "opacity" ],
+    "title" : "CSS Blend Modes"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "An overview of different masking techniques available",
+    "links" : [ {
+      "title" : "Overview of Clip-Paths and Masking",
+      "url" : "http://www.html5rocks.com/en/tutorials/masking/adobe/"
+    }, {
+      "title" : "Clipping and Masking Demos",
+      "url" : "http://codepen.io/yoksel/pen/fsdbu"
+    }, {
+      "title" : "CSS Masking Experiments",
+      "url" : "http://thenittygritty.co/css-masking"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Overflow:hidden is best for masking squares and ellipses because it’s fully compatible across all browsers.",
+      "type" : "good"
+    }, {
+      "description" : "Clip-paths are best for complicated shapes, but are not compatible with Internet Explorer.",
+      "type" : "good"
+    }, {
+      "description" : "Masking is best for shapes without a hard edge, but is only compatible with Chrome and Safari.",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>The ability to make portions of your Creative transparent is useful for “takeover” style Creatives or when animating different elements within your Creative. There are three different ways to achieve this with CSS: overflow:hidden, clip-path, and masks. For a more thorough analysis of the clip-path vs. mask properties, <a href=\"https://css-tricks.com/clipping-masking-css/\" target=\"_blank\">read this article</a>.</p><h2>Overflow:hidden</h2><p>A traditional method of clipping an element is by nesting the element to be clipped within a div that has overflow:hidden applied to it. This method will work in all browsers, but is limited to the shapes you can make with a div/border radiuses. Here are a few <a href=\"http://jsfiddle.net/4bL12nz0/\" target=\"_blank\">code examples</a> that also showcase animating the mask.</p><h2>Clip-Path</h2><p>Clip Paths, similar to overflow:hidden, are best used for hard (vector) edges. Clip Paths are dependent on an SVG shape and offer greater flexible in terms of geometry. A basic example can be found <a href=\"http://codepen.io/anon/pen/ZGXrKr\" target=\"_blank\">here</a>. <a href=\"http://bennettfeely.com/clippy/\" target=\"_blank\">Clippy</a> is an online visual tool for creating simple and complex clip-paths. Clip-paths are not compatible with any version of Internet Explorer.</p><h2>Masking</h2><p>The mask property is a way to achieve masking with the transparency or luminosity of a source image. More details about this property can be found <a href=\"http://www.html5rocks.com/en/tutorials/masking/adobe/#toc-browser-support\" target=\"_blank\">here</a>. Webkit browsers (Chrome and Safari) are the only browsers that support image masking.</p><h2>Compatibility</h2> <p>For the latest specifics on browser compatibility, be sure to check caniuse.com for <a href=\"http://caniuse.com/#search=clip-path\" target=\"_blank\">clip-paths</a> and <a href=\"http://caniuse.com/#search=mask\" target=\"_blank\">masks</a>. The overflow:hidden property will continue to be fully compatible on all browsers.</p>",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      }
+    } ],
+    "tags" : [ "masking", "clipping", "css", "overflow", "transparency" ],
+    "title" : "Masking and Clipping in CSS"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "Create engaging, interactive HTML5-based designs and motion graphics that can run on any device.",
+      "link" : {
+        "title" : "Scalable Vector Graphics (SVG) + Animation",
+        "url" : "http://www.richmediagallery.com/detailPage?id=8201"
+      },
+      "title" : "Scalable Vector Graphics (SVG) + Animation"
+    } ],
+    "description" : "CSS transitions, transforms, and animations which are part of the CSS3 set of <a href=\"http://www.w3.org/standards/techs/css#w3c_all\" target=\"blank\">specifications</a>, provide ways to apply/control animation for changing CSS properties.",
+    "links" : [ {
+      "title" : "CSS3 Introduction",
+      "url" : "http://www.w3schools.com/css/css3_intro.asp"
+    }, {
+      "title" : "CSS-Tricks",
+      "url" : "https://css-tricks.com/"
+    }, {
+      "title" : "CSS: Animation Using CSS Transforms",
+      "url" : "http://www.the-art-of-web.com/css/css-animation/"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Refrain from using JavaScript libraries/frameworks that use the setInterval JavaScript method for animations, and if hand coding then do not use the setInterval method. This method uses up a lot of the browser’s resources and affects performance, and it requires a decent amount of code. It is prefered to use CSS for <a href=\"https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions\" target=\"blank\">transitions</a>,  <a href=\"https://css-tricks.com/almanac/properties/t/transform/\" target=\"blank\">transforms</a> and <a href=\"https://css-tricks.com/almanac/properties/a/animation/\" target=\"blank\">animations</a>. If JavaScript animations are mandatory, then consider using the <a href=\"https://css-tricks.com/using-requestanimationframe/\" target=\"blank\">requestAnimationFrame</a> method, it is specifically made for animations. More information can be found <a href=\"https://developers.google.com/web/fundamentals/look-and-feel/animations/css-vs-javascript\" target=\"blank\">here</a>.",
+      "type" : "good"
+    }, {
+      "description" : "Consider using CSS <a href=\"http://www.w3schools.com/css/css3_3dtransforms.asp\" target=\"blank\">3D transforms</a> to take advantage of the device GPU. This allows for a smoother animation experience because when CSS 3D transforms are invoked, they run in their own layer governed by the GPU. Take note that doing so can lower battery life on mobile devices.",
+      "type" : "good"
+    }, {
+      "description" : "<p>This pertains especially to Dynamic creatives which require a significantly longer time to load all of the data.</p><p>Using the <a href=\"https://support.google.com/richmedia/answer/2672514\" target=\"blank\">Enabler.isPageLoaded()</a> polite load functionality you can wait to trigger all of your CSS animations until all of the data has populated. All you need to do is set a 'paused' class to any element that animates in the ad. Then add this into your css:</p><p><pre><div>.paused {</div><div>&nbsp;&nbsp;animation-play-state: paused !important;</div><div>}</div></pre></p><p>In your .js file you would then release this paused state using querySelectorAll:</p><p><pre><div>var anim = document.querySelectorAll('.paused');</div><div>function pageLoadedHandler() {</div><div>&nbsp;&nbsp;//Play Animations</div><div>&nbsp;&nbsp;for (var i = 0; i < anim.length; i++ ) {</div><div>&nbsp;&nbsp;&nbsp;&nbsp;anim[i].removeAttribute('class', 'paused');</div><div>&nbsp;&nbsp;}</div><div> }</div></pre></p>",
+      "type" : "good"
+    }, {
+      "description" : "Before uploading your CSS files to Studio, consider minifying your CSS with an <a href=\"http://cssminifier.com/\" target=\"blank\">Online CSS Minifier</a>.",
+      "type" : "good"
+    }, {
+      "description" : "Do not use the JavaScript setInterval method to apply animation.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "Learn how to apply <a href=\"http://www.the-art-of-web.com/css/css-animation/\" target=\"blank\">animation using CSS transforms</a>."
+    } ],
+    "tags" : [ "animation", "css" ],
+    "title" : "CSS Transitions, Transforms, and Animations"
   } ]
 }
