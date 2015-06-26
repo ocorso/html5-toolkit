@@ -69,7 +69,6 @@ splash.controller('SplashCtrl', function($scope, $location, SplashContent,
       $scope.main.pageHeight = document.getElementById('container').offsetHeight;
       $scope.main.pageWidth = document.getElementById('container').offsetWidth;
 
-      // console.log($scope.main.pageWidth);
 
       var message = {
         height: $scope.main.pageHeight,
@@ -77,6 +76,8 @@ splash.controller('SplashCtrl', function($scope, $location, SplashContent,
         type: 'resize'
       };
 
+      // oc: here's what we're posting
+      console.info(message);
 
       message = JSON.stringify(message);  
       parent.postMessage(message, "*");

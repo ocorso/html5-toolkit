@@ -54,7 +54,6 @@ toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
       $scope.main.pageHeight = document.getElementById('container').offsetHeight;
       $scope.main.pageWidth = document.getElementById('container').offsetWidth;
 
-      // console.log($scope.main.pageWidth);
 
       var message = {
         height: $scope.main.pageHeight,
@@ -62,7 +61,8 @@ toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
         type: 'resize'
       };
 
-
+      // oc: here's what we're posting
+      console.info(message);
       message = JSON.stringify(message);  
       parent.postMessage(message, "*");
     });
