@@ -35,9 +35,11 @@ $cubic: cubic-bezier(0.4, 0.0, 0.2, 1);
 	-webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-html {
+html,body{
 	height: auto;
+	overflow: hidden;
+}
+html {
 	background: #fff;
 	font: 400 10px/1.846 $font-stack;
 	-webkit-font-smoothing: antialiased;
@@ -45,7 +47,6 @@ html {
 }
 
 body {
-	height: auto;
 	@extend html;
 
 	.cf {
