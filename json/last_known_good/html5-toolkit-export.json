@@ -658,5 +658,134 @@
     } ],
     "tags" : [ "animation", "css" ],
     "title" : "CSS Transitions, Transforms, and Animations"
-  } ]
+  }, {
+    "category" : "formats",
+    "demo" : [ {
+      "description" : "Checkout the selection of global HTML5 Masthead examples on our Rich Media Gallery",
+      "link" : {
+        "title" : "Mastheads on the Rich Media Gallery",
+        "url" : "http://www.richmediagallery.com/gallery#filterGallery:464%2C443~"
+      },
+      "title" : "HTML5 Masthead Examples"
+    } ],
+    "description" : "<p>The YouTube Desktop Masthead is a 970x250 pixel in-page unit running the full width of the YouTube homepage below the navigation bar for 24 hours. There is also an expandable version that expands on the user click to 970x500 pixels.</p><p>As HTML5 offers several key benefits over Flash, we encourage advertisers to take advantage of our broader support for HTML5 Mastheads. Though advertisers can use any of the HTML5 authoring tools available, Google has launched Google Web Designer and HTML5 Studio Layouts to make the experience of building HTML5 as easy as possible.<p>",
+    "links" : [ {
+      "title" : "Rich Media Custom Mastheads Guidelines",
+      "url" : "https://support.google.com/displayspecs/answer/6011474?hl=en"
+    }, {
+      "title" : "Rich Media Layouts Mastheads Guidelines",
+      "url" : "https://support.google.com/displayspecs/answer/4489886?rd=1"
+    }, {
+      "title" : "YouTube Masthead Featured Video",
+      "url" : "http://www.richmediagallery.com/detailPage?id=8161"
+    }, {
+      "title" : "YouTube Masthead Interactive Hotspots",
+      "url" : "http://www.richmediagallery.com/detailPage?id=8190"
+    }, {
+      "title" : "Rich Media Gallery HTML5 Masthead Demos",
+      "url" : "http://www.richmediagallery.com/adtypes#filterAds:478%2C464~"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Refer to and check the Mastheads Guidelines before starting a creative build, the majority of Masthead delays are caused when they don’t meet YouTube specifications.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>HTML5 is an open platform and, therefore advertisers can use any of the available HTML5 editors, including Google Web Designer and many others.</p><p>Google Web Designer provides several customizable Masthead templates that can be used as-is or as a starting point to build more complex Mastheads.</p>",
+      "link" : {
+        "title" : "Jump in and start building with Google Web Designer",
+        "url" : "http://www.google.com/webdesigner"
+      }
+    }, {
+      "description" : "Rich Media Layouts Layouts lets you create a HTML5 Masthead, using the same standard assets you already have. Get a creative built, QA approved, and ready to traffic in as little as one business day.",
+      "link" : {
+        "title" : "Select HTML5 Masthead Layouts in DoubleClick Studio",
+        "url" : "https://www.google.com/doubleclick/studio/#layouts:"
+      }
+    } ],
+    "tags" : [ "youtube", "masthead" ],
+    "title" : "HTML5 Masthead"
+  }, {
+    "category" : "troubleshooting",
+    "description" : "The help center is the best place for general DoubleClick Studio and DoubleClick Rich Media support documents.",
+    "links" : [ {
+      "title" : "DoubleClick Creative Solutions Help Center",
+      "url" : "https://support.google.com/richmedia"
+    } ],
+    "pro-tips" : [ {
+      "description" : "To get creative solutions support, click on Contact us link at the upper right of the Help Center.",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "Build DoubleClick Studio creatives using your favorite authoring tool or source code editor. Studio's software development kit and components help you add creative features such as videos, image galleries, and maps.",
+      "link" : {
+        "title" : "Build your creative",
+        "url" : "https://support.google.com/richmedia/answer/6073360"
+      }
+    }, {
+      "description" : "Studio HTML5 ad format and HTML5 creative assets requirements.",
+      "link" : {
+        "title" : "Desktop HTML5/Mobile web",
+        "url" : "https://support.google.com/richmedia/answer/3419891"
+      }
+    }, {
+      "description" : "You can avoid potential live issues with creatives by meeting best practice and lowest common denominator (LCD) requirements.",
+      "link" : {
+        "title" : "Developer best practices",
+        "url" : "https://support.google.com/richmedia/answer/165130"
+      }
+    }, {
+      "description" : "The process of uploading the creatives you've built to the DoubleClick Studio Web UI.",
+      "link" : {
+        "title" : "Studio Web UI overview",
+        "url" : "https://support.google.com/richmedia/answer/2453366"
+      }
+    } ],
+    "tags" : [ "html5", "studio" ],
+    "title" : "Help Center"
+  },
+  {
+    "title": "Template Generator",
+    "category": "Creation Tools",
+    "description": "",
+    "demo": [
+        {
+            "description": "",
+            "link": {
+                "title": "Building Expanding Creatives",
+                "url": "https://www.youtube.com/watch?v=dwah7k4zLOM"
+            },
+            "title": "Google Web Designer Demo"
+        }
+    ],
+    "quick-start": [
+        {
+            "description": "Here's what it looks like: <img src=’http:\/\/storage.googleapis.com\/html5-toolkit\/html5-template-generator\/h5t_1.png’ \/>.",
+            "link": {
+                "title": "YouTube Channel",
+                "url": "http://youtube.com/googlewebdesigner"
+            }
+        }
+    ],
+    "pro-tips": [
+        {
+            "type": "good",
+            "description": "Start with a template to wire up all the DoubleClick ad-serving logic."
+        },
+        {
+            "type": "bad",
+            "description": "Don't reinvent the wheel by starting from scratch. Save development time by using a template."
+        }
+    ],
+    "links": [
+        {
+            "url": "http://www.richmediagallery.com/tools/template-generator",
+            "title": "Rich Media Gallery"
+        }
+    ],
+    "tags": [
+        "template",
+        "studio"
+      ]
+    }
+ ]
 }

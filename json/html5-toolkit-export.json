@@ -1,1079 +1,791 @@
 {
-   "toolkit-items":[
-      {
-         "category":"troubleshooting",
-         "demo":[
-            {
-               "description":"Chrome Inspect view of Android device.<br /><br /><a href=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" target=\"_blank\"><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" width=\"864\" alt=\"Chrome Inspect view of Android device\"/></>",
-               "link":{
-                  "title":"Debugging a Rich Media Creative",
-                  "url":"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg"
-               },
-               "title":"Debugging a Rich Media Creative"
-            }
-         ],
-         "description":"Debugging HTML5 creatives is easy with built in browser development tools. All major browsers provide a developer inspector of some sort. Most can be accessed while on a page by right clicking and choosing <pre>\"inspect element\"</pre> or via the menu options at the top. Debugging allows you to view the html structure of your creative, view and adjust CSS to tweak visual elements, as well as view network activity, console logging, and performance monitoring.<br /><br />When it comes to debugging a mobile site or ad, you don’t have easy access to an inspector tool like you do on a desktop. Fortunately Chrome, Safari and Firefox all offer remote debugging over a USB connection to your desktop.<br /><br />Check out the resources section for additional information and links from across the web.",
-         "links":[
-            {
-               "title":"Remote Debugging on Android with Chrome",
-               "url":"https://developer.chrome.com/devtools/docs/remote-debugging"
-            },
-            {
-               "title":"Creative Preview App - Android",
-               "url":"https://play.google.com/store/apps/details?id=com.google.android.apps.audition"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Use remote debugging when developing html5 content that will be viewed across screens.",
-               "type":"good"
-            },
-            {
-               "description":"Works with Creative Preview App for debugging in-app creatives. (<a href=\"https://play.google.com/store/apps/details?id=com.google.android.apps.audition\" target=\"_blank\">Android</a>) (iOS - coming soon)",
-               "type":"good"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"Here’s how to quickly get testing with USB Debugging.<br /><br />Get started on Chrome for Android by following instructions to enable USB debugging and connect your phone to your computer. Be sure to visit <strong><i>chrome://inspect</i></strong> and enable Discovery of USB devices.<br /><br />Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br /><br />When visiting <strong><i>chrome://inspect</i></strong> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/chrome_inspect_devices.jpg\" width=\"781\" alt=\"Chrome Inspect\"/>",
-               "link":{
-                  "title":"Remote Debugging on Android with Chrome",
-                  "url":"https://developer.chrome.com/devtools/docs/remote-debugging#setting-up-device"
-               }
-            },
-            {
-               "description":"Get started on Safari and iOS devices by following instructions here to enable debugging options and connect your device to your computer.<br /><br />Send a Studio preview to your phone so it opens in Safari.<br /><br />Open Safari and from the Develop menu you should see your device and open windows listed. Simply select Studio’s preview window and you’ll be able to fully view and debug your creative as if on your desktop.",
-               "link":{
-                  "title":"About Safari Web Inspector",
-                  "url":"https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1"
-               }
-            }
-         ],
-         "tags":[
-            "debugging",
-            "android",
-            "chrome",
-            "safari",
-            "google apis",
-            "mobile"
-         ],
-         "title":"USB Device Debugging"
+  "toolkit-items" : [ {
+    "category" : "troubleshooting",
+    "demo" : [ {
+      "description" : "Chrome Inspect view of Android device.<br /><br /><a href=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" target=\"_blank\"><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" width=\"864\" alt=\"Chrome Inspect view of Android device\"/></>",
+      "link" : {
+        "title" : "Debugging a Rich Media Creative",
+        "url" : "https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg"
       },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"This demo links to a generic HTML page that has 3 different fonts loaded built with Google Web Designer. View Source to see how all font-faces are included by appending pipe-delimited (‘|’) font-names in one link tag..",
-               "link":{
-                  "title":"Google Fonts Demo",
-                  "url":"http://goo.gl/xbllK3"
-               },
-               "title":"Cloud Fonts Demo"
-            }
-         ],
-         "description":"A web with web fonts is more beautiful, readable, accessible and open. Google Fonts makes it quick and easy for everyone to use web fonts, including professional designers and developers. We believe that everyone should be able to bring quality typography to their web pages and applications. All you have to do is add a special stylesheet link to your HTML document, then refer to the font in a CSS style.",
-         "links":[
-            {
-               "title":"Google Fonts Homepage",
-               "url":"https://www.google.com/fonts"
-            },
-            {
-               "title":"Google Developers: Fonts",
-               "url":"https://developers.google.com/fonts/"
-            },
-            {
-               "title":"Demo Source Code",
-               "url":"https://gist.github.com/ocorso/6979a79d26063d349841"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Initiate the font download as early as possible",
-               "type":"good"
-            },
-            {
-               "description":"Collapse multiple Google Fonts API requests into a single one",
-               "type":"good"
-            },
-            {
-               "description":"Avoid using the Google Fonts API in nested stylesheets",
-               "type":"bad"
-            },
-            {
-               "description":"Avoid requesting styles/weights that are not used",
-               "type":"bad"
-            },
-            {
-               "description":"Limit number of families / weights used if possible",
-               "type":"good"
-            },
-            {
-               "description":"Don’t cut images of the text.",
-               "type":"bad"
-            },
-            {
-               "description":"Install Cloud fonts on designer’s machine BEFORE designing.",
-               "type":"good"
-            },
-            {
-               "description":"Adjust font-size based on browser width.",
-               "type":"good"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"Add this code to your website: <pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre><br/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;</pre><br/>That's all there is to it.",
-               "link":{
-                  "title":"Google Fonts",
-                  "url":"https://developers.google.com/fonts/docs/getting_started"
-               }
-            }
-         ],
-         "tags":[
-            "fonts"
-         ],
-         "title":"Google Fonts"
-      },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"Demonstrates the YouTube Player API’s various parameters, functions, and events.<br /><br /><iframe id=\"player\" type=\"text/html\" width=\"640\" height=\"390\"\n  src=\"//www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=https://html5-toolkit.appspot.com\"\n  frameborder=\"0\"></iframe>",
-               "link":{
-                  "title":"YouTube Player Demo",
-                  "url":"https://developers.google.com/youtube/youtube_player_demo"
-               },
-               "title":"YouTube Player Demo"
-            }
-         ],
-         "description":"The YouTube Player IFrame API allows you to easily embed YouTube video content into your Ad. This will allow click to play interactions to increase your public view count to help your video and channel gain exposure. Flash and Javascript API’s have been deprecated in favor of the IFrame API which allows YouTube to serve HTML5 player by default and backup to Flash if necessary.",
-         "links":[
-            {
-               "title":"https://developers.google.com/youtube/iframe_api_reference",
-               "url":"YouTube Player API Reference for iframe Embeds"
-            },
-            {
-               "title":"https://developers.google.com/youtube/youtube_player_demo",
-               "url":"YouTube Player Demo"
-            },
-            {
-               "title":"https://developers.google.com/youtube/iframe_api_reference#Playback_controls",
-               "url":"Google Developers site - YouTube playback controls"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Use the Google Web Designer YouTube component and get basic video metrics, muted autoplay (desktop), and click to play view count included with no additional coding required.",
-               "type":"good"
-            },
-            {
-               "description":"With YouTube HTML5 compatible IFrame player you can be sure your video will playback on all modern browsers and devices.",
-               "type":"good"
-            },
-            {
-               "description":"Need more control? Use JavaScript to load, cue, pause, seek, and more! Check out the API playback controls on the Google Developers site.",
-               "type":"good"
-            },
-            {
-               "description":"IE7 and below are not supported due to lack of postMessage support.",
-               "type":"bad"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"Using Google Web Designer to build your Ad? Drag and drop the YouTube Player component onto the stage from the components panel.<br /><br />With it still selected, check the properties panel to add your YouTube ID and adjust any other parameters.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/youtube-player/youtube-gwd-properties.png\">",
-               "link":{
-                  "title":"Google Web Designer YouTube Component",
-                  "url":"https://support.google.com/webdesigner/answer/3232992?hl=en"
-               }
-            },
-            {
-               "description":"Visit the YouTube Player Getting Started guide to manually include the YouTube Player in your Ad creative.",
-               "link":{
-                  "title":"Getting Started",
-                  "url":"https://developers.google.com/youtube/iframe_api_reference#Getting_Started"
-               }
-            }
-         ],
-         "tags":[
-            "youtube",
-            "google apis",
-            "video",
-            "Google Web Designer"
-         ],
-         "title":"YouTube Player"
-      },
-      {
-         "category":"creation tools",
-         "demo":[
-            {
-               "description":"For advertisers that want to enhance their video assets, create an additional layer of interaction via clickable hotspots that overlay additional content. When hotspot is clicked, the video will pause and overlay will appear. When overlay close button is clicked, the video resumes. This format only runs on YouTube.",
-               "link":{
-                  "title":"HTML5 Interactive Video Hotspots Layout",
-                  "url":"http://www.richmediagallery.com/detailPage?id=8190"
-               },
-               "title":"HTML5 Interactive Video Hotspots Layout"
-            }
-         ],
-         "description":"DoubleClick Studio Layouts makes Rich Media creative development much easier. Layouts provides the Rich Media ad shell for you, so all you have to do is pick the Layout you want, upload your existing assets, add your desired copy, and publish. With Layouts, you can get more out of your existing assets, trade up from basic image creatives to Rich Media, and creatives in minutes.<div><div style=\"display: inline-block; margin-top: 10px;\"><div style=\"float: left; margin-right: 15px;\"><div style=\"margin-bottom: 5px;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/creative-layout.png\"/></div><div><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/options.png\"/></div></div><div style=\"float: left;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/filler.png\"/></div></div>",
-         "links":[
-            {
-               "title":"Studio Layouts Rich Media Gallery",
-               "url":"http://www.richmediagallery.com/resources/layouts"
-            },
-            {
-               "title":"Studio Layouts Help Center",
-               "url":"https://support.google.com/richmedia/answer/3306570"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Use the in-product preview gallery to preview a Layout before deciding to use it. The in-product gallery can be found within the Studio user interface when choosing a Layout.",
-               "type":"good"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"Build a YouTube Masthead with video and hotpots from a Layout using the requirements described <a href=\"https://support.google.com/displayspecs/answer/4489886\" target=\"_blank\">here</a>.<div style=\"margin-top: 10px\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/masthead.png\" /></div>"
-            }
-         ],
-         "tags":[
-            "tool",
-            "Studio",
-            "template",
-            "layout"
-         ],
-         "title":"Studio Layouts"
-      },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"",
-               "link":{
-                  "title":"",
-                  "url":""
-               },
-               "title":""
-            }
-         ],
-         "description":"File size best practices for compressing images, optimizing code, and reducing file size<p>A common complaint in the Flash vs HTML5 debate is that HTML5 Creatives are really heavy in terms of file size. The reason for this misconception is because Flash is an application that not only handles the creation of ads, but also the compression of them. </p><p>“HTML5 Creatives”, on the other hand, commonly refers to ads created with the programming languages HTML, CSS, and Javascript. HTML5 Creatives provide many opportunities to compress your files.</p><p>Many of the tips provided can be implemented in under 15 minutes. The payoff is that a <a href=\"https://www.thinkwithgoogle.com/case-studies/talk-talk-increases-reach-and-lowers-cpa-with-doubleclick.html\" target=\"_blank\">well-compressed HTML5 Creative will perform much better than a Flash Creative.</a></p>",
-         "links":[
-            {
-               "title":"",
-               "url":""
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"",
-               "type":"good"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"<p><a href=\"http://www.google.com/webdesigner/\" target=\"_blank\">Google Web Designer</a> (GWD) is an application specifically made for HTML5 ad development by Google, and is a great HTML5 alternative to developers that are only familiar with Flash. GWD has built in compression for images and code, Google web font support, SVG support, CSS animation support, etc. Additionally, it is fully integrated with Studio.</p><p>GWD is highly recommended above anything else when developing ads. More information on GWD can be found in the <a href=\"https://support.google.com/webdesigner/#topic=3249465/\" target=\"_blank\">GWD Help Center.</a></p>",
-               "link":{
-                  "title":"Google Web Designer",
-                  "url":"http://www.google.com/webdesigner/"
-               }
-            },
-            {
-               "description":"<h3>Total File Size vs. Compressed File Size</h3><p>The total file size (‘Raw File Size’) of your Creative can be viewed in DoubleClick Studio <a href=\"http://screencast.com/t/MzJAwPa9bCP\" target=\"_blank\">here</a>. In Google Web Designer, you can view size of your Creative in the <a href=\"http://screencast.com/t/Zh9wBUXTCay\" target=\"_blank\">Publish panel</a>. Google Web Designer compresses Creatives with gZip.</p><p>To determine your Creative’s compressed size, simply download a free copy of <a href=\"http://www.gnu.org/software/gzip/\" target=\"_blank\">gZip</a>, compress them on your local workspace, and inspect the file size.</p><p>Depending on the Publisher’s ad server, they will be calculating the compressed size of your Creative. Always double check with your Publisher to be sure.</p><h3>What is a good baseline for HTML5 Creative file size?</h3><p>It’s essential to understand your Publisher’s ad serving specifications prior to building your Creative. However, many Publishers follow the IAB recommendation of 35KB (compressed) Initial Load for the Creative and 100KB for total Creative size. Initial Load refers only file size of the .html file in the Creative, not the Enabler, Javascript, CSS, or other image files, but again, check with your Publisher to understand their guidelines to be sure. </p><p>More info about the IAB’s recommendations can be found <a href=\"http://www.iab.net/guidelines/508676/508767/mobileguidelines\" target=\"_blank\">here</a> (page 8/9 <a href=\"http://www.iab.net/media/file/HTML5DAv101.pdf\" target=\"_blank\">here</a>) and DoubleClick’s recommendations <a href=\"https://support.google.com/richmedia/answer/165130?hl=en\" target=\"_blank\">here</a>.</p><h3>How much does DoubleClick Enabler add in file weight?</h3><p>As of April 2015, the Enabler adds approximately ~75KB (~25KB when gZipped).</p>",
-               "link":{
-                  "title":"How to Check Your File Size",
-                  "url":""
-               }
-            },
-            {
-               "description":"<p>Polite loading delays the loading of additional creative assets (like images and video) until the parent page has finished loading. This is different than ‘initial load’, which only refers to file size of the .html file in the Creative. It is helpful to implement the code for polite loading because many publishers have different specs for initial load versus the complete load size. <a href=\"https://support.google.com/richmedia/answer/2672514?hl=en\" target=\"_blank\">More information about polite loading can be found here.</a></p><p>Check with the Publisher to understand their HTML5 specs for Rich Media ads because they are typically different than Flash-based specs. They may or may not count file size based on the compressed gzip format and will rather count the raw file size. Also, individual publisher specs differ from IAB specs depending on placement, ad type, etc. so they may allow more or less leeway in build specs. Publishers may also limit specs for animation and video play time.</p>",
-               "link":{
-                  "title":"Polite Load & Publisher Specs",
-                  "url":"#"
-               }
-            },
-            {
-               "description":"<p>Before attempting to reduce your image size, first determine if an image is even necessary as many things can be created with pure CSS. Here are some questions to ask before saving an asset as an image:</p><h3>Is the graphic a gradient or a solid color?</h3><p>Consider creating the image with just CSS3 to both improve the quality and reduce file size.</p><ul><li><a href=\"http://www.cssmatic.com/gradient-generator\" target=\"_blank\">CSS3 Gradient Generator</a></li></ul><h3>Is the image comprised of solid colors or a vector?</h3><p>Use SVG (Scalable Vector Graphics) whenever possible instead of an image. Images are pixel based (“raster”) and may add some overhead in file weight. In contrast, SVGs are point-to-point based graphics (“vector”) and can greatly reduce file size.</p><ul><li><a href=\"http://www.w3schools.com/svg/\" target=\"_blank\">W3School's SVG Tutorial</a></li><li><a href=\"https://css-tricks.com/using-svg/\" target=\"_blank\">How to Use SVGs</a></li><li><a href=\"http://petercollingridge.appspot.com/svg_optimiser\" target=\"_blank\">Compressing SVGs</a></li></ul><h3>Does your Creative use multiple icons?</h3><p>Use icon fonts whenever possible instead of an image for icons, images are pixel based and may add some overhead in file weight. Icon fonts are actually regular fonts and can be used in the same way as any other font in HTML. They are vector based as well. Custom icon fonts are relatively quick to create and implement.</p><ul><li><a href=\"https://icomoon.io/app/#/select\" target=\"_blank\">Icomoon Icon Font Creator</a></li><li><a href=\"https://thenounproject.com/\" target=\"_blank\">NounProject: an affordable resource to gather SVG icons for your icon font</a></li></ul><h3>Are you using JPGs or PNGs in your project?</h3><p>If pixel based images are required, compress them as much as possible while keeping quality. Many people are already familiar <a href=\"http://help.adobe.com/en_US/creativesuite/cs/using/WS6E857477-27FE-4a88-B8A4-074DC3C65F68.html\" target=\"_blank\">Photoshop’s Save For Web</a>, but there are other online tools that can compress an image even further while retaining quality.<ul><li><a href=\"https://tinypng.com/\" target=\"_blank\">TinyPNG: Online PNG Compressor</a></li><li><a href=\"https://tinyjpg.com/\" target=\"_blank\">TinyJPG: Online JPG Compressor </a></li></ul></p>",
-               "link":{
-                  "title":"Images",
-                  "url":"#"
-               }
-            },
-            {
-               "description":"<p>Consider using <a href=\"http://www.w3schools.com/css/css3_animations.asp\" target=\"_blank\">CSS3 animations</a> (transitions/transforms) instead of Javascript for animations. CSS transforms use the GPU instead of the CPU for rendering animations so it helps with performance and preserves file size.</p><p>Refrain from using JavaScript libraries/frameworks that use the setInterval JavaScript method for animations, and if hand coding then do not use the setInterval method. This method uses up a lot of the browser’s resources and affects performance, and it requires a decent amount of code. If JavaScript animations are mandatory, then consider using the requestAnimationFrame method, it is specifically made for animations.</p><ul><li><a href=\"http://css-tricks.com/using-requestanimationframe/\" target=\"_blank\">Using requestAnimationFrame</a></li><li><a href=\"https://developers.google.com/web/fundamentals/look-and-feel/animations/css-vs-javascript?hl=en\" target=\"_blank\">CSS vs Javascript Animations</a></li></ul><p>Before uploading your CSS files to Studio, consider minifying your CSS with an <a href=\"http://cssminifier.com/\" target=\"_blank\">Online CSS Minifier.</a></p>",
-               "link":{
-                  "title":"CSS and Animations",
-                  "url":"#"
-               }
-            },
-            {
-               "description":"<h3>Are you using jQuery?</h3><p>Don’t use jQuery in your HTML5 Creatives. jQuery is not recommended because it adds unnecessary file weight (~75k) even though the majority of the jQuery library is not utilized in a Creative. Consider using pure Javascript with <a href=\"http://youmightnotneedjquery.com/?hn\" target=\"_blank\">this guide</a>, or using <a href=\"http://zeptojs.com/\" target=\"_blank\">Zepto.js</a> if necessary.</p><h3>Are you using a Javascript Framework?</h3><p>Ask yourself if it is completely necessary to have them in your Creative. Consider taking pieces out of the framework and utilizing them in your main Javascript file to reduce overhead.</p><h3>Are you targeting code for specific devices/browsers?</h3><p>Ensure your code is written for devices/browsers specified, no need to add code for non-supported devices/browsers.</p><ul><li><a href=\"https://support.google.com/richmedia/answer/138582\" target=\"_blank\">Browser and device support for DoubleClick Studio</a></li><li><a href=\"http://caniuse.com/\" target=\"_blank\">Can I Use: Up to date browser support for JS and CSS properties</a></li></ul><h3>Compressing Javascript</h3><p>GWD natively minifies files, so if you’re using GWD no minification is necessary. Otherwise,there are <a href=\"http://jscompress.com/\" target=\"_blank\">online tools</a> that will remove comments and extra whitespace from your Javascript. It’s a best practice to keep a version of your uncompressed Javascript file locally on your computer for later reference.</p><p>Keep in mind that in DoubleClick Studio, JavaScript files require a .js extension, not .min.js. If you minify JavaScript files, you can't add tracking easily. If the client requests minifying, add tracking first and minify the .js file later.</p>",
-               "link":{
-                  "title":"Javascript",
-                  "url":"#"
-               }
-            },
-            {
-               "description":"<p>If you are using a font other than the standard web fonts, consider using <a href=\"https://www.google.com/fonts/\" target=\"_blank\">Google fonts</a>. Google has a large library of fonts which can all be used for free. In order to reduce file size, be sure to only request the characters you need from the font vs. the entire typeface. This is called Font Subsetting.</p><ul><li><a href=\"https://developers.google.com/fonts/docs/getting_started#Optimizing_Requests\" target=\"_blank\">Optimizing Font Requests</a></li></ul>",
-               "link":{
-                  "title":"Optimizing Google Fonts",
-                  "url":"#"
-               }
-            }
-         ],
-         "tags":[
-            "fonts",
-            "html5",
-            "filesize",
-            "file-size",
-            "file size",
-            "javascript",
-            "jquery",
-            "images",
-            "jpg",
-            "png",
-            "gif",
-            "svg",
-            "polite load",
-            "minify",
-            "compression",
-            "KB",
-            "debugging"
-         ],
-         "title":"File Size Best Practices"
-      },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"",
-               "link":{
-                  "title":"",
-                  "url":""
-               },
-               "title":""
-            }
-         ],
-         "description":"Not all browsers are created equal. Sometimes Browser Prefixes need to be added to your CSS to ensure compatibility across devices and browsers.",
-         "links":[
-            {
-               "title":"Browser and device support for DoubleClick Studio",
-               "url":"https://support.google.com/richmedia/answer/138582"
-            },
-            {
-               "title":"Can I Use? What CSS properties are supported by browsers",
-               "url":"http://caniuse.com/"
-            },
-            {
-               "title":"Pleeease: Automatic Online Browser Prefixer",
-               "url":"http://pleeease.io/play/"
-            },
-            {
-               "title":"CSS3 Keyframe Animation Syntax",
-               "url":"https://css-tricks.com/snippets/css/keyframe-animation-syntax/"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Google Web Designer automatically adds appropriate browser prefixes to any animation or elements constructed in the Design panel.",
-               "type":"good"
-            },
-            {
-               "description":"Avoid adding browser prefixes to every single CSS3 property. This will only bloat your CSS and file size. Double-check <a href=\"http://caniuse.com/\" target=\"_blank\">Can I use?</a> for the specifics on browser compatibility",
-               "type":"bad"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"<p>Some CSS3 properties are not yet standarized across all modern browsers. As a result, Vendor (or Browser) Prefixes are needed to ensure browser compatibility. These prefixes are:</p><pre>-moz-/* Firefox and other browsers using Mozilla's browser engine */<br>-webkit-/* Safari, Chrome and browsers using the Webkit engine */<br>-o-/* Opera */<br>-ms-/* Internet Explorer (but not always) */ </pre><p>In use, this would look something like:</p><pre>.example {<br>-webkit-transform: rotate(30deg); /* Chrome <36, Safari 5.1+, iOS, Android =<4.4.4 */<br>-ms-transform: rotate(30deg); /* Internet Explorer 9 */<br>transform: rotate(30deg); /* Internet Explorer 10, Firefox 16+, Opera 12.1+ */<br>}</pre><p>To understand which browsers are compatible with which properties, be sure to consult <a href=\"http://caniuse.com/\" target=\"_blank\">Can I Use?</a> as well as determining <a href=\"http://www.google.com/webdesigner/\" target=\"_blank\">Link</a>what browsers DoubleClick Studio supports</a>.</p>",
-               "link":{
-                  "title":"",
-                  "url":""
-               }
-            }
-         ],
-         "tags":[
-            "html5",
-            "safari",
-            "chrome",
-            "firefox",
-            "webkit",
-            "opera",
-            "css3",
-            "transitions",
-            "animations",
-            "prefix",
-            "browser support"
-         ],
-         "title":"Browser Prefixes"
-      },
-      {
-         "category":"formats",
-         "demo":[
-            {
-               "description":"",
-               "link":{
-                  "title":"",
-                  "url":""
-               },
-               "title":""
-            }
-         ],
-         "description":"<p>Your HTML5 Creatives have the ability to run across many screens, be it Desktop Websites, Tablet/Mobile Websites or Tablet/Mobile In-App. All at the same time! This can be a powerful thing, especially considering that behind the scenes an In-App behaves differently from a Website.</p><p>Let’s take a quick step back... HTML5 is the language of the Web, but an App is the language of, well, the phone it’s on! So when you put a HTML5 creative inside an app it needs some ‘Magic’ to make them talk the same language. This ‘Magic’ is called <a href=\"http://www.iab.net/mraid\" target=\"blank\">MRAID</a>, but luckily for us the <a href=\"https://support.google.com/richmedia/answer/2672553?hl=en\" target=\"blank\">DoubleClick HTML5 Enabler</a> does all this for us. So we can just focus on implementing this correctly.</p>",
-         "links":[
-            {
-               "title":"https://support.google.com/richmedia/answer/3369559?hl=en&ref_topic=3369390",
-               "url":"Roles and responsibilities for Mobile Web and Desktop HTML5   "
-            },
-            {
-               "title":"https://support.google.com/richmedia/answer/2922407?hl=en&ref_topic=2922400",
-               "url":"Make sure users can see your HTML5 In-app ad"
-            },
-            {
-               "title":"https://support.google.com/richmedia/answer/2922409?hl=en&ref_topic=2922400",
-               "url":"Orientation"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Run a quick test with the Publisher’s Mobile Web and In-App inventory first, to check the creative works correctly",
-               "type":"good"
-            },
-            {
-               "description":"In-App creatives can load in the background, use the Enabler’s Visibility check to make sure users can see your HTML5 In-app ad before loading further, animation or playing any video.",
-               "type":"good"
-            },
-            {
-               "description":"Don’t add a close button in your In-App Expand creatives, Studio will do this for you.",
-               "type":"bad"
-            },
-            {
-               "description":"Make use of the Enabler’s Mobile orientation functions, and adjust your creative’s orientation accordingly.",
-               "type":"good"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"<p>Follow our In-Page Build guide to start make your standard banner, with a few lines of code you’ll be up and running.</p><p>In-Page or In-App formats can be chosen depending on where the creative will be trafficked</p>",
-               "link":{
-                  "title":"HTML5 In-page creative overview",
-                  "url":"https://support.google.com/richmedia/answer/2672545"
-               }
-            },
-            {
-               "description":"<p>The Expanding creative build has a few extra steps and checks to watch out for.</p><p>Check the sequence of expand events outlined the build guide is correct, look out for 'requestExpand' and 'finishExpand' calls</p>",
-               "link":{
-                  "title":"HTML5 Expanding creative overview",
-                  "url":"https://support.google.com/richmedia/answer/2745120?hl=en"
-               }
-            },
-            {
-               "description":"<p>We won’t always know the size of the screen we are looking to fill, there are alot of different mobile phone sizes out there!</p><p>When setting up an In-App Interstitial creative use the Flex by Flex size, and when setting up an In-App expand creative be sure of use the expand to fullscreen guide.</p>",
-               "link":{
-                  "title":"HTML5 expand to fullscreen creative",
-                  "url":"https://support.google.com/richmedia/answer/4526020?hl=en&ref_topic=4525889"
-               }
-            },
-            {
-               "description":"<p>Your Creative will run in a lot of places, so it’s important we test them in all these places. For instance, your desktop browser may run the creative differently then your mobile browser, and your In-App creative may behave in the different way then your web creative.<p><p>Studio provides the ability to preview using your desktop, scan a QR code to preview on your mobile, or even push your creative to preview inside an Android App.</p>",
-               "link":{
-                  "title":"Previewing",
-                  "url":"https://support.google.com/richmedia/answer/2879150?hl=en"
-               }
-            }
-         ],
-         "tags":[
-            "in-app",
-            "preview",
-            "android",
-            "mobile",
-            "mraid",
-            "fullscreen"
-         ],
-         "title":"Cross Screen Creatives"
-      },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"",
-               "link":{
-                  "title":"",
-                  "url":""
-               },
-               "title":""
-            }
-         ],
-         "description":"Load ads fast! Reduce file size through image compression and other tips including using sprite sheets and free online tools.",
-         "links":[
-            {
-               "title":"",
-               "url":""
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"",
-               "type":"good"
-            }
-         ],
-         "quick-start":[
-            {
-               "content":"",
-               "description":"Consider creating the image with just CSS3 to both improve the quality and reduce file size. <a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">CSS3GradientGenerator</a><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image01.png\"width=\"300\"alt=\"ChromeInspect\"/>",
-               "link":{
-                  "title":"Gradients: Is the graphic a gradient or a solid color?",
-                  "url":""
-               }
-            },
-            {
-               "content":"",
-               "description":"Use SVG (Scalable Vector Graphics) whenever possible instead of an image. Images are pixel based (\"raster\") and may add some overhead in file weight. In contrast, SVGs are point-to-point based graphics (\"vector\") and can greatly reduce file size.<br/><ul><li><a href=\"http://www.w3schools.com/svg/\"target=\"_blank\">W3School's SVG Tutorial</a></li><li><a href=\"https://css-tricks.com/using-svg/\"target=\"_blank\">How to Use SVGs</a></li><li><a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">Compressing SVGs</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image00.png\"width=\"300\"alt=\"ChromeInspect\"/>",
-               "link":{
-                  "title":"Solid Colors vs Vectors: Is the image comprised of solid colors or a vector?",
-                  "url":""
-               }
-            },
-            {
-               "content":"",
-               "description":"Use icon fonts whenever possible instead of an image for icons, images are pixel based and may add some overhead in file weight. Icon fonts are actually regular fonts and can be used in the same way as any other font in HTML. They are vector based as well. Custom icon fonts are relatively quick to create and implement.<br/><ul><li><a href=\"https://icomoon.io/app/#/select\"target=\"_blank\">Icomoon Icon Font Creator</a></li><li><a href=\"https://thenounproject.com/\"target=\"_blank\">NounProject: an affordable resource to gather SVG icons for your icon font</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image02.png\"width=\"300\"alt=\"ChromeInspect\"/>",
-               "link":{
-                  "title":"Multiple Images & Icons: Do you have multiple images in your project?",
-                  "url":""
-               }
-            },
-            {
-               "content":"",
-               "description":"If pixel based images are required, consider using a Sprite Sheet. A single tiled image that is loaded once, and with CSS, only individual tiles can be made visible, this approach can save making multiple requests over HTTP. <br/><br/>Compressing the image, is still key even with this approach.<br/><ul><li><a href=\"http://www.w3schools.com/css/css_image_sprites.asp\"target=\"_blank\">CSS Image Sprites</a></li><li><a href=\"http://draeton.github.io/stitches/\"target=\"_blank\">Online Sprite Sheet and CSS Creator</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image04.png\"width=\"300\"alt=\"ChromeInspect\"/>",
-               "link":{
-                  "title":"Multiple Images & Icons: Do you have multiple images in your project?",
-                  "url":""
-               }
-            },
-            {
-               "content":"",
-               "description":"If pixel based images are required, compress them as much as possible while keeping quality. Many people are already familiar <a href=\"http://help.adobe.com/en_US/creativesuite/cs/using/WS6E857477-27FE-4a88-B8A4-074DC3C65F68.html\"target=\"_blank\">Photoshop’s Save For Web</a>, but there are other online tools that can compress an image even further while retaining quality.<br/><br/><ul><li><a href=\"https://tinypng.com/\"target=\"_blank\">TinyPNG: Online PNG Compressor</a></li><li><a href=\"https://tinyjpg.com/\"target=\"_blank\">TinyJPG: Online JPG Compressor </a></li></ul><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image03.png\"width=\"300\"alt=\"ChromeInspect\"/>",
-               "link":{
-                  "title":"Image File Type: Are you using JPGs or PNGs in your project?",
-                  "url":""
-               }
-            }
-         ],
-         "tags":[
-            "image",
-            "file size",
-            "compression",
-            "jpg",
-            "png",
-            "gif",
-            "sprite"
-         ],
-         "title":"Image Compression"
-      },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"",
-               "link":{
-                  "title":"",
-                  "url":""
-               },
-               "title":""
-            }
-         ],
-         "description":"CSS has the ability to detect to a browser’s screen size, pixel-density, and device orientation (amongst other properties) with the @media rule",
-         "links":[
-            {
-               "title":"Media Query Boilerplates",
-               "url":"https://css-tricks.com/snippets/css/media-queries-for-standard-devices/"
-            },
-            {
-               "title":"Media Query Properties Explained in Detail",
-               "url":"https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries"
-            },
-            {
-               "title":"W3Schools @media",
-               "url":"http://www.w3schools.com/cssref/css3_pr_mediaquery.asp"
-            },
-            {
-               "title":"9 Basic Principles of Responsive Web Design",
-               "url":"http://blog.froont.com/9-basic-principles-of-responsive-web-design/"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"The @media rule is compatible with all modern browsers",
-               "type":"good"
-            },
-            {
-               "description":"Most developers put their media queries at the very bottom of their CSS and place all their media specific CSS rules within one @media rule vs multiple @media rule for the same screen size interspersed throughout their CSS.",
-               "type":"good"
-            },
-            {
-               "description":"Avoid bloating your CSS with too many media-queries. It’s best to try and accomplish the most CSS styling with the fewest media queries",
-               "type":"bad"
-            },
-            {
-               "description":"If you are only developing <strong>one</strong> creative for a static size (ex 300x250) then media queries will not be necessary for your creative.",
-               "type":"bad"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"<p>CSS has the ability to detect to a browser’s screen size, pixel-density, and device orientation (amongst other properties) with the @media rule. The format includes a rule that when true, applies specific CSS to an element(s). For example:</p><pre>.container {<br>&nbsp;background: red;<br>}<br><br>@media (max-width: 768px) {<br>&nbsp;.container {<br>&nbsp;&nbsp;background: blue;<br>&nbsp;}<br>}<br><br>@media (max-width: 480px){<br>&nbsp;.container {<br>&nbsp;&nbsp;background: black;<br>&nbsp;}<br>}</pre><p>In the example above, if a browser is wider than 768px (most desktop browsers), the .container element will be red. If the browser is between 768px and 480px wide (most tablets oriented to portrait), the .container element will be blue. If the browser is 480px or smaller (most phones oriented to portrait), the .container will be black.</p><p>Media queries are particularly useful for making your full screen Creatives look great on all browser sizes. Another advantage for media queries is for when you have multiple sized Creatives, but only want to maintain one local CSS file. A complete explanation of the @media rule, and it’s properties, can be found here: <a href=\"http://www.w3schools.com/cssref/css3_pr_mediaquery.asp\" target=\"_blank\">http://www.w3schools.com/cssref/css3_pr_mediaquery.asp</a>.</p><h2>Landscape vs. Portrait</h2><p>In addition to Media Queries detecting a device’s orientation, the Double-Click HTML5 SDK has the ability to do so as well. More information about the getOrientation() method can be found <a href=\"https://www.google.com/doubleclick/studio/docs/sdk/html5/en/class_studio_common_Orientation.html\" target=\"_blank\">here</a> and a video tutorial can be found on the <a href=\"https://support.google.com/richmedia/answer/6062364?hl=en\" target=\"_blank\">Rich Media Help Center</a>.</p>",
-               "link":{
-                  "title":"Overview",
-                  "url":""
-               }
-            }
-         ],
-         "tags":[
-            "CSS",
-            "Javascript",
-            "Responsive",
-            "media query",
-            "orientation",
-            "landscape",
-            "tablet",
-            "portrait",
-            "mobile",
-            "detect",
-            "screen size"
-         ],
-         "title":"Detecting Browser Size with CSS Media Queries"
-      },
-      {
-         "category":"creation tools",
-         "demo":[
-            {
-               "description":"",
-               "link":{
-                  "title":"",
-                  "url":""
-               },
-               "title":""
-            }
-         ],
-         "description":"<p>The Google Swiffy tool can elegantly convert your Flash files to HTML5. DoubleClick Campaign Manager and DoubleClick Bid Manager implement Swiffy to allow Media Agencies to convert basic Flash built creatives into HTML5, and Creative Agencies can use Swiffy to convert animation built in Flash.</p><p>and now the caveat… Unfortunately, for now, when it comes to Rich Media Swiffy <strong>will not</strong> convert it. What it can do is convert <em>bits</em> of it!</p><p>Let’s imagine we have a typical Flash creative, consisting of 80% animation and 20% logic/code/components...etc. This logic can be rebuilt in HTML5, and then instead of trying to re-building / replicating the Flash animation we can just move it to a separate Flash file and convert this using Swiffy. Allowing designers to continue using Flash while they learn new HTML5 tools like <a href=\"http://www.google.com/webdesigner/\" target=\"blank\">Google Web Designer</a>.</p>",
-         "links":[
-            {
-               "title":"https://developers.google.com/swiffy/convert/flash-extension",
-               "url":"Adobe Flash Extension"
-            },
-            {
-               "title":"https://docs.google.com/a/google.com/forms/d/1pfsD83_YCVBJrt2-gGW5Fb7oOHcJ8HVyUx4EAdBHHvU/viewform?formkey=dEs1SXBHMTY5QmZDQnhqUVl2dl9hMEE6MQ",
-               "url":"Feedback on Google Swiffy"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Think of Swiffy as a short term tool solution, we don’t want to use Flash to do animation forever.",
-               "type":"good"
-            },
-            {
-               "description":"Remember, Swiffy can not be used to directly convert Rich Media directly.",
-               "type":"bad"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"<p>Upload your SWF file into the Swiffy converter, and right click to save the new HTML5 conversion.</p><p>You could also install the Swiffy Adobe Flash Extension to export as HTML5 directly from Flash</p>",
-               "link":{
-                  "title":"Swiffy",
-                  "url":"https://developers.google.com/swiffy/convert/upload"
-               }
-            }
-         ],
-         "tags":[
-            "swiffy",
-            "flash"
-         ],
-         "title":"Swiffy (Flash Conversion)"
-      },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"",
-               "link":{
-                  "title":"",
-                  "url":"http://richmediagallery.com/dynamic"
-               },
-               "title":""
-            }
-         ],
-         "description":"We have divided the doubleclick dynamic offering into seven packages in order to make launching an HTML5 dynamic campaign as easy as possible. Each package contains consolidated HTML5 assets along with help center guides and roles and responsibility outlines which highlight exactly what needs to be done and by whom.",
-         "links":[
-            {
-               "title":"",
-               "url":""
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Use one solution at a time for better performance",
-               "type":"good"
-            },
-            {
-               "description":"Use the GWD starter file with the spreadsheet template for easy integration",
-               "type":"good"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"Utilise scheduled updates to display different creative messages on different dates or times of day.",
-               "link":{
-                  "title":"Scheduled Updates",
-                  "url":"http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/scheduled_strategy.html"
-               }
-            },
-            {
-               "description":"DCM ID targeting allows you to display different creative messages depending on a DCM ID such a placement or site.",
-               "link":{
-                  "title":"DCM ID Targeting",
-                  "url":"http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/pubpivot_strategy.html"
-               }
-            },
-            {
-               "description":"Publisher pass allows you to use data owned by the publisher to display different creative messages to different users.",
-               "link":{
-                  "title":"Publisher Pass",
-                  "url":"http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/publisherpass_strategy.html"
-               }
-            },
-            {
-               "description":"Audience targeting utilises data from either DBM or Adwords to display relevant messages to the user.",
-               "link":{
-                  "title":"DSP Audience",
-                  "url":"http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/audience_strategy.html"
-               }
-            },
-            {
-               "description":"Dynamic Product Remarketing allows you to display creative based on the products users have been viewing on your site.",
-               "link":{
-                  "title":"Product Remarketing",
-                  "url":"http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/product_remarketing_strategy.html"
-               }
-            },
-            {
-               "description":"Userlist remarketing allows you to display different messages according to which pages a user has visited on your site.",
-               "link":{
-                  "title":"Userlist Remarketing",
-                  "url":"http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/userlist_strategy.html"
-               }
-            }
-         ],
-         "tags":[
-            "dynamic",
-            "DBM"
-         ],
-         "title":"Dynamic Package Solutions"
-      },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"",
-               "link":{
-                  "title":"",
-                  "url":""
-               },
-               "title":""
-            }
-         ],
-         "description":"How to recreate Photoshop's blend modes in CSS",
-         "links":[
-            {
-               "title":"CSS Blend Modes in Depth",
-               "url":"https://css-tricks.com/basics-css-blend-modes/"
-            },
-            {
-               "title":"Visual Comparison of Blend Modes",
-               "url":"http://www.webdesignerdepot.com/2014/07/15-css-blend-modes-that-will-supercharge-your-images/"
-            },
-            {
-               "title":"CodePen Examples",
-               "url":"http://codepen.io/collection/Kgshi/"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Use blend modes in animation to highlight how two different elements interact with each other or with hover states",
-               "type":"good"
-            },
-            {
-               "description":"Use blend modes if you’re repeating an image in different ways. For example, an image is monochromatic in the background, while a smaller full-color version is in the foreground. This will eliminate the need for two image assets.",
-               "type":"good"
-            },
-            {
-               "description":"Don’t use blend modes for a single static image. This will only bloat your file size.",
-               "type":"bad"
-            },
-            {
-               "description":"Internet Explorer does not support blend modes. Use <a href=\"https://css-tricks.com/how-to-create-an-ie-only-stylesheet/\" target=\"_blank\">conditional stylesheets</a> or consider using an animated gif as a workaround.",
-               "type":"bad"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"<p>Adobe Photoshop and other applications use different blend modes to determine how a layer interacts with the layer beneath it. These blend modes are also achievable in CSS with the background-blend and mix-blend-mode properties. <a href=\"http://storage.googleapis.com/html5-toolkit/blend-modes/blendmodes.jpg\" target=\"_blank\">Here is a visual example of the different blend options</a>.</p> <h2>Background-Blend-Mode</h2><p>Background-blend-mode can be used to blend a background image with a solid color or a another background image with <a href=\"https://www.google.com/url?q=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FGuide%2FCSS%2FUsing_multiple_backgrounds&sa=D&sntz=1&usg=AFQjCNHA022TLBBDMQ1Q46BYIjSvDCX4_w\" target=\"_blank\">CSS3 Multiple Backgrounds</a>. The basic usage would be:</p><pre>.example {<br>&nbsp;&nbsp;background-image: url(foo.jpg);<br>&nbsp;&nbsp;background-color: blue;<br>&nbsp;&nbsp;background-blend-mode: multiply;<br>}</pre><p>A live example can be seen here: <a href=\"http://codepen.io/chriscoyier/pen/aBIAc\" target=\"_blank\">http://codepen.io/chriscoyier/pen/aBIAc</a>.</p><h2>Mix Blend Mode</h2><p>Similar to the background-blend-mode, mix-blend-mode can be used on other elements to specify their blending. For example: </p><pre>h1 {<br>&nbsp;&nbsp;color: green;<br>&nbsp;&nbsp;mix-blend-mode: color-dodge;<br>}</pre><p>A live example can be seen here: <a href=\"http://jsfiddle.net/Lr9t0msm/4/\" target=\"_blank\">http://jsfiddle.net/Lr9t0msm/4/</a>.</p><h2>Compatibility</h2><p>Blend Modes are fully compatible with Chrome and Firefox. Internet Explorer does not have plans to support any blend modes. To create an Internet Explorer specific workaround, consider using <a href=\"https://css-tricks.com/how-to-create-an-ie-only-stylesheet/\" target=\"_blank\">conditional stylesheets</a>. Safari does not support the hue, saturation, color, and luminosity blend modes. Be sure to check caniuse.com for the latest updates in <a href=\"http://www.google.com/url?q=http%3A%2F%2Fcaniuse.com%2F%23search%3Dbackground-blend&sa=D&sntz=1&usg=AFQjCNFdItMib7s2WLQ1Iuekk-eMUDbrKA\" target=\"_blank\">background-blend-mode</a> and <a href=\"http://www.google.com/url?q=http%3A%2F%2Fcaniuse.com%2F%23search%3Dmix-blend-mode&sa=D&sntz=1&usg=AFQjCNEO4FPMD1MEUjI3bNFZ2GpwQACnlQ\" target=\"_blank\">mix-blend-mode capabatibility</a>. </p>",
-               "link":{
-                  "title":"",
-                  "url":""
-               }
-            }
-         ],
-         "tags":[
-            "blend",
-            "blend modes",
-            "layering",
-            "CSS",
-            "multiple",
-            "screen",
-            "overlay",
-            "images",
-            "greyscale",
-            "monochromatic",
-            "lighting",
-            "photoshop",
-            "flash",
-            "opacity"
-         ],
-         "title":"CSS Blend Modes"
-      },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"",
-               "link":{
-                  "title":"",
-                  "url":""
-               },
-               "title":""
-            }
-         ],
-         "description":"An overview of different masking techniques available",
-         "links":[
-            {
-               "title":"Overview of Clip-Paths and Masking",
-               "url":"http://www.html5rocks.com/en/tutorials/masking/adobe/"
-            },
-            {
-               "title":"Clipping and Masking Demos",
-               "url":"http://codepen.io/yoksel/pen/fsdbu"
-            },
-            {
-               "title":"CSS Masking Experiments",
-               "url":"http://thenittygritty.co/css-masking"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Overflow:hidden is best for masking squares and ellipses because it’s fully compatible across all browsers.",
-               "type":"good"
-            },
-            {
-               "description":"Clip-paths are best for complicated shapes, but are not compatible with Internet Explorer.",
-               "type":"good"
-            },
-            {
-               "description":"Masking is best for shapes without a hard edge, but is only compatible with Chrome and Safari.",
-               "type":"good"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"<p>The ability to make portions of your Creative transparent is useful for “takeover” style Creatives or when animating different elements within your Creative. There are three different ways to achieve this with CSS: overflow:hidden, clip-path, and masks. For a more thorough analysis of the clip-path vs. mask properties, <a href=\"https://css-tricks.com/clipping-masking-css/\" target=\"_blank\">read this article</a>.</p><h2>Overflow:hidden</h2><p>A traditional method of clipping an element is by nesting the element to be clipped within a div that has overflow:hidden applied to it. This method will work in all browsers, but is limited to the shapes you can make with a div/border radiuses. Here are a few <a href=\"http://jsfiddle.net/4bL12nz0/\" target=\"_blank\">code examples</a> that also showcase animating the mask.</p><h2>Clip-Path</h2><p>Clip Paths, similar to overflow:hidden, are best used for hard (vector) edges. Clip Paths are dependent on an SVG shape and offer greater flexible in terms of geometry. A basic example can be found <a href=\"http://codepen.io/anon/pen/ZGXrKr\" target=\"_blank\">here</a>. <a href=\"http://bennettfeely.com/clippy/\" target=\"_blank\">Clippy</a> is an online visual tool for creating simple and complex clip-paths. Clip-paths are not compatible with any version of Internet Explorer.</p><h2>Masking</h2><p>The mask property is a way to achieve masking with the transparency or luminosity of a source image. More details about this property can be found <a href=\"http://www.html5rocks.com/en/tutorials/masking/adobe/#toc-browser-support\" target=\"_blank\">here</a>. Webkit browsers (Chrome and Safari) are the only browsers that support image masking.</p><h2>Compatibility</h2> <p>For the latest specifics on browser compatibility, be sure to check caniuse.com for <a href=\"http://caniuse.com/#search=clip-path\" target=\"_blank\">clip-paths</a> and <a href=\"http://caniuse.com/#search=mask\" target=\"_blank\">masks</a>. The overflow:hidden property will continue to be fully compatible on all browsers.</p>",
-               "link":{
-                  "title":"",
-                  "url":""
-               }
-            }
-         ],
-         "tags":[
-            "masking",
-            "clipping",
-            "css",
-            "overflow",
-            "transparency"
-         ],
-         "title":"Masking and Clipping in CSS"
-      },
-      {
-         "category":"development",
-         "demo":[
-            {
-               "description":"Create engaging, interactive HTML5-based designs and motion graphics that can run on any device.",
-               "link":{
-                  "title":"Scalable Vector Graphics (SVG) + Animation",
-                  "url":"http://www.richmediagallery.com/detailPage?id=8201"
-               },
-               "title":"Scalable Vector Graphics (SVG) + Animation"
-            }
-         ],
-         "description":"CSS transitions, transforms, and animations which are part of the CSS3 set of <a href=\"http://www.w3.org/standards/techs/css#w3c_all\" target=\"blank\">specifications</a>, provide ways to apply/control animation for changing CSS properties.",
-         "links":[
-            {
-               "title":"CSS3 Introduction",
-               "url":"http://www.w3schools.com/css/css3_intro.asp"
-            },
-            {
-               "title":"CSS-Tricks",
-               "url":"https://css-tricks.com/"
-            },
-            {
-               "title":"CSS: Animation Using CSS Transforms",
-               "url":"http://www.the-art-of-web.com/css/css-animation/"
-            }
-         ],
-         "pro-tips":[
-            {
-               "description":"Refrain from using JavaScript libraries/frameworks that use the setInterval JavaScript method for animations, and if hand coding then do not use the setInterval method. This method uses up a lot of the browser’s resources and affects performance, and it requires a decent amount of code. It is prefered to use CSS for <a href=\"https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions\" target=\"blank\">transitions</a>,  <a href=\"https://css-tricks.com/almanac/properties/t/transform/\" target=\"blank\">transforms</a> and <a href=\"https://css-tricks.com/almanac/properties/a/animation/\" target=\"blank\">animations</a>. If JavaScript animations are mandatory, then consider using the <a href=\"https://css-tricks.com/using-requestanimationframe/\" target=\"blank\">requestAnimationFrame</a> method, it is specifically made for animations. More information can be found <a href=\"https://developers.google.com/web/fundamentals/look-and-feel/animations/css-vs-javascript\" target=\"blank\">here</a>.",
-               "type":"good"
-            },
-            {
-               "description":"Consider using CSS <a href=\"http://www.w3schools.com/css/css3_3dtransforms.asp\" target=\"blank\">3D transforms</a> to take advantage of the device GPU. This allows for a smoother animation experience because when CSS 3D transforms are invoked, they run in their own layer governed by the GPU. Take note that doing so can lower battery life on mobile devices.",
-               "type":"good"
-            },
-            {
-               "description":"<p>This pertains especially to Dynamic creatives which require a significantly longer time to load all of the data.</p><p>Using the <a href=\"https://support.google.com/richmedia/answer/2672514\" target=\"blank\">Enabler.isPageLoaded()</a> polite load functionality you can wait to trigger all of your CSS animations until all of the data has populated. All you need to do is set a 'paused' class to any element that animates in the ad. Then add this into your css:</p><p><pre><div>.paused {</div><div>&nbsp;&nbsp;animation-play-state: paused !important;</div><div>}</div></pre></p><p>In your .js file you would then release this paused state using querySelectorAll:</p><p><pre><div>var anim = document.querySelectorAll('.paused');</div><div>function pageLoadedHandler() {</div><div>&nbsp;&nbsp;//Play Animations</div><div>&nbsp;&nbsp;for (var i = 0; i < anim.length; i++ ) {</div><div>&nbsp;&nbsp;&nbsp;&nbsp;anim[i].removeAttribute('class', 'paused');</div><div>&nbsp;&nbsp;}</div><div> }</div></pre></p>",
-               "type":"good"
-            },
-            {
-               "description":"Before uploading your CSS files to Studio, consider minifying your CSS with an <a href=\"http://cssminifier.com/\" target=\"blank\">Online CSS Minifier</a>.",
-               "type":"good"
-            },
-            {
-               "description":"Do not use the JavaScript setInterval method to apply animation.",
-               "type":"bad"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"Learn how to apply <a href=\"http://www.the-art-of-web.com/css/css-animation/\" target=\"blank\">animation using CSS transforms</a>."
-            }
-         ],
-         "tags":[
-            "animation",
-            "css"
-         ],
-         "title":"CSS Transitions, Transforms, and Animations"
-      },
-      {
-         "title":"HTML5 Masthead",
-         "category":"formats",
-         "description":"<p>The YouTube Desktop Masthead is a 970x250 pixel in-page unit running the full width of the YouTube homepage below the navigation bar for 24 hours. There is also an expandable version that expands on the user click to 970x500 pixels.</p><p>As HTML5 offers several key benefits over Flash, we encourage advertisers to take advantage of our broader support for HTML5 Mastheads. Though advertisers can use any of the HTML5 authoring tools available, Google has launched Google Web Designer and HTML5 Studio Layouts to make the experience of building HTML5 as easy as possible.<p>",
-         "demo":[
-            {
-               "description":"Checkout the selection of global HTML5 Masthead examples on our Rich Media Gallery",
-               "link":{
-                  "title":"Mastheads on the Rich Media Gallery",
-                  "url":"http://www.richmediagallery.com/gallery#filterGallery:464%2C443~"
-               },
-               "title":"HTML5 Masthead Examples"
-            }
-         ],
-         "quick-start":[
-            {
-               "description":"<p>HTML5 is an open platform and, therefore advertisers can use any of the available HTML5 editors, including Google Web Designer and many others.</p><p>Google Web Designer provides several customizable Masthead templates that can be used as-is or as a starting point to build more complex Mastheads.</p>",
-               "link":{
-                  "title":"Jump in and start building with Google Web Designer",
-                  "url":"http://www.google.com/webdesigner"
-               }
-            },
-            {
-               "description":"Rich Media Layouts Layouts lets you create a HTML5 Masthead, using the same standard assets you already have. Get a creative built, QA approved, and ready to traffic in as little as one business day.",
-               "link":{
-                  "title":"Select HTML5 Masthead Layouts in DoubleClick Studio",
-                  "url":"https://www.google.com/doubleclick/studio/#layouts:"
-               }
-            }
-         ],
-         "pro-tips":[
-            {
-               "type":"bad",
-               "description":"Refer to and check the Mastheads Guidelines before starting a creative build, the majority of Masthead delays are caused when they don’t meet YouTube specifications."
-            }
-         ],
-         "links":[
-            {
-               "url":"https://support.google.com/displayspecs/answer/6011474?hl=en",
-               "title":"Rich Media Custom Mastheads Guidelines"
-            },
-            {
-               "url":"https://support.google.com/displayspecs/answer/4489886?rd=1",
-               "title":"Rich Media Layouts Mastheads Guidelines"
-            },
-            {
-               "url":"http://www.richmediagallery.com/detailPage?id=8161",
-               "title":"YouTube Masthead Featured Video"
-            },
-            {
-               "url":"http://www.richmediagallery.com/detailPage?id=8190",
-               "title":"YouTube Masthead Interactive Hotspots"
-            },
-            {
-               "url":"http://www.richmediagallery.com/adtypes#filterAds:478%2C464~",
-               "title":"Rich Media Gallery HTML5 Masthead Demos"
-            }
-         ],
-         "tags":[
-            "youtube",
-            "masthead"
-         ]
-      },
-      {
-         "category":"troubleshooting",
-         "title":"Help Center",
-         "description":"The help center is the best place for general DoubleClick Studio and DoubleClick Rich Media support documents.",
-         "quick-start":[
-            {
-               "description":"Build DoubleClick Studio creatives using your favorite authoring tool or source code editor. Studio's software development kit and components help you add creative features such as videos, image galleries, and maps.",
-               "link":{
-                  "title":"Build your creative",
-                  "url":"https://support.google.com/richmedia/answer/6073360"
-               }
-            },
-            {
-               "description":"Studio HTML5 ad format and HTML5 creative assets requirements.",
-               "link":{
-                  "title":"Desktop HTML5/Mobile web",
-                  "url":"https://support.google.com/richmedia/answer/3419891"
-               }
-            },
-            {
-               "description":"You can avoid potential live issues with creatives by meeting best practice and lowest common denominator (LCD) requirements.",
-               "link":{
-                  "title":"Developer best practices",
-                  "url":"https://support.google.com/richmedia/answer/165130"
-               }
-            },
-            {
-               "description":"The process of uploading the creatives you've built to the DoubleClick Studio Web UI.",
-               "link":{
-                  "title":"Studio Web UI overview",
-                  "url":"https://support.google.com/richmedia/answer/2453366"
-               }
-            }
-         ],
-         "pro-tips":[
-            {
-               "type":"good",
-               "description":"To get creative solutions support, click on Contact us link at the upper right of the Help Center."
-            }
-         ],
-         "links":[
-            {
-               "url":"https://support.google.com/richmedia",
-               "title":"DoubleClick Creative Solutions Help Center"
-            }
-         ],
-         "tags":[
-            "html5",
-            "studio"
-         ]
+      "title" : "Debugging a Rich Media Creative"
+    } ],
+    "description" : "Debugging HTML5 creatives is easy with built in browser development tools. All major browsers provide a developer inspector of some sort. Most can be accessed while on a page by right clicking and choosing <pre>\"inspect element\"</pre> or via the menu options at the top. Debugging allows you to view the html structure of your creative, view and adjust CSS to tweak visual elements, as well as view network activity, console logging, and performance monitoring.<br /><br />When it comes to debugging a mobile site or ad, you don’t have easy access to an inspector tool like you do on a desktop. Fortunately Chrome, Safari and Firefox all offer remote debugging over a USB connection to your desktop.<br /><br />Check out the resources section for additional information and links from across the web.",
+    "links" : [ {
+      "title" : "Remote Debugging on Android with Chrome",
+      "url" : "https://developer.chrome.com/devtools/docs/remote-debugging"
+    }, {
+      "title" : "Creative Preview App - Android",
+      "url" : "https://play.google.com/store/apps/details?id=com.google.android.apps.audition"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Use remote debugging when developing html5 content that will be viewed across screens.",
+      "type" : "good"
+    }, {
+      "description" : "Works with Creative Preview App for debugging in-app creatives. (<a href=\"https://play.google.com/store/apps/details?id=com.google.android.apps.audition\" target=\"_blank\">Android</a>) (iOS - coming soon)",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "Here’s how to quickly get testing with USB Debugging.<br /><br />Get started on Chrome for Android by following instructions to enable USB debugging and connect your phone to your computer. Be sure to visit <strong><i>chrome://inspect</i></strong> and enable Discovery of USB devices.<br /><br />Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br /><br />When visiting <strong><i>chrome://inspect</i></strong> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/chrome_inspect_devices.jpg\" width=\"781\" alt=\"Chrome Inspect\"/>",
+      "link" : {
+        "title" : "Remote Debugging on Android with Chrome",
+        "url" : "https://developer.chrome.com/devtools/docs/remote-debugging#setting-up-device"
       }
-   ]
+    }, {
+      "description" : "Get started on Safari and iOS devices by following instructions here to enable debugging options and connect your device to your computer.<br /><br />Send a Studio preview to your phone so it opens in Safari.<br /><br />Open Safari and from the Develop menu you should see your device and open windows listed. Simply select Studio’s preview window and you’ll be able to fully view and debug your creative as if on your desktop.",
+      "link" : {
+        "title" : "About Safari Web Inspector",
+        "url" : "https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1"
+      }
+    } ],
+    "tags" : [ "debugging", "android", "chrome", "safari", "google apis", "mobile" ],
+    "title" : "USB Device Debugging"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "This demo links to a generic HTML page that has 3 different fonts loaded built with Google Web Designer. View Source to see how all font-faces are included by appending pipe-delimited (‘|’) font-names in one link tag..",
+      "link" : {
+        "title" : "Google Fonts Demo",
+        "url" : "http://goo.gl/xbllK3"
+      },
+      "title" : "Cloud Fonts Demo"
+    } ],
+    "description" : "A web with web fonts is more beautiful, readable, accessible and open. Google Fonts makes it quick and easy for everyone to use web fonts, including professional designers and developers. We believe that everyone should be able to bring quality typography to their web pages and applications. All you have to do is add a special stylesheet link to your HTML document, then refer to the font in a CSS style.",
+    "links" : [ {
+      "title" : "Google Fonts Homepage",
+      "url" : "https://www.google.com/fonts"
+    }, {
+      "title" : "Google Developers: Fonts",
+      "url" : "https://developers.google.com/fonts/"
+    }, {
+      "title" : "Demo Source Code",
+      "url" : "https://gist.github.com/ocorso/6979a79d26063d349841"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Initiate the font download as early as possible",
+      "type" : "good"
+    }, {
+      "description" : "Collapse multiple Google Fonts API requests into a single one",
+      "type" : "good"
+    }, {
+      "description" : "Avoid using the Google Fonts API in nested stylesheets",
+      "type" : "bad"
+    }, {
+      "description" : "Avoid requesting styles/weights that are not used",
+      "type" : "bad"
+    }, {
+      "description" : "Limit number of families / weights used if possible",
+      "type" : "good"
+    }, {
+      "description" : "Don’t cut images of the text.",
+      "type" : "bad"
+    }, {
+      "description" : "Install Cloud fonts on designer’s machine BEFORE designing.",
+      "type" : "good"
+    }, {
+      "description" : "Adjust font-size based on browser width.",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "Add this code to your website: <pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre><br/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;</pre><br/>That's all there is to it.",
+      "link" : {
+        "title" : "Google Fonts",
+        "url" : "https://developers.google.com/fonts/docs/getting_started"
+      }
+    } ],
+    "tags" : [ "fonts" ],
+    "title" : "Google Fonts"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "Demonstrates the YouTube Player API’s various parameters, functions, and events.<br /><br /><iframe id=\"player\" type=\"text/html\" width=\"640\" height=\"390\"\n  src=\"//www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=https://html5-toolkit.appspot.com\"\n  frameborder=\"0\"></iframe>",
+      "link" : {
+        "title" : "YouTube Player Demo",
+        "url" : "https://developers.google.com/youtube/youtube_player_demo"
+      },
+      "title" : "YouTube Player Demo"
+    } ],
+    "description" : "The YouTube Player IFrame API allows you to easily embed YouTube video content into your Ad. This will allow click to play interactions to increase your public view count to help your video and channel gain exposure. Flash and Javascript API’s have been deprecated in favor of the IFrame API which allows YouTube to serve HTML5 player by default and backup to Flash if necessary.",
+    "links" : [ {
+      "title" : "https://developers.google.com/youtube/iframe_api_reference",
+      "url" : "YouTube Player API Reference for iframe Embeds"
+    }, {
+      "title" : "https://developers.google.com/youtube/youtube_player_demo",
+      "url" : "YouTube Player Demo"
+    }, {
+      "title" : "https://developers.google.com/youtube/iframe_api_reference#Playback_controls",
+      "url" : "Google Developers site - YouTube playback controls"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Use the Google Web Designer YouTube component and get basic video metrics, muted autoplay (desktop), and click to play view count included with no additional coding required.",
+      "type" : "good"
+    }, {
+      "description" : "With YouTube HTML5 compatible IFrame player you can be sure your video will playback on all modern browsers and devices.",
+      "type" : "good"
+    }, {
+      "description" : "Need more control? Use JavaScript to load, cue, pause, seek, and more! Check out the API playback controls on the Google Developers site.",
+      "type" : "good"
+    }, {
+      "description" : "IE7 and below are not supported due to lack of postMessage support.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "Using Google Web Designer to build your Ad? Drag and drop the YouTube Player component onto the stage from the components panel.<br /><br />With it still selected, check the properties panel to add your YouTube ID and adjust any other parameters.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/youtube-player/youtube-gwd-properties.png\">",
+      "link" : {
+        "title" : "Google Web Designer YouTube Component",
+        "url" : "https://support.google.com/webdesigner/answer/3232992?hl=en"
+      }
+    }, {
+      "description" : "Visit the YouTube Player Getting Started guide to manually include the YouTube Player in your Ad creative.",
+      "link" : {
+        "title" : "Getting Started",
+        "url" : "https://developers.google.com/youtube/iframe_api_reference#Getting_Started"
+      }
+    } ],
+    "tags" : [ "youtube", "google apis", "video", "Google Web Designer" ],
+    "title" : "YouTube Player"
+  }, {
+    "category" : "creation tools",
+    "demo" : [ {
+      "description" : "For advertisers that want to enhance their video assets, create an additional layer of interaction via clickable hotspots that overlay additional content. When hotspot is clicked, the video will pause and overlay will appear. When overlay close button is clicked, the video resumes. This format only runs on YouTube.",
+      "link" : {
+        "title" : "HTML5 Interactive Video Hotspots Layout",
+        "url" : "http://www.richmediagallery.com/detailPage?id=8190"
+      },
+      "title" : "HTML5 Interactive Video Hotspots Layout"
+    } ],
+    "description" : "DoubleClick Studio Layouts makes Rich Media creative development much easier. Layouts provides the Rich Media ad shell for you, so all you have to do is pick the Layout you want, upload your existing assets, add your desired copy, and publish. With Layouts, you can get more out of your existing assets, trade up from basic image creatives to Rich Media, and creatives in minutes.<div><div style=\"display: inline-block; margin-top: 10px;\"><div style=\"float: left; margin-right: 15px;\"><div style=\"margin-bottom: 5px;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/creative-layout.png\"/></div><div><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/options.png\"/></div></div><div style=\"float: left;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/filler.png\"/></div></div>",
+    "links" : [ {
+      "title" : "Studio Layouts Rich Media Gallery",
+      "url" : "http://www.richmediagallery.com/resources/layouts"
+    }, {
+      "title" : "Studio Layouts Help Center",
+      "url" : "https://support.google.com/richmedia/answer/3306570"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Use the in-product preview gallery to preview a Layout before deciding to use it. The in-product gallery can be found within the Studio user interface when choosing a Layout.",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "Build a YouTube Masthead with video and hotpots from a Layout using the requirements described <a href=\"https://support.google.com/displayspecs/answer/4489886\" target=\"_blank\">here</a>.<div style=\"margin-top: 10px\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/masthead.png\" /></div>"
+    } ],
+    "tags" : [ "tool", "Studio", "template", "layout" ],
+    "title" : "Studio Layouts"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "File size best practices for compressing images, optimizing code, and reducing file size<p>A common complaint in the Flash vs HTML5 debate is that HTML5 Creatives are really heavy in terms of file size. The reason for this misconception is because Flash is an application that not only handles the creation of ads, but also the compression of them. </p><p>“HTML5 Creatives”, on the other hand, commonly refers to ads created with the programming languages HTML, CSS, and Javascript. HTML5 Creatives provide many opportunities to compress your files.</p><p>Many of the tips provided can be implemented in under 15 minutes. The payoff is that a <a href=\"https://www.thinkwithgoogle.com/case-studies/talk-talk-increases-reach-and-lowers-cpa-with-doubleclick.html\" target=\"_blank\">well-compressed HTML5 Creative will perform much better than a Flash Creative.</a></p>",
+    "links" : [ {
+      "title" : "",
+      "url" : ""
+    } ],
+    "pro-tips" : [ {
+      "description" : "",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p><a href=\"http://www.google.com/webdesigner/\" target=\"_blank\">Google Web Designer</a> (GWD) is an application specifically made for HTML5 ad development by Google, and is a great HTML5 alternative to developers that are only familiar with Flash. GWD has built in compression for images and code, Google web font support, SVG support, CSS animation support, etc. Additionally, it is fully integrated with Studio.</p><p>GWD is highly recommended above anything else when developing ads. More information on GWD can be found in the <a href=\"https://support.google.com/webdesigner/#topic=3249465/\" target=\"_blank\">GWD Help Center.</a></p>",
+      "link" : {
+        "title" : "Google Web Designer",
+        "url" : "http://www.google.com/webdesigner/"
+      }
+    }, {
+      "description" : "<h3>Total File Size vs. Compressed File Size</h3><p>The total file size (‘Raw File Size’) of your Creative can be viewed in DoubleClick Studio <a href=\"http://screencast.com/t/MzJAwPa9bCP\" target=\"_blank\">here</a>. In Google Web Designer, you can view size of your Creative in the <a href=\"http://screencast.com/t/Zh9wBUXTCay\" target=\"_blank\">Publish panel</a>. Google Web Designer compresses Creatives with gZip.</p><p>To determine your Creative’s compressed size, simply download a free copy of <a href=\"http://www.gnu.org/software/gzip/\" target=\"_blank\">gZip</a>, compress them on your local workspace, and inspect the file size.</p><p>Depending on the Publisher’s ad server, they will be calculating the compressed size of your Creative. Always double check with your Publisher to be sure.</p><h3>What is a good baseline for HTML5 Creative file size?</h3><p>It’s essential to understand your Publisher’s ad serving specifications prior to building your Creative. However, many Publishers follow the IAB recommendation of 35KB (compressed) Initial Load for the Creative and 100KB for total Creative size. Initial Load refers only file size of the .html file in the Creative, not the Enabler, Javascript, CSS, or other image files, but again, check with your Publisher to understand their guidelines to be sure. </p><p>More info about the IAB’s recommendations can be found <a href=\"http://www.iab.net/guidelines/508676/508767/mobileguidelines\" target=\"_blank\">here</a> (page 8/9 <a href=\"http://www.iab.net/media/file/HTML5DAv101.pdf\" target=\"_blank\">here</a>) and DoubleClick’s recommendations <a href=\"https://support.google.com/richmedia/answer/165130?hl=en\" target=\"_blank\">here</a>.</p><h3>How much does DoubleClick Enabler add in file weight?</h3><p>As of April 2015, the Enabler adds approximately ~75KB (~25KB when gZipped).</p>",
+      "link" : {
+        "title" : "How to Check Your File Size",
+        "url" : ""
+      }
+    }, {
+      "description" : "<p>Polite loading delays the loading of additional creative assets (like images and video) until the parent page has finished loading. This is different than ‘initial load’, which only refers to file size of the .html file in the Creative. It is helpful to implement the code for polite loading because many publishers have different specs for initial load versus the complete load size. <a href=\"https://support.google.com/richmedia/answer/2672514?hl=en\" target=\"_blank\">More information about polite loading can be found here.</a></p><p>Check with the Publisher to understand their HTML5 specs for Rich Media ads because they are typically different than Flash-based specs. They may or may not count file size based on the compressed gzip format and will rather count the raw file size. Also, individual publisher specs differ from IAB specs depending on placement, ad type, etc. so they may allow more or less leeway in build specs. Publishers may also limit specs for animation and video play time.</p>",
+      "link" : {
+        "title" : "Polite Load & Publisher Specs",
+        "url" : "#"
+      }
+    }, {
+      "description" : "<p>Before attempting to reduce your image size, first determine if an image is even necessary as many things can be created with pure CSS. Here are some questions to ask before saving an asset as an image:</p><h3>Is the graphic a gradient or a solid color?</h3><p>Consider creating the image with just CSS3 to both improve the quality and reduce file size.</p><ul><li><a href=\"http://www.cssmatic.com/gradient-generator\" target=\"_blank\">CSS3 Gradient Generator</a></li></ul><h3>Is the image comprised of solid colors or a vector?</h3><p>Use SVG (Scalable Vector Graphics) whenever possible instead of an image. Images are pixel based (“raster”) and may add some overhead in file weight. In contrast, SVGs are point-to-point based graphics (“vector”) and can greatly reduce file size.</p><ul><li><a href=\"http://www.w3schools.com/svg/\" target=\"_blank\">W3School's SVG Tutorial</a></li><li><a href=\"https://css-tricks.com/using-svg/\" target=\"_blank\">How to Use SVGs</a></li><li><a href=\"http://petercollingridge.appspot.com/svg_optimiser\" target=\"_blank\">Compressing SVGs</a></li></ul><h3>Does your Creative use multiple icons?</h3><p>Use icon fonts whenever possible instead of an image for icons, images are pixel based and may add some overhead in file weight. Icon fonts are actually regular fonts and can be used in the same way as any other font in HTML. They are vector based as well. Custom icon fonts are relatively quick to create and implement.</p><ul><li><a href=\"https://icomoon.io/app/#/select\" target=\"_blank\">Icomoon Icon Font Creator</a></li><li><a href=\"https://thenounproject.com/\" target=\"_blank\">NounProject: an affordable resource to gather SVG icons for your icon font</a></li></ul><h3>Are you using JPGs or PNGs in your project?</h3><p>If pixel based images are required, compress them as much as possible while keeping quality. Many people are already familiar <a href=\"http://help.adobe.com/en_US/creativesuite/cs/using/WS6E857477-27FE-4a88-B8A4-074DC3C65F68.html\" target=\"_blank\">Photoshop’s Save For Web</a>, but there are other online tools that can compress an image even further while retaining quality.<ul><li><a href=\"https://tinypng.com/\" target=\"_blank\">TinyPNG: Online PNG Compressor</a></li><li><a href=\"https://tinyjpg.com/\" target=\"_blank\">TinyJPG: Online JPG Compressor </a></li></ul></p>",
+      "link" : {
+        "title" : "Images",
+        "url" : "#"
+      }
+    }, {
+      "description" : "<p>Consider using <a href=\"http://www.w3schools.com/css/css3_animations.asp\" target=\"_blank\">CSS3 animations</a> (transitions/transforms) instead of Javascript for animations. CSS transforms use the GPU instead of the CPU for rendering animations so it helps with performance and preserves file size.</p><p>Refrain from using JavaScript libraries/frameworks that use the setInterval JavaScript method for animations, and if hand coding then do not use the setInterval method. This method uses up a lot of the browser’s resources and affects performance, and it requires a decent amount of code. If JavaScript animations are mandatory, then consider using the requestAnimationFrame method, it is specifically made for animations.</p><ul><li><a href=\"http://css-tricks.com/using-requestanimationframe/\" target=\"_blank\">Using requestAnimationFrame</a></li><li><a href=\"https://developers.google.com/web/fundamentals/look-and-feel/animations/css-vs-javascript?hl=en\" target=\"_blank\">CSS vs Javascript Animations</a></li></ul><p>Before uploading your CSS files to Studio, consider minifying your CSS with an <a href=\"http://cssminifier.com/\" target=\"_blank\">Online CSS Minifier.</a></p>",
+      "link" : {
+        "title" : "CSS and Animations",
+        "url" : "#"
+      }
+    }, {
+      "description" : "<h3>Are you using jQuery?</h3><p>Don’t use jQuery in your HTML5 Creatives. jQuery is not recommended because it adds unnecessary file weight (~75k) even though the majority of the jQuery library is not utilized in a Creative. Consider using pure Javascript with <a href=\"http://youmightnotneedjquery.com/?hn\" target=\"_blank\">this guide</a>, or using <a href=\"http://zeptojs.com/\" target=\"_blank\">Zepto.js</a> if necessary.</p><h3>Are you using a Javascript Framework?</h3><p>Ask yourself if it is completely necessary to have them in your Creative. Consider taking pieces out of the framework and utilizing them in your main Javascript file to reduce overhead.</p><h3>Are you targeting code for specific devices/browsers?</h3><p>Ensure your code is written for devices/browsers specified, no need to add code for non-supported devices/browsers.</p><ul><li><a href=\"https://support.google.com/richmedia/answer/138582\" target=\"_blank\">Browser and device support for DoubleClick Studio</a></li><li><a href=\"http://caniuse.com/\" target=\"_blank\">Can I Use: Up to date browser support for JS and CSS properties</a></li></ul><h3>Compressing Javascript</h3><p>GWD natively minifies files, so if you’re using GWD no minification is necessary. Otherwise,there are <a href=\"http://jscompress.com/\" target=\"_blank\">online tools</a> that will remove comments and extra whitespace from your Javascript. It’s a best practice to keep a version of your uncompressed Javascript file locally on your computer for later reference.</p><p>Keep in mind that in DoubleClick Studio, JavaScript files require a .js extension, not .min.js. If you minify JavaScript files, you can't add tracking easily. If the client requests minifying, add tracking first and minify the .js file later.</p>",
+      "link" : {
+        "title" : "Javascript",
+        "url" : "#"
+      }
+    }, {
+      "description" : "<p>If you are using a font other than the standard web fonts, consider using <a href=\"https://www.google.com/fonts/\" target=\"_blank\">Google fonts</a>. Google has a large library of fonts which can all be used for free. In order to reduce file size, be sure to only request the characters you need from the font vs. the entire typeface. This is called Font Subsetting.</p><ul><li><a href=\"https://developers.google.com/fonts/docs/getting_started#Optimizing_Requests\" target=\"_blank\">Optimizing Font Requests</a></li></ul>",
+      "link" : {
+        "title" : "Optimizing Google Fonts",
+        "url" : "#"
+      }
+    } ],
+    "tags" : [ "fonts", "html5", "filesize", "file-size", "file size", "javascript", "jquery", "images", "jpg", "png", "gif", "svg", "polite load", "minify", "compression", "KB", "debugging" ],
+    "title" : "File Size Best Practices"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "Not all browsers are created equal. Sometimes Browser Prefixes need to be added to your CSS to ensure compatibility across devices and browsers.",
+    "links" : [ {
+      "title" : "Browser and device support for DoubleClick Studio",
+      "url" : "https://support.google.com/richmedia/answer/138582"
+    }, {
+      "title" : "Can I Use? What CSS properties are supported by browsers",
+      "url" : "http://caniuse.com/"
+    }, {
+      "title" : "Pleeease: Automatic Online Browser Prefixer",
+      "url" : "http://pleeease.io/play/"
+    }, {
+      "title" : "CSS3 Keyframe Animation Syntax",
+      "url" : "https://css-tricks.com/snippets/css/keyframe-animation-syntax/"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Google Web Designer automatically adds appropriate browser prefixes to any animation or elements constructed in the Design panel.",
+      "type" : "good"
+    }, {
+      "description" : "Avoid adding browser prefixes to every single CSS3 property. This will only bloat your CSS and file size. Double-check <a href=\"http://caniuse.com/\" target=\"_blank\">Can I use?</a> for the specifics on browser compatibility",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>Some CSS3 properties are not yet standarized across all modern browsers. As a result, Vendor (or Browser) Prefixes are needed to ensure browser compatibility. These prefixes are:</p><pre>-moz-/* Firefox and other browsers using Mozilla's browser engine */<br>-webkit-/* Safari, Chrome and browsers using the Webkit engine */<br>-o-/* Opera */<br>-ms-/* Internet Explorer (but not always) */ </pre><p>In use, this would look something like:</p><pre>.example {<br>-webkit-transform: rotate(30deg); /* Chrome <36, Safari 5.1+, iOS, Android =<4.4.4 */<br>-ms-transform: rotate(30deg); /* Internet Explorer 9 */<br>transform: rotate(30deg); /* Internet Explorer 10, Firefox 16+, Opera 12.1+ */<br>}</pre><p>To understand which browsers are compatible with which properties, be sure to consult <a href=\"http://caniuse.com/\" target=\"_blank\">Can I Use?</a> as well as determining <a href=\"http://www.google.com/webdesigner/\" target=\"_blank\">Link</a>what browsers DoubleClick Studio supports</a>.</p>",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      }
+    } ],
+    "tags" : [ "html5", "safari", "chrome", "firefox", "webkit", "opera", "css3", "transitions", "animations", "prefix", "browser support" ],
+    "title" : "Browser Prefixes"
+  }, {
+    "category" : "formats",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "<p>Your HTML5 Creatives have the ability to run across many screens, be it Desktop Websites, Tablet/Mobile Websites or Tablet/Mobile In-App. All at the same time! This can be a powerful thing, especially considering that behind the scenes an In-App behaves differently from a Website.</p><p>Let’s take a quick step back... HTML5 is the language of the Web, but an App is the language of, well, the phone it’s on! So when you put a HTML5 creative inside an app it needs some ‘Magic’ to make them talk the same language. This ‘Magic’ is called <a href=\"http://www.iab.net/mraid\" target=\"blank\">MRAID</a>, but luckily for us the <a href=\"https://support.google.com/richmedia/answer/2672553?hl=en\" target=\"blank\">DoubleClick HTML5 Enabler</a> does all this for us. So we can just focus on implementing this correctly.</p>",
+    "links" : [ {
+      "title" : "https://support.google.com/richmedia/answer/3369559?hl=en&ref_topic=3369390",
+      "url" : "Roles and responsibilities for Mobile Web and Desktop HTML5   "
+    }, {
+      "title" : "https://support.google.com/richmedia/answer/2922407?hl=en&ref_topic=2922400",
+      "url" : "Make sure users can see your HTML5 In-app ad"
+    }, {
+      "title" : "https://support.google.com/richmedia/answer/2922409?hl=en&ref_topic=2922400",
+      "url" : "Orientation"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Run a quick test with the Publisher’s Mobile Web and In-App inventory first, to check the creative works correctly",
+      "type" : "good"
+    }, {
+      "description" : "In-App creatives can load in the background, use the Enabler’s Visibility check to make sure users can see your HTML5 In-app ad before loading further, animation or playing any video.",
+      "type" : "good"
+    }, {
+      "description" : "Don’t add a close button in your In-App Expand creatives, Studio will do this for you.",
+      "type" : "bad"
+    }, {
+      "description" : "Make use of the Enabler’s Mobile orientation functions, and adjust your creative’s orientation accordingly.",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>Follow our In-Page Build guide to start make your standard banner, with a few lines of code you’ll be up and running.</p><p>In-Page or In-App formats can be chosen depending on where the creative will be trafficked</p>",
+      "link" : {
+        "title" : "HTML5 In-page creative overview",
+        "url" : "https://support.google.com/richmedia/answer/2672545"
+      }
+    }, {
+      "description" : "<p>The Expanding creative build has a few extra steps and checks to watch out for.</p><p>Check the sequence of expand events outlined the build guide is correct, look out for 'requestExpand' and 'finishExpand' calls</p>",
+      "link" : {
+        "title" : "HTML5 Expanding creative overview",
+        "url" : "https://support.google.com/richmedia/answer/2745120?hl=en"
+      }
+    }, {
+      "description" : "<p>We won’t always know the size of the screen we are looking to fill, there are alot of different mobile phone sizes out there!</p><p>When setting up an In-App Interstitial creative use the Flex by Flex size, and when setting up an In-App expand creative be sure of use the expand to fullscreen guide.</p>",
+      "link" : {
+        "title" : "HTML5 expand to fullscreen creative",
+        "url" : "https://support.google.com/richmedia/answer/4526020?hl=en&ref_topic=4525889"
+      }
+    }, {
+      "description" : "<p>Your Creative will run in a lot of places, so it’s important we test them in all these places. For instance, your desktop browser may run the creative differently then your mobile browser, and your In-App creative may behave in the different way then your web creative.<p><p>Studio provides the ability to preview using your desktop, scan a QR code to preview on your mobile, or even push your creative to preview inside an Android App.</p>",
+      "link" : {
+        "title" : "Previewing",
+        "url" : "https://support.google.com/richmedia/answer/2879150?hl=en"
+      }
+    } ],
+    "tags" : [ "in-app", "preview", "android", "mobile", "mraid", "fullscreen" ],
+    "title" : "Cross Screen Creatives"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "Load ads fast! Reduce file size through image compression and other tips including using sprite sheets and free online tools.",
+    "links" : [ {
+      "title" : "",
+      "url" : ""
+    } ],
+    "pro-tips" : [ {
+      "description" : "",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "content" : "",
+      "description" : "Consider creating the image with just CSS3 to both improve the quality and reduce file size. <a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">CSS3GradientGenerator</a><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image01.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "link" : {
+        "title" : "Gradients: Is the graphic a gradient or a solid color?",
+        "url" : ""
+      }
+    }, {
+      "content" : "",
+      "description" : "Use SVG (Scalable Vector Graphics) whenever possible instead of an image. Images are pixel based (\"raster\") and may add some overhead in file weight. In contrast, SVGs are point-to-point based graphics (\"vector\") and can greatly reduce file size.<br/><ul><li><a href=\"http://www.w3schools.com/svg/\"target=\"_blank\">W3School's SVG Tutorial</a></li><li><a href=\"https://css-tricks.com/using-svg/\"target=\"_blank\">How to Use SVGs</a></li><li><a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">Compressing SVGs</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image00.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "link" : {
+        "title" : "Solid Colors vs Vectors: Is the image comprised of solid colors or a vector?",
+        "url" : ""
+      }
+    }, {
+      "content" : "",
+      "description" : "Use icon fonts whenever possible instead of an image for icons, images are pixel based and may add some overhead in file weight. Icon fonts are actually regular fonts and can be used in the same way as any other font in HTML. They are vector based as well. Custom icon fonts are relatively quick to create and implement.<br/><ul><li><a href=\"https://icomoon.io/app/#/select\"target=\"_blank\">Icomoon Icon Font Creator</a></li><li><a href=\"https://thenounproject.com/\"target=\"_blank\">NounProject: an affordable resource to gather SVG icons for your icon font</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image02.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "link" : {
+        "title" : "Multiple Images & Icons: Do you have multiple images in your project?",
+        "url" : ""
+      }
+    }, {
+      "content" : "",
+      "description" : "If pixel based images are required, consider using a Sprite Sheet. A single tiled image that is loaded once, and with CSS, only individual tiles can be made visible, this approach can save making multiple requests over HTTP. <br/><br/>Compressing the image, is still key even with this approach.<br/><ul><li><a href=\"http://www.w3schools.com/css/css_image_sprites.asp\"target=\"_blank\">CSS Image Sprites</a></li><li><a href=\"http://draeton.github.io/stitches/\"target=\"_blank\">Online Sprite Sheet and CSS Creator</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image04.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "link" : {
+        "title" : "Multiple Images & Icons: Do you have multiple images in your project?",
+        "url" : ""
+      }
+    }, {
+      "content" : "",
+      "description" : "If pixel based images are required, compress them as much as possible while keeping quality. Many people are already familiar <a href=\"http://help.adobe.com/en_US/creativesuite/cs/using/WS6E857477-27FE-4a88-B8A4-074DC3C65F68.html\"target=\"_blank\">Photoshop’s Save For Web</a>, but there are other online tools that can compress an image even further while retaining quality.<br/><br/><ul><li><a href=\"https://tinypng.com/\"target=\"_blank\">TinyPNG: Online PNG Compressor</a></li><li><a href=\"https://tinyjpg.com/\"target=\"_blank\">TinyJPG: Online JPG Compressor </a></li></ul><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image03.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "link" : {
+        "title" : "Image File Type: Are you using JPGs or PNGs in your project?",
+        "url" : ""
+      }
+    } ],
+    "tags" : [ "image", "file size", "compression", "jpg", "png", "gif", "sprite" ],
+    "title" : "Image Compression"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "CSS has the ability to detect to a browser’s screen size, pixel-density, and device orientation (amongst other properties) with the @media rule",
+    "links" : [ {
+      "title" : "Media Query Boilerplates",
+      "url" : "https://css-tricks.com/snippets/css/media-queries-for-standard-devices/"
+    }, {
+      "title" : "Media Query Properties Explained in Detail",
+      "url" : "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries"
+    }, {
+      "title" : "W3Schools @media",
+      "url" : "http://www.w3schools.com/cssref/css3_pr_mediaquery.asp"
+    }, {
+      "title" : "9 Basic Principles of Responsive Web Design",
+      "url" : "http://blog.froont.com/9-basic-principles-of-responsive-web-design/"
+    } ],
+    "pro-tips" : [ {
+      "description" : "The @media rule is compatible with all modern browsers",
+      "type" : "good"
+    }, {
+      "description" : "Most developers put their media queries at the very bottom of their CSS and place all their media specific CSS rules within one @media rule vs multiple @media rule for the same screen size interspersed throughout their CSS.",
+      "type" : "good"
+    }, {
+      "description" : "Avoid bloating your CSS with too many media-queries. It’s best to try and accomplish the most CSS styling with the fewest media queries",
+      "type" : "bad"
+    }, {
+      "description" : "If you are only developing <strong>one</strong> creative for a static size (ex 300x250) then media queries will not be necessary for your creative.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>CSS has the ability to detect to a browser’s screen size, pixel-density, and device orientation (amongst other properties) with the @media rule. The format includes a rule that when true, applies specific CSS to an element(s). For example:</p><pre>.container {<br>&nbsp;background: red;<br>}<br><br>@media (max-width: 768px) {<br>&nbsp;.container {<br>&nbsp;&nbsp;background: blue;<br>&nbsp;}<br>}<br><br>@media (max-width: 480px){<br>&nbsp;.container {<br>&nbsp;&nbsp;background: black;<br>&nbsp;}<br>}</pre><p>In the example above, if a browser is wider than 768px (most desktop browsers), the .container element will be red. If the browser is between 768px and 480px wide (most tablets oriented to portrait), the .container element will be blue. If the browser is 480px or smaller (most phones oriented to portrait), the .container will be black.</p><p>Media queries are particularly useful for making your full screen Creatives look great on all browser sizes. Another advantage for media queries is for when you have multiple sized Creatives, but only want to maintain one local CSS file. A complete explanation of the @media rule, and it’s properties, can be found here: <a href=\"http://www.w3schools.com/cssref/css3_pr_mediaquery.asp\" target=\"_blank\">http://www.w3schools.com/cssref/css3_pr_mediaquery.asp</a>.</p><h2>Landscape vs. Portrait</h2><p>In addition to Media Queries detecting a device’s orientation, the Double-Click HTML5 SDK has the ability to do so as well. More information about the getOrientation() method can be found <a href=\"https://www.google.com/doubleclick/studio/docs/sdk/html5/en/class_studio_common_Orientation.html\" target=\"_blank\">here</a> and a video tutorial can be found on the <a href=\"https://support.google.com/richmedia/answer/6062364?hl=en\" target=\"_blank\">Rich Media Help Center</a>.</p>",
+      "link" : {
+        "title" : "Overview",
+        "url" : ""
+      }
+    } ],
+    "tags" : [ "CSS", "Javascript", "Responsive", "media query", "orientation", "landscape", "tablet", "portrait", "mobile", "detect", "screen size" ],
+    "title" : "Detecting Browser Size with CSS Media Queries"
+  }, {
+    "category" : "creation tools",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "<p>The Google Swiffy tool can elegantly convert your Flash files to HTML5. DoubleClick Campaign Manager and DoubleClick Bid Manager implement Swiffy to allow Media Agencies to convert basic Flash built creatives into HTML5, and Creative Agencies can use Swiffy to convert animation built in Flash.</p><p>and now the caveat… Unfortunately, for now, when it comes to Rich Media Swiffy <strong>will not</strong> convert it. What it can do is convert <em>bits</em> of it!</p><p>Let’s imagine we have a typical Flash creative, consisting of 80% animation and 20% logic/code/components...etc. This logic can be rebuilt in HTML5, and then instead of trying to re-building / replicating the Flash animation we can just move it to a separate Flash file and convert this using Swiffy. Allowing designers to continue using Flash while they learn new HTML5 tools like <a href=\"http://www.google.com/webdesigner/\" target=\"blank\">Google Web Designer</a>.</p>",
+    "links" : [ {
+      "title" : "https://developers.google.com/swiffy/convert/flash-extension",
+      "url" : "Adobe Flash Extension"
+    }, {
+      "title" : "https://docs.google.com/a/google.com/forms/d/1pfsD83_YCVBJrt2-gGW5Fb7oOHcJ8HVyUx4EAdBHHvU/viewform?formkey=dEs1SXBHMTY5QmZDQnhqUVl2dl9hMEE6MQ",
+      "url" : "Feedback on Google Swiffy"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Think of Swiffy as a short term tool solution, we don’t want to use Flash to do animation forever.",
+      "type" : "good"
+    }, {
+      "description" : "Remember, Swiffy can not be used to directly convert Rich Media directly.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>Upload your SWF file into the Swiffy converter, and right click to save the new HTML5 conversion.</p><p>You could also install the Swiffy Adobe Flash Extension to export as HTML5 directly from Flash</p>",
+      "link" : {
+        "title" : "Swiffy",
+        "url" : "https://developers.google.com/swiffy/convert/upload"
+      }
+    } ],
+    "tags" : [ "swiffy", "flash" ],
+    "title" : "Swiffy (Flash Conversion)"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : "http://richmediagallery.com/dynamic"
+      },
+      "title" : ""
+    } ],
+    "description" : "We have divided the doubleclick dynamic offering into seven packages in order to make launching an HTML5 dynamic campaign as easy as possible. Each package contains consolidated HTML5 assets along with help center guides and roles and responsibility outlines which highlight exactly what needs to be done and by whom.",
+    "links" : [ {
+      "title" : "",
+      "url" : ""
+    } ],
+    "pro-tips" : [ {
+      "description" : "Use one solution at a time for better performance",
+      "type" : "good"
+    }, {
+      "description" : "Use the GWD starter file with the spreadsheet template for easy integration",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "Utilise scheduled updates to display different creative messages on different dates or times of day.",
+      "link" : {
+        "title" : "Scheduled Updates",
+        "url" : "http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/scheduled_strategy.html"
+      }
+    }, {
+      "description" : "DCM ID targeting allows you to display different creative messages depending on a DCM ID such a placement or site.",
+      "link" : {
+        "title" : "DCM ID Targeting",
+        "url" : "http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/pubpivot_strategy.html"
+      }
+    }, {
+      "description" : "Publisher pass allows you to use data owned by the publisher to display different creative messages to different users.",
+      "link" : {
+        "title" : "Publisher Pass",
+        "url" : "http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/publisherpass_strategy.html"
+      }
+    }, {
+      "description" : "Audience targeting utilises data from either DBM or Adwords to display relevant messages to the user.",
+      "link" : {
+        "title" : "DSP Audience",
+        "url" : "http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/audience_strategy.html"
+      }
+    }, {
+      "description" : "Dynamic Product Remarketing allows you to display creative based on the products users have been viewing on your site.",
+      "link" : {
+        "title" : "Product Remarketing",
+        "url" : "http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/product_remarketing_strategy.html"
+      }
+    }, {
+      "description" : "Userlist remarketing allows you to display different messages according to which pages a user has visited on your site.",
+      "link" : {
+        "title" : "Userlist Remarketing",
+        "url" : "http://rich_media_gallery.storage.googleapis.com/galleryitems/NEW_RMG/ADTYPES_DEMOS/DynamicSolutions/strategies/userlist_strategy.html"
+      }
+    } ],
+    "tags" : [ "dynamic", "DBM" ],
+    "title" : "Dynamic Package Solutions"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "How to recreate Photoshop's blend modes in CSS",
+    "links" : [ {
+      "title" : "CSS Blend Modes in Depth",
+      "url" : "https://css-tricks.com/basics-css-blend-modes/"
+    }, {
+      "title" : "Visual Comparison of Blend Modes",
+      "url" : "http://www.webdesignerdepot.com/2014/07/15-css-blend-modes-that-will-supercharge-your-images/"
+    }, {
+      "title" : "CodePen Examples",
+      "url" : "http://codepen.io/collection/Kgshi/"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Use blend modes in animation to highlight how two different elements interact with each other or with hover states",
+      "type" : "good"
+    }, {
+      "description" : "Use blend modes if you’re repeating an image in different ways. For example, an image is monochromatic in the background, while a smaller full-color version is in the foreground. This will eliminate the need for two image assets.",
+      "type" : "good"
+    }, {
+      "description" : "Don’t use blend modes for a single static image. This will only bloat your file size.",
+      "type" : "bad"
+    }, {
+      "description" : "Internet Explorer does not support blend modes. Use <a href=\"https://css-tricks.com/how-to-create-an-ie-only-stylesheet/\" target=\"_blank\">conditional stylesheets</a> or consider using an animated gif as a workaround.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>Adobe Photoshop and other applications use different blend modes to determine how a layer interacts with the layer beneath it. These blend modes are also achievable in CSS with the background-blend and mix-blend-mode properties. <a href=\"http://storage.googleapis.com/html5-toolkit/blend-modes/blendmodes.jpg\" target=\"_blank\">Here is a visual example of the different blend options</a>.</p> <h2>Background-Blend-Mode</h2><p>Background-blend-mode can be used to blend a background image with a solid color or a another background image with <a href=\"https://www.google.com/url?q=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FGuide%2FCSS%2FUsing_multiple_backgrounds&sa=D&sntz=1&usg=AFQjCNHA022TLBBDMQ1Q46BYIjSvDCX4_w\" target=\"_blank\">CSS3 Multiple Backgrounds</a>. The basic usage would be:</p><pre>.example {<br>&nbsp;&nbsp;background-image: url(foo.jpg);<br>&nbsp;&nbsp;background-color: blue;<br>&nbsp;&nbsp;background-blend-mode: multiply;<br>}</pre><p>A live example can be seen here: <a href=\"http://codepen.io/chriscoyier/pen/aBIAc\" target=\"_blank\">http://codepen.io/chriscoyier/pen/aBIAc</a>.</p><h2>Mix Blend Mode</h2><p>Similar to the background-blend-mode, mix-blend-mode can be used on other elements to specify their blending. For example: </p><pre>h1 {<br>&nbsp;&nbsp;color: green;<br>&nbsp;&nbsp;mix-blend-mode: color-dodge;<br>}</pre><p>A live example can be seen here: <a href=\"http://jsfiddle.net/Lr9t0msm/4/\" target=\"_blank\">http://jsfiddle.net/Lr9t0msm/4/</a>.</p><h2>Compatibility</h2><p>Blend Modes are fully compatible with Chrome and Firefox. Internet Explorer does not have plans to support any blend modes. To create an Internet Explorer specific workaround, consider using <a href=\"https://css-tricks.com/how-to-create-an-ie-only-stylesheet/\" target=\"_blank\">conditional stylesheets</a>. Safari does not support the hue, saturation, color, and luminosity blend modes. Be sure to check caniuse.com for the latest updates in <a href=\"http://www.google.com/url?q=http%3A%2F%2Fcaniuse.com%2F%23search%3Dbackground-blend&sa=D&sntz=1&usg=AFQjCNFdItMib7s2WLQ1Iuekk-eMUDbrKA\" target=\"_blank\">background-blend-mode</a> and <a href=\"http://www.google.com/url?q=http%3A%2F%2Fcaniuse.com%2F%23search%3Dmix-blend-mode&sa=D&sntz=1&usg=AFQjCNEO4FPMD1MEUjI3bNFZ2GpwQACnlQ\" target=\"_blank\">mix-blend-mode capabatibility</a>. </p>",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      }
+    } ],
+    "tags" : [ "blend", "blend modes", "layering", "CSS", "multiple", "screen", "overlay", "images", "greyscale", "monochromatic", "lighting", "photoshop", "flash", "opacity" ],
+    "title" : "CSS Blend Modes"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      },
+      "title" : ""
+    } ],
+    "description" : "An overview of different masking techniques available",
+    "links" : [ {
+      "title" : "Overview of Clip-Paths and Masking",
+      "url" : "http://www.html5rocks.com/en/tutorials/masking/adobe/"
+    }, {
+      "title" : "Clipping and Masking Demos",
+      "url" : "http://codepen.io/yoksel/pen/fsdbu"
+    }, {
+      "title" : "CSS Masking Experiments",
+      "url" : "http://thenittygritty.co/css-masking"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Overflow:hidden is best for masking squares and ellipses because it’s fully compatible across all browsers.",
+      "type" : "good"
+    }, {
+      "description" : "Clip-paths are best for complicated shapes, but are not compatible with Internet Explorer.",
+      "type" : "good"
+    }, {
+      "description" : "Masking is best for shapes without a hard edge, but is only compatible with Chrome and Safari.",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>The ability to make portions of your Creative transparent is useful for “takeover” style Creatives or when animating different elements within your Creative. There are three different ways to achieve this with CSS: overflow:hidden, clip-path, and masks. For a more thorough analysis of the clip-path vs. mask properties, <a href=\"https://css-tricks.com/clipping-masking-css/\" target=\"_blank\">read this article</a>.</p><h2>Overflow:hidden</h2><p>A traditional method of clipping an element is by nesting the element to be clipped within a div that has overflow:hidden applied to it. This method will work in all browsers, but is limited to the shapes you can make with a div/border radiuses. Here are a few <a href=\"http://jsfiddle.net/4bL12nz0/\" target=\"_blank\">code examples</a> that also showcase animating the mask.</p><h2>Clip-Path</h2><p>Clip Paths, similar to overflow:hidden, are best used for hard (vector) edges. Clip Paths are dependent on an SVG shape and offer greater flexible in terms of geometry. A basic example can be found <a href=\"http://codepen.io/anon/pen/ZGXrKr\" target=\"_blank\">here</a>. <a href=\"http://bennettfeely.com/clippy/\" target=\"_blank\">Clippy</a> is an online visual tool for creating simple and complex clip-paths. Clip-paths are not compatible with any version of Internet Explorer.</p><h2>Masking</h2><p>The mask property is a way to achieve masking with the transparency or luminosity of a source image. More details about this property can be found <a href=\"http://www.html5rocks.com/en/tutorials/masking/adobe/#toc-browser-support\" target=\"_blank\">here</a>. Webkit browsers (Chrome and Safari) are the only browsers that support image masking.</p><h2>Compatibility</h2> <p>For the latest specifics on browser compatibility, be sure to check caniuse.com for <a href=\"http://caniuse.com/#search=clip-path\" target=\"_blank\">clip-paths</a> and <a href=\"http://caniuse.com/#search=mask\" target=\"_blank\">masks</a>. The overflow:hidden property will continue to be fully compatible on all browsers.</p>",
+      "link" : {
+        "title" : "",
+        "url" : ""
+      }
+    } ],
+    "tags" : [ "masking", "clipping", "css", "overflow", "transparency" ],
+    "title" : "Masking and Clipping in CSS"
+  }, {
+    "category" : "development",
+    "demo" : [ {
+      "description" : "Create engaging, interactive HTML5-based designs and motion graphics that can run on any device.",
+      "link" : {
+        "title" : "Scalable Vector Graphics (SVG) + Animation",
+        "url" : "http://www.richmediagallery.com/detailPage?id=8201"
+      },
+      "title" : "Scalable Vector Graphics (SVG) + Animation"
+    } ],
+    "description" : "CSS transitions, transforms, and animations which are part of the CSS3 set of <a href=\"http://www.w3.org/standards/techs/css#w3c_all\" target=\"blank\">specifications</a>, provide ways to apply/control animation for changing CSS properties.",
+    "links" : [ {
+      "title" : "CSS3 Introduction",
+      "url" : "http://www.w3schools.com/css/css3_intro.asp"
+    }, {
+      "title" : "CSS-Tricks",
+      "url" : "https://css-tricks.com/"
+    }, {
+      "title" : "CSS: Animation Using CSS Transforms",
+      "url" : "http://www.the-art-of-web.com/css/css-animation/"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Refrain from using JavaScript libraries/frameworks that use the setInterval JavaScript method for animations, and if hand coding then do not use the setInterval method. This method uses up a lot of the browser’s resources and affects performance, and it requires a decent amount of code. It is prefered to use CSS for <a href=\"https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions\" target=\"blank\">transitions</a>,  <a href=\"https://css-tricks.com/almanac/properties/t/transform/\" target=\"blank\">transforms</a> and <a href=\"https://css-tricks.com/almanac/properties/a/animation/\" target=\"blank\">animations</a>. If JavaScript animations are mandatory, then consider using the <a href=\"https://css-tricks.com/using-requestanimationframe/\" target=\"blank\">requestAnimationFrame</a> method, it is specifically made for animations. More information can be found <a href=\"https://developers.google.com/web/fundamentals/look-and-feel/animations/css-vs-javascript\" target=\"blank\">here</a>.",
+      "type" : "good"
+    }, {
+      "description" : "Consider using CSS <a href=\"http://www.w3schools.com/css/css3_3dtransforms.asp\" target=\"blank\">3D transforms</a> to take advantage of the device GPU. This allows for a smoother animation experience because when CSS 3D transforms are invoked, they run in their own layer governed by the GPU. Take note that doing so can lower battery life on mobile devices.",
+      "type" : "good"
+    }, {
+      "description" : "<p>This pertains especially to Dynamic creatives which require a significantly longer time to load all of the data.</p><p>Using the <a href=\"https://support.google.com/richmedia/answer/2672514\" target=\"blank\">Enabler.isPageLoaded()</a> polite load functionality you can wait to trigger all of your CSS animations until all of the data has populated. All you need to do is set a 'paused' class to any element that animates in the ad. Then add this into your css:</p><p><pre><div>.paused {</div><div>&nbsp;&nbsp;animation-play-state: paused !important;</div><div>}</div></pre></p><p>In your .js file you would then release this paused state using querySelectorAll:</p><p><pre><div>var anim = document.querySelectorAll('.paused');</div><div>function pageLoadedHandler() {</div><div>&nbsp;&nbsp;//Play Animations</div><div>&nbsp;&nbsp;for (var i = 0; i < anim.length; i++ ) {</div><div>&nbsp;&nbsp;&nbsp;&nbsp;anim[i].removeAttribute('class', 'paused');</div><div>&nbsp;&nbsp;}</div><div> }</div></pre></p>",
+      "type" : "good"
+    }, {
+      "description" : "Before uploading your CSS files to Studio, consider minifying your CSS with an <a href=\"http://cssminifier.com/\" target=\"blank\">Online CSS Minifier</a>.",
+      "type" : "good"
+    }, {
+      "description" : "Do not use the JavaScript setInterval method to apply animation.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "Learn how to apply <a href=\"http://www.the-art-of-web.com/css/css-animation/\" target=\"blank\">animation using CSS transforms</a>."
+    } ],
+    "tags" : [ "animation", "css" ],
+    "title" : "CSS Transitions, Transforms, and Animations"
+  }, {
+    "category" : "formats",
+    "demo" : [ {
+      "description" : "Checkout the selection of global HTML5 Masthead examples on our Rich Media Gallery",
+      "link" : {
+        "title" : "Mastheads on the Rich Media Gallery",
+        "url" : "http://www.richmediagallery.com/gallery#filterGallery:464%2C443~"
+      },
+      "title" : "HTML5 Masthead Examples"
+    } ],
+    "description" : "<p>The YouTube Desktop Masthead is a 970x250 pixel in-page unit running the full width of the YouTube homepage below the navigation bar for 24 hours. There is also an expandable version that expands on the user click to 970x500 pixels.</p><p>As HTML5 offers several key benefits over Flash, we encourage advertisers to take advantage of our broader support for HTML5 Mastheads. Though advertisers can use any of the HTML5 authoring tools available, Google has launched Google Web Designer and HTML5 Studio Layouts to make the experience of building HTML5 as easy as possible.<p>",
+    "links" : [ {
+      "title" : "Rich Media Custom Mastheads Guidelines",
+      "url" : "https://support.google.com/displayspecs/answer/6011474?hl=en"
+    }, {
+      "title" : "Rich Media Layouts Mastheads Guidelines",
+      "url" : "https://support.google.com/displayspecs/answer/4489886?rd=1"
+    }, {
+      "title" : "YouTube Masthead Featured Video",
+      "url" : "http://www.richmediagallery.com/detailPage?id=8161"
+    }, {
+      "title" : "YouTube Masthead Interactive Hotspots",
+      "url" : "http://www.richmediagallery.com/detailPage?id=8190"
+    }, {
+      "title" : "Rich Media Gallery HTML5 Masthead Demos",
+      "url" : "http://www.richmediagallery.com/adtypes#filterAds:478%2C464~"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Refer to and check the Mastheads Guidelines before starting a creative build, the majority of Masthead delays are caused when they don’t meet YouTube specifications.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "<p>HTML5 is an open platform and, therefore advertisers can use any of the available HTML5 editors, including Google Web Designer and many others.</p><p>Google Web Designer provides several customizable Masthead templates that can be used as-is or as a starting point to build more complex Mastheads.</p>",
+      "link" : {
+        "title" : "Jump in and start building with Google Web Designer",
+        "url" : "http://www.google.com/webdesigner"
+      }
+    }, {
+      "description" : "Rich Media Layouts Layouts lets you create a HTML5 Masthead, using the same standard assets you already have. Get a creative built, QA approved, and ready to traffic in as little as one business day.",
+      "link" : {
+        "title" : "Select HTML5 Masthead Layouts in DoubleClick Studio",
+        "url" : "https://www.google.com/doubleclick/studio/#layouts:"
+      }
+    } ],
+    "tags" : [ "youtube", "masthead" ],
+    "title" : "HTML5 Masthead"
+  }, {
+    "category" : "troubleshooting",
+    "description" : "The help center is the best place for general DoubleClick Studio and DoubleClick Rich Media support documents.",
+    "links" : [ {
+      "title" : "DoubleClick Creative Solutions Help Center",
+      "url" : "https://support.google.com/richmedia"
+    } ],
+    "pro-tips" : [ {
+      "description" : "To get creative solutions support, click on Contact us link at the upper right of the Help Center.",
+      "type" : "good"
+    } ],
+    "quick-start" : [ {
+      "description" : "Build DoubleClick Studio creatives using your favorite authoring tool or source code editor. Studio's software development kit and components help you add creative features such as videos, image galleries, and maps.",
+      "link" : {
+        "title" : "Build your creative",
+        "url" : "https://support.google.com/richmedia/answer/6073360"
+      }
+    }, {
+      "description" : "Studio HTML5 ad format and HTML5 creative assets requirements.",
+      "link" : {
+        "title" : "Desktop HTML5/Mobile web",
+        "url" : "https://support.google.com/richmedia/answer/3419891"
+      }
+    }, {
+      "description" : "You can avoid potential live issues with creatives by meeting best practice and lowest common denominator (LCD) requirements.",
+      "link" : {
+        "title" : "Developer best practices",
+        "url" : "https://support.google.com/richmedia/answer/165130"
+      }
+    }, {
+      "description" : "The process of uploading the creatives you've built to the DoubleClick Studio Web UI.",
+      "link" : {
+        "title" : "Studio Web UI overview",
+        "url" : "https://support.google.com/richmedia/answer/2453366"
+      }
+    } ],
+    "tags" : [ "html5", "studio" ],
+    "title" : "Help Center"
+  },
+  {
+    "title": "Template Generator",
+    "category": "Creation tools",
+    "description": "Use this tool as a starting point for your <a href=\"http://www.richmediagallery.com/detailPage?id=8063\" title=\"HTML5 Lightbox Ad\">HTML5 Lightbox Ad</a>, <a href=\"http:\/\/www.richmediagallery.com/detailPage?id=8050\" title=\"YouTube Masthead\">YouTube Masthead</a> or IAB Rich Media HTML5 ads. This tool allows you to create, preview and download a custom sample file, built to your exact requirements and specifications. So if you know what you want? Then what are you waiting for?<br><br>NOTE: If you have Google Web Designer installed then after you’ve chosen your ad, why not utilse the \"Open in GWD\" button to open Google Web Designer with your required ad ready to go.",
+    "demo": [
+        {
+            "description": "Watch how you can create template to your specifications and open in Google Web Designer.",
+            "link": {
+                "title": "Building Expanding Creatives",
+                "url": "https://www.youtube.com/watch?v=dwah7k4zLOM"
+            },
+            "title": "Google Web Designer Demo"
+        }
+    ],
+    "quick-start": [
+        {
+            "description": "Here's what it looks like: <img src=’http:\/\/storage.googleapis.com\/html5-toolkit\/html5-template-generator\/h5t_1.png’ \/>.",
+            "link": {
+                "title": "YouTube Channel",
+                "url": "http://youtube.com/googlewebdesigner"
+            }
+        }
+    ],
+    "pro-tips": [
+        {
+            "type": "good",
+            "description": "Start with a template to wire up all the DoubleClick ad-serving logic."
+        },
+        {
+            "type": "bad",
+            "description": "Don't reinvent the wheel by starting from scratch. Save development time by using a template."
+        }
+    ],
+    "links": [
+        {
+            "url": "http://www.richmediagallery.com/tools/template-generator",
+            "title": "Rich Media Gallery"
+        }
+    ],
+    "tags": [
+        "template",
+        "studio"
+      ]
+    }
+ ]
 }
