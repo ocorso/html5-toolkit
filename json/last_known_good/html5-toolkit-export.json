@@ -129,7 +129,7 @@
       "type" : "bad"
     } ],
     "quick-start" : [ {
-      "description" : "Using Google Web Designer to build your Ad? Drag and drop the YouTube Player component onto the stage from the components panel.<br /><br />With it still selected, check the properties panel to add your YouTube ID and adjust any other parameters.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/youtube-player/youtube-gwd-properties.png\">",
+      "description" : "Using Google Web Designer to build your Ad? Drag and drop the YouTube Player component onto the stage from the components panel.<br /><br />With it still selected, check the properties panel to add your YouTube ID and adjust any other parameters.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/youtube-player/youtube-gwd-properties.png\" width=\"278\" height=\"341\">",
       "link" : {
         "title" : "Google Web Designer YouTube Component",
         "url" : "https://support.google.com/webdesigner/answer/3232992?hl=en"
@@ -742,50 +742,36 @@
     } ],
     "tags" : [ "html5", "studio" ],
     "title" : "Help Center"
-  },
-  {
-    "title": "Template Generator",
-    "category": "Creation Tools",
-    "description": "",
-    "demo": [
-        {
-            "description": "",
-            "link": {
-                "title": "Building Expanding Creatives",
-                "url": "https://www.youtube.com/watch?v=dwah7k4zLOM"
-            },
-            "title": "Google Web Designer Demo"
-        }
-    ],
-    "quick-start": [
-        {
-            "description": "Here's what it looks like: <img src=’http:\/\/storage.googleapis.com\/html5-toolkit\/html5-template-generator\/h5t_1.png’ \/>.",
-            "link": {
-                "title": "YouTube Channel",
-                "url": "http://youtube.com/googlewebdesigner"
-            }
-        }
-    ],
-    "pro-tips": [
-        {
-            "type": "good",
-            "description": "Start with a template to wire up all the DoubleClick ad-serving logic."
-        },
-        {
-            "type": "bad",
-            "description": "Don't reinvent the wheel by starting from scratch. Save development time by using a template."
-        }
-    ],
-    "links": [
-        {
-            "url": "http://www.richmediagallery.com/tools/template-generator",
-            "title": "Rich Media Gallery"
-        }
-    ],
-    "tags": [
-        "template",
-        "studio"
-      ]
-    }
- ]
+  }, {
+    "category" : "creation tools",
+    "demo" : [ {
+      "description" : "Watch how you can create template to your specifications and open in Google Web Designer.",
+      "link" : {
+        "title" : "Building Expanding Creatives",
+        "url" : "https://www.youtube.com/watch?v=dwah7k4zLOM"
+      },
+      "title" : "Google Web Designer Demo"
+    } ],
+    "description" : "Use this tool as a starting point for your <a href=\"http://www.richmediagallery.com/detailPage?id=8063\" title=\"HTML5 Lightbox Ad\">HTML5 Lightbox Ad</a>, <a href=\"http://www.richmediagallery.com/detailPage?id=8050\" title=\"YouTube Masthead\">YouTube Masthead</a> or IAB Rich Media HTML5 ads. This tool allows you to create, preview and download a custom sample file, built to your exact requirements and specifications. So if you know what you want? Then what are you waiting for?<br><br>NOTE: If you have Google Web Designer installed then after you’ve chosen your ad, why not utilse the \"Open in GWD\" button to open Google Web Designer with your required ad ready to go.",
+    "links" : [ {
+      "title" : "Rich Media Gallery",
+      "url" : "http://www.richmediagallery.com/tools/template-generator"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Start with a template to wire up all the DoubleClick ad-serving logic.",
+      "type" : "good"
+    }, {
+      "description" : "Don't reinvent the wheel by starting from scratch. Save development time by using a template.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "Here's what it looks like: <img src=\"https://storage.googleapis.com/html5-toolkit/html5-template-generator/h5t_1.png\" />.",
+      "link" : {
+        "title" : "YouTube Channel",
+        "url" : "http://youtube.com/googlewebdesigner"
+      }
+    } ],
+    "tags" : [ "template", "studio" ],
+    "title" : "Template Generator"
+  } ]
 }
