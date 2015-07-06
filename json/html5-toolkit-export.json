@@ -759,7 +759,7 @@
     ],
     "quick-start": [
         {
-            "description": "Here's what it looks like: <img src=’http:\/\/storage.googleapis.com\/html5-toolkit\/html5-template-generator\/h5t_1.png’ \/>.",
+            "description": "Here's what it looks like: <img src=’https:\/\/storage.googleapis.com\/html5-toolkit\/html5-template-generator\/h5t_1.png’ \/>.",
             "link": {
                 "title": "YouTube Channel",
                 "url": "http://youtube.com/googlewebdesigner"

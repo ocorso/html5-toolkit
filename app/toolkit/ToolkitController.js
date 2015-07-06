@@ -58,7 +58,8 @@ toolkit.controller('ToolkitCtrl', function($scope, $routeParams, $location,
       var message = {
         height: $scope.main.pageHeight,
         width: $scope.main.pageWidth,
-        type: 'resize'
+        type: 'resize',
+        path: $location.path()
       };
 
       // oc: here's what we're posting
