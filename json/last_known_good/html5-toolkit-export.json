@@ -2,7 +2,7 @@
   "toolkit-items" : [ {
     "category" : "troubleshooting",
     "demo" : [ {
-      "description" : "Chrome Inspect view of Android device.<br /><br /><a href=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" target=\"_blank\"><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" width=\"864\" alt=\"Chrome Inspect view of Android device\"/></>",
+      "description" : "Chrome Inspect view of Android device.<br /><br /><a href=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" target=\"_blank\"><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" width=\"864\" height=\"544\"alt=\"Chrome Inspect view of Android device\"/></>",
       "link" : {
         "title" : "Debugging a Rich Media Creative",
         "url" : "https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg"
@@ -25,7 +25,7 @@
       "type" : "good"
     } ],
     "quick-start" : [ {
-      "description" : "Here’s how to quickly get testing with USB Debugging.<br /><br />Get started on Chrome for Android by following instructions to enable USB debugging and connect your phone to your computer. Be sure to visit <strong><i>chrome://inspect</i></strong> and enable Discovery of USB devices.<br /><br />Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br /><br />When visiting <strong><i>chrome://inspect</i></strong> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/chrome_inspect_devices.jpg\" width=\"781\" alt=\"Chrome Inspect\"/>",
+      "description" : "Here’s how to quickly get testing with USB Debugging.<br /><br />Get started on Chrome for Android by following instructions to enable USB debugging and connect your phone to your computer. Be sure to visit <strong><i>chrome://inspect</i></strong> and enable Discovery of USB devices.<br /><br />Send a Studio preview to your phone so it opens in either the Chrome web browser or the Creative Preview app.<br /><br />When visiting <strong><i>chrome://inspect</i></strong> you should now see your Device and any open tabs. Simply select inspect on Studio’s preview tab and you’ll be able to fully view and debug your creative as if on your desktop.<br /><br /><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/chrome_inspect_devices.jpg\" width=\"781\" height=\"314\" alt=\"Chrome Inspect\"/>",
       "link" : {
         "title" : "Remote Debugging on Android with Chrome",
         "url" : "https://developer.chrome.com/devtools/docs/remote-debugging#setting-up-device"
@@ -86,10 +86,16 @@
       "type" : "good"
     } ],
     "quick-start" : [ {
-      "description" : "Add this code to your website: <pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre><br/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;</pre><br/>That's all there is to it.",
+      "description" : "Add this code to your website: <pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre><br/> Then integrate the fonts into your CSS: <pre>font-family: 'Open Sans', sans-serif;</pre><br/>That’s all there is to it.",
       "link" : {
         "title" : "Google Fonts",
         "url" : "https://developers.google.com/fonts/docs/getting_started"
+      }
+    }, {
+      "description" : "To only request certain characters in your web font, append the <b>text</b> key and include whichever characters you want in the value: <pre>&lt;link href='https://fonts.googleapis.com/css?family=Open+Sans&text=Hello'&gt;</pre>",
+      "link" : {
+        "title" : "Optimizing your font requests",
+        "url" : "https://developers.google.com/fonts/docs/getting_started#Optimizing_Requests"
       }
     } ],
     "tags" : [ "fonts" ],
@@ -153,7 +159,7 @@
       },
       "title" : "HTML5 Interactive Video Hotspots Layout"
     } ],
-    "description" : "DoubleClick Studio Layouts makes Rich Media creative development much easier. Layouts provides the Rich Media ad shell for you, so all you have to do is pick the Layout you want, upload your existing assets, add your desired copy, and publish. With Layouts, you can get more out of your existing assets, trade up from basic image creatives to Rich Media, and creatives in minutes.<div><div style=\"display: inline-block; margin-top: 10px;\"><div style=\"float: left; margin-right: 15px;\"><div style=\"margin-bottom: 5px;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/creative-layout.png\"/></div><div><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/options.png\"/></div></div><div style=\"float: left;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/filler.png\"/></div></div>",
+    "description" : "DoubleClick Studio Layouts makes Rich Media creative development much easier. Layouts provides the Rich Media ad shell for you, so all you have to do is pick the Layout you want, upload your existing assets, add your desired copy, and publish. With Layouts, you can get more out of your existing assets, trade up from basic image creatives to Rich Media, and creatives in minutes.<div><div style=\"display: inline-block; margin-top: 10px;\"><div style=\"float: left; margin-right: 15px;\"><div style=\"margin-bottom: 5px;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/creative-layout.png\" width=\"249\" height=\"159\"/></div><div><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/options.png\" width=\"249\" height=\"118\"/></div></div><div style=\"float: left;\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/filler.png\" width=\"348\" height=\"217\"/></div></div>",
     "links" : [ {
       "title" : "Studio Layouts Rich Media Gallery",
       "url" : "http://www.richmediagallery.com/resources/layouts"
@@ -166,7 +172,7 @@
       "type" : "good"
     } ],
     "quick-start" : [ {
-      "description" : "Build a YouTube Masthead with video and hotpots from a Layout using the requirements described <a href=\"https://support.google.com/displayspecs/answer/4489886\" target=\"_blank\">here</a>.<div style=\"margin-top: 10px\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/masthead.png\" /></div>"
+      "description" : "Build a YouTube Masthead with video and hotpots from a Layout using the requirements described <a href=\"https://support.google.com/displayspecs/answer/4489886\" target=\"_blank\">here</a>.<div style=\"margin-top: 10px\"><img src=\"https://storage.googleapis.com/html5-toolkit/layouts/masthead.png\" width=\"743\" height=\"191\"/></div>"
     } ],
     "tags" : [ "tool", "Studio", "template", "layout" ],
     "title" : "Studio Layouts"
@@ -356,35 +362,35 @@
     } ],
     "quick-start" : [ {
       "content" : "",
-      "description" : "Consider creating the image with just CSS3 to both improve the quality and reduce file size. <a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">CSS3GradientGenerator</a><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image01.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "description" : "Consider creating the image with just CSS3 to both improve the quality and reduce file size. <a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">CSS3GradientGenerator</a><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image01.png\" width=\"300\" height=\"261\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Gradients: Is the graphic a gradient or a solid color?",
         "url" : ""
       }
     }, {
       "content" : "",
-      "description" : "Use SVG (Scalable Vector Graphics) whenever possible instead of an image. Images are pixel based (\"raster\") and may add some overhead in file weight. In contrast, SVGs are point-to-point based graphics (\"vector\") and can greatly reduce file size.<br/><ul><li><a href=\"http://www.w3schools.com/svg/\"target=\"_blank\">W3School's SVG Tutorial</a></li><li><a href=\"https://css-tricks.com/using-svg/\"target=\"_blank\">How to Use SVGs</a></li><li><a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">Compressing SVGs</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image00.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "description" : "Use SVG (Scalable Vector Graphics) whenever possible instead of an image. Images are pixel based (\"raster\") and may add some overhead in file weight. In contrast, SVGs are point-to-point based graphics (\"vector\") and can greatly reduce file size.<br/><ul><li><a href=\"http://www.w3schools.com/svg/\"target=\"_blank\">W3School's SVG Tutorial</a></li><li><a href=\"https://css-tricks.com/using-svg/\"target=\"_blank\">How to Use SVGs</a></li><li><a href=\"http://www.cssmatic.com/gradient-generator\"target=\"_blank\">Compressing SVGs</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image00.png\"width=\"300\"height=\"273\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Solid Colors vs Vectors: Is the image comprised of solid colors or a vector?",
         "url" : ""
       }
     }, {
       "content" : "",
-      "description" : "Use icon fonts whenever possible instead of an image for icons, images are pixel based and may add some overhead in file weight. Icon fonts are actually regular fonts and can be used in the same way as any other font in HTML. They are vector based as well. Custom icon fonts are relatively quick to create and implement.<br/><ul><li><a href=\"https://icomoon.io/app/#/select\"target=\"_blank\">Icomoon Icon Font Creator</a></li><li><a href=\"https://thenounproject.com/\"target=\"_blank\">NounProject: an affordable resource to gather SVG icons for your icon font</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image02.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "description" : "Use icon fonts whenever possible instead of an image for icons, images are pixel based and may add some overhead in file weight. Icon fonts are actually regular fonts and can be used in the same way as any other font in HTML. They are vector based as well. Custom icon fonts are relatively quick to create and implement.<br/><ul><li><a href=\"https://icomoon.io/app/#/select\"target=\"_blank\">Icomoon Icon Font Creator</a></li><li><a href=\"https://thenounproject.com/\"target=\"_blank\">NounProject: an affordable resource to gather SVG icons for your icon font</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image02.png\"width=\"300\"height=\"195\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Multiple Images & Icons: Do you have multiple images in your project?",
         "url" : ""
       }
     }, {
       "content" : "",
-      "description" : "If pixel based images are required, consider using a Sprite Sheet. A single tiled image that is loaded once, and with CSS, only individual tiles can be made visible, this approach can save making multiple requests over HTTP. <br/><br/>Compressing the image, is still key even with this approach.<br/><ul><li><a href=\"http://www.w3schools.com/css/css_image_sprites.asp\"target=\"_blank\">CSS Image Sprites</a></li><li><a href=\"http://draeton.github.io/stitches/\"target=\"_blank\">Online Sprite Sheet and CSS Creator</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image04.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "description" : "If pixel based images are required, consider using a Sprite Sheet. A single tiled image that is loaded once, and with CSS, only individual tiles can be made visible, this approach can save making multiple requests over HTTP. <br/><br/>Compressing the image, is still key even with this approach.<br/><ul><li><a href=\"http://www.w3schools.com/css/css_image_sprites.asp\"target=\"_blank\">CSS Image Sprites</a></li><li><a href=\"http://draeton.github.io/stitches/\"target=\"_blank\">Online Sprite Sheet and CSS Creator</a></li></ul><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image04.png\"width=\"300\"height=\"195\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Multiple Images & Icons: Do you have multiple images in your project?",
         "url" : ""
       }
     }, {
       "content" : "",
-      "description" : "If pixel based images are required, compress them as much as possible while keeping quality. Many people are already familiar <a href=\"http://help.adobe.com/en_US/creativesuite/cs/using/WS6E857477-27FE-4a88-B8A4-074DC3C65F68.html\"target=\"_blank\">Photoshop’s Save For Web</a>, but there are other online tools that can compress an image even further while retaining quality.<br/><br/><ul><li><a href=\"https://tinypng.com/\"target=\"_blank\">TinyPNG: Online PNG Compressor</a></li><li><a href=\"https://tinyjpg.com/\"target=\"_blank\">TinyJPG: Online JPG Compressor </a></li></ul><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image03.png\"width=\"300\"alt=\"ChromeInspect\"/>",
+      "description" : "If pixel based images are required, compress them as much as possible while keeping quality. Many people are already familiar <a href=\"http://help.adobe.com/en_US/creativesuite/cs/using/WS6E857477-27FE-4a88-B8A4-074DC3C65F68.html\"target=\"_blank\">Photoshop’s Save For Web</a>, but there are other online tools that can compress an image even further while retaining quality.<br/><br/><ul><li><a href=\"https://tinypng.com/\"target=\"_blank\">TinyPNG: Online PNG Compressor</a></li><li><a href=\"https://tinyjpg.com/\"target=\"_blank\">TinyJPG: Online JPG Compressor </a></li></ul><br/><br/><img src=\"https://storage.googleapis.com/html5-toolkit/image-compression/image03.png\"width=\"300\"height=\"286\"alt=\"ChromeInspect\"/>",
       "link" : {
         "title" : "Image File Type: Are you using JPGs or PNGs in your project?",
         "url" : ""
@@ -765,7 +771,7 @@
       "type" : "bad"
     } ],
     "quick-start" : [ {
-      "description" : "Here's what it looks like: <img src=\"https://storage.googleapis.com/html5-toolkit/html5-template-generator/h5t_1.png\" />.",
+      "description" : "Here's what it looks like: <img src=\"https://storage.googleapis.com/html5-toolkit/html5-template-generator/h5t_1.png\" width=\"739\" height=\"529\"/>.",
       "link" : {
         "title" : "YouTube Channel",
         "url" : "http://youtube.com/googlewebdesigner"
