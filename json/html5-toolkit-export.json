@@ -1,5 +1,45 @@
 {
   "toolkit-items" : [ {
+    "category" : "creation tools",
+    "demo" : [ {
+      "description" : "<iframe width=\"420\" height=\"315\" src=\"https://www.youtube.com/embed/dwah7k4zLOM\" frameborder=\"0\" allowfullscreen></iframe>",
+      "link" : {
+        "title" : "Building Expanding Creatives",
+        "url" : "https://www.youtube.com/watch?v=C1_U79gEPjU"
+      },
+      "title" : "Google Web Designer Demo"
+    } ],
+    "description" : "Google Web Designer is an integrated development environment (IDE) that helps you create engaging, interactive HTML5-based designs and motion graphics that can run on any device.",
+    "links" : [ {
+      "title" : "google.com/webdesigner",
+      "url" : "http://www.google.com/webdesigner/"
+    }, {
+      "title" : "Help Center",
+      "url" : "https://support.google.com/webdesigner/#topic=3249465"
+    }, {
+      "title" : "Community Forum",
+      "url" : "https://groups.google.com/forum/#!forum/gwdbeta"
+    }, {
+      "title" : "YouTube Channel",
+      "url" : "http://youtube.com/googlewebdesigner"
+    } ],
+    "pro-tips" : [ {
+      "description" : "Start with a template to wire up all the DoubleClick ad-serving logic.",
+      "type" : "good"
+    }, {
+      "description" : "Don't drag multiple copies of the same image on the stage. Instead, use the asset library panel.",
+      "type" : "bad"
+    } ],
+    "quick-start" : [ {
+      "description" : "An easy way to create an ad is to use templates. Templates are pre-made ads in popular sizes, using generally popular styles and features. By replacing the images and other assets you can quickly create a useful, working ad.<br>To create an ad from a template, select <b>New</b> from template from the File menu.",
+      "link" : {
+        "title" : "Template Overview",
+        "url" : "https://www.youtube.com/watch?v=ArwOu9fj5UU"
+      }
+    } ],
+    "tags" : [ "tool", "wysiwyg", "animation", "timeline", "templates" ],
+    "title" : "Google Web Designer"
+  }, {
     "category" : "troubleshooting",
     "demo" : [ {
       "description" : "Chrome Inspect view of Android device.<br /><br /><a href=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" target=\"_blank\"><img src=\"https://storage.googleapis.com/html5-toolkit/usb-debugging/annotated_usb_debugging_demo_screenshot.jpg\" width=\"864\" height=\"544\"alt=\"Chrome Inspect view of Android device\"/></>",
@@ -748,36 +788,5 @@
     } ],
     "tags" : [ "html5", "studio" ],
     "title" : "Help Center"
-  }, {
-    "category" : "creation tools",
-    "demo" : [ {
-      "description" : "Watch how you can create template to your specifications and open in Google Web Designer.",
-      "link" : {
-        "title" : "Building Expanding Creatives",
-        "url" : "https://www.youtube.com/watch?v=dwah7k4zLOM"
-      },
-      "title" : "Google Web Designer Demo"
-    } ],
-    "description" : "Use this tool as a starting point for your <a href=\"http://www.richmediagallery.com/detailPage?id=8063\" title=\"HTML5 Lightbox Ad\">HTML5 Lightbox Ad</a>, <a href=\"http://www.richmediagallery.com/detailPage?id=8050\" title=\"YouTube Masthead\">YouTube Masthead</a> or IAB Rich Media HTML5 ads. This tool allows you to create, preview and download a custom sample file, built to your exact requirements and specifications. So if you know what you want? Then what are you waiting for?<br><br>NOTE: If you have Google Web Designer installed then after you’ve chosen your ad, why not utilse the \"Open in GWD\" button to open Google Web Designer with your required ad ready to go.",
-    "links" : [ {
-      "title" : "Rich Media Gallery",
-      "url" : "http://www.richmediagallery.com/tools/template-generator"
-    } ],
-    "pro-tips" : [ {
-      "description" : "Start with a template to wire up all the DoubleClick ad-serving logic.",
-      "type" : "good"
-    }, {
-      "description" : "Don't reinvent the wheel by starting from scratch. Save development time by using a template.",
-      "type" : "bad"
-    } ],
-    "quick-start" : [ {
-      "description" : "Here's what it looks like: <img src=\"https://storage.googleapis.com/html5-toolkit/html5-template-generator/h5t_1.png\" width=\"739\" height=\"529\"/>.",
-      "link" : {
-        "title" : "YouTube Channel",
-        "url" : "http://youtube.com/googlewebdesigner"
-      }
-    } ],
-    "tags" : [ "template", "studio" ],
-    "title" : "Template Generator"
   } ]
 }
