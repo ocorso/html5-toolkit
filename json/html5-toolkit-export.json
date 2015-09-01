@@ -696,6 +696,9 @@
       "description" : "Before uploading your CSS files to Studio, consider minifying your CSS with an <a href=\"http://cssminifier.com/\" target=\"blank\">Online CSS Minifier</a>.",
       "type" : "good"
     }, {
+      "description" : "To skip CSS3 animations to a last frame consider adding the <a href=\"http://www.w3schools.com/cssref/css3_pr_animation-duration.asp\" target=\"blank\">animation-duration</a> property with a value of 0s to a <a href=\"http://www.w3schools.com/cssref/css_selectors.asp\" target=\"blank\">selector</a> upon an <a href=\"https://developer.mozilla.org/en-US/docs/Web/Events\" target=\"blank\">event</a>. Example can be found <a href=\"http://jsbin.com/ragefa/edit?html,css,js,output\" target=\"blank\">here</a>.",
+      "type" : "good"
+    }, {
       "description" : "Do not use the JavaScript setInterval method to apply animation.",
       "type" : "bad"
     } ],
