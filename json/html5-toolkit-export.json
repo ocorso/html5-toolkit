@@ -485,40 +485,6 @@
     "tags" : [ "CSS", "Javascript", "Responsive", "media query", "orientation", "landscape", "tablet", "portrait", "mobile", "detect", "screen size" ],
     "title" : "Detecting Browser Size with CSS Media Queries"
   }, {
-    "category" : "creation tools",
-    "demo" : [ {
-      "description" : "",
-      "link" : {
-        "title" : "",
-        "url" : ""
-      },
-      "title" : ""
-    } ],
-    "description" : "<p>The Google Swiffy tool can elegantly convert your Flash files to HTML5. DoubleClick Campaign Manager and DoubleClick Bid Manager implement Swiffy to allow Media Agencies to convert basic Flash built creatives into HTML5, and Creative Agencies can use Swiffy to convert animation built in Flash.</p><p>and now the caveat… Unfortunately, for now, when it comes to Rich Media Swiffy <strong>will not</strong> convert it. What it can do is convert <em>bits</em> of it!</p><p>Let’s imagine we have a typical Flash creative, consisting of 80% animation and 20% logic/code/components...etc. This logic can be rebuilt in HTML5, and then instead of trying to re-building / replicating the Flash animation we can just move it to a separate Flash file and convert this using Swiffy. Allowing designers to continue using Flash while they learn new HTML5 tools like <a href=\"http://www.google.com/webdesigner/\" target=\"blank\">Google Web Designer</a>.</p>",
-    "links" : [ {
-      "title" : "https://developers.google.com/swiffy/convert/flash-extension",
-      "url" : "Adobe Flash Extension"
-    }, {
-      "title" : "https://docs.google.com/a/google.com/forms/d/1pfsD83_YCVBJrt2-gGW5Fb7oOHcJ8HVyUx4EAdBHHvU/viewform?formkey=dEs1SXBHMTY5QmZDQnhqUVl2dl9hMEE6MQ",
-      "url" : "Feedback on Google Swiffy"
-    } ],
-    "pro-tips" : [ {
-      "description" : "Think of Swiffy as a short term tool solution, we don’t want to use Flash to do animation forever.",
-      "type" : "good"
-    }, {
-      "description" : "Remember, Swiffy can not be used to directly convert Rich Media directly.",
-      "type" : "bad"
-    } ],
-    "quick-start" : [ {
-      "description" : "<p>Upload your SWF file into the Swiffy converter, and right click to save the new HTML5 conversion.</p><p>You could also install the Swiffy Adobe Flash Extension to export as HTML5 directly from Flash</p>",
-      "link" : {
-        "title" : "Swiffy",
-        "url" : "https://developers.google.com/swiffy/convert/upload"
-      }
-    } ],
-    "tags" : [ "swiffy", "flash" ],
-    "title" : "Swiffy (Flash Conversion)"
-  }, {
     "category" : "development",
     "demo" : [ {
       "description" : "",
